@@ -3,7 +3,7 @@ Testing Framework powered by TestNG and Selenium
 
 ### How to start? ###
 
-* Download and install IntelliJ IDEA  - use licensed version from [Confluence](https://confluence.softserveinc.com/display/ITAM/JetBrains+Clients+activation+guide#JetBrainsClientsactivationguide-IntelliJIDEA)
+* Download and install IntelliJ IDEA  - [here] (https://www.jetbrains.com/idea/download/#section=windows)
 * Download and install Java SE Development Kit for your OS from [Oracle latest SE kit](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html)
 * Download Maven from [Maven Download](https://maven.apache.org/download.cgi) and add it to your Windows PATH - [Windows guide](https://maven.apache.org/guides/getting-started/windows-prerequisites.html)
 * On Windows install [GIT](https://git-scm.com/downloads)
