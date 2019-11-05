@@ -15,6 +15,7 @@
         <!-- - - - - - - Encoding - - - - - - -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
+        <maven.surefile.plugin.version>2.22.2</maven.surefile.plugin.version>
         <!-- - - - - - - Java - - - - - - -->
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -24,7 +25,7 @@
         <!-- - - - - - - Selenium - - - - - - -->
         <org.seleniumhq.selenium.version>3.14.0</org.seleniumhq.selenium.version>
         <!-- - - - - - -Utils - - - - - - -->
-        <org.apache.poi.version>3.8.0</org.apache.poi.version>
+        <org.apache.poi.version>4.1.0</org.apache.poi.version>
         <org.mockito.version>1.10.19</org.mockito.version>
         <org.powermock.version>1.7.4</org.powermock.version>
         <!-- - - - - - - Logging - - - - - - -->
@@ -94,7 +95,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.connector.java}</version>
+            <version>${mysql.connector.version}</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -133,7 +134,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>${maven.resource.plugin.version}</version>
+                <version>${maven.resources.plugin.version}</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
@@ -152,18 +153,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefile.plugin.version}</version>
-                <configuration>
-                    <argLine>-Xms512m -Xmx1024m</argLine>
-                    <systemPropertyVariables>
-                        <surefile.reports.directory>
-                            ${testng.reports.directory}
-                        </surefile.reports.directory>
-                    </systemPropertyVariables>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>testng.2xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                    <reportsDirectory>${testng.reports.directory}</reportsDirectory>
-                </configuration>
             </plugin>
         </plugins>
     </build>
