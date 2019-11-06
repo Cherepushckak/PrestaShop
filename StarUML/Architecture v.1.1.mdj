@@ -23825,6 +23825,82 @@
 							]
 						}
 					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAFuPM7Y47gWAaE=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "UnlogUserInfo",
+					"ownedElements": [
+						{
+							"_type": "UMLAssociation",
+							"_id": "AAAAAAFuPM/5IMnWFcA=",
+							"_parent": {
+								"$ref": "AAAAAAFuPM7Y47gWAaE="
+							},
+							"end1": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAFuPM/5IMnXN5w=",
+								"_parent": {
+									"$ref": "AAAAAAFuPM/5IMnWFcA="
+								},
+								"reference": {
+									"$ref": "AAAAAAFuPM7Y47gWAaE="
+								}
+							},
+							"end2": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAFuPM/5IMnY0hY=",
+								"_parent": {
+									"$ref": "AAAAAAFuPM/5IMnWFcA="
+								},
+								"reference": {
+									"$ref": "AAAAAAFuMdHwvMeyrR4="
+								},
+								"aggregation": "composite"
+							}
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAFuPM+Cpb4Ohwc=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "LogUserInfo",
+					"ownedElements": [
+						{
+							"_type": "UMLAssociation",
+							"_id": "AAAAAAFuPNAIFcwIMYc=",
+							"_parent": {
+								"$ref": "AAAAAAFuPM+Cpb4Ohwc="
+							},
+							"end1": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAFuPNAIFswJtwE=",
+								"_parent": {
+									"$ref": "AAAAAAFuPNAIFcwIMYc="
+								},
+								"reference": {
+									"$ref": "AAAAAAFuPM+Cpb4Ohwc="
+								}
+							},
+							"end2": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAFuPNAIFswKmsE=",
+								"_parent": {
+									"$ref": "AAAAAAFuPNAIFcwIMYc="
+								},
+								"reference": {
+									"$ref": "AAAAAAFuMdHwvMeyrR4="
+								},
+								"aggregation": "composite"
+							}
+						}
+					]
 				}
 			]
 		}
