@@ -1,21 +1,18 @@
 package Common;
 
-import org.openqa.selenium.chrome.ChromeDriver;
 import Header.*;
+import Tools.*;
 /**
  *
  */
 public abstract class APageParent {
 
-    protected final String startURL = "http://3.124.147.74/";  //Default URL for site
-    protected ChromeDriver driver;
     protected HeaderFull headerFull;
     protected Header header;
     /**
      * Default constructor
      */
     public APageParent() {
-        driver = new ChromeDriver();
     }
 
     /**
