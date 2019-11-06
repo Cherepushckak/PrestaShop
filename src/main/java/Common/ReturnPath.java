@@ -1,18 +1,17 @@
+package Common;
 
 import java.util.*;
 
 /**
  * 
  */
-public class PagePath {
+public class ReturnPath {
 
     /**
      * Default constructor
      */
-    public PagePath() {
+    public ReturnPath() {
     }
-
-
 
 
 }
