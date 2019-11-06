@@ -1,5 +1,10 @@
 package Header;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.util.*;
 
 /**
@@ -17,7 +22,7 @@ public class LogCont {
      */
     public LogCont() {
         logo = driver.findElement(By.cssSelector("h1>a>img"));
-        contactUs = driver.findElement(By.cssSelector("#contact-link"));
+        contactUS = driver.findElement(By.cssSelector("#contact-link"));
     }
 
     /** method opens homePage */

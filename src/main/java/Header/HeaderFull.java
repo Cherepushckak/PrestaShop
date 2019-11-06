@@ -1,5 +1,10 @@
 package Header;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.util.*;
 
 /**
@@ -7,6 +12,7 @@ import java.util.*;
  * art, searchField, language, cart, currency, logUserInfo, unlogUserInfo.
  */
 public class HeaderFull extends Header {
+    WebDriver driver = new ChromeDriver();
 
     private WebElement clothes;
     private WebElement accessories;
@@ -23,6 +29,8 @@ public class HeaderFull extends Header {
      */
     public HeaderFull() {
         super();
+        createLogUser();
+        createHeaderFull();
         /**
             if createUser()==true
                 logUserInfo = new LogUserInfo();
@@ -40,8 +48,7 @@ public class HeaderFull extends Header {
          */
     }
 
-    private boolean createUser() {
-        boolean result;
+    private boolean checkUser() {
 
         /**
          if user logged
@@ -49,31 +56,36 @@ public class HeaderFull extends Header {
          else
          return false
          */
-        if (logUserInfo) {
-            this.logUserInfo
-            return result;
+        if (logUserInfo.findSignOut()) {
+
         }
+            return true;
+
+    }
+    public void createLogUser(){
+            logUserInfo = new LogUserInfo();
+
     }
 
     /** Method for constructor, creates part of the HeaderFull Object*/
     public void createHeaderFull() {
-        searchProductField = driver.findElement(By.cssSelector(".ui-autocomplete-input"));
-        searchProductButton = driver.findElement(By.xpath("//button[@type='submit']"));
+        searchField = driver.findElement(By.cssSelector(".ui-autocomplete-input"));
+        searchButton = driver.findElement(By.xpath("//button[@type='submit']"));
         language = driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
         currency = driver.findElement(By.cssSelector("#currency-selector-label"));
         cart = driver.findElement(By.cssSelector(".header"));
 
     }
-    private boolean checkCart(){
-        boolean result;
-        /**
-         * if cart is empty
-         *      return false;
-         * else
-         *      return true;
-         */
-        return result;
-    }
+//    private boolean checkCart(){
+//        boolean result;
+//        /**
+//         * if cart is empty
+//         *      return false;
+//         * else
+//         *      return true;
+//         */
+//        return result;
+//    }
 
     /**
      * Також потрібно буде пододавати відповідні функції натискання на вею елементи які записані у філдах
