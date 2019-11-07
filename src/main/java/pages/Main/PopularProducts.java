@@ -41,7 +41,7 @@ public class PopularProducts {
     }
 
     /**
-     * method to create list of products
+     * method to create list of products and initialization of allProducts field
      */
 
     public void initPopularProducts () {
@@ -50,6 +50,22 @@ public class PopularProducts {
         for (WebElement current : driver.findElements(By.cssSelector(".thumbnail-container"))) {
             products.add(new Product(current));
         }
+
+        /**
+         * method to get product by part of name
+         */
+
+       /* public Product getProductByPartialName (String partialProductName) {
+            Product result = null;
+            for (Product current : getProducts()) {
+                if (current.getNameProductText().toLowerCase()
+                .contains(partialProductName.toLowerCase())) {
+                    result = current;
+                    break;
+                }
+            }
+            return result;
+        }*/
     }
 
 
