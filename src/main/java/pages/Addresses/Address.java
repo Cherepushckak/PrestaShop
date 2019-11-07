@@ -1,7 +1,7 @@
 package pages.Addresses;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import tools.WebDriver;
 
 /**
  * 
@@ -9,6 +9,7 @@ import tools.WebDriver;
 public class Address {
 
 	// Fields
+	private WebElement addressesContainer;
 	private WebElement alias;
 	private WebElement allFieldsAddress;
 	private WebElement updateButton;
@@ -17,14 +18,27 @@ public class Address {
 	/**
 	 * Default constructor
 	 */
-	public Address() {
-		alias = WebDriver.driver.findElementByXPath("//article[@id='address-13']/div[1]/h4");
-		allFieldsAddress = WebDriver.driver.findElementByXPath("//article[@id='address-13']/div[1]/address");
-		updateButton = WebDriver.driver.findElementByCssSelector(".address-footer>a:nth-child(1)");
-		deleteButton = WebDriver.driver.findElementByCssSelector(".address-footer>a:nth-child(2)");
+	public Address(WebElement addressesContainer) {
+		this.addressesContainer = addressesContainer;
+		initAddresses();
+	}
+	
+	public void initAddresses () {
+		alias = addressesContainer.findElement(By.xpath("//article[@id='address-13']/div[1]/h4"));
+		allFieldsAddress = addressesContainer.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
+		updateButton = addressesContainer.findElement(By.cssSelector(".address-footer>a:nth-child(1)"));
+		deleteButton = addressesContainer.findElement(By.cssSelector(".address-footer>a:nth-child(2)"));
 	}
 
 	// Getters and setters
+	public WebElement getAddressesContainer() {
+		return addressesContainer;
+	}
+
+	public void setAddressesContainer(WebElement addressesContainer) {
+		this.addressesContainer = addressesContainer;
+	}
+
 	public WebElement getAlias() {
 		return alias;
 	}
@@ -46,7 +60,7 @@ public class Address {
     	updateButton.click();
     }
     
-	// Click 'Update' button
+	// Click 'Delete' button
     public void deleteClick() {
     	deleteButton.click();
     }

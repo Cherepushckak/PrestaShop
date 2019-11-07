@@ -18602,7 +18602,7 @@
 											"top": 343,
 											"width": 75.8671875,
 											"height": 13,
-											"text": "AAddresses"
+											"text": "Addresses"
 										},
 										{
 											"_type": "LabelView",
@@ -23691,7 +23691,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFuORIytC1Fv5s="
 							},
-							"name": "AAddresses",
+							"name": "Addresses",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",

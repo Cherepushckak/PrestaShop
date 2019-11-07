@@ -9,10 +9,12 @@ public class AddressesPage extends APageParent {
 
 	// Fields
 	
+	
     /**
      * Default constructor
      */
     public AddressesPage() {
+    	
     }
     
     
