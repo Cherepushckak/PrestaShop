@@ -34,7 +34,7 @@ public class LoginForm {
 	
 	public void initLogin () {
 		WebDriver webDriver = new WebDriver ();
-		WebDriver.driver.get ( "http://3.124.147.74/index.php?controller=authentication&back=my-account" );
+		webDriver.driver.get ( "http://3.124.147.74/index.php?controller=authentication&back=my-account" );
 		writeDefaultCredantional ();
 		showClick ();
 	}
