@@ -29,6 +29,9 @@ public class HeaderFull extends Header {
      */
     public HeaderFull() {
         super();
+        initLogUser();
+        initHeaderFull();
+
         /**
             if createUser()==true
                 logUserInfo = new LogUserInfo();
@@ -46,8 +49,7 @@ public class HeaderFull extends Header {
          */
     }
 
-    private boolean createUser() {
-        boolean result;
+    private boolean initLogUser() {
 
         /**
          if user logged
@@ -55,32 +57,47 @@ public class HeaderFull extends Header {
          else
          return false
          */
-        if (logUserInfo) {
-            this.logUserInfo;
-            return result;
+        if (logUserInfo.findSignOut()) {
+        //Have to test IT!!!!!!!!!11
         }
+        System.out.println();
+            return true;
+
+    }
+    public void createLogUser(){
+            logUserInfo = new LogUserInfo();
+
     }
 
     /** Method for constructor, creates part of the HeaderFull Object*/
-    public void createHeaderFull() {
+    public void initHeaderFull() {
+        searchField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
+        searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
+        language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
+        currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
+        cart = WebDriver.driver.findElement(By.cssSelector(".header"));
         searchProductField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
         searchProductButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
         language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
         currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
+<<<<<<< HEAD
+        //desktop_user_info = WebDriver.driver.findElement(By.cssSelector(".aHS-bnu>div:nth-child(2)>span>a", "#_desktop_user_info"));
+=======
         desktop_user_info = WebDriver.driver.findElement(By.cssSelector("#_desktop_user_info>div>a>span"));
+>>>>>>> c8c3d04ea0da21a5b47aae7a403b8dcc6edb4745
         cart = WebDriver.driver.findElement(By.cssSelector(".header"));
 
     }
-    private boolean checkCart(){
-        boolean result;
-        /**
-         * if cart is empty
-         *      return false;
-         * else
-         *      return true;
-         */
-        return result;
-    }
+//    private boolean checkCart(){
+//        boolean result;
+//        /**
+//         * if cart is empty
+//         *      return false;
+//         * else
+//         *      return true;
+//         */
+//        return result;
+//    }
 
     /**
      * Також потрібно буде пододавати відповідні функції натискання на вею елементи які записані у філдах
