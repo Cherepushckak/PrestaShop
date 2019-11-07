@@ -63,4 +63,5 @@ public class Product {
     public String getNameProductText () {
         return getName().getText();
     }
+
 }

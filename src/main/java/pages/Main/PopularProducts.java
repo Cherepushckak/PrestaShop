@@ -1,14 +1,15 @@
 package pages.Main;
 
 
-<<<<<<< HEAD:src/main/java/Main/PopularProducts.java
-import Search.Product;
-import Tools.WebDriver;
+
+//import Tools.WebDriver;
 import org.openqa.selenium.By;
-=======
+import org.openqa.selenium.WebDriver;
 import pages.Search.Product;
->>>>>>> SET:src/main/java/pages/Main/PopularProducts.java
 import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
@@ -17,15 +18,26 @@ public class PopularProducts {
     /**
      * List with product items, uses class pages.Product from package pages.Search (it`s the same class we use in main page)
      */
-    private List <Product> popularProducts;
+    private List<Product> products;
+
+    private WebDriver driver;
 
     private WebElement allProducts;
 
     /**
      * Default constructor
      */
-    public PopularProducts() {
+    public PopularProducts(WebDriver driver) {
+        this.driver = driver;
         initPopularProducts();
+    }
+
+    /**
+     * getter for list of popular products
+     */
+
+    public List<Product> getProducts() {
+        return products;
     }
 
     /**
@@ -33,9 +45,10 @@ public class PopularProducts {
      */
 
     public void initPopularProducts () {
-        popularProducts = new ArrayList<Product>();
-        for (WebElement current : WebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
-            popularProducts.add(new Product(current));
+        allProducts = driver.findElement(By.cssSelector(".all-product-link.float-xs-left.float-md-right.h4"));
+        products = new ArrayList<Product>();
+        for (WebElement current : driver.findElements(By.cssSelector(".thumbnail-container"))) {
+            products.add(new Product(current));
         }
     }
 
