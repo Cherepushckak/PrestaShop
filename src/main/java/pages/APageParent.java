@@ -25,7 +25,7 @@ public abstract class APageParent {
     //Create pages.Header Full
     public HeaderFull createHeader(){
         HeaderFull header = new HeaderFull();
-        return header();
+        return header;
     }
 
 
