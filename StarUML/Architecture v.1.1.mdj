@@ -17,7 +17,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Main",
+					"name": "pages.Main",
 					"defaultDiagram": true,
 					"ownedViews": [
 						{
@@ -62,7 +62,7 @@
 											"top": 558,
 											"width": 951,
 											"height": 13,
-											"text": "Common"
+											"text": "pages.Common"
 										},
 										{
 											"_type": "LabelView",
@@ -162,7 +162,7 @@
 											"top": 190,
 											"width": 471,
 											"height": 13,
-											"text": "Header"
+											"text": "pages.Header"
 										},
 										{
 											"_type": "LabelView",
@@ -275,7 +275,7 @@
 											"top": 222,
 											"width": 271,
 											"height": 13,
-											"text": "Addresses"
+											"text": "pages.Addresses"
 										},
 										{
 											"_type": "LabelView",
@@ -390,7 +390,7 @@
 											"top": 662,
 											"width": 135,
 											"height": 13,
-											"text": "Order"
+											"text": "pages.Order"
 										},
 										{
 											"_type": "LabelView",
@@ -501,7 +501,7 @@
 											"top": 662,
 											"width": 135,
 											"height": 13,
-											"text": "User"
+											"text": "pages.User"
 										},
 										{
 											"_type": "LabelView",
@@ -611,7 +611,7 @@
 											"top": 662,
 											"width": 87,
 											"height": 13,
-											"text": "Forgot"
+											"text": "pages.Forgot"
 										},
 										{
 											"_type": "LabelView",
@@ -721,7 +721,7 @@
 											"top": 662,
 											"width": 95,
 											"height": 13,
-											"text": "Register"
+											"text": "pages.Register"
 										},
 										{
 											"_type": "LabelView",
@@ -831,7 +831,7 @@
 											"top": 662,
 											"width": 87,
 											"height": 13,
-											"text": "Login"
+											"text": "pages.Login"
 										},
 										{
 											"_type": "LabelView",
@@ -941,7 +941,7 @@
 											"top": 662,
 											"width": 143,
 											"height": 13,
-											"text": "Main"
+											"text": "pages.Main"
 										},
 										{
 											"_type": "LabelView",
@@ -1054,7 +1054,7 @@
 											"top": 662,
 											"width": 319,
 											"height": 13,
-											"text": "Product"
+											"text": "pages.Product"
 										},
 										{
 											"_type": "LabelView",
@@ -1170,7 +1170,7 @@
 											"top": 662,
 											"width": 407,
 											"height": 13,
-											"text": "Search"
+											"text": "pages.Search"
 										},
 										{
 											"_type": "LabelView",
@@ -1304,7 +1304,7 @@
 											"top": 662,
 											"width": 215,
 											"height": 13,
-											"text": "Cart"
+											"text": "pages.Cart"
 										},
 										{
 											"_type": "LabelView",
@@ -1437,7 +1437,7 @@
 											"top": -96,
 											"width": 80.9072265625,
 											"height": 13,
-											"text": "(from Header)"
+											"text": "(from pages.Header)"
 										},
 										{
 											"_type": "LabelView",
@@ -2719,7 +2719,7 @@
 											"top": 48,
 											"width": 91.00634765625,
 											"height": 13,
-											"text": "(from Common)"
+											"text": "(from pages.Common)"
 										},
 										{
 											"_type": "LabelView",
@@ -2905,7 +2905,7 @@
 											"top": 48,
 											"width": 91.00634765625,
 											"height": 13,
-											"text": "(from Common)"
+											"text": "(from pages.Common)"
 										},
 										{
 											"_type": "LabelView",
@@ -4371,7 +4371,7 @@
 											"top": -80,
 											"width": 83.07177734375,
 											"height": 13,
-											"text": "(from Product)"
+											"text": "(from pages.Product)"
 										},
 										{
 											"_type": "LabelView",
@@ -5376,7 +5376,7 @@
 											"top": 64,
 											"width": 83.07177734375,
 											"height": 13,
-											"text": "(from Product)"
+											"text": "(from pages.Product)"
 										},
 										{
 											"_type": "LabelView",
@@ -6108,7 +6108,7 @@
 											"top": 16,
 											"width": 83.07177734375,
 											"height": 13,
-											"text": "(from Product)"
+											"text": "(from pages.Product)"
 										},
 										{
 											"_type": "LabelView",
@@ -8026,7 +8026,7 @@
 											"top": 32,
 											"width": 91.00634765625,
 											"height": 13,
-											"text": "(from Common)"
+											"text": "(from pages.Common)"
 										},
 										{
 											"_type": "LabelView",
@@ -9542,7 +9542,7 @@
 											"top": 423,
 											"width": 76.01904296875,
 											"height": 13,
-											"text": "Header"
+											"text": "pages.Header"
 										},
 										{
 											"_type": "LabelView",
@@ -9557,7 +9557,7 @@
 											"top": -64,
 											"width": 80.9072265625,
 											"height": 13,
-											"text": "(from Header)"
+											"text": "(from pages.Header)"
 										},
 										{
 											"_type": "LabelView",
@@ -12864,7 +12864,7 @@
 											"top": -48,
 											"width": 80.9072265625,
 											"height": 13,
-											"text": "(from Header)"
+											"text": "(from pages.Header)"
 										},
 										{
 											"_type": "LabelView",
@@ -13053,7 +13053,7 @@
 											"top": -160,
 											"width": 80.9072265625,
 											"height": 13,
-											"text": "(from Header)"
+											"text": "(from pages.Header)"
 										},
 										{
 											"_type": "LabelView",
@@ -13242,7 +13242,7 @@
 											"top": -584,
 											"width": 80.9072265625,
 											"height": 13,
-											"text": "(from Header)"
+											"text": "(from pages.Header)"
 										},
 										{
 											"_type": "LabelView",
@@ -13431,7 +13431,7 @@
 											"top": 704,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Order)"
+											"text": "(from pages.Order)"
 										},
 										{
 											"_type": "LabelView",
@@ -13620,7 +13620,7 @@
 											"top": -240,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Order)"
+											"text": "(from pages.Order)"
 										},
 										{
 											"_type": "LabelView",
@@ -13809,7 +13809,7 @@
 											"top": 64,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Main)"
+											"text": "(from pages.Main)"
 										},
 										{
 											"_type": "LabelView",
@@ -13998,7 +13998,7 @@
 											"top": 472,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Main)"
+											"text": "(from pages.Main)"
 										},
 										{
 											"_type": "LabelView",
@@ -14187,7 +14187,7 @@
 											"top": 72,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Login)"
+											"text": "(from pages.Login)"
 										},
 										{
 											"_type": "LabelView",
@@ -14376,7 +14376,7 @@
 											"top": 48,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Login)"
+											"text": "(from pages.Login)"
 										},
 										{
 											"_type": "LabelView",
@@ -14565,7 +14565,7 @@
 											"top": 96,
 											"width": 86.67724609375,
 											"height": 13,
-											"text": "(from Register)"
+											"text": "(from pages.Register)"
 										},
 										{
 											"_type": "LabelView",
@@ -14754,7 +14754,7 @@
 											"top": 80,
 											"width": 86.67724609375,
 											"height": 13,
-											"text": "(from Register)"
+											"text": "(from pages.Register)"
 										},
 										{
 											"_type": "LabelView",
@@ -14943,7 +14943,7 @@
 											"top": 96,
 											"width": 75.841796875,
 											"height": 13,
-											"text": "(from Forgot)"
+											"text": "(from pages.Forgot)"
 										},
 										{
 											"_type": "LabelView",
@@ -15132,7 +15132,7 @@
 											"top": 96,
 											"width": 75.841796875,
 											"height": 13,
-											"text": "(from Forgot)"
+											"text": "(from pages.Forgot)"
 										},
 										{
 											"_type": "LabelView",
@@ -15321,7 +15321,7 @@
 											"top": 712,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from User)"
+											"text": "(from pages.User)"
 										},
 										{
 											"_type": "LabelView",
@@ -15510,7 +15510,7 @@
 											"top": 704,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from User)"
+											"text": "(from pages.User)"
 										},
 										{
 											"_type": "LabelView",
@@ -15699,7 +15699,7 @@
 											"top": -184,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Order)"
+											"text": "(from pages.Order)"
 										},
 										{
 											"_type": "LabelView",
@@ -15888,7 +15888,7 @@
 											"top": -128,
 											"width": 83.07177734375,
 											"height": 13,
-											"text": "(from Product)"
+											"text": "(from pages.Product)"
 										},
 										{
 											"_type": "LabelView",
@@ -16077,7 +16077,7 @@
 											"top": -64,
 											"width": 83.07177734375,
 											"height": 13,
-											"text": "(from Product)"
+											"text": "(from pages.Product)"
 										},
 										{
 											"_type": "LabelView",
@@ -16266,7 +16266,7 @@
 											"top": -192,
 											"width": 83.07177734375,
 											"height": 13,
-											"text": "(from Product)"
+											"text": "(from pages.Product)"
 										},
 										{
 											"_type": "LabelView",
@@ -16455,7 +16455,7 @@
 											"top": -208,
 											"width": 83.07177734375,
 											"height": 13,
-											"text": "(from Product)"
+											"text": "(from pages.Product)"
 										},
 										{
 											"_type": "LabelView",
@@ -16644,7 +16644,7 @@
 											"top": -16,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Search)"
+											"text": "(from pages.Search)"
 										},
 										{
 											"_type": "LabelView",
@@ -16833,7 +16833,7 @@
 											"top": 40,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Search)"
+											"text": "(from pages.Search)"
 										},
 										{
 											"_type": "LabelView",
@@ -17022,7 +17022,7 @@
 											"top": 40,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Search)"
+											"text": "(from pages.Search)"
 										},
 										{
 											"_type": "LabelView",
@@ -17211,7 +17211,7 @@
 											"top": 56,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Search)"
+											"text": "(from pages.Search)"
 										},
 										{
 											"_type": "LabelView",
@@ -17398,7 +17398,7 @@
 											"left": 1448,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Search)"
+											"text": "(from pages.Search)"
 										},
 										{
 											"_type": "LabelView",
@@ -17584,7 +17584,7 @@
 											"top": 24,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Search)"
+											"text": "(from pages.Search)"
 										},
 										{
 											"_type": "LabelView",
@@ -17773,7 +17773,7 @@
 											"top": -8,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Search)"
+											"text": "(from pages.Search)"
 										},
 										{
 											"_type": "LabelView",
@@ -17960,7 +17960,7 @@
 											"top": -16,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Search)"
+											"text": "(from pages.Search)"
 										},
 										{
 											"_type": "LabelView",
@@ -18134,7 +18134,7 @@
 											"top": 919,
 											"width": 49.11181640625,
 											"height": 13,
-											"text": "Product"
+											"text": "pages.Product"
 										},
 										{
 											"_type": "LabelView",
@@ -18149,7 +18149,7 @@
 											"top": 48,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Main)"
+											"text": "(from pages.Main)"
 										},
 										{
 											"_type": "LabelView",
@@ -18338,7 +18338,7 @@
 											"top": 296,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Search)"
+											"text": "(from pages.Search)"
 										},
 										{
 											"_type": "LabelView",
@@ -18527,7 +18527,7 @@
 											"top": -24,
 											"width": 99.68994140625,
 											"height": 13,
-											"text": "(from Addresses)"
+											"text": "(from pages.Addresses)"
 										},
 										{
 											"_type": "LabelView",
@@ -18716,7 +18716,7 @@
 											"top": -24,
 											"width": 99.68994140625,
 											"height": 13,
-											"text": "(from Addresses)"
+											"text": "(from pages.Addresses)"
 										},
 										{
 											"_type": "LabelView",
@@ -18905,7 +18905,7 @@
 											"top": 56,
 											"width": 99.68994140625,
 											"height": 13,
-											"text": "(from Addresses)"
+											"text": "(from pages.Addresses)"
 										},
 										{
 											"_type": "LabelView",
@@ -19094,7 +19094,7 @@
 											"top": 48,
 											"width": 99.68994140625,
 											"height": 13,
-											"text": "(from Addresses)"
+											"text": "(from pages.Addresses)"
 										},
 										{
 											"_type": "LabelView",
@@ -19283,7 +19283,7 @@
 											"top": 136,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Cart)"
+											"text": "(from pages.Cart)"
 										},
 										{
 											"_type": "LabelView",
@@ -19472,7 +19472,7 @@
 											"top": 80,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Cart)"
+											"text": "(from pages.Cart)"
 										},
 										{
 											"_type": "LabelView",
@@ -19661,7 +19661,7 @@
 											"top": 56,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Cart)"
+											"text": "(from pages.Cart)"
 										},
 										{
 											"_type": "LabelView",
@@ -19850,7 +19850,7 @@
 											"top": 80,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Cart)"
+											"text": "(from pages.Cart)"
 										},
 										{
 											"_type": "LabelView",
@@ -20039,7 +20039,7 @@
 											"top": -64,
 											"width": 80.9072265625,
 											"height": 13,
-											"text": "(from Header)"
+											"text": "(from pages.Header)"
 										},
 										{
 											"_type": "LabelView",
@@ -20225,7 +20225,7 @@
 											"top": -112,
 											"width": 80.9072265625,
 											"height": 13,
-											"text": "(from Header)"
+											"text": "(from pages.Header)"
 										},
 										{
 											"_type": "LabelView",
@@ -20953,7 +20953,7 @@
 											"font": "Arial;13;0",
 											"width": 80.9072265625,
 											"height": 13,
-											"text": "(from Header)"
+											"text": "(from pages.Header)"
 										},
 										{
 											"_type": "LabelView",
@@ -21387,7 +21387,7 @@
 											"top": 855,
 											"width": 49.11181640625,
 											"height": 13,
-											"text": "Product"
+											"text": "pages.Product"
 										},
 										{
 											"_type": "LabelView",
@@ -21402,7 +21402,7 @@
 											"top": 564,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Main)"
+											"text": "(from pages.Main)"
 										},
 										{
 											"_type": "LabelView",
@@ -22106,7 +22106,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Cart",
+					"name": "pages.Cart",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -22267,7 +22267,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Search",
+					"name": "pages.Search",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -22576,7 +22576,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Product",
+					"name": "pages.Product",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -22835,7 +22835,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Main",
+					"name": "pages.Main",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -22945,7 +22945,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFuOPd33jw7VjA="
 							},
-							"name": "Product",
+							"name": "pages.Product",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -23013,7 +23013,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Login",
+					"name": "pages.Login",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23084,7 +23084,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Register",
+					"name": "pages.Register",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23155,7 +23155,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Forgot",
+					"name": "pages.Forgot",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23226,7 +23226,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "User",
+					"name": "pages.User",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23297,7 +23297,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Order",
+					"name": "pages.Order",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23434,7 +23434,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Addresses",
+					"name": "pages.Addresses",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23610,7 +23610,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Header",
+					"name": "pages.Header",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23618,7 +23618,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFuORTTXpyGhTw="
 							},
-							"name": "Header",
+							"name": "pages.Header",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -24214,7 +24214,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Common",
+					"name": "pages.Common",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
