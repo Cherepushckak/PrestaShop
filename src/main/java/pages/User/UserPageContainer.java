@@ -3,7 +3,7 @@ package pages.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import Tools.WebDriver;
+import tools.WebDriver;
 
 /**
  * 
