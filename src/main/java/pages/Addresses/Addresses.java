@@ -3,15 +3,16 @@ package pages.Addresses;
 /**
  * 
  */
-public abstract class AAddresses {
+public class Addresses {
 
+	
     /**
      * Default constructor
      */
-    public AAddresses() {
+    public Addresses() {
+    	
     }
-
-
-
-
+    
+    
+    
 }
