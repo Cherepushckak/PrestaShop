@@ -1,14 +1,8 @@
-<<<<<<< HEAD:src/main/java/Header/LogUserInfo.java
-package Header;
+package pages.Header;
 
+import tools.WebDriver ;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import
-
-import java.util.*;
-=======
-package pages.Header;
->>>>>>> 094937e35fd9cbf05a8ff92fda8d44e3c701e858:src/main/java/pages/Header/LogUserInfo.java
 
 /**
  *
@@ -20,21 +14,17 @@ public class LogUserInfo {
      */
     private WebElement signOut;
 
-<<<<<<< HEAD:src/main/java/Header/LogUserInfo.java
     /**
      * shows name of the user on Header
      */
-=======
-    /** shows name of the user on pages.Header */
->>>>>>> 094937e35fd9cbf05a8ff92fda8d44e3c701e858:src/main/java/pages/Header/LogUserInfo.java
     private WebElement userAccount;
 
     /**
      * Default constructor
      */
     public LogUserInfo() {
-        signOut = driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
-        userAccount = driver.findElement(By.cssSelector(".account"));
+        signOut = WebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
+        userAccount = WebDriver.driver.findElement(By.cssSelector(".account"));
     }
 
     /**
@@ -43,7 +33,9 @@ public class LogUserInfo {
     public void clickSignOut() {
         signOut.click();
     }
-/** method find signOut element */
+
+
+    /** method find signOut element */
     public boolean findSignOut() {
         return signOut.isEnabled();
     }

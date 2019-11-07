@@ -1,15 +1,8 @@
-<<<<<<< HEAD:src/main/java/Header/LogCont.java
-package Header;
+package pages.Header;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.*;
-=======
-package pages.Header;
->>>>>>> 094937e35fd9cbf05a8ff92fda8d44e3c701e858:src/main/java/pages/Header/LogCont.java
+import tools.WebDriver;
 
 /**
  * Class contains webElement: logo and Contact Us
@@ -25,16 +18,16 @@ public class LogCont {
      * Default constructor
      */
     public LogCont() {
-        logo = driver.findElement(By.cssSelector("h1>a>img"));
-        contactUS = driver.findElement(By.cssSelector("#contact-link"));
+        logo = WebDriver.driver.findElement(By.cssSelector("h1>a>img"));
+        contactUS = WebDriver.driver.findElement(By.cssSelector("#contact-link"));
     }
 
-    /** method opens homePage */
+    /** method opens homePage          change for method that returns HomePage */
     public void clickLogo() {
         logo.click();
     }
 
-    /** method opens Contact Us form*/
+    /** method opens Contact Us form  change for method that returns contactUs page*/
     public void clickContactUS() {
         contactUS.click();
     }

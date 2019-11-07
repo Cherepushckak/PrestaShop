@@ -1,20 +1,14 @@
 package pages.Header;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-<<<<<<< HEAD:src/main/java/Header/HeaderFull.java
-import org.openqa.selenium.chrome.ChromeDriver;
-=======
 import tools.WebDriver;
->>>>>>> 094937e35fd9cbf05a8ff92fda8d44e3c701e858:src/main/java/pages/Header/HeaderFull.java
 
 /**
  * Class HeaderFull is a child class of pages.Header with it;s own fields: clothes, accessories,
  * art, searchField, language, cart, currency, logUserInfo, unlogUserInfo.
  */
 public class HeaderFull extends Header {
-    WebDriver driver = new ChromeDriver();
 
     private WebElement clothes;
     private WebElement accessories;
@@ -35,8 +29,9 @@ public class HeaderFull extends Header {
      */
     public HeaderFull() {
         super();
-        checkLogUser();
-        ini
+        initLogUser();
+        initHeaderFull();
+
         /**
             if createUser()==true
                 logUserInfo = new LogUserInfo();
@@ -54,7 +49,7 @@ public class HeaderFull extends Header {
          */
     }
 
-    private boolean checkLogUser() {
+    private boolean initLogUser() {
 
         /**
          if user logged
@@ -63,11 +58,9 @@ public class HeaderFull extends Header {
          return false
          */
         if (logUserInfo.findSignOut()) {
-
-        if (logUserInfo) {
-            this.logUserInfo;
-            return result;
+        //Have to test IT!!!!!!!!!11
         }
+        System.out.println();
             return true;
 
     }
@@ -77,12 +70,12 @@ public class HeaderFull extends Header {
     }
 
     /** Method for constructor, creates part of the HeaderFull Object*/
-    public void initHeaderFull () {
-        searchField = driver.findElement(By.cssSelector(".ui-autocomplete-input"));
-        searchButton = driver.findElement(By.xpath("//button[@type='submit']"));
-        language = driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
-        currency = driver.findElement(By.cssSelector("#currency-selector-label"));
-        cart = driver.findElement(By.cssSelector(".header"));
+    public void initHeaderFull() {
+        searchField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
+        searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
+        language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
+        currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
+        cart = WebDriver.driver.findElement(By.cssSelector(".header"));
         searchProductField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
         searchProductButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
         language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
