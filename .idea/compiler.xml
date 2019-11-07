@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+<<<<<<< HEAD
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -14,5 +15,10 @@
 >>>>>>> fef6b39acf78ad7e2b0ac64b8aca5d185fe04075
       </profile>
     </annotationProcessing>
+=======
+    <bytecodeTargetLevel>
+      <module name="441" target="1.6" />
+    </bytecodeTargetLevel>
+>>>>>>> 2c6d5d658a19a6860dded2a4f22dedd6913b6edf
   </component>
 </project>
