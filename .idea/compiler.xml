@@ -2,11 +2,15 @@
 <project version="4">
   <component name="CompilerConfiguration">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8934066106848ef50b662a0bb9ec60d13ab3a1d1
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
 <<<<<<< HEAD
         <module name="441" />
 =======
@@ -16,8 +20,14 @@
       </profile>
     </annotationProcessing>
 =======
+=======
+        <module name="PrestaShop" />
+      </profile>
+    </annotationProcessing>
+>>>>>>> 8934066106848ef50b662a0bb9ec60d13ab3a1d1
     <bytecodeTargetLevel>
       <module name="441" target="1.6" />
+      <module name="PrestaShop" target="1.6" />
     </bytecodeTargetLevel>
 >>>>>>> 2c6d5d658a19a6860dded2a4f22dedd6913b6edf
   </component>
