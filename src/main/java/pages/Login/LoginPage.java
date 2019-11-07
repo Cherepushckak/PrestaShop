@@ -1,5 +1,7 @@
 package pages.Login;
 
+import Common.APageParent;
+
 /**
  * 
  */
