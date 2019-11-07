@@ -79,6 +79,7 @@ local.properties
 
 **/*.iml
 .idea/
+.idea/*.xml
 .idea_modules/
 
 # JIRA plugin
