@@ -9,7 +9,7 @@ import Tools.WebDriver;
  * If you need to click on path element,
  * use method clickElement, with int argument
  * use this temptale: Home / Clothes / Category
- *                     ^        ^         ^ 
+ *                     ^        ^         ^
  *                     0        1         2
  */
 public class PagePath {
