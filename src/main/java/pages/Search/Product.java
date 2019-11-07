@@ -1,6 +1,5 @@
 package pages.Search;
 
-import Tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
