@@ -29,7 +29,6 @@ public class LoginForm {
 		emailClick ().sendKeys ( email );
 		passwordClick ().sendKeys ( password );
 		
-		
 	}
 	
 	public void initLogin () {
