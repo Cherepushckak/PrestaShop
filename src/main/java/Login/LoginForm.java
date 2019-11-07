@@ -16,10 +16,6 @@ public class LoginForm {
 	private WebElement signIn;
 	private WebElement noAccount;
 	
-	
-	/**
-	 * Default constructor
-	 */
 	public LoginForm () {
 		initLogin ();
 	}
