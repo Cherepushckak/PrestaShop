@@ -7,12 +7,14 @@ import pages.Common.APageParent;
  */
 public class UserPage extends APageParent {
 
-    /**
-     * Default constructor
-     */
-    public UserPage() {
-    }
-
-
-
+	// Fields
+	public UserPageContainer userPageContainer;
+	
+	/**
+	 * Default constructor
+	 */
+	public UserPage() {
+		UserPageContainer userPageContainer = new UserPageContainer();
+	}
+	
 }
