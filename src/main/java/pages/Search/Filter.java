@@ -3,12 +3,12 @@ package pages.Search;
 /**
  * 
  */
-public abstract class AFilter {
+public class Filter {
 
     /**
      * Default constructor
      */
-    public AFilter() {
+    public Filter() {
     }
 
 

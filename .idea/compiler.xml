@@ -7,10 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="PrestaShop" />
+<<<<<<< HEAD
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="PrestaShop" target="1.6" />
     </bytecodeTargetLevel>
+=======
+        <module name="441" />
+      </profile>
+    </annotationProcessing>
+>>>>>>> d6140825393efd2fcfb2cb4a4140f54633505faa
   </component>
 </project>

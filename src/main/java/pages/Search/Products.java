@@ -3,12 +3,12 @@ package pages.Search;
 /**
  * 
  */
-public abstract class AProducts {
+public class Products {
 
     /**
      * Default constructor
      */
-    public AProducts() {
+    public Products() {
     }
 
 
