@@ -1,5 +1,6 @@
 package pages.Search;
 
+import Tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -7,6 +8,10 @@ import org.openqa.selenium.WebElement;
  *
  */
 public class Product {
+    /**
+     * container of one product
+     */
+    private WebElement productContainer;
     /**
      * name of product
      */
@@ -16,7 +21,8 @@ public class Product {
     /**
      * Default constructor
      */
-    public Product() {
+    public Product(WebElement productContainer) {
+        this.productContainer = productContainer;
         initProduct();
     }
 
@@ -25,18 +31,36 @@ public class Product {
      */
 
     public void initProduct() {
-        this.name = driver.findElement(By.cssSelector(".h3.product-title>a"));
+        name = productContainer.findElement(By.cssSelector(".h3.product-title>a"));
     }
+
+    /**
+     * getter for productContainer
+     */
+
+    public WebElement getProductContainer() {
+        return productContainer;
+    }
+
+    /**
+     * name
+     */
+
+    //getter
 
     public WebElement getName() {
         return name;
     }
 
-    public void setName(WebElement name) {
-        this.name = name;
-    }
+    //name click
 
     public void clickProductName() {
         name.click();
+    }
+
+    //get name in String format
+
+    public String getNameProductText () {
+        return getName().getText();
     }
 }
