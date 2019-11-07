@@ -81,6 +81,7 @@ local.properties
 .idea/
 .idea/*.xml
 .idea_modules/
+.idea/misc.xml
 
 # JIRA plugin
 atlassian-ide-plugin.xml
