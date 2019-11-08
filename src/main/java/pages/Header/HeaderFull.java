@@ -80,11 +80,7 @@ public class HeaderFull extends Header {
         searchProductButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
         language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
         currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
-<<<<<<< HEAD
-        //desktop_user_info = WebDriver.driver.findElement(By.cssSelector(".aHS-bnu>div:nth-child(2)>span>a", "#_desktop_user_info"));
-=======
         desktop_user_info = WebDriver.driver.findElement(By.cssSelector("#_desktop_user_info>div>a>span"));
->>>>>>> c8c3d04ea0da21a5b47aae7a403b8dcc6edb4745
         cart = WebDriver.driver.findElement(By.cssSelector(".header"));
 
     }

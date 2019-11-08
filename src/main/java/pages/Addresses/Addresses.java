@@ -16,7 +16,7 @@ public class Addresses {
     public Addresses() {
     	ArrayList<Addresses> addresses = new ArrayList<Addresses>();
     	
-    	addresses.add();
+    	// addresses.add();
     }
     
     

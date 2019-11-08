@@ -1,5 +1,7 @@
 package pages.Forgot;
 
+import pages.Common.APageParent;
+
 /**
  * 
  */

@@ -2,7 +2,7 @@ package pages.Common;
 
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
-import Tools.WebDriver;
+import tools.WebDriver;
 
 
 /**

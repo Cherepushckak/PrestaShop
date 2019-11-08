@@ -1,5 +1,7 @@
 package pages.Product;
 
+import pages.Common.APageParent;
+
 /**
  * 
  */

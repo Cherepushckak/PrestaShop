@@ -1,5 +1,7 @@
 package pages.Header;
 
+import org.openqa.selenium.WebElement;
+
 /**
  * Currency:  EUR, UAH, USD
  */
