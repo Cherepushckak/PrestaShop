@@ -1,9 +1,8 @@
-package pages.Search;
+package main.java.pages.Search;
 
 import org.openqa.selenium.WebElement;
 import tools.WebDriver;
 import java.util.ArrayList;
-
 /**
  * 
  */
@@ -19,6 +18,9 @@ public class Categories {
 
         ArrayList<Category> temp;
 
+        for (WebElement c: WebDriver.driver.findElementsByXPath("//li[@data-depth='0']")) {
+            categories.add(new Category(c));
+        }
         //categories = (ArrayList<WebElement>) WebDriver.driver.findElementsByXPath("//li[@data-depth=0]/a");
     }
 
