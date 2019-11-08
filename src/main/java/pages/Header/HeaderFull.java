@@ -83,6 +83,7 @@ public class HeaderFull extends Header {
 //    private boolean checkCart() {
 //        boolean result;
 //        if (cart.isEnabled())
+
 //            return result;
 //    }
 
