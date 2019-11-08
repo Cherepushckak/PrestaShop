@@ -1,6 +1,7 @@
-package pages.Login;
+package main.java.pages.Login;
 
-import Common.APageParent;
+
+import main.java.pages.Common.APageParent;
 
 /**
  * 

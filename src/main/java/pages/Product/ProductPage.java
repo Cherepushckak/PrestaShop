@@ -1,9 +1,9 @@
-package pages.Product;
+package main.java.pages.Product;
 
+import main.java.pages.Common.APageParent;
+import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import pages.Common.APageParent;
-import tools.WebDriver;
 
 /**
  *

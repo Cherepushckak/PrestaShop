@@ -1,4 +1,4 @@
-package pages.Product;
+package main.java.pages.Product;
 
 /**
  * 

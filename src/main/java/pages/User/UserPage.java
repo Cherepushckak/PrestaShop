@@ -1,6 +1,6 @@
-package pages.User;
+package main.java.pages.User;
 
-import pages.Common.APageParent;
+import main.java.pages.Common.APageParent;
 
 /**
  * 

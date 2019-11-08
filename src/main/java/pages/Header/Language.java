@@ -1,8 +1,9 @@
-package pages.Header;
+package main.java.pages.Header;
 
+import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import tools.WebDriver;
+
 
 /**
  *

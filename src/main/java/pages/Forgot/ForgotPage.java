@@ -1,4 +1,6 @@
-package pages.Forgot;
+package main.java.pages.Forgot;
+
+import main.java.pages.Common.APageParent;
 
 /**
  * 

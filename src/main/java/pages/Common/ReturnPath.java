@@ -1,4 +1,4 @@
-package pages.Common;
+package main.java.pages.Common;
 
 /**
  * 

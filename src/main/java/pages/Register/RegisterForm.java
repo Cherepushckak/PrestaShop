@@ -1,16 +1,16 @@
-package pages.Register;
+package main.java.pages.Register;
 
-import data.Title;
-import data.User;
+import main.java.data.Title;
+import main.java.data.User;
+import main.java.pages.Main.MainPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pages.Main.MainPage;
+
 
 public class RegisterForm {
 
     private WebDriver driver;
-
     private WebElement logInInstead;
     private WebElement titleMr;
     private WebElement titleMrs;

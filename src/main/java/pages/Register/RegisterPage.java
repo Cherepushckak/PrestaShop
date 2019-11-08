@@ -1,7 +1,6 @@
-package pages.Register;
+package main.java.pages.Register;
 
-import pages.Common.APageParent;
-
+import main.java.pages.Common.APageParent;
 import org.openqa.selenium.WebDriver;
 
 public class RegisterPage extends APageParent {

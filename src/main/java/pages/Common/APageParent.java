@@ -1,6 +1,7 @@
-package pages.Common;
+package main.java.pages.Common;
 
-import pages.Header.*;
+import main.java.pages.Header.Header;
+import main.java.pages.Header.HeaderFull;
 
 /**
  *

@@ -1,4 +1,4 @@
-package pages.Addresses;
+package main.java.pages.Addresses;
 
 import java.util.ArrayList;
 
@@ -13,11 +13,11 @@ public class Addresses {
     /**
      * Default constructor
      */
-    public Addresses() {
-    	ArrayList<Addresses> addresses = new ArrayList<Addresses>();
-    	
-    	addresses.add();
-    }
+//    public Addresses() {
+//    	ArrayList<Addresses> addresses = new ArrayList<Addresses>();
+//
+//    	addresses.add();
+//    }
     
     
     
