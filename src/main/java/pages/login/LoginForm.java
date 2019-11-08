@@ -1,6 +1,5 @@
 package main.java.pages.login;
 
-
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -35,33 +34,48 @@ public class LoginForm {
     public void initLogin () {
         WebDriver webDriver = new WebDriver ();
         webDriver.driver.get ( "http://3.124.147.74/index.php?controller=authentication&back=my-account" );
-        writeDefaultCredantional ();
-        showClick ();
+//		writeDefaultCredantional ();
+//		showClick ();
+//		signInClick ();
+        forgotPasswordClick ();
     }
     
     public WebElement emailClick () {
-        WebElement clickEmail = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+        email = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
                 "div:nth-child(2) input" ) );
-        clickEmail.click ();
-        return clickEmail;
+        email.click ();
+        return email;
     }
     
     public WebElement passwordClick () {
-        WebElement clickPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+        password = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
                 "div:nth-child(3) > div.col-md-6 > div > input" ) );
-        clickPassword.click ();
-        return clickPassword;
+        password.click ();
+        return password;
     }
     
     public WebElement showClick (  ){
-        WebElement clickShow = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+        show = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
                 "div:nth-child(3) > div.col-md-6 > div > span > button" ) );
-        clickShow.click ();
-        return clickShow;
+        show.click ();
+        return show;
     }
     
     public void writeDefaultCredantional () {
         emailClick ().sendKeys ( "admin@gmail.com" );
         passwordClick ().sendKeys ( "admin" );
+    }
+    
+    public WebElement signInClick(){
+        signIn = WebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
+        signIn.click ();
+        return signIn;
+    }
+    
+    public ForgotPassword forgotPasswordClick(){
+        forgotPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > div.forgot-password > a" ) );
+        forgotPassword.click ();
+        ForgotPassword fPassword = new ForgotPassword ();
+        return fPassword;
     }
 }
