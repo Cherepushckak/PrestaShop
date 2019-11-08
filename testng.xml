@@ -9,6 +9,11 @@
                     <include name="test"/>
                 </methods>
             </class>
+            <class name="main.java.test.OlegLoginTest">
+                <methods>
+                    <include name="testLoginForm"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
