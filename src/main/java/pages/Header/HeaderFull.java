@@ -1,8 +1,10 @@
-package pages.Header;
+package main.java.pages.Header;
 
+import main.java.pages.*;
+import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import tools.WebDriver;
+
 
 /**
  * Class HeaderFull is a child class of pages.Header with it;s own fields: clothes, accessories,

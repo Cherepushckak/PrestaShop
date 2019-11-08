@@ -1,4 +1,4 @@
-package pages.Search;
+package main.java.pages.Search;
 
 /**
  * 

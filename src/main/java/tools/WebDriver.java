@@ -1,4 +1,4 @@
-package tools;
+package main.java.tools;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 

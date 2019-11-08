@@ -1,8 +1,11 @@
-package pages.Search;
+package main.java.pages.Search;
 
+
+import main.java.pages.Common.APageParent;
+import main.java.pages.Common.PagePath;
+import main.java.pages.Search.Categories;
 import org.openqa.selenium.WebElement;
-import pages.Common.APageParent;
-import pages.Common.PagePath;
+
 
 /**
  * 

@@ -1,4 +1,4 @@
-package pages.Forgot;
+package main.java.pages.Forgot;
 
 /**
  * 

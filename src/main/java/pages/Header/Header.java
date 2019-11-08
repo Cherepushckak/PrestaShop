@@ -1,4 +1,4 @@
-package pages.Header;
+package main.java.pages.Header;
 
 /**
  * Class pages.Header that contains instance of LogCont class

@@ -1,8 +1,9 @@
-package pages.Common;
+package main.java.pages.Common;
 
+import main.java.tools.WebDriver;
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
-import Tools.WebDriver;
+
 
 
 /**

@@ -1,11 +1,11 @@
-package pages.Main;
+package main.java.pages.Main;
 
 
 
 //import Tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import pages.Search.Product;
+import main.java.pages.Search.Product;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;

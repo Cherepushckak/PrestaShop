@@ -1,4 +1,6 @@
-package pages.Header;
+package main.java.pages.Header;
+
+import org.openqa.selenium.WebElement;
 
 /**
  * Currency:  EUR, UAH, USD

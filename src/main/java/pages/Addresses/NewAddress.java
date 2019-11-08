@@ -1,4 +1,4 @@
-package pages.Addresses;
+package main.java.pages.Addresses;
 
 /**
  * 

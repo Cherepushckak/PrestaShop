@@ -1,6 +1,6 @@
-package pages.Addresses;
+package main.java.pages.Addresses;
 
-import pages.Common.APageParent;
+import main.java.pages.Common.APageParent;
 
 /**
  * 

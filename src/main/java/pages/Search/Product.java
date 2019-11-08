@@ -1,8 +1,8 @@
-package pages.Search;
+package main.java.pages.Search;
 
+import main.java.pages.Product.ProductPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import pages.Product.ProductPage;
 
 /**
  *

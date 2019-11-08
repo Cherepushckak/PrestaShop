@@ -1,4 +1,6 @@
-package pages.Cart;
+package main.java.pages.Cart;
+
+import main.java.pages.Cart.AShopingCart;
 
 /**
  * 
