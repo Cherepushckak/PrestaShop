@@ -9,27 +9,28 @@ import org.openqa.selenium.WebElement;
  */
 public class LogUserInfo {
 
-    /**
-     * to sign out from the cabinet
-     */
+    /** to sign out from the cabinet */
     private WebElement signOut;
 
-    /**
-     * shows name of the user on Header
-     */
+    /**shows name of the user on Header */
     private WebElement userAccount;
 
-    /**
-     * Default constructor
-     */
+    /** Default constructor */
     public LogUserInfo() {
         signOut = WebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
         userAccount = WebDriver.driver.findElement(By.cssSelector(".account"));
     }
 
     /**
-     * Method sign out from the cabinet
+     * method create instance of LogUserInfo class;
+     * @return instance of LogUserInfo.
      */
+    public static LogUserInfo createLogUser(){
+        LogUserInfo logUserInfo = new LogUserInfo();
+        return logUserInfo;
+    }
+
+    /** Method sign out from the cabinet */
     public void clickSignOut() {
         signOut.click();
     }
