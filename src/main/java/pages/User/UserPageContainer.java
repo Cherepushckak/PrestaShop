@@ -1,9 +1,9 @@
-package pages.User;
+package main.java.pages.User;
 
+import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import tools.WebDriver;
 
 /**
  * 

@@ -1,4 +1,6 @@
-package pages.Main;
+package main.java.pages.Main;
+
+import main.java.pages.Common.APageParent;
 
 /**
  * 

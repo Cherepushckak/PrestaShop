@@ -1,7 +1,6 @@
 package main.java.pages.Search;
 
 import org.openqa.selenium.WebElement;
-import tools.WebDriver;
 
 import java.util.ArrayList;
 

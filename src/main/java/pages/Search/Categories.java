@@ -1,15 +1,20 @@
 package main.java.pages.Search;
 
+import main.java.tools.WebDriver;
 import org.openqa.selenium.WebElement;
-import tools.WebDriver;
 import java.util.ArrayList;
+<<<<<<< HEAD
+=======
+import java.util.Locale;
+
+>>>>>>> c5217616128c234952f78025e319a8de3d33d7b2
 /**
  * 
  */
 public class Categories {
 
     private WebElement categoryName;
-    private ArrayList<Category> categories;
+    private ArrayList<Locale.Category> categories;
     /**
      * Default constructor
      */

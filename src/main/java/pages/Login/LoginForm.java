@@ -1,7 +1,7 @@
-package pages.Login;
+package main.java.pages.Login;
 
-import tools.WebDriver;
 
+import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

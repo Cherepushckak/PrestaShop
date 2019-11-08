@@ -1,4 +1,4 @@
-package pages.Login;
+package main.java.pages.Login;
 
 import org.openqa.selenium.WebElement;
 
