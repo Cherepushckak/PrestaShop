@@ -55,12 +55,12 @@ public class Address {
 		this.allFieldsAddress = allFieldsAddress;
 	}
 	
-	// Click 'Update' button
+	// Click on 'Update' button
     public void updateClick() {
     	updateButton.click();
     }
     
-	// Click 'Delete' button
+	// Click on 'Delete' button
     public void deleteClick() {
     	deleteButton.click();
     }
