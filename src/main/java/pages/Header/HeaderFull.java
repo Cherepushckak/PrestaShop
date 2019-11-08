@@ -18,11 +18,11 @@ public class HeaderFull extends Header {
     private WebElement language;
     private WebElement cart;
     private WebElement currency;
-    private WebElement searchProductField;
-    private WebElement searchProductButton;
-    private WebElement desktop_user_info;
     private LogUserInfo logUserInfo;
     private UnlogUserInfo unlogUserInfo;
+    //private WebElement searchProductField;
+    //  private WebElement searchProductButton;
+    // private WebElement desktop_user_info;
 
     /**
      * Default constructor
@@ -33,10 +33,10 @@ public class HeaderFull extends Header {
         initHeaderFull();
 
         /**
-            if createUser()==true
-                logUserInfo = new LogUserInfo();
-            else
-                unlogUser = new UnlogUserInfo();
+         if createUser()==true
+         logUserInfo = new LogUserInfo();
+         else
+         unlogUser = new UnlogUserInfo();
          */
         /**
          * if checkCart()==true
@@ -49,58 +49,43 @@ public class HeaderFull extends Header {
          */
     }
 
-    private boolean initLogUser() {
 
-        /**
-         if user logged
-         return true
-         else
-         return false
-         */
+    private void initLogUser() {
+
         if (logUserInfo.findSignOut()) {
-        //Have to test IT!!!!!!!!!11
+            LogUserInfo.createLogUser();
         }
-        System.out.println();
-            return true;
-
-    }
-    public void createLogUser(){
-            logUserInfo = new LogUserInfo();
 
     }
 
-    /** Method for constructor, creates part of the HeaderFull Object*/
+    /**
+     * Method for constructor, creates part of the HeaderFull Object
+     */
     public void initHeaderFull() {
+
         searchField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
         searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
         language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
         currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
         cart = WebDriver.driver.findElement(By.cssSelector(".header"));
-        searchProductField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
-        searchProductButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
-        language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
-        currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
-<<<<<<< HEAD
-        //desktop_user_info = WebDriver.driver.findElement(By.cssSelector(".aHS-bnu>div:nth-child(2)>span>a", "#_desktop_user_info"));
-=======
-        desktop_user_info = WebDriver.driver.findElement(By.cssSelector("#_desktop_user_info>div>a>span"));
->>>>>>> c8c3d04ea0da21a5b47aae7a403b8dcc6edb4745
-        cart = WebDriver.driver.findElement(By.cssSelector(".header"));
+        clothes = WebDriver.driver.findElement(By.cssSelector("#category-3"));
+        accessories = WebDriver.driver.findElement(By.cssSelector("#category-6"));
+        art = WebDriver.driver.findElement(By.cssSelector("#category-9"));
 
     }
-//    private boolean checkCart(){
+
+
+    // cart = WebDriver.driver.findElement(By.cssSelector(".header"));
+//        searchProductField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
+//        searchProductButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
+    //desktop_user_info = WebDriver.driver.findElement(By.cssSelector(".aHS-bnu>div:nth-child(2)>span>a", "#_desktop_user_info"));
+
+//    private boolean checkCart() {
 //        boolean result;
-//        /**
-//         * if cart is empty
-//         *      return false;
-//         * else
-//         *      return true;
-//         */
-//        return result;
+//        if (cart.isEnabled())
+//            return result;
 //    }
 
-    /**
-     * Також потрібно буде пододавати відповідні функції натискання на вею елементи які записані у філдах
-     */
+
 
 }
