@@ -1,8 +1,8 @@
 package pages.Search;
 
-import Tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import pages.Product.ProductPage;
 
 /**
  *
@@ -54,8 +54,9 @@ public class Product {
 
     //name click
 
-    public void clickProductName() {
+    public ProductPage clickProductName() {
         name.click();
+        return new ProductPage();
     }
 
     //get name in String format
@@ -63,4 +64,5 @@ public class Product {
     public String getNameProductText () {
         return getName().getText();
     }
+
 }
