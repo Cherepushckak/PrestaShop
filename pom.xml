@@ -10,6 +10,7 @@
     <properties>
         <selenium.version>3.12.0</selenium.version>
         <testng.version>7.0.0</testng.version>
+        <maven.surefile.plugin.version>2.22.2</maven.surefile.plugin.version>
     </properties>
 
     <build>
