@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" name="PrestaShop/src/main
+    /java/test/test.java">
+        <classes>
+            <class name="main.java.test.test">
+                <methods>
+                    <include name="test"/>
+                </methods>
+            </class>
+            <class name="main.java.test.TestLoginForm">
+                <methods>
+                    <include name="testLoginForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
