@@ -1,26 +1,36 @@
 package main.java.test;
 
-import main.java.pages.header.UnlogUserInfo;
-import main.java.pages.login.LoginForm;
-import main.java.tools.WebDriver;
-import org.openqa.selenium.By;
+import main.java.data.User;
+import main.java.data.UserRepository;
+import main.java.pages.main.MainPage;
+import main.java.pages.register.RegisterPage;
+import main.java.tools.OurWebDriver;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class CreateNewUser {
+public class TestCreateNewUser {
 	@Test
-	public void testLoginForm(){
-		WebDriver webDriver = new WebDriver ();
-		UnlogUserInfo unlogUserInfo = new UnlogUserInfo ();
-		unlogUserInfo.clickSignIn ();
-		LoginForm loginForm = new LoginForm (  );
-		loginForm.writeDefaultCredantional ();
-		loginForm.signInClick ();
-		String expected = "Admin admin";
-		String actual = WebDriver.driver.findElement ( By.cssSelector ( "#_desktop_user_info > div >" +
-				" a.account > span" ) ).getText ();
-		assertEquals ( actual, expected );
+	public void testCreateNewUser() throws InterruptedException {
+
+		OurWebDriver webDriver = new OurWebDriver();
+		UserRepository userRepository = new UserRepository();
+
+		// method should be implemented at Main Page
+		// it click at SignIn button and return new SignIn page
+		//webDriver.driver.get("http://3.124.147.74/index.php?controller=authentication");
+
+
+		// method should be implemented at at SignIn page
+		// it should click at link "No account? Create one here" and should return new RegisterPage
+
+
+		// create new user Page
+		webDriver.driver.get("http://3.124.147.74/index.php?controller=authentication&create_account=1");
+		RegisterPage registerPage = new RegisterPage(webDriver.driver);
+		User user = userRepository.getUniqueUser();
+		MainPage mainPage = registerPage.regform.createAccountFor(user);
+
 		webDriver.closeDriver ();
 	}
 }

@@ -1,6 +1,6 @@
 package main.java.pages.header;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -64,14 +64,14 @@ public class HeaderFull extends Header {
      */
     public void initHeaderFull() {
 
-        searchField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
-        searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
-        language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
-        currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
-        cart = WebDriver.driver.findElement(By.cssSelector(".header"));
-        clothes = WebDriver.driver.findElement(By.cssSelector("#category-3"));
-        accessories = WebDriver.driver.findElement(By.cssSelector("#category-6"));
-        art = WebDriver.driver.findElement(By.cssSelector("#category-9"));
+        searchField = OurWebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
+        searchButton = OurWebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
+        language = OurWebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
+        currency = OurWebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
+        cart = OurWebDriver.driver.findElement(By.cssSelector(".header"));
+        clothes = OurWebDriver.driver.findElement(By.cssSelector("#category-3"));
+        accessories = OurWebDriver.driver.findElement(By.cssSelector("#category-6"));
+        art = OurWebDriver.driver.findElement(By.cssSelector("#category-9"));
 
     }
 

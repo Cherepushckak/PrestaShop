@@ -1,6 +1,6 @@
 package main.java.pages.header;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -29,7 +29,7 @@ public enum Language {
          * @return language webElement.
          */
         public WebElement getLanguage() {
-            language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
+            language = OurWebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
             return language;
         }
 
@@ -43,7 +43,7 @@ public enum Language {
          * @return arrow.
          */
         public WebElement getArrow() {
-            arrow = WebDriver.driver.findElement(By.xpath("//div[@id='_desktop_language_selector']//i[@class='material-icons expand-more']"));
+            arrow = OurWebDriver.driver.findElement(By.xpath("//div[@id='_desktop_language_selector']//i[@class='material-icons expand-more']"));
             return arrow;
         }
 
@@ -59,7 +59,7 @@ public enum Language {
          * @return english webElement.
          */
         public WebElement getEnglish() {
-            english = WebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='en']"));
+            english = OurWebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='en']"));
             return english;
         }
 
@@ -77,7 +77,7 @@ public enum Language {
          * @return ukrainian webElement.
          */
         public WebElement getUkrainian() {
-            ukrainian = WebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='uk']"));
+            ukrainian = OurWebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='uk']"));
             return ukrainian;
         }
 

@@ -1,6 +1,6 @@
 package main.java.pages.header;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -18,8 +18,8 @@ public class LogCont {
      * Default constructor
      */
     public LogCont() {
-        logo = WebDriver.driver.findElement(By.cssSelector("h1>a>img"));
-        contactUS = WebDriver.driver.findElement(By.cssSelector("#contact-link"));
+        logo = OurWebDriver.driver.findElement(By.cssSelector("h1>a>img"));
+        contactUS = OurWebDriver.driver.findElement(By.cssSelector("#contact-link"));
     }
 
     /** method opens homePage          change for method that returns HomePage */

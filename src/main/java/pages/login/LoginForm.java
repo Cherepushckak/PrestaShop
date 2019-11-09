@@ -1,6 +1,6 @@
 package main.java.pages.login;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -32,14 +32,14 @@ public class LoginForm {
     }
     
     public void initLogin () {
-        email = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+        email = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
                 "div:nth-child(2) input" ) );
-        password = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+        password = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
                 "div:nth-child(3) > div.col-md-6 > div > input" ) );
-        show = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+        show = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
                 "div:nth-child(3) > div.col-md-6 > div > span > button" ) );
-        signIn = WebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
-        forgotPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+        signIn = OurWebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
+        forgotPassword = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
                 "div.forgot-password > a" ) );
         
     }

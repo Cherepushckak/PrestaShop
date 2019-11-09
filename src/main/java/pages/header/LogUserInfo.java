@@ -1,6 +1,6 @@
 package main.java.pages.header;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -17,8 +17,8 @@ public class LogUserInfo {
 
     /** Default constructor */
     public LogUserInfo() {
-        signOut = WebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
-        userAccount = WebDriver.driver.findElement(By.cssSelector(".account"));
+        signOut = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
+        userAccount = OurWebDriver.driver.findElement(By.cssSelector(".account"));
     }
 
     /**
