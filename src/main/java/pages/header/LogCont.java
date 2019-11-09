@@ -18,7 +18,7 @@ public class LogCont {
      * Default constructor
      */
     public LogCont() {
-        logo = WebDriver.driver.findElement(By.cssSelector("h1>a>img"));
+        logo = WebDriver.driver.findElement(By.xpath("//header[@id='header']//div[@class='col-md-2 hidden-sm-down']"));
         contactUS = WebDriver.driver.findElement(By.cssSelector("#contact-link"));
     }
 
