@@ -2,6 +2,8 @@
 # Created by https://www.gitignore.io/api/java,linux,macos,maven,windows,eclipse,intellij
 # Edit at https://www.gitignore.io/?templates=java,linux,macos,maven,windows,eclipse,intellij
 
+
+
 ### Eclipse ###
 .metadata
 bin/
@@ -14,7 +16,6 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-TEST/
 
 # External tool builders
 .externalToolBuilders/
@@ -34,7 +35,7 @@ TEST/
 # Java annotation processor (APT)
 .factorypath
 
-# PDT-specific (PHP Development Tools)
+# PDT-specific (PHP Development tools)
 .buildpath
 
 # sbteclipse plugin
@@ -64,7 +65,7 @@ TEST/
 # Eclipse Core
 .project
 
-# JDT-specific (Eclipse Java Development Tools)
+# JDT-specific (Eclipse Java Development tools)
 .classpath
 
 # Annotation Processing
@@ -77,7 +78,12 @@ TEST/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 **/*.iml
+<<<<<<< HEAD
+=======
+.idea
+>>>>>>> 71af047aad97908ef10bd845fbb874bf7b08138d
 .idea/
+.idea/*.xml
 .idea_modules/
 
 # JIRA plugin
@@ -99,7 +105,7 @@ fabric.properties
 # BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# Mobile tools for Java (J2ME)
 .mtj.tmp/
 
 # Package Files #
