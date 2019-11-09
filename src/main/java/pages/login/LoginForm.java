@@ -32,31 +32,29 @@ public class LoginForm {
     }
     
     public void initLogin () {
-        WebDriver webDriver = new WebDriver ();
-        webDriver.driver.get ( "http://3.124.147.74/index.php?controller=authentication&back=my-account" );
-//		writeDefaultCredantional ();
-//		showClick ();
-//		signInClick ();
-        forgotPasswordClick ();
+        email = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+                "div:nth-child(2) input" ) );
+        password = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+                "div:nth-child(3) > div.col-md-6 > div > input" ) );
+        show = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+                "div:nth-child(3) > div.col-md-6 > div > span > button" ) );
+        signIn = WebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
+        forgotPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+                "div.forgot-password > a" ) );
+        
     }
     
     public WebElement emailClick () {
-        email = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-                "div:nth-child(2) input" ) );
         email.click ();
         return email;
     }
     
     public WebElement passwordClick () {
-        password = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-                "div:nth-child(3) > div.col-md-6 > div > input" ) );
         password.click ();
         return password;
     }
     
     public WebElement showClick (  ){
-        show = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-                "div:nth-child(3) > div.col-md-6 > div > span > button" ) );
         show.click ();
         return show;
     }
@@ -67,13 +65,11 @@ public class LoginForm {
     }
     
     public WebElement signInClick(){
-        signIn = WebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
         signIn.click ();
         return signIn;
     }
     
     public ForgotPassword forgotPasswordClick(){
-        forgotPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > div.forgot-password > a" ) );
         forgotPassword.click ();
         ForgotPassword fPassword = new ForgotPassword ();
         return fPassword;
