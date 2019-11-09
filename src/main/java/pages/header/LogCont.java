@@ -4,21 +4,22 @@ import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+
 /**
  * Class contains webElement: logo and Contact Us
  */
 public class LogCont {
 
     /** element 'MyStore' on the pages.Header */
-    public WebElement logo;
+    private WebElement logo;
 
     /** element 'ContactUS' on pages.Header*/
-    public WebElement contactUS;
+    private WebElement contactUS;
     /**
      * Default constructor
      */
     public LogCont() {
-        logo = WebDriver.driver.findElement(By.cssSelector("h1>a>img"));
+   //     logo = WebDriver.driver.findElement(By.cssSelector("#_desktop_logo > h1 > a"));
         contactUS = WebDriver.driver.findElement(By.cssSelector("#contact-link"));
     }
 

@@ -18,7 +18,7 @@ public class LogUserInfo {
     /** Default constructor */
     public LogUserInfo() {
         signOut = WebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
-        userAccount = WebDriver.driver.findElement(By.cssSelector(".account"));
+        userAccount = WebDriver.driver.findElement(By.cssSelector("#_desktop_user_info > div > a.account > span"));
     }
 
     /**
@@ -26,8 +26,8 @@ public class LogUserInfo {
      * @return instance of LogUserInfo.
      */
     public static LogUserInfo createLogUser(){
-        LogUserInfo logUserInfo = new LogUserInfo();
-        return logUserInfo;
+       
+        return new LogUserInfo ();
     }
 
     /** Method sign out from the cabinet */
@@ -45,5 +45,10 @@ public class LogUserInfo {
      */
     public void clickUserAccount() {
         userAccount.click();
+    }
+    
+    public String getUserAccount () {
+        String userName = userAccount.getText ();
+        return userName;
     }
 }

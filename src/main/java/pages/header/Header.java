@@ -5,16 +5,11 @@ package main.java.pages.header;
  */
 public class Header {
 
-    protected LogCont logCont;
+    private LogCont logCont;
     /**
      * Default constructor
      */
     public Header() {
         logCont = new LogCont();
     }
-
-
-
-
-
 }
