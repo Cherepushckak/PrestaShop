@@ -1,50 +1,40 @@
+/*
+ * main.java.pages.addresses;
+ *
+ * Version 1.0
+ *
+ * 09.11.2019
+ *
+ * Copyright: Made by Volodymyr Zyhmund
+ */
+
 package main.java.pages.addresses;
 
-import main.java.tools.WebDriver;
-import org.openqa.selenium.WebElement;
-import java.util.ArrayList;
+// Additional packages
 
-/**
- * Addresses class
- */
+import java.util.ArrayList;
+import org.openqa.selenium.WebElement;
+import main.java.tools.WebDriver;
+
+// Addresses class
 public class Addresses {
 
+    // Collection of addresses
     ArrayList<Address> addresses = new ArrayList<>();
 
     // Fields
-    private WebElement homeTopLink;
-    private WebElement yourAccountLink;
-    private String actualPageName;
     private WebElement addressesList;
     private WebElement createNewAddressLink;
-    private WebElement backToYourAccountLink;
-    private WebElement homeLowerLink;
 
     /**
      * Default constructor
      */
-    public Addresses() {
-        homeTopLink();
-        yourAccountLink();
-        actualPageName();
+    Addresses() {
         initAddressesList(addresses);
         createNewAddressLink();
-        backToYourAccountLink();
-        homeLowerLink();
     }
 
-    private void homeTopLink() {
-        homeTopLink = WebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[1]/a/span");
-    }
-
-    private void yourAccountLink() {
-        yourAccountLink = WebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[2]/a/span");
-    }
-
-    private void actualPageName() {
-        actualPageName = WebDriver.driver.findElementByXPath("//*[@id='main']/header/h1/text()").getText();
-    }
-
+    // Initialise list of addresses
     private void initAddressesList(ArrayList<Address> addresses) {
         addressesList = WebDriver.driver.findElementByXPath("//section[@id='content']");
         for (WebElement current : WebDriver.driver.findElementsByCssSelector("div.col-sm-6:nth-child(2)")) {
@@ -52,41 +42,31 @@ public class Addresses {
         }
     }
 
+    // Initialise '+ Create new address' link
     private void createNewAddressLink() {
         createNewAddressLink = WebDriver.driver.findElementByXPath("//section[@id='content']/div[4]/a");
     }
 
-    private void backToYourAccountLink() {
-        backToYourAccountLink = WebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[1]");
+    // Getters and setters
+    public ArrayList<Address> getAddresses() {
+        return addresses;
     }
 
-    private void homeLowerLink() {
-        homeLowerLink = WebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[2]");
+    public void setAddresses(ArrayList<Address> addresses) {
+        this.addresses = addresses;
     }
 
-    // Click 'Home top' link
-    public void homeTopClick() {
-        homeTopLink.click();
+    public WebElement getAddressesList() {
+        return addressesList;
     }
 
-    // Click 'Your account' link
-    public void yourAccountClick() {
-        yourAccountLink.click();
+    public void setAddressesList(WebElement addressesList) {
+        this.addressesList = addressesList;
     }
 
     // Click '+ Create new address' link
-    public void createNewAddressClick() {
+    private void createNewAddressClick() {
         createNewAddressLink.click();
     }
 
-    // Click '< Back to your account' link
-    public void backToYourAccountClick() {
-        backToYourAccountLink.click();
-    }
-
-    // Click 'Home Lower' link
-    public void homeClick() {
-        homeLowerLink.click();
-    }
-    
 }
