@@ -41,7 +41,7 @@ public class PopularProducts {
      * method to create list of products and initialization of allProducts field
      */
 
-    public void initPopularProducts () {
+    private void initPopularProducts() {
         allProducts = WebDriver.driver.findElement(By.cssSelector(".all-product-link.float-xs-left.float-md-right.h4"));
         products = new ArrayList<Product>();
         for (WebElement current : WebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {

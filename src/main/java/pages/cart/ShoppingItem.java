@@ -13,7 +13,7 @@ public class ShoppingItem {
      * container of one item
      */
 
-    WebElement shoppingItemContainer;
+    private WebElement shoppingItemContainer;
     /**
      * fields
      */
@@ -86,7 +86,7 @@ public class ShoppingItem {
     }
 
     public double getPriceValue() {
-        return Integer.parseInt(getPrice().getText().replace("₴", "").trim());
+        return Double.parseDouble(getPrice().getText().replace("₴", "").trim());
     }
 
     public int getQuantity () {
@@ -94,7 +94,7 @@ public class ShoppingItem {
     }
 
     public double getTotalPriceValue () {
-        return Integer.parseInt(getTotalPrice().getText().replace("₴", "").trim());
+        return Double.parseDouble(getTotalPrice().getText().replace("₴", "").trim());
     }
 
     public void clickIncreaseQuantity () {

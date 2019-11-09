@@ -26,7 +26,7 @@ public class ShoppingCart {
      * initialization method
      */
 
-    public void initShoppingCart () {
+    private void initShoppingCart() {
         continueShoppingButton = WebDriver.driver.findElement(By.cssSelector(".cart-grid-body>.label"));
         shoppingItemsList = new ArrayList<ShoppingItem>();
         for (WebElement current : WebDriver.driver.findElements(By.cssSelector(".cart-item"))) {
