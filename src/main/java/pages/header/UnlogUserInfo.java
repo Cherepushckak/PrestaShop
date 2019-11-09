@@ -1,5 +1,6 @@
 package main.java.pages.header;
 
+import main.java.pages.login.LoginForm;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,15 +25,8 @@ public class UnlogUserInfo {
     /**
      * method opens LoginForm method
      */
-    public void clickSignIn() {
+    public LoginForm clickSignIn() {
         signIn.click();
-        //////////  change method so it can return LoginForm page////////////
-//    public void clickSignIn() {
-//        LoginForm loginForm = new LoginForm();
-//        signIn.click();
-//        return loginForm.initLogin();
-//
-//    }
-
+        return new LoginForm ();
     }
 }
