@@ -1,12 +1,21 @@
+/**
+ * main.java.pages.addresses;
+ *
+ * Version 1.0
+ *
+ * 09.11.2019
+ *
+ * Copyright: Made by Volodymyr Zyhmund
+ */
+
 package main.java.pages.addresses;
 
+// Additional packages
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-/**
- * Address class
- */
+// Address class
 public class Address {
 
 	// Fields
@@ -16,16 +25,15 @@ public class Address {
 	private WebElement updateButton;
 	private WebElement deleteButton;
 
-	/**
-	 * Default constructor
-	 */
-	public Address(WebElement addressContainer) {
-		this.addressContainer = WebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
+	 // Default constructor
+	Address(WebElement addressContainer) {
+		this.addressContainer = addressContainer;
 		initAddress();
 	}
 
 	// Init address
-	public void initAddress() {
+	private void initAddress() {
+		addressContainer = WebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
 		alias = WebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/h4"));
 		allFieldsAddress = WebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
 		updateButton = WebDriver.driver.findElement(By.cssSelector(".address-footer>a:nth-child(1)"));
@@ -43,13 +51,9 @@ public class Address {
 	public void setAllFieldsAddress(WebElement allFieldsAddress) { this.allFieldsAddress = allFieldsAddress; }
 
 	// Click 'Update' button
-    public void updateClick() {
-    	updateButton.click();
-    }
+    public void updateClick() { updateButton.click(); }
     
 	// Click 'Delete' button
-    public void deleteClick() {
-    	deleteButton.click();
-    }
+    public void deleteClick() { deleteButton.click(); }
 
 }

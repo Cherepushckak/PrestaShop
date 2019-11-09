@@ -5,14 +5,17 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 
 /**
- * 
+ * Addresses class
  */
 public class Addresses {
+
+    ArrayList<Address> addresses = new ArrayList<>();
 
     // Fields
     private WebElement homeTopLink;
     private WebElement yourAccountLink;
     private String actualPageName;
+    private WebElement addressesList;
     private WebElement createNewAddressLink;
     private WebElement backToYourAccountLink;
     private WebElement homeLowerLink;
@@ -24,7 +27,6 @@ public class Addresses {
         homeTopLink();
         yourAccountLink();
         actualPageName();
-    	ArrayList<Address> addresses = new ArrayList<>();
         initAddressesList(addresses);
         createNewAddressLink();
         backToYourAccountLink();
@@ -44,6 +46,7 @@ public class Addresses {
     }
 
     private void initAddressesList(ArrayList<Address> addresses) {
+        addressesList = WebDriver.driver.findElementByXPath("//section[@id='content']");
         for (WebElement current : WebDriver.driver.findElementsByCssSelector("div.col-sm-6:nth-child(2)")) {
             addresses.add(new Address(current));
         }
