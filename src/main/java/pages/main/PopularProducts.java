@@ -2,9 +2,8 @@ package main.java.pages.main;
 
 
 
-//import Tools.WebDriver;
+import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import main.java.pages.search.Product;
 import org.openqa.selenium.WebElement;
 
@@ -20,15 +19,13 @@ public class PopularProducts {
      */
     private List<Product> products;
 
-    private WebDriver driver;
 
     private WebElement allProducts;
 
     /**
      * Default constructor
      */
-    public PopularProducts(WebDriver driver) {
-        this.driver = driver;
+    public PopularProducts() {
         initPopularProducts();
     }
 
@@ -44,10 +41,10 @@ public class PopularProducts {
      * method to create list of products and initialization of allProducts field
      */
 
-    public void initPopularProducts () {
-        allProducts = driver.findElement(By.cssSelector(".all-product-link.float-xs-left.float-md-right.h4"));
+    private void initPopularProducts() {
+        allProducts = WebDriver.driver.findElement(By.cssSelector(".all-product-link.float-xs-left.float-md-right.h4"));
         products = new ArrayList<Product>();
-        for (WebElement current : driver.findElements(By.cssSelector(".thumbnail-container"))) {
+        for (WebElement current : WebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
             products.add(new Product(current));
         }
 
