@@ -51,12 +51,13 @@ public class HeaderFull extends Header {
     }
 
 
-    private void initLogUser() {
-
-        if (logUserInfo.findSignOut()) {
-            LogUserInfo.createLogUser();
-        }
-
+    public LogUserInfo initLogUser() {
+//        Cause we testing up to our Test Cases we don`t need any conditions
+//        if (logUserInfo.findSignOut()) {
+//            logUserInfo.createLogUser();
+//        }
+        
+        return new LogUserInfo ();
     }
 
     /**
@@ -66,7 +67,7 @@ public class HeaderFull extends Header {
 
         searchField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
         searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
-        language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
+        language = WebDriver.driver.findElement(By.cssSelector("#_desktop_language_selector > div > div"));
         currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
         cart = WebDriver.driver.findElement(By.cssSelector(".header"));
         clothes = WebDriver.driver.findElement(By.cssSelector("#category-3"));
@@ -87,7 +88,4 @@ public class HeaderFull extends Header {
 
 //            return result;
 //    }
-
-
-
 }
