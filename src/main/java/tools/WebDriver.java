@@ -8,16 +8,11 @@ public class WebDriver {
     
     public WebDriver (){
         System.setProperty ( "webdriver.chrome.driver" ,
-<<<<<<< HEAD
-                "..\\test\\src\\main\\java\\data\\chromedriver.exe");
-        driver = new ChromeDriver ();
-=======
                 "src\\main\\java\\data\\chromedriver.exe" );
         driver = new ChromeDriver (  );
         driver.get ( startURL );
     }
     public void closeDriver(){
         driver.quit ();
->>>>>>> SET
     }
 }
