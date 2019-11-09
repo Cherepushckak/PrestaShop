@@ -1,6 +1,6 @@
 package main.java.pages.common;
 
-import main.java.tools.OurWebDriver;
+import main.java.tools.WebDriver;
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 
@@ -21,7 +21,7 @@ public class PagePath {
      * Default constructor
      */
     public PagePath() {
-        path = (ArrayList<WebElement>) OurWebDriver.driver.findElementsByXPath ("//nav[@class='breadcrumb hidden-sm-down']//a");
+        path = (ArrayList<WebElement>) WebDriver.driver.findElementsByXPath ("//nav[@class='breadcrumb hidden-sm-down']//a");
     }
 
     public void clickElement(int index){

@@ -4,7 +4,7 @@ import main.java.data.User;
 import main.java.data.UserRepository;
 import main.java.pages.main.MainPage;
 import main.java.pages.register.RegisterPage;
-import main.java.tools.OurWebDriver;
+import main.java.tools.WebDriver;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -13,7 +13,7 @@ public class TestCreateNewUser {
 	@Test
 	public void testCreateNewUser() throws InterruptedException {
 
-		OurWebDriver webDriver = new OurWebDriver();
+		WebDriver webDriver = new WebDriver();
 		UserRepository userRepository = new UserRepository();
 
 		// method should be implemented at Main Page
