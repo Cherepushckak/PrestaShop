@@ -30,7 +30,7 @@ public class Product {
      * method to init product fields
      */
 
-    public void initProduct() {
+    private void initProduct() {
         name = productContainer.findElement(By.cssSelector(".h3.product-title>a"));
     }
 
