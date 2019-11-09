@@ -8,7 +8,7 @@ public class WebDriver {
     
     public WebDriver (){
         System.setProperty ( "webdriver.chrome.driver" ,
-                "..\\test\\src\\main\\java\\data\\chromedriver.exe" );
+                "src\\main\\java\\data\\chromedriver.exe" );
         driver = new ChromeDriver (  );
         driver.get ( startURL );
     }
