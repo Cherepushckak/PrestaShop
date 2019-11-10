@@ -7,10 +7,10 @@ public class WebDriver {
 
     static public final String startURL = "http://3.124.147.74";  //Default URL for site
     
+
     public WebDriver (){
 
-
-       System.setProperty ( "webdriver.chrome.driver" ,
+        System.setProperty ( "webdriver.chrome.driver" ,
                 "src\\main\\java\\data\\chromedriver.exe" );
 
         driver = new ChromeDriver (  );
