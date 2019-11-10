@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class RegisterPage extends APageParent {
 
     WebDriver driver;
-    private RegisterForm regform;
+    public RegisterForm regform;
 
     /**
      * Default constructor

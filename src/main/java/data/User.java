@@ -95,4 +95,18 @@ public class User {
     public void setCheckboxSignUpNewsletter(Boolean checkboxSignUpNewsletter) {
         this.checkboxSignUpNewsletter = checkboxSignUpNewsletter;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "title=" + title +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", checkboxReceiveOffers=" + checkboxReceiveOffers +
+                ", checkboxSignUpNewsletter=" + checkboxSignUpNewsletter +
+                '}';
+    }
 }
