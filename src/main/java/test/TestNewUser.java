@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class TestCreateNewUser {
+public class TestNewUser {
 	@Test
 	public void testCreateNewUser() throws InterruptedException {
 
