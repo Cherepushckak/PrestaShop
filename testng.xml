@@ -11,13 +11,11 @@
                 </methods>
             </class>
 
-
             <class name="main.java.test.TestCreateNewUser">
                 <methods>
                     <include name="testCreateNewUser"/>
                 </methods>
             </class>
-
 
             <class name="main.java.test.TestLoginForm">
                 <methods>
