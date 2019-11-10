@@ -34,9 +34,19 @@ public class LoginForm {
 		return email;
 	}
 	
+	public WebElement writeEmailClick ( String email ) {
+		emailClick ().sendKeys ( email );
+		return this.email;
+	}
+	
 	public WebElement passwordClick () {
 		getPassword ().click ();
 		return password;
+	}
+	
+	public WebElement writePasswordClick ( String password ) {
+		passwordClick ().sendKeys ( password );
+		return this.password;
 	}
 	
 	public WebElement showClick () {
@@ -44,9 +54,9 @@ public class LoginForm {
 		return show;
 	}
 	
-	public UserPage writeDefaultCredantional () {
-		emailClick ().sendKeys ( "admin@gmail.com" );
-		passwordClick ().sendKeys ( "admin" );
+	public UserPage writeDefaultCredantials ( String email, String password ) {
+		writeEmailClick ( email );
+		writePasswordClick ( password );
 		signInClick ();
 		return new UserPage ();
 	}
