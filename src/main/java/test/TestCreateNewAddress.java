@@ -15,7 +15,8 @@ public class TestCreateNewAddress {
 
     @Test(priority = 1)
     public void createNewAddress() {
-        System.out.println("It WORKs! =D");
+        WebDriver webDriver = new WebDriver();
+
     }
 
     @Test(priority = 2)
