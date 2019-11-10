@@ -78,10 +78,8 @@ local.properties
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 **/*.iml
-<<<<<<< HEAD
-=======
 .idea
->>>>>>> 71af047aad97908ef10bd845fbb874bf7b08138d
+
 .idea/
 .idea/*.xml
 .idea_modules/
