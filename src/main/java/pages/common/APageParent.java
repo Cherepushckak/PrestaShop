@@ -8,8 +8,8 @@ import main.java.pages.header.HeaderFull;
  */
 public abstract class APageParent {
 
-    public HeaderFull headerFull;
-    protected Header header;
+    private HeaderFull headerFull;
+    private Header header;
     /**
      * Default constructor
      */
