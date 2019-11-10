@@ -28,7 +28,8 @@ public class UserPageContainer extends HeaderFull {
     	pageName = WebDriver.driver.findElementByXPath("//*[@id='main']/header/h1");
 
     	// This is 'Addresses' card-link on Your account page
-    	address = WebDriver.driver.findElementByXPath("//a[@id='addresses-link']");
+	    //Correct your address cause it doesn`t work
+    	//address = WebDriver.driver.findElementByXPath("//a[@id='addresses-link']");
     }
     
     // Check container label

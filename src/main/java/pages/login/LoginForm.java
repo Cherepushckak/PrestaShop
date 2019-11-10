@@ -9,77 +9,105 @@ import org.openqa.selenium.WebElement;
  *
  */
 public class LoginForm {
-    private WebElement email;
-    private WebElement password;
-    private WebElement show;
-    private WebElement forgotPassword;
-    private WebElement signIn;
-    private WebElement noAccount;
-    
-    
-    /**
-     * Default constructor
-     */
-    public LoginForm () {
-        initLogin ();
-    }
-    
-//    public LoginForm ( String email, String password ) {
-//        this.email = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-//                "div:nth-child(2) input" ) );
-//        this.password = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-//                "div:nth-child(3) > div.col-md-6 > div > input" ) );
-//        this.show = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-//                "div:nth-child(3) > div.col-md-6 > div > span > button" ) );
-//        this.signIn = WebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
-//        this.forgotPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-//                "div.forgot-password > a" ) );
-//        emailClick ().sendKeys ( email );
-//        passwordClick ().sendKeys ( password );
-//    }
-    
-    public void initLogin () {
-        email = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-                "div:nth-child(2) input" ) );
-        password = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-                "div:nth-child(3) > div.col-md-6 > div > input" ) );
-        show = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-                "div:nth-child(3) > div.col-md-6 > div > span > button" ) );
-        signIn = WebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
-        forgotPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-                "div.forgot-password > a" ) );
-        
-    }
-    
-    public WebElement emailClick () {
-        email.click ();
-        return email;
-    }
-    
-    public WebElement passwordClick () {
-        password.click ();
-        return password;
-    }
-    
-    public WebElement showClick (  ){
-        show.click ();
-        return show;
-    }
-    
-    public UserPage writeDefaultCredantional () {
-        emailClick ().sendKeys ( "admin@gmail.com" );
-        passwordClick ().sendKeys ( "admin" );
-        signInClick ();
-        return new UserPage();
-    }
-    
-    public void signInClick(){
-        signIn.click ();
-    }
-    
-    public ForgotPassword forgotPasswordClick(){
-        forgotPassword.click ();
-        ForgotPassword fPassword = new ForgotPassword ();
-        return fPassword;
-    }
+	private WebElement email;
+	private WebElement password;
+	private WebElement show;
+	private WebElement forgotPassword;
+	private WebElement signIn;
+	private WebElement noAccount;
+	
+	public LoginForm () {
+		initLogin ();
+	}
+	
+	public void initLogin () {
+		setEmail ();
+		setPassword ();
+		setForgotPassword ();
+		setNoAccount ();
+		setShow ();
+		setSignIn ();
+	}
+	
+	public WebElement emailClick () {
+		getEmail ().click ();
+		return email;
+	}
+	
+	public WebElement passwordClick () {
+		getPassword ().click ();
+		return password;
+	}
+	
+	public WebElement showClick () {
+		getShow ().click ();
+		return show;
+	}
+	
+	public UserPage writeDefaultCredantional () {
+		emailClick ().sendKeys ( "admin@gmail.com" );
+		passwordClick ().sendKeys ( "admin" );
+		signInClick ();
+		return new UserPage ();
+	}
+	
+	public void signInClick () {
+		getSignIn ().click ();
+	}
+	
+	public ForgotPassword forgotPasswordClick () {
+		getForgotPassword ().click ();
+		return new ForgotPassword ();
+	}
+	
+	public WebElement getEmail () {
+		return email;
+	}
+	
+	public WebElement getPassword () {
+		return password;
+	}
+	
+	public WebElement getShow () {
+		return show;
+	}
+	
+	public WebElement getForgotPassword () {
+		return forgotPassword;
+	}
+	
+	public WebElement getSignIn () {
+		return signIn;
+	}
+	
+	public WebElement getNoAccount () {
+		return noAccount;
+	}
+	
+	public void setEmail () {
+		email = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+				"div:nth-child(2) input" ) );
+	}
+	
+	public void setPassword () {
+		password = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+				"div:nth-child(3) > div.col-md-6 > div > input" ) );
+	}
+	
+	public void setShow () {
+		show = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+				"div:nth-child(3) > div.col-md-6 > div > span > button" ) );
+	}
+	
+	public void setForgotPassword () {
+		forgotPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+				"div.forgot-password > a" ) );
+	}
+	
+	public void setSignIn () {
+		signIn = WebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
+	}
+	
+	public void setNoAccount () {
+	}
 }
