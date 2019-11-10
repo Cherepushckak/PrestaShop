@@ -54,6 +54,7 @@ public class Address {
         this.phone = phone;
     }
 
+    // Getters and setters
     public String getAlias() {
         return alias;
     }
@@ -122,7 +123,5 @@ public class Address {
     public void setPhone(Integer phone) { this.phone = phone; }
 
     @Override
-    public String toString() {
-        return super.toString();
-    }
+    public String toString() { return super.toString(); }
 }

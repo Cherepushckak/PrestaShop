@@ -17,10 +17,10 @@ public class AddressRepository {
                 "",
                 79000,
                 "Lviv",
-                new String[]{"country.Ukraine"},
+                new String[]{"Ukraine"},
                 123456789);
 
-        address1 = new Address(
+        address2 = new Address(
                 "My Address Two",
                 "Marta",
                 "Zyhmund",
@@ -30,7 +30,7 @@ public class AddressRepository {
                 "",
                 79000,
                 "Lviv",
-                new String[]{"country.Ukraine"},
+                new String[]{"Ukraine"},
                 987654321);
     }
 

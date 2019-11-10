@@ -25,7 +25,7 @@ public class NewAddress {
     private WebElement lastName;
     private WebElement company;
     private WebElement vatNumber;
-    private WebElement addr;
+    private WebElement myAddress;
     private WebElement addressComplement;
     private WebElement zipPostalCode;
     private WebElement city;
@@ -49,7 +49,7 @@ public class NewAddress {
         lastName = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[3]/div[1]/input");
         company = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[4]/div[1]/input");
         vatNumber = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[5]/div[1]/input");
-        addr = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[6]/div[1]/input");
+        myAddress = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[6]/div[1]/input");
         addressComplement = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[7]/div[1]/input");
         zipPostalCode = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[8]/div[1]/input");
         city = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[9]/div[1]/input");
@@ -77,8 +77,8 @@ public class NewAddress {
     public WebElement getVatNumber() { return vatNumber; }
     public void setVatNumber(WebElement vatNumber) { this.vatNumber = vatNumber; }
 
-    public WebElement getAddr() { return addr; }
-    public void setAddr(WebElement addr) { this.addr = addr; }
+    public WebElement getMyAddress() { return myAddress; }
+    public void setMyAddress(WebElement myAddress) { this.myAddress = myAddress; }
 
     public WebElement getAddressComplement() { return addressComplement; }
     public void setAddressComplement(WebElement addressComplement) { this.addressComplement = addressComplement; }
@@ -96,7 +96,7 @@ public class NewAddress {
     public void setPhone(WebElement phone) { this.phone = phone; }
 
     // Click 'SAVE' button
-    private void saveClick() {
+    private void clickSave() {
         saveButton.click();
     }
 }
