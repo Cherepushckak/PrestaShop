@@ -1,7 +1,6 @@
 package main.java.test;
 
 import static org.testng.Assert.*;
-
 import main.java.pages.header.HeaderFull;
 import main.java.pages.header.LogUserInfo;
 import main.java.pages.header.UnlogUserInfo;

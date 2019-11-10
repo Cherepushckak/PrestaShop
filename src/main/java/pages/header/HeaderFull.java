@@ -45,18 +45,10 @@ public class HeaderFull extends Header {
          * else
          *      currency = null;
          */
-        /**
-         * Також потрібно буде прописати пошук оголошених вище філдів
-         */
     }
 
 
     public LogUserInfo initLogUser() {
-//        Cause we testing up to our Test Cases we don`t need any conditions
-//        if (logUserInfo.findSignOut()) {
-//            logUserInfo.createLogUser();
-//        }
-        
         return new LogUserInfo ();
     }
 
