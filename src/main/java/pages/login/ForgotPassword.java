@@ -14,29 +14,54 @@ public class ForgotPassword {
 	}
 	
 	public void initResentLink(){
-		emailAddressClick ();
-		sendResetLinkClick ();
-		backToLoginClick ();
+		setEmailAddress ();
+		setSendResetLink ();
+		setBackToLogin ();
 	}
 	
 	public WebElement emailAddressClick (){
-		emailAddress = WebDriver.driver.findElement ( By.cssSelector ( "#email" ) );
-		emailAddress.click ();
-		emailAddress.sendKeys ( "admin@gmail.com" );
+		getEmailAddress ().click ();
 		return emailAddress;
 	}
 	
-	public WebElement sendResetLinkClick (){
-		sendResetLink = WebDriver.driver.findElement ( By.cssSelector ( "#content > form > section > div > " +
-				"button.form-control-submit.btn.btn-primary.hidden-xs-down" ) );
-		sendResetLink.click ();
-		return sendResetLink;
+	public ForgotLoginMessage sendResetLinkClick (){
+		getSendResetLink ().click ();
+		return new ForgotLoginMessage ();
 	}
 	
 	public WebElement backToLoginClick(){
-		backToLogin = WebDriver.driver.findElement ( By.cssSelector ( "#main > footer > ul > li > a" ) );
-		backToLogin.click ();
+		getBackToLogin ().click ();
 		return backToLogin;
 	}
 	
+	public ForgotLoginMessage writeEmail(){
+		emailAddressClick ().sendKeys ( "admin@gmail.com" );
+		sendResetLinkClick ();
+		return new ForgotLoginMessage ();
+	}
+	
+	public WebElement getEmailAddress () {
+		return emailAddress;
+	}
+	
+	public void setEmailAddress (  ) {
+		emailAddress = WebDriver.driver.findElement ( By.cssSelector ( "#email" ) );
+	}
+	
+	public WebElement getSendResetLink () {
+		return sendResetLink;
+	}
+	
+	public void setSendResetLink (  ) {
+		sendResetLink = WebDriver.driver.findElement ( By.cssSelector ( "#content > form > section > div > " +
+				"button.form-control-submit.btn.btn-primary.hidden-xs-down" ) );
+	}
+	
+	public WebElement getBackToLogin () {
+		return backToLogin;
+	}
+	
+	public void setBackToLogin (  ) {
+		backToLogin = WebDriver.driver.findElement ( By.cssSelector ( "#main > footer > a" ) );
+	}
 }
