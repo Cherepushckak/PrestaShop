@@ -11,7 +11,6 @@
 package main.java.pages.addresses;
 
 // Additional packages
-
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -77,5 +76,4 @@ public class Address {
     private void deleteClick() {
         deleteButton.click();
     }
-
 }
