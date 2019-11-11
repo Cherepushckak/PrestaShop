@@ -1,13 +1,19 @@
 package main.java.test.TestNata;
 
+import main.java.pages.header.Header;
+import main.java.pages.header.HeaderFull;
 import main.java.pages.header.LogCont;
 
+import main.java.pages.main.MainPage;
+import main.java.pages.main.PopularProducts;
+import main.java.pages.search.Product;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -15,7 +21,6 @@ public class LogContTest {
 
     WebDriver webDriver = new WebDriver();
     LogCont logCont;
-    private WebElement runPage;
     private WebElement actual;
 
     @BeforeMethod
@@ -23,13 +28,12 @@ public class LogContTest {
         webDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         webDriver.driver.manage().window().maximize();
         logCont = new LogCont();
-        runPage = webDriver.driver.findElement(By.xpath("//div[@class='header-top']//img[@class='logo img-responsive']"));
     }
 
     @Test(priority = 1)
     public void clickContactUsTest() throws InterruptedException {
         //Act
-
+        //No ContactUs page!!!!!!!!!!
         logCont.clickContactUS();
         actual = webDriver.driver.findElement(By.cssSelector(".contact-form"));
 
@@ -38,19 +42,23 @@ public class LogContTest {
         System.out.println("contact us page is opened");
 
     }
+
     @Test(priority = 2)
     public void clickLogoTest() {
 
+        //Arrange
+        int expected = 8;
+
         //Act
-        logCont.clickLogo();
+        MainPage mainPage = new LogCont().clickLogo();
 
         //Assert
-        actual = webDriver.driver.findElement(By.cssSelector(".products"));
+        List actuallList = mainPage.getPopularProducts().getProducts();
+        int actual = actuallList.size();
 
-        Assert.assertTrue(actual.isEnabled());
+        Assert.assertEquals(actual, expected);
         System.out.println("list of products is present");
     }
-
 
 
     @AfterClass

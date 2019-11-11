@@ -11,22 +11,22 @@ import org.openqa.selenium.WebElement;
 public class UnlogUserInfo {
 
     /**
-     * element signIn on HeaderFull
+     * element signInHeaderFull on HeaderFull
      */
-    private WebElement signIn;
+    private WebElement signInHeaderFull;
 
     /**
      * Default constructor
      */
     public UnlogUserInfo() {
-        signIn = WebDriver.driver.findElement(By.xpath("//div[@class='user-info']//span[@class='hidden-sm-down']"));
+        signInHeaderFull = WebDriver.driver.findElement(By.xpath("//div[@class='user-info']//span[@class='hidden-sm-down']"));
     }
 
     /**
      * method opens LoginForm method
      */
-    public LoginForm clickSignIn() {
-        signIn.click();
+    public LoginForm clickSignInHeaderFull() {
+        signInHeaderFull.click();
         return new LoginForm ();
     }
 }

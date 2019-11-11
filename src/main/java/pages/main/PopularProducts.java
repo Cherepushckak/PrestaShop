@@ -64,9 +64,8 @@ public class PopularProducts {
             return result;
         }*/
     }
-
-
-
-
-
+//I made getter for my test
+    public WebElement getAllProducts() {
+        return allProducts;
+    }
 }

@@ -3,7 +3,6 @@ package main.java.test.TestNata;
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.login.LoginForm;
 import main.java.tools.WebDriver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -12,10 +11,9 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class SignInTest {
+public class SignInHeaderFullTest {
 
     WebDriver webDriver = new WebDriver();
-    private WebElement runPage;
     private WebElement actual;
 
 
@@ -23,7 +21,6 @@ public class SignInTest {
     public void before() {
         webDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         webDriver.driver.manage().window().maximize();
-        runPage = webDriver.driver.findElement(By.xpath("//div[@class='header-top']//img[@class='logo img-responsive']"));
     }
 
 
@@ -31,9 +28,12 @@ public class SignInTest {
     @Test
     public void signIn(){
 
-        LoginForm loginForm = new UnlogUserInfo().clickSignIn();
+        //Arrange
+        LoginForm loginForm = new UnlogUserInfo().clickSignInHeaderFull();
+
         //Act
-        actual = webDriver.driver.findElementByCssSelector(".login-form");
+        actual = loginForm.emailClick();
+
         //Assert
         Assert.assertTrue(actual.isDisplayed());
         System.out.println("LogIn form is opened");

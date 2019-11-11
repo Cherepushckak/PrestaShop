@@ -11,7 +11,7 @@ public class TestLoginForm {
 	@Test
 	public void testLoginForm() {
 		WebDriver webDriver = new WebDriver ();
-		UserPage userPage = new UnlogUserInfo().clickSignIn ()
+		UserPage userPage = new UnlogUserInfo().clickSignInHeaderFull()
 				.writeDefaultCredantional();
 		String expected = "Admin admin";
 		String actual = userPage.createHeader ().initLogUser ().getUserAccount ();

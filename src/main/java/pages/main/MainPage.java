@@ -21,4 +21,8 @@ public class MainPage extends HeaderFull {
         popularProducts = new PopularProducts();
     }
 
+    //Nata created fot LogFContTest
+    public PopularProducts getPopularProducts() {
+        return popularProducts;
+    }
 }
