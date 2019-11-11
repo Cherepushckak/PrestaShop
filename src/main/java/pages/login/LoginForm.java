@@ -1,5 +1,6 @@
 package main.java.pages.login;
 
+import io.qameta.allure.Step;
 import main.java.pages.user.UserPage;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
@@ -43,7 +44,6 @@ public class LoginForm {
 		getPassword ().click ();
 		return password;
 	}
-	
 	public WebElement writePasswordClick ( String password ) {
 		passwordClick ().sendKeys ( password );
 		return this.password;
@@ -53,8 +53,8 @@ public class LoginForm {
 		getShow ().click ();
 		return show;
 	}
-	
-	public UserPage writeDefaultCredantials ( String email, String password ) {
+	@Step("Step 1")
+	public UserPage logIn ( String email, String password ) {
 		writeEmailClick ( email );
 		writePasswordClick ( password );
 		signInClick ();
