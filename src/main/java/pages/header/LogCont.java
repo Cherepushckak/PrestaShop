@@ -1,7 +1,7 @@
 package main.java.pages.header;
 
 import main.java.pages.main.MainPage;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -21,8 +21,8 @@ public class LogCont {
      */
     public LogCont() {
 
-        logo = WebDriver.driver.findElement(By.xpath("//img[@class='logo img-responsive']"));
-        contactUS = WebDriver.driver.findElement(By.xpath("//div[@class='row']//div[@id='_desktop_contact_link']"));
+        logo = OurWebDriver.driver.findElement(By.xpath("//img[@class='logo img-responsive']"));
+        contactUS = OurWebDriver.driver.findElement(By.xpath("//div[@class='row']//div[@id='_desktop_contact_link']"));
 
     }
 
