@@ -12,7 +12,7 @@ public class WebDriver {
 
         if ((System.getProperty("os.name")).contains("Mac OS")) {
             System.setProperty("webdriver.chrome.driver", "../Webdriver/chromedriver");
-        } else {
+       } else {
             System.setProperty("webdriver.chrome.driver", "..\\Webdriver\\chromedriver.exe");
         }
 

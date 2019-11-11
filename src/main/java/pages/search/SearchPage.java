@@ -11,10 +11,10 @@ import org.openqa.selenium.WebElement;
  */
 public class SearchPage extends APageParent {
     //elements
-    private WebElement Description;
+    //private WebElement description;
     //instants
-    private Categories categories;
-    private Description description;
+    private Categories categories;          //75%
+    private Description description;        //
     private SortBy sortBy;
     private ActiveFilter activeFilter;
     private PagePath pagePath;
@@ -25,8 +25,7 @@ public class SearchPage extends APageParent {
      * Default constructor
      */
     public SearchPage() {
-        //createHeader();
-
+        //createHeaderFull();
     }
 
 }

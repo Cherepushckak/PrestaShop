@@ -16,13 +16,17 @@ public class Category {
         this.self = self;
         categoryName = self.getText();
         isCollapsed = false;
-        //subCategory = WebDriver.driver.findElementsByXPath("");
     }
 
+    /*
+     * Add sub category to list
+     */
     public void addSubCategory(WebElement subCategory){
         this.subCategory.add(subCategory);
     }
 
-    //public void open
+    public void setCollapse(WebElement collapse){
+        this.collapse = collapse;
+    }
 
 }
