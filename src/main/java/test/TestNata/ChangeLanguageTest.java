@@ -1,13 +1,14 @@
 package main.java.test.TestNata;
 
 import main.java.pages.header.CertainLanguage;
+import main.java.pages.header.HeaderFull;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class HeaderFullTest {
+public class ChangeLanguageTest {
     WebDriver webDriver = new WebDriver();
     //Actions actions = new Actions(WebDriver.driver);
 
@@ -31,7 +32,7 @@ public class HeaderFullTest {
      */
     @BeforeMethod
     public void beforeMethod() {
-        certainLanguage = new CertainLanguage();
+       certainLanguage = new CertainLanguage();
         webDriver.driver.manage().window().maximize();
     }
 
@@ -39,9 +40,12 @@ public class HeaderFullTest {
     @Test(priority = 1)
     public void checkLanguage() {
 
-        certainLanguage.clickLanguage();
-        actual = certainLanguage.getDropDownListLanguage();
+        actual = certainLanguage.clickLanguage().getDropDownListLanguage();
+
+        /** checks if dropDownList is opened*/
+
         Assert.assertTrue(actual.isDisplayed());
+
         System.out.println("List of languages is present");
 
     }
@@ -54,9 +58,9 @@ public class HeaderFullTest {
         expectedText = "English";
 
         //Act
-        certainLanguage.clickEnglishInDropDown();
-        actual = WebDriver.driver.findElement(By.xpath("//span[@class='expand-more']"));
-        actualText = actual.getText();
+        actualText = certainLanguage.clickEnglishInDropDown().getLanguage().getText();
+
+        /** assert checks if text of webElement 'language' equals to expectedText*/
 
         //Assert
         Assert.assertEquals(actualText, expectedText);
@@ -74,7 +78,8 @@ public class HeaderFullTest {
         Thread.sleep(2000);
 
         certainLanguage.clickUkrainianInDropDown();
-        actual = WebDriver.driver.findElement(By.xpath("//span[@class='expand-more']"));
+        actual = certainLanguage.getLanguage();
+                //WebDriver.driver.findElement(By.xpath("//span[@class='expand-more']"));
 
         //Assert
         Assert.assertTrue(actual.isDisplayed());

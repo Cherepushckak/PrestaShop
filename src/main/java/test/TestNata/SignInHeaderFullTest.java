@@ -24,9 +24,8 @@ public class SignInHeaderFullTest {
     }
 
 
-
     @Test
-    public void signIn(){
+    public void signIn() {
 
         //Arrange
         LoginForm loginForm = new UnlogUserInfo().clickSignInHeaderFull();
@@ -39,8 +38,9 @@ public class SignInHeaderFullTest {
         System.out.println("LogIn form is opened");
 
     }
+
     @AfterClass
-    public void afterClass(){
+    public void afterClass() {
         webDriver.closeDriver();
     }
 }

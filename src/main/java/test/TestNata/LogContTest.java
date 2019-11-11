@@ -1,12 +1,8 @@
 package main.java.test.TestNata;
 
-import main.java.pages.header.Header;
-import main.java.pages.header.HeaderFull;
 import main.java.pages.header.LogCont;
 
 import main.java.pages.main.MainPage;
-import main.java.pages.main.PopularProducts;
-import main.java.pages.search.Product;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -53,8 +49,8 @@ public class LogContTest {
         MainPage mainPage = new LogCont().clickLogo();
 
         //Assert
-        List actuallList = mainPage.getPopularProducts().getProducts();
-        int actual = actuallList.size();
+        List actualList = mainPage.getPopularProducts().getProducts();
+        int actual = actualList.size();
 
         Assert.assertEquals(actual, expected);
         System.out.println("list of products is present");

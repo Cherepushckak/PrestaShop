@@ -1,5 +1,7 @@
 package main.java.pages.header;
 
+import main.java.pages.product.ProductPage;
+import main.java.pages.search.SearchPage;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -33,24 +35,28 @@ public class HeaderFull extends Header {
     }
 
     public void initHeaderFull() {
+        getCertainLanguage();
 
         //I declared instance of class CertainLanguage, instead of field language
-        certainLanguage = new CertainLanguage();
+       // certainLanguage = new CertainLanguage();
 
         //------------We have to create HeaderFull perfectly, so when I check webElement I'll add it to method!---------
         //
 //        this.language = WebDriver.driver.findElement(By.cssSelector("#_desktop_language_selector > div > div"));
-//        this.searchField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
-//        this.searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
+searchField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
+searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
 //        this.currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
 //        this.cart = WebDriver.driver.findElement(By.cssSelector(".header"));
-//        this.clothes = WebDriver.driver.findElement(By.cssSelector("#category-3"));
+        clothes = WebDriver.driver.findElement(By.cssSelector("#category-3"));
 //        this.accessories = WebDriver.driver.findElement(By.cssSelector("#category-6"));
 //        this.art = WebDriver.driver.findElement(By.cssSelector("#category-9"));
 
     }
 
 
+    public CertainLanguage getCertainLanguage() {
+        return certainLanguage;
+    }
 
     public WebElement getClothes() {
         return clothes;
@@ -70,6 +76,24 @@ public class HeaderFull extends Header {
 
     public WebElement getSearchButton() {
         return searchButton;
+    }
+
+    /**
+     * method opens ProductPage
+     * @return ProductPage
+     */
+    public SearchPage searchButtonClick(){
+        getSearchButton().click();
+        return new SearchPage();
+    }
+    public HeaderFull clearSearchField(){
+        getSearchField().clear();
+        return new HeaderFull();
+    }
+    public HeaderFull sendKeysToSearchField(String searchingProduct){
+
+        getSearchField().sendKeys(searchingProduct);
+        return new HeaderFull();
     }
 
 //    public WebElement getLanguage() {

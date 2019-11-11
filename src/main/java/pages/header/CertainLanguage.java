@@ -4,7 +4,7 @@ import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class CertainLanguage extends HeaderFull{
+public class CertainLanguage extends HeaderFull {
 
     private WebElement language;
     private WebElement english;
@@ -15,10 +15,11 @@ public class CertainLanguage extends HeaderFull{
     public CertainLanguage() {
         initCertainLanguage();
     }
-public CertainLanguage initCertainLanguage(){
-    getLanguage();
-    getArrow();
-    return new CertainLanguage();
+
+    public void initCertainLanguage() {
+        getLanguage();
+        getArrow();
+        // return new CertainLanguage();
     }
 
     /**
@@ -31,8 +32,9 @@ public CertainLanguage initCertainLanguage(){
         return language;
     }
 
-    public void clickLanguage() {
+    public CertainLanguage clickLanguage() {
         getLanguage().click();
+        return new CertainLanguage();
     }
 
     //May be make a List of elements that contains 2 x languages?????///////////////////////////////
@@ -68,10 +70,11 @@ public CertainLanguage initCertainLanguage(){
      * method find english webElement in dropDown list!
      * find only when arrow is pressed.
      *
-     * @return english webElement.
+     * @return language webElement.
      */
-    public void clickEnglishInDropDown() {
+    public CertainLanguage clickEnglishInDropDown() {
         getEnglish().click();
+        return new CertainLanguage();
     }
 
     /**
@@ -87,10 +90,13 @@ public CertainLanguage initCertainLanguage(){
     /**
      * method find ukrainian webElement in dropDown list!
      * find only when arrow is pressed.
+     *
+     * @return language webElement.
      */
-    //add elements that return element in the header
-    public void clickUkrainianInDropDown() {
-       getUkrainian().click();
+
+    public WebElement clickUkrainianInDropDown() {
+        getUkrainian().click();
+        return language;
     }
 
     /**
@@ -104,7 +110,5 @@ public CertainLanguage initCertainLanguage(){
         return dropDownListLanguage;
     }
 
-
-    ///method that change language!!!!!!!!!!!!!!!!
 }
 
