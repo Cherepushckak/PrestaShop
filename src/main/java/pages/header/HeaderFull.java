@@ -30,8 +30,8 @@ public class HeaderFull extends Header {
      */
     public HeaderFull() {
         super();
-        initLogUser();
         initHeaderFull();
+        getLogUserInformation ();
 
         /**
          if createUser()==true
@@ -45,18 +45,6 @@ public class HeaderFull extends Header {
          * else
          *      currency = null;
          */
-        /**
-         * Також потрібно буде прописати пошук оголошених вище філдів
-         */
-    }
-
-
-    private void initLogUser() {
-
-        if (logUserInfo.findSignOut()) {
-            LogUserInfo.createLogUser();
-        }
-
     }
 
     /**
@@ -66,13 +54,17 @@ public class HeaderFull extends Header {
 
         searchField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
         searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
-        language = WebDriver.driver.findElement(By.cssSelector("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
+        language = WebDriver.driver.findElement(By.cssSelector("#_desktop_language_selector > div > div"));
         currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
         cart = WebDriver.driver.findElement(By.cssSelector(".header"));
         clothes = WebDriver.driver.findElement(By.cssSelector("#category-3"));
         accessories = WebDriver.driver.findElement(By.cssSelector("#category-6"));
         art = WebDriver.driver.findElement(By.cssSelector("#category-9"));
 
+    }
+    
+    public LogUserInformation getLogUserInformation(){
+        return new LogUserInformation();
     }
 
 
@@ -87,7 +79,5 @@ public class HeaderFull extends Header {
 
 //            return result;
 //    }
-
-
 
 }

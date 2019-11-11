@@ -8,8 +8,8 @@ import main.java.pages.header.HeaderFull;
  */
 public abstract class APageParent {
 
-    protected HeaderFull headerFull;
-    protected Header header;
+    private HeaderFull headerFull;
+    private Header header;
     /**
      * Default constructor
      */
@@ -21,13 +21,13 @@ public abstract class APageParent {
      */
 
     //Create pages.Header Simple
-    public void createHeaderSimple(){
+    public void createHeaderSimple() {
         this.header = new Header();
     }
 
     //Create pages.Header Full
-    public void createHeader(){
-        this.headerFull = new HeaderFull();
+    public HeaderFull createHeader() {
+        return new HeaderFull ();
     }
 
 
