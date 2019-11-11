@@ -3,6 +3,7 @@ package main.java.pages.register;
 import main.java.data.Title;
 import main.java.data.User;
 import main.java.pages.main.MainPage;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,8 @@ import org.openqa.selenium.WebElement;
 
 public class RegisterForm {
 
-    private WebDriver driver;
+    private WebDriver driver = OurWebDriver.driver;
+
     private WebElement logInInstead;
     private WebElement titleMr;
     private WebElement titleMrs;
@@ -28,8 +30,7 @@ public class RegisterForm {
     /**
      * Default constructor
      */
-    public RegisterForm(WebDriver driver) {
-        this.driver = driver;
+    public RegisterForm() {
         initRegisterForm();
     }
 
@@ -46,7 +47,6 @@ public class RegisterForm {
         this.checkboxSignUpNewsletter = driver.findElement(By.cssSelector("input[name='newsletter']"));
         this.checkboxIAgree = driver.findElement(By.cssSelector("input[name='psgdpr']"));
         this.buttonSave = driver.findElement(By.cssSelector("button.btn-primary"));
-
     }
 
 

@@ -1,7 +1,7 @@
 package main.java.pages.product;
 
 import main.java.pages.cart.CartPage;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -34,8 +34,8 @@ public class AddedToCart {
      */
 
     public void initAddedToCart () {
-        checkoutButton = WebDriver.driver.findElement(By.cssSelector(".cart-content-btn>.btn.btn-primary"));
-        closeAddedToCart = WebDriver.driver.findElement(By.cssSelector(".close"));
+        checkoutButton = OurWebDriver.driver.findElement(By.cssSelector(".cart-content-btn>.btn.btn-primary"));
+        closeAddedToCart = OurWebDriver.driver.findElement(By.cssSelector(".close"));
     }
 
     /**

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Instant;
 import java.util.concurrent.TimeUnit;
 
-public class WebDriver {
+public class OurWebDriver {
     static public ChromeDriver driver;
     private static final String startURL = "http://3.124.147.74"; // Default URL for site
 
@@ -15,7 +15,7 @@ public class WebDriver {
 
 
 
-    public WebDriver() {
+    public OurWebDriver() {
 
         if ((System.getProperty("os.name")).contains("Mac OS")) {
             System.setProperty("webdriver.chrome.driver", "../Webdriver/chromedriver");

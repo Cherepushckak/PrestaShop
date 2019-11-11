@@ -13,7 +13,6 @@
         </classes>
     </test>
 
-
     <!-- Artemenko Maksym's tests -->
     <test verbose="3" name="Maksym Artemenko's tests">
         <classes>
