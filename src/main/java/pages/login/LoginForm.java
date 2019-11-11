@@ -1,11 +1,15 @@
 package main.java.pages.login;
 
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  *
@@ -37,6 +41,7 @@ public class LoginForm {
 		return email;
 	}
 	
+	@Step("Step 1")
 	public WebElement writeEmailClick ( String email ) {
 		emailClick ().sendKeys ( email );
 		return this.email;
@@ -46,6 +51,8 @@ public class LoginForm {
 		getPassword ().click ();
 		return password;
 	}
+	
+	@Step("Step 2")
 	public WebElement writePasswordClick ( String password ) {
 		passwordClick ().sendKeys ( password );
 		return this.password;
@@ -55,7 +62,7 @@ public class LoginForm {
 		getShow ().click ();
 		return show;
 	}
-	@Step("Step 1")
+	
 	public UserPage logIn ( String email, String password ) {
 		writeEmailClick ( email );
 		writePasswordClick ( password );
@@ -126,7 +133,7 @@ public class LoginForm {
 	}
 	
 	public void setNoAccount () {
-		noAccount = OurWebDriver.driver.findElement ( By.partialLinkText ("No account?" ) );
+		noAccount = OurWebDriver.driver.findElement ( By.cssSelector ( "#content > div > a" ) );
 	}
 }
 
