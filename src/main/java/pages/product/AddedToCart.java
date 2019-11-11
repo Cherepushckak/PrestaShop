@@ -4,6 +4,8 @@ import main.java.pages.cart.CartPage;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * 
@@ -17,6 +19,8 @@ public class AddedToCart {
      * "x" button to close the pop-up
      */
     private WebElement closeAddedToCart;
+
+   // WebDriverWait wait = new WebDriverWait(WebDriver.driver, 5);
 
     /**
      * Default constructor
@@ -49,6 +53,8 @@ public class AddedToCart {
      *checkout button click method proceed to Cart Page
      */
     public CartPage clickCheckoutButton () {
+        WebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated
+                (By.cssSelector(".cart-content-btn>.btn.btn-primary")));
         checkoutButton.click();
         return new CartPage();
     }

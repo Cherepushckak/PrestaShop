@@ -21,4 +21,7 @@ public class MainPage extends HeaderFull {
         popularProducts = new PopularProducts();
     }
 
+    public PopularProducts getPopularProducts() {
+        return popularProducts;
+    }
 }

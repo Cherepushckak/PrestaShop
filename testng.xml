@@ -12,8 +12,8 @@
             </class>
         </classes>
     </test>
-  
-  
+
+
     <!-- Artemenko Maksym's tests -->
     <test verbose="3" name="Maksym Artemenko's tests">
         <classes>
@@ -40,6 +40,17 @@
                 <methods>
                     <include name="createNewAddress2"/>
                     <include name="terminateBrowser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Artem Hurin tests -->
+    <test verbose="4" name="Artem Hurin tests">
+        <classes>
+            <class name="main.java.test.TestCart">
+                <methods>
+                    <include name="itemPresentsNonLogin"/>
                 </methods>
             </class>
         </classes>

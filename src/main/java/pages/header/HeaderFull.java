@@ -30,7 +30,7 @@ public class HeaderFull extends Header {
      */
     public HeaderFull() {
         super();
-        initLogUser();
+        //initLogUser();
         initHeaderFull();
 
         /**

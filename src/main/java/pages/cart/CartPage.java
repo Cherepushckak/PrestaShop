@@ -17,8 +17,11 @@ public class CartPage extends HeaderFull {
 
     }
 
-    private void initShoppingCart () {
+    public void initShoppingCart () {
         shoppingCart = new ShoppingCart();
     }
 
+    public ShoppingCart getShoppingCart() {
+        return shoppingCart;
+    }
 }

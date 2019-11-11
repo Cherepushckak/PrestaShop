@@ -21,6 +21,7 @@ public class PopularProducts {
 
 
     private WebElement allProducts;
+    private String partialProductName;
 
     /**
      * Default constructor
@@ -47,12 +48,14 @@ public class PopularProducts {
         for (WebElement current : WebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
             products.add(new Product(current));
         }
+    }
+
 
         /**
          * method to get product by part of name
          */
 
-       /* public Product getProductByPartialName (String partialProductName) {
+       public Product getProductByPartialName (String partialProductName) {
             Product result = null;
             for (Product current : getProducts()) {
                 if (current.getNameProductText().toLowerCase()
@@ -62,11 +65,10 @@ public class PopularProducts {
                 }
             }
             return result;
-        }*/
+        }
     }
 
 
 
 
 
-}
