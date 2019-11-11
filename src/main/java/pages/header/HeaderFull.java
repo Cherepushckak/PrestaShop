@@ -30,8 +30,8 @@ public class HeaderFull extends Header {
      */
     public HeaderFull() {
         super();
-        initLogUser();
         initHeaderFull();
+        getLogUserInformation ();
 
         /**
          if createUser()==true
@@ -45,11 +45,6 @@ public class HeaderFull extends Header {
          * else
          *      currency = null;
          */
-    }
-
-
-    public LogUserInfo initLogUser() {
-        return new LogUserInfo ();
     }
 
     /**
@@ -67,6 +62,10 @@ public class HeaderFull extends Header {
         art = WebDriver.driver.findElement(By.cssSelector("#category-9"));
 
     }
+    
+    public LogUserInformation getLogUserInformation(){
+        return new LogUserInformation();
+    }
 
 
     // cart = WebDriver.driver.findElement(By.cssSelector(".header"));
@@ -80,4 +79,5 @@ public class HeaderFull extends Header {
 
 //            return result;
 //    }
+
 }
