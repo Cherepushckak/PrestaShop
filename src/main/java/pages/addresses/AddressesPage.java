@@ -13,8 +13,12 @@ package main.java.pages.addresses;
 // Additional packages
 
 import main.java.pages.common.APageParent;
-import main.java.tools.WebDriver;
+
+
+
 import org.openqa.selenium.WebElement;
+import main.java.tools.OurWebDriver;
+
 
 /**
  * AddressesPage class, which extends APageParent class
@@ -49,22 +53,22 @@ public class AddressesPage extends APageParent {
 
     // Initialise 'Home' top link
     private void homeTopLink() {
-        homeTopLink = WebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[1]/a/span");
+        homeTopLink = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[1]/a/span");
     }
 
     // Initialise 'Your account' link
     private void yourAccountLink() {
-        yourAccountLink = WebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[2]/a/span");
+        yourAccountLink = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[2]/a/span");
     }
 
     // Initialise 'Addresses' link
     private void addresses() {
-        addresses = WebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[3]/a/span");
+        addresses = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[3]/a/span");
     }
 
     // Initialise actual page name
     private void actualPageName() {
-        actualPageName = WebDriver.driver.findElementByXPath("//section[@id='main']/header/h1/text()");
+        actualPageName = OurWebDriver.driver.findElementByXPath("//section[@id='main']/header/h1/text()");
     }
 
     // Initialise class addresses
@@ -78,12 +82,12 @@ public class AddressesPage extends APageParent {
 
     // Initialise '< Back to your account' link
     private void backToYourAccountLink() {
-        backToYourAccountLink = WebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[1]");
+        backToYourAccountLink = OurWebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[1]");
     }
 
     // Initialise 'Home' lower link
     private void homeLowerLink() {
-        homeLowerLink = WebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[2]");
+        homeLowerLink = OurWebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[2]");
     }
 
     // Click 'Home' link

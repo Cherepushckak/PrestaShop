@@ -1,6 +1,7 @@
 package main.java.pages.header;
 
-import main.java.tools.WebDriver;
+
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -28,7 +29,7 @@ public class CertainLanguage extends HeaderFull {
      * @return language webElement.
      */
     public WebElement getLanguage() {
-        language = WebDriver.driver.findElement(By.xpath("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
+        language = OurWebDriver.driver.findElement(By.xpath("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
         return language;
     }
 
@@ -45,7 +46,7 @@ public class CertainLanguage extends HeaderFull {
      * @return arrow.
      */
     public WebElement getArrow() {
-        arrow = WebDriver.driver.findElement(By.xpath("//div[@id='_desktop_language_selector']//i[@class='material-icons expand-more']"));
+        arrow = OurWebDriver.driver.findElement(By.xpath("//div[@id='_desktop_language_selector']//i[@class='material-icons expand-more']"));
         return arrow;
     }
 
@@ -62,7 +63,7 @@ public class CertainLanguage extends HeaderFull {
      * @return english webElement.
      */
     public WebElement getEnglish() {
-        english = WebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='en']"));
+        english = OurWebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='en']"));
         return english;
     }
 
@@ -83,7 +84,7 @@ public class CertainLanguage extends HeaderFull {
      * @return ukrainian webElement.
      */
     public WebElement getUkrainian() {
-        ukrainian = WebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='uk']"));
+        ukrainian = OurWebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='uk']"));
         return ukrainian;
     }
 
@@ -105,7 +106,7 @@ public class CertainLanguage extends HeaderFull {
      * @return dropDown element.
      */
     public WebElement getDropDownListLanguage() {
-        dropDownListLanguage = WebDriver.driver.findElement(By.xpath(
+        dropDownListLanguage = OurWebDriver.driver.findElement(By.xpath(
                 "//div[@class='language-selector dropdown js-dropdown open']//ul[@class='dropdown-menu hidden-sm-down']"));
         return dropDownListLanguage;
     }

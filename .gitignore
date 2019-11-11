@@ -85,7 +85,7 @@ local.properties
 .idea/
 .idea/*.xml
 .idea_modules/
-
+.allure/
 # JIRA plugin
 atlassian-ide-plugin.xml
 

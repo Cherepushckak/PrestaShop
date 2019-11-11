@@ -2,7 +2,10 @@ package main.java.test.TestNata;
 
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.login.LoginForm;
-import main.java.tools.WebDriver;
+
+import main.java.tools.OurWebDriver;
+import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -13,7 +16,11 @@ import java.util.concurrent.TimeUnit;
 
 public class SignInHeaderFullTest {
 
-    WebDriver webDriver = new WebDriver();
+
+
+    OurWebDriver webDriver = new OurWebDriver();
+    private WebElement runPage;
+
     private WebElement actual;
 
 
@@ -28,6 +35,8 @@ public class SignInHeaderFullTest {
     public void signIn() {
 
         //Arrange
+
+
         LoginForm loginForm = new UnlogUserInfo().clickSignInHeaderFull();
 
         //Act

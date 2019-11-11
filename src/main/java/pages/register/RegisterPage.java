@@ -11,9 +11,9 @@ public class RegisterPage extends APageParent {
     /**
      * Default constructor
      */
-    public RegisterPage(WebDriver driver) {
+    public RegisterPage() {
         super();
-        regform = new RegisterForm(driver);
+        regform = new RegisterForm();
     }
 
 }

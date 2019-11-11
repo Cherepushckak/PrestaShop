@@ -3,7 +3,7 @@ package main.java.test.TestNata;
 import main.java.data.SearchElements;
 import main.java.pages.header.HeaderFull;
 import main.java.pages.search.SearchPage;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class HeaderFullGeneralTest {
-    WebDriver webDriver = new WebDriver();
+    OurWebDriver webDriver = new OurWebDriver();
     private WebElement actual;
     private HeaderFull headerFull;
 

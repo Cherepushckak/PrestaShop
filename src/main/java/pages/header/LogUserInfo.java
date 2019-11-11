@@ -1,6 +1,6 @@
 package main.java.pages.header;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -17,14 +17,19 @@ public class LogUserInfo {
 
     /** Default constructor */
     public LogUserInfo() {
+
         initLogUserInfo();
     }
 
     //Changed!!!!!!!!! taken away from constructor!!!!!!!
     public LogUserInfo initLogUserInfo() {
-        signOut = WebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
-        userAccount = WebDriver.driver.findElement(By.cssSelector("#_desktop_user_info > div > a.account > span"));
+        signOut = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
+        userAccount =OurWebDriver.driver.findElement(By.cssSelector("#_desktop_user_info > div > a.account > span"));
         return new LogUserInfo();
+
+//        signOut = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
+//        userAccount = OurWebDriver.driver.findElement(By.cssSelector("#_desktop_user_info > div > a.account > span"));
+
     }
     /**
      * method create instance of LogUserInfo class;
@@ -52,7 +57,7 @@ public class LogUserInfo {
         userAccount.click();
     }
     
-    public String getUserAccount () {
+    public String getUserNameFromHeader() {
         String userName = userAccount.getText ();
         return userName;
     }

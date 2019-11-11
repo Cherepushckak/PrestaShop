@@ -1,7 +1,7 @@
 package main.java.test.TestNata;
 
 import main.java.pages.header.CertainLanguage;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class ChangeLanguageTest {
-    WebDriver webDriver = new WebDriver();
+    OurWebDriver webDriver = new OurWebDriver();
     //Actions actions = new Actions(WebDriver.driver);
 
     /**

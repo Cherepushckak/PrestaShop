@@ -1,9 +1,13 @@
 package main.java.test;
 
-import main.java.tools.WebDriver;
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import org.testng.annotations.AfterTest;
+import main.java.tools.OurWebDriver;
+
 
 public class TestCreateNewAddress {
 
@@ -14,7 +18,7 @@ public class TestCreateNewAddress {
 
     @Test(priority = 1)
     public void createNewAddress() {
-        WebDriver webDriver = new WebDriver();
+        OurWebDriver webDriver = new OurWebDriver();
 
     }
 
@@ -26,6 +30,6 @@ public class TestCreateNewAddress {
     @AfterTest
     public void terminateBrowser() {
         // Close test browser windows to release hardware resources
-        WebDriver.driver.quit();
+        OurWebDriver.driver.quit();
     }
 }

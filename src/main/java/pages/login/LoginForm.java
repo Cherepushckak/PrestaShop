@@ -1,8 +1,9 @@
 package main.java.pages.login;
 
 import io.qameta.allure.Step;
+import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -28,6 +29,7 @@ public class LoginForm {
 		setNoAccount ();
 		setShow ();
 		setSignIn ();
+		setNoAccount();
 	}
 	
 	public WebElement emailClick () {
@@ -69,6 +71,11 @@ public class LoginForm {
 		getForgotPassword ().click ();
 		return new ForgotPassword ();
 	}
+
+	public RegisterPage noAccountClick () {
+		getNoAccount().click();
+		return new RegisterPage();
+	}
 	
 	public WebElement getEmail () {
 		return email;
@@ -95,29 +102,31 @@ public class LoginForm {
 	}
 	
 	public void setEmail () {
-		email = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+		email = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
 				"div:nth-child(2) input" ) );
 	}
 	
 	public void setPassword () {
-		password = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+		password = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
 				"div:nth-child(3) > div.col-md-6 > div > input" ) );
 	}
 	
 	public void setShow () {
-		show = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+		show = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
 				"div:nth-child(3) > div.col-md-6 > div > span > button" ) );
 	}
 	
 	public void setForgotPassword () {
-		forgotPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+		forgotPassword = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
 				"div.forgot-password > a" ) );
 	}
 	
 	public void setSignIn () {
-		signIn = WebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
+		signIn = OurWebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
 	}
 	
 	public void setNoAccount () {
+		noAccount = OurWebDriver.driver.findElement ( By.partialLinkText ("No account?" ) );
 	}
 }
+

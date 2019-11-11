@@ -1,7 +1,11 @@
 package main.java.pages.login;
 
-import main.java.tools.WebDriver;
+
 import org.openqa.selenium.By;
+
+import org.openqa.selenium.By;
+import main.java.tools.OurWebDriver;
+
 import org.openqa.selenium.WebElement;
 
 public class ForgotPassword {
@@ -45,7 +49,7 @@ public class ForgotPassword {
 	}
 	
 	public void setEmailAddress (  ) {
-		emailAddress = WebDriver.driver.findElement ( By.cssSelector ( "#email" ) );
+		emailAddress = OurWebDriver.driver.findElement ( By.cssSelector ( "#email" ) );
 	}
 	
 	public WebElement getSendResetLink () {
@@ -53,7 +57,7 @@ public class ForgotPassword {
 	}
 	
 	public void setSendResetLink (  ) {
-		sendResetLink = WebDriver.driver.findElement ( By.cssSelector ( "#content > form > section > div > " +
+		sendResetLink = OurWebDriver.driver.findElement ( By.cssSelector ( "#content > form > section > div > " +
 				"button.form-control-submit.btn.btn-primary.hidden-xs-down" ) );
 	}
 	
@@ -62,6 +66,6 @@ public class ForgotPassword {
 	}
 	
 	public void setBackToLogin (  ) {
-		backToLogin = WebDriver.driver.findElement ( By.cssSelector ( "#main > footer > a" ) );
+		backToLogin = OurWebDriver.driver.findElement ( By.cssSelector ( "#main > footer > a" ) );
 	}
 }
