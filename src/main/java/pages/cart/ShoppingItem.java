@@ -1,7 +1,7 @@
 package main.java.pages.cart;
 
 import main.java.pages.product.ProductPage;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -39,13 +39,13 @@ public class ShoppingItem {
      */
 
     private void initShoppingItem () {
-        name = WebDriver.driver.findElement(By.cssSelector(".product-line-info>.label"));
-        increaseQuantity = WebDriver.driver.findElement(By.cssSelector(".material-icons.touchspin-up"));
-        decreaseQuantity = WebDriver.driver.findElement(By.cssSelector(".material-icons.touchspin-down"));
-        price = WebDriver.driver.findElement(By.cssSelector(".current-price>.price"));
-        totalPrice = WebDriver.driver.findElement(By.cssSelector(".col-md-6.col-xs-2.price>.product-price"));
-        basket = WebDriver.driver.findElement(By.cssSelector(".material-icons.float-xs-left"));
-        quantity = WebDriver.driver.findElement(By.cssSelector(".js-cart-line-product-quantity.form-control"));
+        name = OurWebDriver.driver.findElement(By.cssSelector(".product-line-info>.label"));
+        increaseQuantity = OurWebDriver.driver.findElement(By.cssSelector(".material-icons.touchspin-up"));
+        decreaseQuantity = OurWebDriver.driver.findElement(By.cssSelector(".material-icons.touchspin-down"));
+        price = OurWebDriver.driver.findElement(By.cssSelector(".current-price>.price"));
+        totalPrice = OurWebDriver.driver.findElement(By.cssSelector(".col-md-6.col-xs-2.price>.product-price"));
+        basket = OurWebDriver.driver.findElement(By.cssSelector(".material-icons.float-xs-left"));
+        quantity = OurWebDriver.driver.findElement(By.cssSelector(".js-cart-line-product-quantity.form-control"));
     }
 
 

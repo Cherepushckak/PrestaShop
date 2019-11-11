@@ -1,6 +1,6 @@
 package main.java.pages.search;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class SortBy {
      * Default constructor
      */
     public SortBy() {
-        sortType = (ArrayList<WebElement>) WebDriver.driver.findElementByXPath("//div[@class='dropdown-menu']//a");
+        sortType = (ArrayList<WebElement>) OurWebDriver.driver.findElementByXPath("//div[@class='dropdown-menu']//a");
     }
 
     /**

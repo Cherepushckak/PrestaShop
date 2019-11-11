@@ -3,12 +3,12 @@ package main.java.tools;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class WebDriver {
+public class OurWebDriver {
     static public ChromeDriver driver;
     private static final String startURL = "http://3.124.147.74"; // Default URL for site
     
 
-    public WebDriver() {
+    public OurWebDriver() {
 
         if ((System.getProperty("os.name")).contains("Mac OS")) {
             System.setProperty("webdriver.chrome.driver", "../Webdriver/chromedriver");

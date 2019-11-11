@@ -1,6 +1,6 @@
 package main.java.pages.search;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -16,7 +16,7 @@ public class Categories {
      * Default constructor
      */
     public Categories() {
-        categoryName = WebDriver.driver.findElementByXPath("//a[@class='text-uppercase h6']");
+        categoryName = OurWebDriver.driver.findElementByXPath("//a[@class='text-uppercase h6']");
 
         ArrayList<Category> temp;
 
