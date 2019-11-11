@@ -34,18 +34,19 @@ public class RegisterForm {
     }
 
     private void initRegisterForm() {
-        this.logInInstead = driver.findElement(By.xpath("a [text() = 'Log in instead!']"));
-        this.titleMr = driver.findElement(By.cssSelector("input [name = 'id_gender'][value = 1]"));
-        this.titleMrs = driver.findElement(By.cssSelector("input [name = 'id_gender'][value = 2]"));
-        this.firstName = driver.findElement(By.cssSelector("input [name = 'firstname']"));
-        this.lastName = driver.findElement(By.cssSelector("input [name = 'lastname']"));
-        this.email = driver.findElement(By.cssSelector("input [name = 'email']"));
-        this.password = driver.findElement(By.cssSelector("input [name = 'password']"));
-        this.birthday = driver.findElement(By.cssSelector("input [name = 'birthday']"));
-        this.checkboxReceiveOffers = driver.findElement(By.cssSelector("input [name = 'optin']"));
-        this.checkboxSignUpNewsletter = driver.findElement(By.cssSelector("input [name = 'newsletter']"));
-        this.checkboxIAgree = driver.findElement(By.cssSelector("input [name = 'psgdpr']"));
-        this.buttonSave = driver.findElement(By.xpath("buttom [text() = 'Save']"));
+        this.logInInstead = driver.findElement(By.linkText("Log in instead!"));
+        this.titleMr =  driver.findElement(By.cssSelector("input[name='id_gender'][value='1']"));
+        this.titleMrs = driver.findElement(By.cssSelector("input[name='id_gender'][value='2']"));
+        this.firstName = driver.findElement(By.cssSelector("input[name='firstname']"));
+        this.lastName = driver.findElement(By.cssSelector("input[name='lastname']"));
+        this.email = driver.findElement(By.cssSelector("input[name='email']"));
+        this.password = driver.findElement(By.cssSelector("input[name='password']"));
+        this.birthday = driver.findElement(By.cssSelector("input[name='birthday']"));
+        this.checkboxReceiveOffers = driver.findElement(By.cssSelector("input[name='optin']"));
+        this.checkboxSignUpNewsletter = driver.findElement(By.cssSelector("input[name='newsletter']"));
+        this.checkboxIAgree = driver.findElement(By.cssSelector("input[name='psgdpr']"));
+        this.buttonSave = driver.findElement(By.cssSelector("button.btn-primary"));
+
     }
 
 
@@ -194,7 +195,7 @@ public class RegisterForm {
 
     // Business logic
 
-    public MainPage createAccount(User user) {
+    public MainPage createAccountFor(User user) throws InterruptedException {
 
         if (user.getTitle() == Title.MR) {
             setTitleMr();
@@ -217,6 +218,7 @@ public class RegisterForm {
         }
 
         selectCheckboxIAgree();
+        Thread.sleep(3000); //for demonstration purpose
         clickSaveButton();
 
         MainPage mainPage = new MainPage();
