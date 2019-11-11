@@ -1,6 +1,5 @@
 package main.java.pages.header;
 
-import main.java.pages.product.ProductPage;
 import main.java.pages.search.SearchPage;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
@@ -20,7 +19,7 @@ public class HeaderFull extends Header {
     private WebElement searchButton;
 
 
-    private WebElement language;
+    //private WebElement language;
     private CertainLanguage certainLanguage;
     private WebElement cart;
     private WebElement currency;
@@ -50,7 +49,7 @@ searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']")
         clothes = WebDriver.driver.findElement(By.cssSelector("#category-3"));
 //        this.accessories = WebDriver.driver.findElement(By.cssSelector("#category-6"));
 //        this.art = WebDriver.driver.findElement(By.cssSelector("#category-9"));
-
+        getLogUserInformation ();
     }
 
 
@@ -78,9 +77,10 @@ searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']")
         return searchButton;
     }
 
+
     /**
-     * method opens ProductPage
-     * @return ProductPage
+     * method opens SearchPage
+     * @return SearchPage
      */
     public SearchPage searchButtonClick(){
         getSearchButton().click();
@@ -102,6 +102,10 @@ searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']")
 
     public WebElement getCart() {
         return cart;
+    }
+    
+    public LogUserInformation getLogUserInformation(){
+        return new LogUserInformation();
     }
 
     public WebElement getCurrency() {
@@ -140,4 +144,5 @@ searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']")
 
 //            return result;
 //    }
+
 }
