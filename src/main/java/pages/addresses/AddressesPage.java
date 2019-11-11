@@ -23,7 +23,8 @@ public class AddressesPage extends APageParent {
 	// Fields
     private WebElement homeTopLink;
     private WebElement yourAccountLink;
-    private String actualPageName;
+    private WebElement addresses;
+    private WebElement actualPageName;
 
     private WebElement backToYourAccountLink;
     private WebElement homeLowerLink;
@@ -34,8 +35,9 @@ public class AddressesPage extends APageParent {
     AddressesPage() {
         homeTopLink();
         yourAccountLink();
+        addresses();
         actualPageName();
-        initAddresses();
+        initAddressesList();
         backToYourAccountLink();
         homeLowerLink();
     }
@@ -54,13 +56,18 @@ public class AddressesPage extends APageParent {
         yourAccountLink = WebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[2]/a/span");
     }
 
+    // Initialise 'Addresses' link
+    private void addresses() {
+        addresses = WebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[3]/a/span");
+    }
+
     // Initialise actual page name
     private void actualPageName() {
-        actualPageName = WebDriver.driver.findElementByXPath("//*[@id='main']/header/h1/text()").getText();
+        actualPageName = WebDriver.driver.findElementByXPath("//section[@id='main']/header/h1/text()");
     }
 
     // Initialise class addresses
-    private void initAddresses() {
+    private void initAddressesList() {
         new Addresses();
     }
 
@@ -78,16 +85,18 @@ public class AddressesPage extends APageParent {
         homeLowerLink = WebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[2]");
     }
 
-    // Click 'Home to' link
-    private void homeTopClick() { homeTopLink.click(); }
+    // Click 'Home' link
+    private void clickHomeTop() { homeTopLink.click(); }
 
     // Click 'Your account' link
-    private void yourAccountClick() { yourAccountLink.click(); }
+    private void clickYourAccount() { yourAccountLink.click(); }
+
+    // Click 'Addresses' link
+    private void clickAddressess() { addresses.click(); }
 
     // Click '< Back to your account' link
-    private void backToYourAccountClick() { backToYourAccountLink.click(); }
+    private void clickBackToYourAccount() { backToYourAccountLink.click(); }
 
     // Click 'Home Lower' link
-    private void homeClick() { homeLowerLink.click(); }
-
+    private void clickHome() { homeLowerLink.click(); }
 }

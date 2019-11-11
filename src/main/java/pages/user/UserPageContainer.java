@@ -2,7 +2,6 @@ package main.java.pages.user;
 
 import main.java.pages.header.HeaderFull;
 import main.java.tools.WebDriver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 /**
@@ -19,14 +18,18 @@ public class UserPageContainer extends HeaderFull {
      */
     public UserPageContainer() {
     	super();
-    	// pages.User page elements initialization
+
+    	// pages.user page elements initialization
 	    //We will get text from actualPageName later in test
-    	actualPageName = WebDriver.driver.findElement(By.xpath("//*[@id='main']/header/h1"));
+    	actualPageName = WebDriver.driver.findElementByXPath("//*[@id='main']/header/h1");
+
     	//Assert.assertTrue(actualPageName.contains("Your account"));
 	    //We will get text from pageName later in test
-    	pageName = WebDriver.driver.findElement(By.xpath("//*[@id='main']/header/h1"));
-    	//Don`t understand what actually you search
-    	//address = WebDriver.driver.findElement(By.xpath("//a[@id='addresses-link']"));
+    	pageName = WebDriver.driver.findElementByXPath("//*[@id='main']/header/h1");
+
+    	// This is 'Addresses' card-link on Your account page
+	    //Correct your address cause it doesn`t work
+    	//address = WebDriver.driver.findElementByXPath("//a[@id='addresses-link']");
     }
     
     // Check container label

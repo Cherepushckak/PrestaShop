@@ -23,6 +23,7 @@ public class LogCont {
 
         logo = WebDriver.driver.findElement(By.xpath("//img[@class='logo img-responsive']"));
         contactUS = WebDriver.driver.findElement(By.xpath("//div[@class='row']//div[@id='_desktop_contact_link']"));
+
     }
 
     /** method opens homePage          change for method that returns HomePage */

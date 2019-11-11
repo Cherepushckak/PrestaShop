@@ -12,7 +12,7 @@ public class TestLoginForm {
 	public void testLoginForm() {
 		WebDriver webDriver = new WebDriver ();
 		UserPage userPage = new UnlogUserInfo().clickSignInHeaderFull()
-				.writeDefaultCredantional();
+				.writeDefaultCredantials("admin@gmail.com", "admin");
 		String expected = "Admin admin";
 		String actual = userPage.createHeader ().initLogUser ().getUserAccount ();
 		assertEquals ( actual, expected );

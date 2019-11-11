@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" name="PrestaShop/src/main
-    /java/test/test.java">
+
+      <!-- Detsyk Oleh's tests -->
+    <test verbose="3" name="Oleg Decyk's tests">
         <classes>
-            <class name="main.java.test.test">
-                <methods>
-                    <include name="test"/>
-                </methods>
-            </class>
-
-            <class name="main.java.test.TestCreateNewUser">
-                <methods>
-                    <include name="testCreateNewUser"/>
-                </methods>
-            </class>
-
             <class name="main.java.test.TestLoginForm">
                 <methods>
                     <include name="testLoginForm"/>
                 </methods>
             </class>
-
         </classes>
     </test>
+  
+  
+    <!-- Artemenko Maksym's tests -->
+    <test verbose="3" name="Maksym Artemenko's tests">
+        <classes>
+            <class name="main.java.test.TestNewUser">
+                <methods>
+                    <include name="testCreateNewUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <!-- Zyhmund Volodya's tests -->
+    <test verbose="3" name="Volodya's tests">
+        <classes>
+            <class name="main.java.test.TestCreateNewAddress">
+                <methods>
+                    <include name="launchBrowser"/>
+                    <include name="createNewAddress"/>
+                </methods>
+            </class>
+
+            <class name="main.java.test.TestCreateNewAddress">
+                <methods>
+                    <include name="createNewAddress2"/>
+                    <include name="terminateBrowser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 </suite>

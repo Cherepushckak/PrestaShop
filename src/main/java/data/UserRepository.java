@@ -16,7 +16,7 @@ public class UserRepository {
                 "Petro",
                 "Shevchenko",
                 "petro.shevchenko@test.com",
-                "test",
+                "test123",
                 "01/06/2000",
                 Boolean.TRUE,
                 Boolean.FALSE);
@@ -45,7 +45,7 @@ public class UserRepository {
         uniqueUser.setTitle(Title.MR);
         uniqueUser.setFirstName("FirstName");
         uniqueUser.setLastName("LastName");
-        uniqueUser.setPassword("test");
+        uniqueUser.setPassword("test123");
         uniqueUser.setBirthday("04/04/1999");
         uniqueUser.setCheckboxReceiveOffers(Boolean.TRUE);
         uniqueUser.setCheckboxSignUpNewsletter(Boolean.TRUE);
