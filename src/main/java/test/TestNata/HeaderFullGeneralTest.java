@@ -2,8 +2,6 @@ package main.java.test.TestNata;
 
 import main.java.data.SearchElements;
 import main.java.pages.header.HeaderFull;
-import main.java.pages.header.LogCont;
-import main.java.pages.product.ProductPage;
 import main.java.pages.search.SearchPage;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
@@ -44,10 +42,7 @@ public class HeaderFullGeneralTest {
         Assert.assertTrue(actual.isDisplayed());
         System.out.println("SearchResult is present");
     }
-    @Test
-    public void clickClothes(){
 
-    }
     @AfterClass
     public void afterClass(){
         webDriver.closeDriver();

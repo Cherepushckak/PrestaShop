@@ -1,13 +1,14 @@
 package main.java.test.TestNata;
 
 import main.java.pages.header.LogCont;
-
 import main.java.pages.main.MainPage;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

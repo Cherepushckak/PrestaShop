@@ -1,6 +1,5 @@
 package main.java.tools;
 
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WebDriver {

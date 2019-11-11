@@ -11,9 +11,10 @@
 package main.java.pages.addresses;
 
 // Additional packages
+
 import main.java.pages.common.APageParent;
-import org.openqa.selenium.WebElement;
 import main.java.tools.WebDriver;
+import org.openqa.selenium.WebElement;
 
 /**
  * AddressesPage class, which extends APageParent class

@@ -1,16 +1,16 @@
 package main.java.test;
 
-import static org.testng.Assert.*;
-
-import io.qameta.allure.*;
-import main.java.pages.header.HeaderFull;
-import main.java.pages.header.LogUserInfo;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.user.UserPage;
 import main.java.tools.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 public class TestLoginForm {
     @BeforeTest

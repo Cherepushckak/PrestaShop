@@ -1,12 +1,12 @@
 package main.java.test.TestNata;
 
 import main.java.pages.header.CertainLanguage;
-import main.java.pages.header.HeaderFull;
 import main.java.tools.WebDriver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class ChangeLanguageTest {
     WebDriver webDriver = new WebDriver();
@@ -69,6 +69,7 @@ public class ChangeLanguageTest {
     }
 
     /** test checks the possibility to choose Ukrainian language from the dropDown list*/
+    //---------------Separate it to another class!!!!!!!--------------------
     @Test (priority = 3)
     public void changeLanguageForUkrainian()throws InterruptedException{
         //Act
@@ -79,7 +80,6 @@ public class ChangeLanguageTest {
 
         certainLanguage.clickUkrainianInDropDown();
         actual = certainLanguage.getLanguage();
-                //WebDriver.driver.findElement(By.xpath("//span[@class='expand-more']"));
 
         //Assert
         Assert.assertTrue(actual.isDisplayed());

@@ -1,7 +1,7 @@
 package main.java.pages.login;
 
-import org.openqa.selenium.By;
 import main.java.tools.WebDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class ForgotPassword {

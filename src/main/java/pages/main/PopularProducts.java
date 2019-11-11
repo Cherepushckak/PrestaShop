@@ -1,10 +1,9 @@
 package main.java.pages.main;
 
 
-
+import main.java.pages.search.Product;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
-import main.java.pages.search.Product;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;

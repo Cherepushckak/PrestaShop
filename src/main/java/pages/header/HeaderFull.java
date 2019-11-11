@@ -26,8 +26,6 @@ public class HeaderFull extends Header {
     private LogUserInfo logUserInfo;
     private UnlogUserInfo unlogUserInfo;
 
-    //We have to add LogUserInfo of UnlogUserInfo!!!!!!!!
-    //There are methods initLogUser(), initUnlogUserInfo(), so we can add by yourself certain user!!!!!!!
     public HeaderFull() {
         super();
         initHeaderFull();
@@ -36,8 +34,6 @@ public class HeaderFull extends Header {
     public void initHeaderFull() {
         getCertainLanguage();
 
-        //I declared instance of class CertainLanguage, instead of field language
-       // certainLanguage = new CertainLanguage();
 
         //------------We have to create HeaderFull perfectly, so when I check webElement I'll add it to method!---------
         //
@@ -96,10 +92,6 @@ searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']")
         return new HeaderFull();
     }
 
-//    public WebElement getLanguage() {
-//        return language;
-//    }
-
     public WebElement getCart() {
         return cart;
     }
@@ -126,17 +118,9 @@ searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']")
         return new UnlogUserInfo();
     }
 
-//    /**
-//     * Method for constructor, creates part of the HeaderFull Object
-//     */
-//    public void languageClick() {
-//        language.click();
-//    }
+
 
     // cart = WebDriver.driver.findElement(By.cssSelector(".header"));
-//        searchProductField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
-//        searchProductButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
-    //desktop_user_info = WebDriver.driver.findElement(By.cssSelector(".aHS-bnu>div:nth-child(2)>span>a", "#_desktop_user_info"));
 
 //    private boolean checkCart() {
 //        boolean result;

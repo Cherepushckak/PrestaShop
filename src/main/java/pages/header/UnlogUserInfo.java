@@ -1,7 +1,6 @@
 package main.java.pages.header;
 
 import main.java.pages.login.LoginForm;
-import main.java.pages.login.LoginPage;
 import main.java.tools.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

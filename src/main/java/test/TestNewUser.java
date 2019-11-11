@@ -7,8 +7,6 @@ import main.java.pages.register.RegisterPage;
 import main.java.tools.WebDriver;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
-
 public class TestNewUser {
 	@Test
 	public void testCreateNewUser() throws InterruptedException {
