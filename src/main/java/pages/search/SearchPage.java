@@ -14,13 +14,13 @@ public class SearchPage extends APageParent {
     //private WebElement description;
     //instants
     private Categories categories;          //75%
-    private Description description;        //
-    private SortBy sortBy;
-    private ActiveFilter activeFilter;
-    private PagePath pagePath;
+    private Description description;        //25%
+    private SortBy sortBy;                  //60%
+    private ActiveFilter activeFilter;      //10%
+    private PagePath pagePath;              //75%
     //containers
-    private Filter filter;
-    private Products products;
+    private Filter filter;                  //60%
+    private Products products;              //??%
     /**
      * Default constructor
      */

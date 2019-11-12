@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 
 public class test implements ITestListener {
-    
+
     @Override
     public void onTestFailure ( ITestResult result ) {
         saveScreenshot ();
@@ -41,7 +41,6 @@ public class test implements ITestListener {
     
     @AfterTest ( alwaysRun = true )
     private void closeWebDriver (  ) {
-        
         OurWebDriver.driver.quit ();
     }
 }
