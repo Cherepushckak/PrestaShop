@@ -17,7 +17,6 @@ public class LogUserInfo extends LogUserInformation{
 
     /** Default constructor */
     public LogUserInfo() {
-
         initLogUserInfo();
     }
 

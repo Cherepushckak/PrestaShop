@@ -13,11 +13,12 @@ import org.testng.annotations.*;
 
 
 public class test implements ITestListener {
-    
+
     @Override
     public void onTestFailure ( ITestResult result ) {
         saveScreenshot ();
     }
+    
     @Attachment ( value = "Page screenshot", type = "image/png" )
     public byte[] saveScreenshot () {
         return ( ( TakesScreenshot ) OurWebDriver.driver ).getScreenshotAs ( OutputType.BYTES );

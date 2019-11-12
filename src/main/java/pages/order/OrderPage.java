@@ -1,11 +1,11 @@
 package main.java.pages.order;
 
-import main.java.pages.common.APageParent;
+import main.java.pages.header.HeaderFull;
 
 /**
  * 
  */
-public class OrderPage extends APageParent {
+public class OrderPage extends HeaderFull {
 
     /**
      * Default constructor

@@ -16,7 +16,7 @@ public class UserPageInstrument {
     }
 
     public void initLogUserInfo() {
-        logUserInfo = new UserPage().createHeader()
+        logUserInfo = new UserPage()
                 .getLogUserInformation()
                 .getUnlogogUserInfo()
                 .clickSignInHeaderFull()

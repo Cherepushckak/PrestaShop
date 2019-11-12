@@ -11,11 +11,7 @@
 package main.java.pages.addresses;
 
 // Additional packages
-
-import main.java.pages.common.APageParent;
-
-
-
+import main.java.pages.header.HeaderFull;
 import org.openqa.selenium.WebElement;
 import main.java.tools.OurWebDriver;
 
@@ -23,7 +19,7 @@ import main.java.tools.OurWebDriver;
 /**
  * AddressesPage class, which extends APageParent class
  */
-public class AddressesPage extends APageParent {
+public class AddressesPage extends HeaderFull {
 
 	// Fields
     private WebElement homeTopLink;

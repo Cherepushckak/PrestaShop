@@ -137,9 +137,11 @@ public class LoginForm {
 	public void setNoAccount () {
 		noAccount = OurWebDriver.driver.findElement ( By.cssSelector ( "#content > div > a" ) );
 	}
+
+	//Nata created for helper!!!!!!!!!!!
 	public UserPage sendKeysToLoginForm(){
 
-		return new HeaderFull().getUnlogUserInfo().clickSignInHeaderFull().getLoginForm ()
+		return new HeaderFull().getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull().getLoginForm ()
 				.logIn ( "admin@gmail.com", "admin" );
 	}
 }
