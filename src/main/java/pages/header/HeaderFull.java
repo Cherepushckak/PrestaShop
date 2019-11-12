@@ -1,6 +1,12 @@
 package main.java.pages.header;
 
-import main.java.tools.WebDriver;
+
+import main.java.pages.search.SearchPage;
+
+
+import main.java.pages.searchresult.SearchResultPage;
+import main.java.tools.OurWebDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -16,63 +22,120 @@ public class HeaderFull extends Header {
     private WebElement art;
     private WebElement searchField;
     private WebElement searchButton;
-    private WebElement language;
+
+
+    //private WebElement language;
+    private CertainLanguage certainLanguage;
     private WebElement cart;
     private WebElement currency;
     private LogUserInfo logUserInfo;
     private UnlogUserInfo unlogUserInfo;
-    //private WebElement searchProductField;
-    //  private WebElement searchProductButton;
-    // private WebElement desktop_user_info;
 
-    /**
-     * Default constructor
-     */
     public HeaderFull() {
         super();
-        initLogUser();
         initHeaderFull();
+    }
 
-        /**
-         if createUser()==true
-         logUserInfo = new LogUserInfo();
-         else
-         unlogUser = new UnlogUserInfo();
-         */
-        /**
-         * if checkCart()==true
-         *     currency = driver.find element...
-         * else
-         *      currency = null;
-         */
+    public void initHeaderFull() {
+        getCertainLanguage();
+
+
+        //------------We have to create HeaderFull perfectly, so when I check webElement I'll add it to method!---------
+        //
+//        this.language = WebDriver.driver.findElement(By.cssSelector("#_desktop_language_selector > div > div"));
+searchField = OurWebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
+searchButton = OurWebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
+//        this.currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
+//        this.cart = WebDriver.driver.findElement(By.cssSelector(".header"));
+        clothes = OurWebDriver.driver.findElement(By.cssSelector("#category-3"));
+//        this.accessories = WebDriver.driver.findElement(By.cssSelector("#category-6"));
+//        this.art = WebDriver.driver.findElement(By.cssSelector("#category-9"));
+        getLogUserInformation ();
     }
 
 
-    public LogUserInfo initLogUser() {
-        return new LogUserInfo ();
+    public CertainLanguage getCertainLanguage() {
+        return certainLanguage;
     }
+
+    public WebElement getClothes() {
+        return clothes;
+    }
+
+    public WebElement getAccessories() {
+        return accessories;
+    }
+
+    public WebElement getArt() {
+        return art;
+    }
+
+    public WebElement getSearchField() {
+        return searchField;
+    }
+
+    public WebElement getSearchButton() {
+        return searchButton;
+    }
+
 
     /**
-     * Method for constructor, creates part of the HeaderFull Object
+     * method opens SearchPage
+     * @return SearchPage
      */
-    public void initHeaderFull() {
-
-        searchField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
-        searchButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
-        language = WebDriver.driver.findElement(By.cssSelector("#_desktop_language_selector > div > div"));
-        currency = WebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
-        cart = WebDriver.driver.findElement(By.cssSelector(".header"));
-        clothes = WebDriver.driver.findElement(By.cssSelector("#category-3"));
-        accessories = WebDriver.driver.findElement(By.cssSelector("#category-6"));
-        art = WebDriver.driver.findElement(By.cssSelector("#category-9"));
-
+    public SearchResultPage searchButtonClick(){
+        getSearchButton().click();
+        return new SearchResultPage();
     }
+    public HeaderFull clearSearchField(){
+        getSearchField().clear();
+        return new HeaderFull();
+    }
+    public HeaderFull sendKeysToSearchField(String searchingProduct){
+
+        getSearchField().sendKeys(searchingProduct);
+        return new HeaderFull();
+    }
+
+//        searchField = OurWebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
+//        searchButton = OurWebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
+//        language = OurWebDriver.driver.findElement(By.cssSelector("#_desktop_language_selector > div > div"));
+//        currency = OurWebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
+//        cart = OurWebDriver.driver.findElement(By.cssSelector(".header"));
+//        clothes = OurWebDriver.driver.findElement(By.cssSelector("#category-3"));
+//        accessories = OurWebDriver.driver.findElement(By.cssSelector("#category-6"));
+//        art = OurWebDriver.driver.findElement(By.cssSelector("#category-9"));
+
+
+    public WebElement getCart() {
+        return cart;
+    }
+    
+    public LogUserInformation getLogUserInformation(){
+        return new LogUserInformation();
+    }
+
+    public WebElement getCurrency() {
+        return currency;
+    }
+
+    public LogUserInfo getLogUserInfo() {
+        return logUserInfo;
+    }
+
+    public UnlogUserInfo getUnlogUserInfo() {
+        return unlogUserInfo;
+    }
+    public LogUserInfo initLogUser() {
+        return new LogUserInfo();
+    }
+    public UnlogUserInfo initUnlogUserInfo(){
+        return new UnlogUserInfo();
+    }
+
 
 
     // cart = WebDriver.driver.findElement(By.cssSelector(".header"));
-//        searchProductField = WebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
-//        searchProductButton = WebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
-    //desktop_user_info = WebDriver.driver.findElement(By.cssSelector(".aHS-bnu>div:nth-child(2)>span>a", "#_desktop_user_info"));
 
 //    private boolean checkCart() {
 //        boolean result;
@@ -80,4 +143,5 @@ public class HeaderFull extends Header {
 
 //            return result;
 //    }
+
 }

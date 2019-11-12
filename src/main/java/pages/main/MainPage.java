@@ -1,9 +1,10 @@
 package main.java.pages.main;
 
 import main.java.pages.header.HeaderFull;
+import main.java.pages.login.LoginPage;
 
 /**
- * 
+ *
  */
 public class MainPage extends HeaderFull {
 
@@ -17,8 +18,19 @@ public class MainPage extends HeaderFull {
         initPopularProducts();
     }
 
-    private void initPopularProducts () {
+    private void initPopularProducts() {
         popularProducts = new PopularProducts();
     }
+
+    public PopularProducts getPopularProducts() {
+        return popularProducts;
+    }
+
+    public LoginPage clickSignIn() {
+        return getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull(); // takes method from headerFull
+    }   // takes method from headerFull. init class for unlogged user . uses its method click
+//    public LoginPage clickSignIn() {
+//        return getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull(); // takes method from headerFull
+//    }   // takes method from headerFull. init class for unlogged user . uses its method click
 
 }

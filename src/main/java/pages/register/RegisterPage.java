@@ -1,9 +1,9 @@
 package main.java.pages.register;
 
-import main.java.pages.common.APageParent;
+import main.java.pages.header.HeaderFull;
 import org.openqa.selenium.WebDriver;
 
-public class RegisterPage extends APageParent {
+public class RegisterPage extends HeaderFull {
 
     WebDriver driver;
     public RegisterForm regform;
@@ -11,9 +11,9 @@ public class RegisterPage extends APageParent {
     /**
      * Default constructor
      */
-    public RegisterPage(WebDriver driver) {
+    public RegisterPage() {
         super();
-        regform = new RegisterForm(driver);
+        regform = new RegisterForm();
     }
 
 }

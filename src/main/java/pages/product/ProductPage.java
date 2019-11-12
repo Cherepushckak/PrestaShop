@@ -1,14 +1,14 @@
 package main.java.pages.product;
 
-import main.java.pages.common.APageParent;
-import main.java.tools.WebDriver;
+import main.java.pages.header.HeaderFull;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 /**
  *
  */
-public class ProductPage extends APageParent {
+public class ProductPage extends HeaderFull {
 
     /**
      * fields
@@ -28,7 +28,7 @@ public class ProductPage extends APageParent {
      * init field Cart Button
      */
     public void initProductPage() {
-        addToCartButton = WebDriver.driver.findElement(By.cssSelector(".btn.btn-primary.add-to-cart"));
+        addToCartButton = OurWebDriver.driver.findElement(By.cssSelector(".btn.btn-primary.add-to-cart"));
     }
 
     /**

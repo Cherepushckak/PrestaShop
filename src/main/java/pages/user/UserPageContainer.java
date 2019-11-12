@@ -2,7 +2,7 @@ package main.java.pages.user;
 
 import main.java.pages.addresses.Addresses;
 import main.java.pages.header.HeaderFull;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
 /**
@@ -21,7 +21,15 @@ public class UserPageContainer extends HeaderFull {
 
     	// pages.user page elements initialization
 	    //We will get text from actualPageName later in test
+<<<<<<< HEAD
     	actualPageName = WebDriver.driver.findElementByXPath("//section[@id='main']/header/h1");
+=======
+    	actualPageName = OurWebDriver.driver.findElementByXPath("//*[@id='main']/header/h1");
+
+    	//Assert.assertTrue(actualPageName.contains("Your account"));
+	    //We will get text from pageName later in test
+    	pageName = OurWebDriver.driver.findElementByXPath("//*[@id='main']/header/h1");
+>>>>>>> 337c55b883aafba402322a20a55aca2dd53a4ee9
 
     	// This is 'Addresses' card-link on Your account page
 	    //Correct your address cause it doesn`t work

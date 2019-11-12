@@ -2,14 +2,36 @@ package main.java.test;
 
 
 
-import main.java.tools.WebDriver;
-import org.testng.annotations.Test;
+import io.qameta.allure.Attachment;
+import main.java.tools.OurWebDriver;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
 
-public class test {
+public class test implements ITestListener {
 
-    @Test
-    public void test() {
-       System.out.println("Test");
+    @Override
+    public void onTestFailure ( ITestResult result ) {
+        saveScreenshot ();
+    }
+    
+    @Attachment ( value = "Page screenshot", type = "image/png" )
+    public byte[] saveScreenshot () {
+        return ( ( TakesScreenshot ) OurWebDriver.driver ).getScreenshotAs ( OutputType.BYTES );
+    }
+    
+    
+    @BeforeTest
+    protected void setUpWebDriver () {
+        OurWebDriver webDriver = new OurWebDriver ();
+    }
+
+    @AfterTest ( alwaysRun = true )
+    protected void closeWebDriver () {
+        OurWebDriver.driver.quit ();
     }
 }

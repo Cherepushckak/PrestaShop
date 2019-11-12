@@ -1,22 +1,32 @@
 package main.java.test;
 
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import static org.testng.Assert.*;
+
+import io.qameta.allure.*;
 
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.user.UserPage;
-import main.java.tools.WebDriver;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+@Listeners(test.class)
 
+public class TestLoginForm extends test {
 
-public class TestLoginForm {
+	@Severity ( SeverityLevel.CRITICAL )
+	@Description ( "Verify if customer can log in" )
 	@Test
 	public void testLoginForm () {
-		WebDriver webDriver = new WebDriver ();
-		UserPage userPage = new UnlogUserInfo ().clickSignIn ()
-				.writeDefaultCredantials ("admin@gmail.com", "admin" );
-		String expected = "Admin admin";
-		String actual = userPage.createHeader ().initLogUser ().getUserAccount ();
+		
+		UserPage userPage = new UnlogUserInfo ().clickSignInHeaderFull().getLoginForm ()
+				.logIn ( "admin@gmail.com", "admin" );
+		String expected = "Admin ";
+		String actual = userPage.getLogUserInformation ().getLogUserInfo ().getUserNameFromHeader ();
 		assertEquals ( actual, expected );
-		webDriver.closeDriver ();
+		
 	}
+
 }

@@ -11,7 +11,7 @@
 package main.java.pages.addresses;
 
 // Additional packages
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -35,11 +35,11 @@ public class Address {
 
     // Init address
     private void initAddress() {
-        addressContainer = WebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
-        alias = WebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/h4"));
-        allFieldsAddress = WebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
-        updateButton = WebDriver.driver.findElement(By.cssSelector(".address-footer>a:nth-child(1)"));
-        deleteButton = WebDriver.driver.findElement(By.cssSelector(".address-footer>a:nth-child(2)"));
+        addressContainer = OurWebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
+        alias = OurWebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/h4"));
+        allFieldsAddress = OurWebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
+        updateButton = OurWebDriver.driver.findElement(By.cssSelector(".address-footer>a:nth-child(1)"));
+        deleteButton = OurWebDriver.driver.findElement(By.cssSelector(".address-footer>a:nth-child(2)"));
     }
 
     // Getters and setters

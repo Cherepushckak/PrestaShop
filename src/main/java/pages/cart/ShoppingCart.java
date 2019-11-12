@@ -1,6 +1,6 @@
 package main.java.pages.cart;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ *
  */
 public class ShoppingCart {
 
@@ -27,9 +27,14 @@ public class ShoppingCart {
      */
 
     private void initShoppingCart() {
-        continueShoppingButton = WebDriver.driver.findElement(By.cssSelector(".cart-grid-body>.label"));
+        continueShoppingButton = OurWebDriver.driver.findElement(By.cssSelector(".cart-grid-body>.label"));
+        initShoppingItemsList();
+    }
+
+
+    private void initShoppingItemsList() {
         shoppingItemsList = new ArrayList<ShoppingItem>();
-        for (WebElement current : WebDriver.driver.findElements(By.cssSelector(".cart-item"))) {
+        for (WebElement current : OurWebDriver.driver.findElements(By.cssSelector(".cart-item"))) {
             shoppingItemsList.add(new ShoppingItem(current));
         }
     }
@@ -42,11 +47,16 @@ public class ShoppingCart {
         return continueShoppingButton;
     }
 
+    public List<ShoppingItem> getShoppingItemsList() {
+        initShoppingItemsList();
+        return shoppingItemsList;
+    }
+
     /**
      * click Continue shopping and proceed to Main Page
      */
 
-    public void clickContinueShoppingButton () {
+    public void clickContinueShoppingButton() {
         continueShoppingButton.click();
     }
 }
