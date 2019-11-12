@@ -119,19 +119,19 @@ searchButton = OurWebDriver.driver.findElement(By.xpath("//button[@type='submit'
         return currency;
     }
 
-    public LogUserInfo getLogUserInfo() {
-        return logUserInfo;
-    }
+//    public LogUserInfo getLogUserInfo() {
+//        return logUserInfo;
+//    }
 
-    public UnlogUserInfo getUnlogUserInfo() {
-        return unlogUserInfo;
-    }
-    public LogUserInfo initLogUser() {
-        return new LogUserInfo();
-    }
-    public UnlogUserInfo initUnlogUserInfo(){
-        return new UnlogUserInfo();
-    }
+//    public UnlogUserInfo getUnlogUserInfo() {
+//        return unlogUserInfo;
+//    }
+//    public LogUserInfo initLogUser() {
+//        return new LogUserInfo();
+//    }
+//    public UnlogUserInfo initUnlogUserInfo(){
+//        return new UnlogUserInfo();
+//    }
 
 
 

@@ -7,6 +7,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 @Listeners(test.class)
 
+
 public class TestForgotLogin extends test {
 	
 	@Test
@@ -14,4 +15,5 @@ public class TestForgotLogin extends test {
 		ForgotLoginMessage forgotLoginMessage = new UnlogUserInfo ().clickSignInHeaderFull ().getLoginForm().forgotPasswordClick ().writeEmail();
 	}
 }
+
 

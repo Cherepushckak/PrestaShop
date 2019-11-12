@@ -1,7 +1,6 @@
 package main.java.test.TestNata;
 
 import main.java.pages.header.UnlogUserInfo;
-import main.java.pages.login.LoginForm;
 import main.java.pages.login.LoginPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
