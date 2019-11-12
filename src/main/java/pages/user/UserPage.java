@@ -19,9 +19,4 @@ public class UserPage extends HeaderFull {
 		return new UserPageContainer();
 	}
 
-
-	//Nata created for helper
-	public UserPageContainer getUserPageContainer() {
-		return userPageContainer;
-	}
 }
