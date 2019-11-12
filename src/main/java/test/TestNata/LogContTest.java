@@ -4,6 +4,7 @@ import main.java.pages.header.LogCont;
 
 import main.java.pages.main.MainPage;
 
+
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
 
@@ -17,8 +18,6 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-@Listeners(test.class)
-
 
 public class LogContTest extends test{
 
@@ -30,6 +29,7 @@ public class LogContTest extends test{
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         logCont = new LogCont();
     }
+
 
     @Test(priority = 1)
     public void clickContactUsTest() throws InterruptedException {

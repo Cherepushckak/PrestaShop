@@ -12,7 +12,7 @@ import io.qameta.allure.*;
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.user.UserPage;
 import org.testng.annotations.*;
-@Listeners (test.class)
+
 
 
 
@@ -24,7 +24,9 @@ public class TestLoginForm extends test {
 	@Test
 	public void testLoginForm () {
 
+		
 		UserPage userPage = new UnlogUserInfo ().clickSignInHeaderFull().getLoginForm ()
+
 				.logIn ( "admin@gmail.com", "admin" );
 		String expected = "Admin ";
 		String actual = userPage.createHeader ().getLogUserInformation ().getLogUserInfo ().getUserNameFromHeader ();
