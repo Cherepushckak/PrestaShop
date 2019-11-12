@@ -23,6 +23,6 @@ public class MainPage extends HeaderFull {
     }
 
     public LoginPage clickSignIn() {
-        return getLogUserInformation().getUnlogogUserInfo().clickSignIn(); // takes method from headerFull
+        return getLogUserInformation().getUnlogogUserInfo().clickSignIn();
     }   // takes method from headerFull. init class for unlogged user . uses its method click
 }
