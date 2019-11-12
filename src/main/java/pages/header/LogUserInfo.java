@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 /**
  *
  */
-public class LogUserInfo {
+public class LogUserInfo extends LogUserInformation{
 
     /** to sign out from the cabinet */
     private WebElement signOut;

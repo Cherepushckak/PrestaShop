@@ -26,6 +26,14 @@ public class LogCont {
 
     }
 
+    public WebElement getLogo() {
+        return logo;
+    }
+
+    public WebElement getContactUS() {
+        return contactUS;
+    }
+
     /** method opens homePage          change for method that returns HomePage */
     public MainPage clickLogo() {
         logo.click();

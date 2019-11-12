@@ -1,3 +1,4 @@
+
 //package main.java.test.TestMaksym;
 //
 //import main.java.data.User;
@@ -7,13 +8,16 @@
 //import main.java.pages.register.RegisterPage;
 //import main.java.test.test;
 //import main.java.tools.OurWebDriver;
+
 //import org.testng.annotations.Listeners;
+
 //import org.testng.annotations.Test;
 //
 //import static org.testng.Assert.assertEquals;
 //
-//
+
 //public class TestNewUser extends test {
+
 //	@Test
 //	public void testCreateNewUser() throws InterruptedException {
 //
@@ -24,7 +28,9 @@
 //		Thread.sleep(2000); // for demonstration purposes only
 //
 //		// click at sign in button to get new LoginPage
+
 //		LoginPage loginPage = mainPageUserUnregistered.;
+
 //		Thread.sleep(2000); // for demonstration purposes only
 //
 //		// click at link "No account? Create one here" to get new RegisterPage
@@ -49,4 +55,3 @@
 //		webDriver.closeDriver ();
 //	}
 //}
-//
