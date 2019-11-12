@@ -24,7 +24,7 @@ public class TestLoginForm extends test {
 	public void testLoginForm () {
 
 		//change for this!!!!!!!!
-// String actual = new UserPageInstrument().getLogUserInfo().getUserNameFromHeader();
+// String actual = new LogInHelper().getLogUserInfo().getUserNameFromHeader();
 		
 		UserPage userPage = new UnlogUserInfo ().clickSignInHeaderFull().getLoginForm ()
 				.logIn ( "admin@gmail.com", "admin" );

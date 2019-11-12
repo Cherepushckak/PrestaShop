@@ -7,11 +7,11 @@ import main.java.tools.OurWebDriver;
 
 import static org.testng.Assert.assertEquals;
 
-public class UserPageInstrument {
+public class LogInHelper {
     //  private  UserPage userPage;
     private LogUserInfo logUserInfo;
 
-    public UserPageInstrument() {
+    public LogInHelper() {
         initLogUserInfo();
     }
 
