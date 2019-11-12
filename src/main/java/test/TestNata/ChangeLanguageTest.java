@@ -1,26 +1,31 @@
 package main.java.test.TestNata;
 
 import main.java.pages.header.CertainLanguage;
+import main.java.test.test;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-public class ChangeLanguageTest {
-    OurWebDriver webDriver = new OurWebDriver();
-    //Actions actions = new Actions(WebDriver.driver);
+@Listeners(test.class)
 
+public class ChangeLanguageTest extends test {
     /**
      * web element for saving actual element, used is assert
      */
     private WebElement actual;
 
-    /** string value, used in assert(actual result)*/
+    /**
+     * string value, used in assert(actual result)
+     */
     private String actualText;
 
-    /** string value, used in assert(expected result)*/
+    /**
+     * string value, used in assert(expected result)
+     */
     private String expectedText;
     /**
      * instance od CertainLanguage class
@@ -32,11 +37,12 @@ public class ChangeLanguageTest {
      */
     @BeforeMethod
     public void beforeMethod() {
-       certainLanguage = new CertainLanguage();
-        webDriver.driver.manage().window().maximize();
+        certainLanguage = new CertainLanguage();
     }
 
-    /** test checks if language button is working*/
+    /**
+     * test checks if language button is working
+     */
     @Test(priority = 1)
     public void checkLanguage() {
 
@@ -50,9 +56,11 @@ public class ChangeLanguageTest {
 
     }
 
-    /** test checks the possibility to choose English language from the dropDown list*/
+    /**
+     * test checks the possibility to choose English language from the dropDown list
+     */
     @Test(priority = 2)
-    public void changeLanguageForEnglish(){
+    public void changeLanguageForEnglish() {
 
         //Arrange
         expectedText = "English";
@@ -68,10 +76,12 @@ public class ChangeLanguageTest {
 
     }
 
-    /** test checks the possibility to choose Ukrainian language from the dropDown list*/
+    /**
+     * test checks the possibility to choose Ukrainian language from the dropDown list
+     */
     //---------------Separate it to another class!!!!!!!--------------------
-    @Test (priority = 3)
-    public void changeLanguageForUkrainian()throws InterruptedException{
+    @Test(priority = 3)
+    public void changeLanguageForUkrainian() throws InterruptedException {
         //Act
         certainLanguage.clickLanguage();
 
@@ -85,10 +95,5 @@ public class ChangeLanguageTest {
         Assert.assertTrue(actual.isDisplayed());
         System.out.println("Language is changed for Ukrainian");
 
-    }
-
-    @AfterClass
-    public void afterTest() {
-        webDriver.closeDriver();
     }
 }

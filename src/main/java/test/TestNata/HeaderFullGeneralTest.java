@@ -3,31 +3,29 @@ package main.java.test.TestNata;
 import main.java.data.SearchElements;
 import main.java.pages.header.HeaderFull;
 import main.java.pages.search.SearchPage;
+import main.java.test.test;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
+@Listeners(test.class)
 
-public class HeaderFullGeneralTest {
-    OurWebDriver webDriver = new OurWebDriver();
+public class HeaderFullGeneralTest extends test {
     private WebElement actual;
     private HeaderFull headerFull;
 
     @BeforeClass
-    public void beforeClass(){
+    public void beforeClass() {
         headerFull = new HeaderFull();
 
     }
+
     @BeforeMethod
     public void before() {
-        webDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        webDriver.driver.manage().window().maximize();
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @Test
@@ -38,13 +36,8 @@ public class HeaderFullGeneralTest {
                 .searchButtonClick();
 
         //No page is created!!!! temporally using this!!!
-        actual = webDriver.driver.findElement(By.xpath("//img[@alt='Mountain fox cushion']"));
+        actual = OurWebDriver.driver.findElement(By.xpath("//img[@alt='Mountain fox cushion']"));
         Assert.assertTrue(actual.isDisplayed());
         System.out.println("SearchResult is present");
-    }
-
-    @AfterClass
-    public void afterClass(){
-        webDriver.closeDriver();
     }
 }

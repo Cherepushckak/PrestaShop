@@ -60,5 +60,5 @@ public class LogContTest extends test{
         Assert.assertEquals(actual, expected);
         System.out.println("list of products is present");
     }
-    
+
 }
