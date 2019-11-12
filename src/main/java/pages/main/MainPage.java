@@ -4,7 +4,7 @@ import main.java.pages.header.HeaderFull;
 import main.java.pages.login.LoginPage;
 
 /**
- * 
+ *
  */
 public class MainPage extends HeaderFull {
 
@@ -18,7 +18,7 @@ public class MainPage extends HeaderFull {
         initPopularProducts();
     }
 
-    private void initPopularProducts () {
+    private void initPopularProducts() {
         popularProducts = new PopularProducts();
     }
 
@@ -27,6 +27,10 @@ public class MainPage extends HeaderFull {
     }
 
     public LoginPage clickSignIn() {
-        return getLogUserInformation().getUnlogogUserInfo().clickSignIn(); // takes method from headerFull
+        return getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull(); // takes method from headerFull
     }   // takes method from headerFull. init class for unlogged user . uses its method click
+//    public LoginPage clickSignIn() {
+//        return getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull(); // takes method from headerFull
+//    }   // takes method from headerFull. init class for unlogged user . uses its method click
+
 }

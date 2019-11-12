@@ -1,17 +1,15 @@
 package main.java.pages.main;
 
-
-
+import main.java.pages.search.Product;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
-import main.java.pages.search.Product;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ *
  */
 public class PopularProducts {
     /**
@@ -38,6 +36,10 @@ public class PopularProducts {
         return products;
     }
 
+    public WebElement getAllProducts() {
+        return allProducts;
+    }
+
     /**
      * method to create list of products and initialization of allProducts field
      */
@@ -51,24 +53,19 @@ public class PopularProducts {
     }
 
 
-        /**
-         * method to get product by part of name
-         */
+    /**
+     * method to get product by part of name
+     */
 
-       public Product getProductByPartialName (String partialProductName) {
-            Product result = null;
-            for (Product current : getProducts()) {
-                if (current.getNameProductText().toLowerCase()
-                .contains(partialProductName.toLowerCase())) {
-                    result = current;
-                    break;
-                }
+    public Product getProductByPartialName(String partialProductName) {
+        Product result = null;
+        for (Product current : getProducts()) {
+            if (current.getNameProductText().toLowerCase()
+                    .contains(partialProductName.toLowerCase())) {
+                result = current;
+                break;
             }
-            return result;
         }
+        return result;
     }
-
-
-
-
-
+}

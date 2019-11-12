@@ -1,5 +1,3 @@
-package main.java.test.TestMaksym;
-
 import main.java.data.User;
 import main.java.data.UserRepository;
 import main.java.pages.login.LoginPage;
@@ -7,9 +5,11 @@ import main.java.pages.main.MainPage;
 import main.java.pages.register.RegisterPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
+@Listeners (test.class)
 
 public class TestNewUser {
 	@Test
@@ -47,3 +47,4 @@ public class TestNewUser {
 		webDriver.closeDriver ();
 	}
 }
+

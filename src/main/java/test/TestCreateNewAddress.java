@@ -1,16 +1,17 @@
 package main.java.test;
 
+
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 import org.testng.annotations.AfterTest;
 import main.java.tools.OurWebDriver;
 
-public class TestCreateNewAddress {
 
-    @BeforeTest
-    public void launchBrowser() {
-        System.out.println("\tLaunching Volodya's test suite:\n");
-    }
+public class TestCreateNewAddress extends test{
+
 
     @Test(priority = 1)
     public void createNewAddress() {
@@ -23,9 +24,4 @@ public class TestCreateNewAddress {
         System.out.println("It WORKs 2! =D");
     }
 
-    @AfterTest
-    public void terminateBrowser() {
-        // Close test browser windows to release hardware resources
-        OurWebDriver.driver.quit();
-    }
 }
