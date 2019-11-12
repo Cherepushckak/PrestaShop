@@ -2,7 +2,6 @@ package main.java.test.TestNata;
 
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.login.LoginForm;
-
 import main.java.pages.login.LoginPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
@@ -16,19 +15,17 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-@Listeners(test.class)
 
 public class SignInHeaderFullTest extends test {
 
     private WebElement actual;
-
-
+    
     @BeforeMethod
     public void before() {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-
+    
     @Test
     public void signIn() {
 
