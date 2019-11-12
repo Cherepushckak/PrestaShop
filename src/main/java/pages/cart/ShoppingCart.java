@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ *
  */
 public class ShoppingCart {
 
@@ -28,6 +28,11 @@ public class ShoppingCart {
 
     private void initShoppingCart() {
         continueShoppingButton = OurWebDriver.driver.findElement(By.cssSelector(".cart-grid-body>.label"));
+        initShoppingItemsList();
+    }
+
+
+    private void initShoppingItemsList() {
         shoppingItemsList = new ArrayList<ShoppingItem>();
         for (WebElement current : OurWebDriver.driver.findElements(By.cssSelector(".cart-item"))) {
             shoppingItemsList.add(new ShoppingItem(current));
@@ -42,11 +47,16 @@ public class ShoppingCart {
         return continueShoppingButton;
     }
 
+    public List<ShoppingItem> getShoppingItemsList() {
+        initShoppingItemsList();
+        return shoppingItemsList;
+    }
+
     /**
      * click Continue shopping and proceed to Main Page
      */
 
-    public void clickContinueShoppingButton () {
+    public void clickContinueShoppingButton() {
         continueShoppingButton.click();
     }
 }

@@ -2,8 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
-      <!-- Detsyk Oleh's tests -->
-    <test verbose="3" name="Oleg Decyk's tests">
+    <test verbose="1" name="Lv-441 tests">
         <classes>
             <class name="main.java.test.TestLoginForm"></class>
             <class name="main.java.test.TestMaksym.TestNewUser"></class>
@@ -11,6 +10,7 @@
             <class name="main.java.test.TestNata.SignInTest"></class>
             <class name="main.java.test.TestCreateNewAddress"></class>
             <class name="main.java.test.TestForgotLogin"></class>
+            <class name="main.java.test.TestCart"></class>
         </classes>
     </test>
 </suite>

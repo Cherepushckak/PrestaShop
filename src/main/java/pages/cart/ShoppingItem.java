@@ -4,6 +4,7 @@ import main.java.pages.product.ProductPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
  * 
@@ -112,5 +113,6 @@ public class ShoppingItem {
 
     public void clickBasket () {
         basket.click();
+        OurWebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".no-items")));
     }
 }
