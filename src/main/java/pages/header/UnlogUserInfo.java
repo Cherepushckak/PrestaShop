@@ -1,19 +1,23 @@
 package main.java.pages.header;
 
 
+import com.google.gson.annotations.Until;
 import main.java.pages.login.LoginForm;
 
 
 import main.java.pages.login.LoginPage;
 import main.java.tools.OurWebDriver;
-
+import main.java.pages.header.LogCont;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
  */
-public class UnlogUserInfo {
+public class UnlogUserInfo extends LogUserInformation {
 
     /**
      * element signInHeaderFull on HeaderFull
@@ -38,6 +42,7 @@ public class UnlogUserInfo {
 //        return new LoginForm();
 //    }
     public LoginPage clickSignInHeaderFull() {
+
         signInHeaderFull.click();
        return new LoginPage ();
 

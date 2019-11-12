@@ -1,11 +1,11 @@
 package main.java.pages.user;
 
-import main.java.pages.common.APageParent;
+import main.java.pages.header.HeaderFull;
 
 /**
  * 
  */
-public class UserPage extends APageParent {
+public class UserPage extends HeaderFull {
 
 	// Fields
 	public UserPageContainer userPageContainer;
@@ -13,8 +13,10 @@ public class UserPage extends APageParent {
 	/**
 	 * Default constructor
 	 */
-	public UserPage() {
-		UserPageContainer userPageContainer = new UserPageContainer();
+	public UserPage() { getUserPageContainer(); }
+
+	public UserPageContainer getUserPageContainer() {
+		return new UserPageContainer();
 	}
-	
+
 }

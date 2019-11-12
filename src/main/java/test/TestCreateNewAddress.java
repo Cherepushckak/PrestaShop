@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import org.testng.annotations.AfterTest;
 import main.java.tools.OurWebDriver;
+@Listeners(test.class)
 
 
 public class TestCreateNewAddress extends test{

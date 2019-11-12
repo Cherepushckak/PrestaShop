@@ -46,7 +46,6 @@ public class Address {
     private WebElement getAddressContainer() {
         return addressContainer;
     }
-
     private void setAddressContainer(WebElement addressContainer) {
         this.addressContainer = addressContainer;
     }
@@ -54,7 +53,6 @@ public class Address {
     private WebElement getAlias() {
         return alias;
     }
-
     private void setAlias(WebElement alias) {
         this.alias = alias;
     }
@@ -62,7 +60,6 @@ public class Address {
     private WebElement getAllFieldsAddress() {
         return allFieldsAddress;
     }
-
     private void setAllFieldsAddress(WebElement allFieldsAddress) {
         this.allFieldsAddress = allFieldsAddress;
     }

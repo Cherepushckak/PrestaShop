@@ -17,25 +17,24 @@ import static org.testng.Assert.assertEquals;
 @Listeners (test.class)
 
 public class TestNewUser extends test {
-
-    @Severity(SeverityLevel.CRITICAL)
-    @Description("Verify creation of the new user account")
+  
+  @Severity(SeverityLevel.CRITICAL)
+  @Description("Verify creation of the new user account")
 	@Test
 	public void testCreateNewUser() throws InterruptedException {
 
-		OurWebDriver webDriver = new OurWebDriver();
 		UserRepository userRepository = new UserRepository();
 
 		MainPage mainPageUserUnregistered = new MainPage();
-		Thread.sleep(2000); // for demonstration purposes only
+		Thread.sleep(500); // for demonstration purposes only
 
 		// click at sign in button to get new LoginPage
 		LoginPage loginPage = mainPageUserUnregistered.clickSignIn();
-		Thread.sleep(2000); // for demonstration purposes only
+		Thread.sleep(500); // for demonstration purposes only
 
 		// click at link "No account? Create one here" to get new RegisterPage
 		RegisterPage registerPage = loginPage.getLoginForm().noAccountClick();
-		Thread.sleep(2000); // for demonstration purposes only
+		Thread.sleep(500); // for demonstration purposes only
 
 		// create unique User
 		User user = userRepository.getUniqueUser();
@@ -51,8 +50,6 @@ public class TestNewUser extends test {
 
 		assertEquals(userNameAtTheHeader, userNameFromObjectUser,
 				"Expected user FirstName, LastName is not found in the main page's header after the User was created");
-
-		webDriver.closeDriver ();
 	}
 }
 
