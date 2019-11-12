@@ -18,6 +18,7 @@ public class test implements ITestListener {
     public void onTestFailure ( ITestResult result ) {
         saveScreenshot ();
     }
+    
     @Attachment ( value = "Page screenshot", type = "image/png" )
     public byte[] saveScreenshot () {
         return ( ( TakesScreenshot ) OurWebDriver.driver ).getScreenshotAs ( OutputType.BYTES );

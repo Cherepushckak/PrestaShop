@@ -1,6 +1,6 @@
 package main.java.pages.product;
 
-import main.java.pages.common.APageParent;
+import main.java.pages.header.HeaderFull;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 /**
  *
  */
-public class ProductPage extends APageParent {
+public class ProductPage extends HeaderFull {
 
     /**
      * fields

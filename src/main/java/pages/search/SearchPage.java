@@ -1,15 +1,14 @@
 package main.java.pages.search;
 
-
-import main.java.pages.common.APageParent;
 import main.java.pages.common.PagePath;
+import main.java.pages.header.HeaderFull;
 import org.openqa.selenium.WebElement;
 
 
 /**
  * 
  */
-public class SearchPage extends APageParent {
+public class SearchPage extends HeaderFull {
     //elements
     private WebElement Description;
     //instants

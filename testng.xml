@@ -2,14 +2,38 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
-      <!-- Detsyk Oleh's tests -->
-    <test verbose="3" name="Oleg Decyk's tests">
+    <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.TestLoginForm"></class>
-            <class name="main.java.test.TestMaksym.TestNewUser"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ChangeLanguageTest">
+        <classes>
+            <class name="main.java.test.TestNata.ChangeLanguageTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="LogContTest">
+        <classes>
             <class name="main.java.test.TestNata.LogContTest"></class>
-            <class name="main.java.test.TestNata.SignInTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="SignInHeaderFull">
+        <classes>
+            <class name="main.java.test.TestNata.SignInHeaderFullTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="HeaderFullGeneralTest">
+        <classes>
+            <class name="main.java.test.TestNata.HeaderFullGeneralTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestCreateNewAddress">
+        <classes>
             <class name="main.java.test.TestCreateNewAddress"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestForgotLogin">
+        <classes>
             <class name="main.java.test.TestForgotLogin"></class>
         </classes>
     </test>
