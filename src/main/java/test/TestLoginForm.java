@@ -28,7 +28,7 @@ public class TestLoginForm extends test {
 		
 		UserPage userPage = new UnlogUserInfo ().clickSignInHeaderFull().getLoginForm ()
 				.logIn ( "admin@gmail.com", "admin" );
-		String expected = "Admin ";
+		String expected = "Admin admin";
 		String actual = userPage.getLogUserInformation ().getLogUserInfo ().getUserNameFromHeader ();
 		assertEquals ( actual, expected );
 		
