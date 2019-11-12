@@ -6,11 +6,12 @@
     <test verbose="3" name="Oleg Decyk's tests">
         <classes>
             <class name="main.java.test.TestLoginForm">
-                <methods>
-                    <include name="testLoginForm"/>
-                </methods>
             </class>
+            <class name="main.java.test.TestMaksym.TestNewUser"></class>
+            <class name="main.java.test.TestNata.LogContTest"></class>
+            <class name="main.java.test.TestNata.SignInTest"></class>
+            <class name="main.java.test.TestCreateNewAddress"></class>
+            <class name="main.java.test.TestForgotLogin"></class>
         </classes>
     </test>
-
 </suite>

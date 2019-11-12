@@ -7,9 +7,11 @@ import main.java.pages.main.MainPage;
 import main.java.pages.register.RegisterPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
+@Listeners (test.class)
 
 public class TestNewUser {
 	@Test

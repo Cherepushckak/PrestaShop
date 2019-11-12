@@ -6,7 +6,7 @@ import io.qameta.allure.*;
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.user.UserPage;
 import org.testng.annotations.*;
-@Listeners (test.class)
+
 
 
 public class TestLoginForm extends test {
@@ -15,6 +15,7 @@ public class TestLoginForm extends test {
 	@Description ( "Verify if customer can log in" )
 	@Test
 	public void testLoginForm () {
+		
 		UserPage userPage = new UnlogUserInfo ().clickSignIn ().getLoginForm ()
 				.logIn ( "admin@gmail.com", "admin" );
 		String expected = "Admin ";

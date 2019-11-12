@@ -9,10 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
+import org.testng.annotations.*;
 
 public class test implements ITestListener {
     
@@ -25,23 +22,15 @@ public class test implements ITestListener {
         return ( ( TakesScreenshot ) OurWebDriver.driver ).getScreenshotAs ( OutputType.BYTES );
     }
     
-    @Override
-    public void onStart ( ITestContext context ) {
-        setUpWebDriver ();
-    }
-    
-    @Override
-    public void onFinish ( ITestContext context ) {
-        closeWebDriver ();
-    }
-    @BeforeTest
-    private void setUpWebDriver () {
+
+    @BeforeClass
+    protected void setUpWebDriver () {
         OurWebDriver webDriver = new OurWebDriver ();
     }
-    
-    @AfterTest ( alwaysRun = true )
-    private void closeWebDriver (  ) {
-        
+
+    @AfterClass ( alwaysRun = true )
+    protected void closeWebDriver () {
         OurWebDriver.driver.quit ();
     }
+    
 }
