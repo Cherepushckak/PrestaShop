@@ -29,14 +29,14 @@
     <!-- Zyhmund Volodya's tests -->
     <test verbose="3" name="Volodya's tests">
         <classes>
-            <class name="main.java.test.TestCreateNewAddress">
+            <class name="main.java.test.testVolodya.TestCreateNewAddress">
                 <methods>
                     <include name="launchBrowser"/>
                     <include name="createNewAddress"/>
                 </methods>
             </class>
 
-            <class name="main.java.test.TestCreateNewAddress">
+            <class name="main.java.test.testVolodya.TestCreateNewAddress">
                 <methods>
                     <include name="createNewAddress2"/>
                     <include name="terminateBrowser"/>

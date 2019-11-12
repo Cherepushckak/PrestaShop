@@ -25,17 +25,16 @@ public class AddressesPage extends APageParent {
     private WebElement yourAccountLink;
     private WebElement addresses;
     private WebElement actualPageName;
-
     private WebElement backToYourAccountLink;
     private WebElement homeLowerLink;
 
     /**
      * Default constructor
      */
-    AddressesPage() {
+    public AddressesPage() {
         homeTopLink();
         yourAccountLink();
-        addresses();
+        //addresses();
         actualPageName();
         initAddressesList();
         backToYourAccountLink();
@@ -63,7 +62,7 @@ public class AddressesPage extends APageParent {
 
     // Initialise actual page name
     private void actualPageName() {
-        actualPageName = WebDriver.driver.findElementByXPath("//section[@id='main']/header/h1/text()");
+        actualPageName = WebDriver.driver.findElementByXPath("//section[@id='main']/header/h1");
     }
 
     // Initialise class addresses
@@ -84,6 +83,24 @@ public class AddressesPage extends APageParent {
     private void homeLowerLink() {
         homeLowerLink = WebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[2]");
     }
+
+    public WebElement getHomeTopLink() { return homeTopLink; }
+    public void setHomeTopLink(WebElement homeTopLink) { this.homeTopLink = homeTopLink; }
+
+    public WebElement getYourAccountLink() { return yourAccountLink; }
+    public void setYourAccountLink(WebElement yourAccountLink) { this.yourAccountLink = yourAccountLink; }
+
+    public WebElement getAddresses() { return addresses; }
+    public void setAddresses(WebElement addresses) { this.addresses = addresses; }
+
+    public WebElement getActualPageName() { return actualPageName; }
+    public void setActualPageName(WebElement actualPageName) { this.actualPageName = actualPageName; }
+
+    public WebElement getBackToYourAccountLink() { return backToYourAccountLink; }
+    public void setBackToYourAccountLink(WebElement backToYourAccountLink) { this.backToYourAccountLink = backToYourAccountLink; }
+
+    public WebElement getHomeLowerLink() { return homeLowerLink; }
+    public void setHomeLowerLink(WebElement homeLowerLink) { this.homeLowerLink = homeLowerLink; }
 
     // Click 'Home' link
     private void clickHomeTop() { homeTopLink.click(); }

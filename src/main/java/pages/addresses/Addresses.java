@@ -19,7 +19,7 @@ import main.java.tools.WebDriver;
 public class Addresses {
 
     // Collection of addresses
-    ArrayList<Address> addresses = new ArrayList<>();
+    private ArrayList<Address> addresses = new ArrayList<>();
 
     // Fields
     private WebElement addressesList;
@@ -28,7 +28,10 @@ public class Addresses {
     /**
      * Default constructor
      */
-    Addresses() {
+    public Addresses() {}
+
+    public Addresses(WebElement addressesList) {
+        this.addressesList = addressesList;
         initAddressesList(addresses);
         createNewAddressLink();
     }
@@ -47,25 +50,16 @@ public class Addresses {
     }
 
     // Getters and setters
-    public ArrayList<Address> getAddresses() {
-        return addresses;
-    }
+    public WebElement getAddressesList() { return addressesList; }
+    public void setAddressesList(WebElement addressesList) { this.addressesList = addressesList; }
 
-    public void setAddresses(ArrayList<Address> addresses) {
-        this.addresses = addresses;
-    }
-
-    public WebElement getAddressesList() {
-        return addressesList;
-    }
-
-    public void setAddressesList(WebElement addressesList) {
-        this.addressesList = addressesList;
-    }
+    public WebElement getCreateNewAddressLink() { return createNewAddressLink; }
+    public void setCreateNewAddressLink(WebElement createNewAddressLink) { this.createNewAddressLink = createNewAddressLink; }
 
     // Click '+ Create new address' link
-    private void createNewAddressClick() {
+    public NewAddress clickCreateNewAddressLink() {
         createNewAddressLink.click();
+        return new NewAddress();
     }
 
 }
