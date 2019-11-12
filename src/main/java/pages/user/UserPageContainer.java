@@ -1,6 +1,7 @@
 package main.java.pages.user;
 
 import main.java.pages.header.HeaderFull;
+import main.java.pages.header.UnlogUserInfo;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -41,5 +42,6 @@ public class UserPageContainer extends HeaderFull {
     public void addressClick() {
     	address.click();
     }
-    
+
+
 }
