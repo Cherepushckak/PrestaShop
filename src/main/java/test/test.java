@@ -13,7 +13,7 @@ import org.testng.annotations.*;
 
 
 public class test implements ITestListener {
-    
+
     @Override
     public void onTestFailure ( ITestResult result ) {
         saveScreenshot ();

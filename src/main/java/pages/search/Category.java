@@ -9,10 +9,24 @@ public class Category {
     private WebElement self;
     private String categoryName;
     private ArrayList<WebElement> subCategory;
+    private WebElement collapse;
+    private boolean isCollapsed;
 
     public Category(WebElement self){
         this.self = self;
         categoryName = self.getText();
-        //subCategory = WebDriver.driver.findElementsByXPath("");
+        isCollapsed = false;
     }
+
+    /*
+     * Add sub category to list
+     */
+    public void addSubCategory(WebElement subCategory){
+        this.subCategory.add(subCategory);
+    }
+
+    public void setCollapse(WebElement collapse){
+        this.collapse = collapse;
+    }
+
 }
