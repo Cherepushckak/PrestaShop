@@ -9,8 +9,9 @@ import org.testng.annotations.Test;
 
 public class TestForgotLogin extends test {
 	
-	@Test
-	public void testForgotPassword(){
-		ForgotLoginMessage forgotLoginMessage = new UnlogUserInfo ().clickSignIn ().getLoginForm().forgotPasswordClick ().writeEmail();
-	}
+//	@Test
+//	public void testForgotPassword(){
+//		ForgotLoginMessage forgotLoginMessage = new UnlogUserInfo ().clickSignIn ().getLoginForm().forgotPasswordClick ().writeEmail();
+//	}
 }
+

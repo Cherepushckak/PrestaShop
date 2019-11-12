@@ -2,9 +2,11 @@ package main.java.test.TestNata;
 
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.login.LoginForm;
+import main.java.pages.login.LoginPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -13,23 +15,31 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-@Listeners ( test.class)
 
-public class SignInTest {
+public class SignInHeaderFullTest extends test {
 
-    OurWebDriver webDriver = new OurWebDriver();
-    private WebElement runPage;
     private WebElement actual;
     
-    @Test
-    public void signIn(){
+    @BeforeMethod
+    public void before() {
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    }
 
-        LoginForm loginForm = new UnlogUserInfo().clickSignIn().getLoginForm();
+    
+    @Test
+    public void signIn() {
+
+        //Arrange
+
+        LoginPage loginPage = new UnlogUserInfo().clickSignInHeaderFull();
+
         //Act
-        actual = webDriver.driver.findElementByCssSelector(".login-form");
+        actual = loginPage.getLoginForm().emailClick();
+
         //Assert
         Assert.assertTrue(actual.isDisplayed());
         System.out.println("LogIn form is opened");
 
     }
+
 }
