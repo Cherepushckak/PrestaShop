@@ -1,3 +1,5 @@
+package main.java.test.TestMaksym;
+
 import main.java.data.User;
 import main.java.data.UserRepository;
 import main.java.pages.login.LoginPage;

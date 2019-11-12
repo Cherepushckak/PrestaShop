@@ -1,12 +1,13 @@
-package main.java.test;
+package main.java.test.testArtem;
 
 import main.java.pages.cart.CartPage;
 import main.java.pages.main.MainPage;
+import main.java.test.test;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class TestCart extends test {
+public class TestCartSmoke extends test {
 
     @Test
     public void itemPresentsNonLogin() {
