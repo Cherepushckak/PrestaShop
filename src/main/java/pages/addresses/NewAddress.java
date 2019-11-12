@@ -11,7 +11,6 @@
 package main.java.pages.addresses;
 
 // Additional packages
-
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -36,8 +35,7 @@ public class NewAddress {
     /**
      * Default constructor
      */
-    NewAddress(WebElement newAddressContainer) {
-        this.newAddressContainer = newAddressContainer;
+    public NewAddress() {
         initNewAddress();
     }
 
@@ -96,7 +94,7 @@ public class NewAddress {
     public void setPhone(WebElement phone) { this.phone = phone; }
 
     // Click 'SAVE' button
-    private void clickSave() {
+    private void clickSaveButton() {
         saveButton.click();
     }
 }

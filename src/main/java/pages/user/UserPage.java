@@ -13,8 +13,10 @@ public class UserPage extends HeaderFull {
 	/**
 	 * Default constructor
 	 */
-	public UserPage() {
-		UserPageContainer userPageContainer = new UserPageContainer();
+	public UserPage() { getUserPageContainer(); }
+
+	public UserPageContainer getUserPageContainer() {
+		return new UserPageContainer();
 	}
 
 
