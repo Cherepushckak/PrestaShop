@@ -14,12 +14,17 @@ import main.java.pages.user.UserPage;
 import org.testng.annotations.*;
 @Listeners(test.class)
 
+
+
 public class TestLoginForm extends test {
 
 	@Severity ( SeverityLevel.CRITICAL )
 	@Description ( "Verify if customer can log in" )
 	@Test
 	public void testLoginForm () {
+
+		//change for this!!!!!!!!
+// String actual = new LogInHelper().getLogUserInfo().getUserNameFromHeader();
 		
 		UserPage userPage = new UnlogUserInfo ().clickSignInHeaderFull().getLoginForm ()
 				.logIn ( "admin@gmail.com", "admin" );

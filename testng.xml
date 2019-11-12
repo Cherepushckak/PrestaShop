@@ -30,7 +30,7 @@
     </test>
     <test verbose="3" name="TestCreateNewAddress">
         <classes>
-            <class name="main.java.test.TestCreateNewAddress"></class>
+            <class name="test.TestVolodya.TestCreateNewAddress"></class>
         </classes>
     </test>
     <test verbose="3" name="TestForgotLogin">

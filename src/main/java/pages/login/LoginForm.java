@@ -2,6 +2,8 @@ package main.java.pages.login;
 
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
+import main.java.pages.header.HeaderFull;
+import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
 import main.java.tools.OurWebDriver;
@@ -27,13 +29,16 @@ public class LoginForm {
 	}
 	
 	public void initLogin () {
-		setEmail ();
-		setPassword ();
-		setForgotPassword ();
-		setNoAccount ();
-		setShow ();
-		setSignIn ();
-		setNoAccount();
+		email = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+				"div:nth-child(2) input" ) );
+		password = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+				"div:nth-child(3) > div.col-md-6 > div > input" ) );
+		show = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+				"div:nth-child(3) > div.col-md-6 > div > span > button" ) );
+		forgotPassword = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+				"div.forgot-password > a" ) );
+		signIn = OurWebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
+		noAccount = OurWebDriver.driver.findElement ( By.cssSelector ( "#content > div > a" ) );
 	}
 	
 	public WebElement emailClick () {
@@ -106,34 +111,6 @@ public class LoginForm {
 	
 	public WebElement getNoAccount () {
 		return noAccount;
-	}
-	
-	public void setEmail () {
-		email = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-				"div:nth-child(2) input" ) );
-	}
-	
-	public void setPassword () {
-		password = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-				"div:nth-child(3) > div.col-md-6 > div > input" ) );
-	}
-	
-	public void setShow () {
-		show = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-				"div:nth-child(3) > div.col-md-6 > div > span > button" ) );
-	}
-	
-	public void setForgotPassword () {
-		forgotPassword = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
-				"div.forgot-password > a" ) );
-	}
-	
-	public void setSignIn () {
-		signIn = OurWebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
-	}
-	
-	public void setNoAccount () {
-		noAccount = OurWebDriver.driver.findElement ( By.cssSelector ( "#content > div > a" ) );
 	}
 }
 
