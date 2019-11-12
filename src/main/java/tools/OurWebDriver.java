@@ -1,6 +1,5 @@
 package main.java.tools;
 
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class OurWebDriver {
@@ -15,6 +14,7 @@ public class OurWebDriver {
         } else {
             System.setProperty("webdriver.chrome.driver", "..\\Webdriver\\chromedriver.exe");
         }
+
 
         driver = new ChromeDriver();
         driver.manage().window().maximize(); // Maximize test browser window
