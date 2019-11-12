@@ -8,11 +8,11 @@ import main.java.tools.OurWebDriver;
 import static org.testng.Assert.assertEquals;
 
 public class UserPageInstrument {
-  //  private  UserPage userPage;
+    //  private  UserPage userPage;
     private LogUserInfo logUserInfo;
+
     public UserPageInstrument() {
         initLogUserInfo();
-
     }
 
     public void initLogUserInfo() {
@@ -21,13 +21,10 @@ public class UserPageInstrument {
                 .getUnlogogUserInfo()
                 .clickSignInHeaderFull()
                 .getLoginForm()
-                .sendKeysToLoginForm()
-                .getUserPageContainer()
+                .logIn("admin@gmail.com", "admin")
                 .getLogUserInformation()
                 .getLogUserInfo();
 
-//        String expected = "Admin ";
-//        assertEquals(logUserInfoText, expected);
     }
 
     public LogUserInfo getLogUserInfo() {

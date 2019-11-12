@@ -16,22 +16,13 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertEquals;
 
 public class TestLoginFormNata extends test {
-    UserPageInstrument userPageInstrument;
 
-    @BeforeMethod
-    public void beforeMethod() {
-        userPageInstrument = new UserPageInstrument();
-
-
-    }
 
     @Test
     public void nataTestLoginForm() {
-      // LogUserInfo logUserInfo =
-       //UserPage userPage = new HeaderFull().getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull().getLoginForm().sendKeysToLoginForm();
-       // userPageInstrument.initLogUserInfoText();
-        String actual = new UserPageInstrument().getLogUserInfo().getUserNameFromHeader(); //logUserInfo.getUserNameFromHeader();
-        String expected = "Admin ";
+
+        String actual = new UserPageInstrument().getLogUserInfo().getUserNameFromHeader();
+        String expected = "Admin admin";
         assertEquals(actual, expected);
     }
 

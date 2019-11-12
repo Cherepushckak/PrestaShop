@@ -43,8 +43,6 @@ public class UnlogUserInfo extends LogUserInformation {
 //    }
     public LoginPage clickSignInHeaderFull() {
 
-        WebDriverWait driverWait = new WebDriverWait(OurWebDriver.driver, 10);
-        signInHeaderFull = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//img[@class='logo img-responsive']")));
         signInHeaderFull.click();
        return new LoginPage ();
 
