@@ -15,6 +15,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
+@Listeners(test.class)
 
 public class SignInHeaderFullTest extends test {
 

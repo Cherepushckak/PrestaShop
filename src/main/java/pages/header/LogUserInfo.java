@@ -17,15 +17,13 @@ public class LogUserInfo {
 
     /** Default constructor */
     public LogUserInfo() {
-
         initLogUserInfo();
     }
 
     //Changed!!!!!!!!! taken away from constructor!!!!!!!
-    public LogUserInfo initLogUserInfo() {
+    public void initLogUserInfo() {
         signOut = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
         userAccount =OurWebDriver.driver.findElement(By.cssSelector("#_desktop_user_info > div > a.account > span"));
-        return new LogUserInfo();
 
 //        signOut = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//a[@class='logout hidden-sm-down']"));
 //        userAccount = OurWebDriver.driver.findElement(By.cssSelector("#_desktop_user_info > div > a.account > span"));
