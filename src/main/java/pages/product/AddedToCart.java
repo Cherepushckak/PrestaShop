@@ -53,7 +53,7 @@ public class AddedToCart {
      *checkout button click method proceed to Cart Page
      */
     public CartPage clickCheckoutButton () {
-        WebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated
+        OurWebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated
                 (By.cssSelector(".cart-content-btn>.btn.btn-primary")));
         checkoutButton.click();
         return new CartPage();

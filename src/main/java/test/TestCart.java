@@ -26,7 +26,6 @@ public class TestCart {
         String actual = cartPage.getShoppingCart().getShoppingItemsList().get(0).getNameText();
         assertTrue(actual.toLowerCase().contains("t-shirt"));
         cartPage.getShoppingCart().getShoppingItemsList().get(0).clickBasket();
-        OurWebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".no-items")));
         assertTrue(cartPage.getShoppingCart().getShoppingItemsList().isEmpty());
     }
 
