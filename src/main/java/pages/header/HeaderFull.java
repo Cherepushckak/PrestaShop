@@ -97,15 +97,6 @@ searchButton = OurWebDriver.driver.findElement(By.xpath("//button[@type='submit'
         return new HeaderFull();
     }
 
-//        searchField = OurWebDriver.driver.findElement(By.cssSelector(".ui-autocomplete-input"));
-//        searchButton = OurWebDriver.driver.findElement(By.xpath("//button[@type='submit']"));
-//        language = OurWebDriver.driver.findElement(By.cssSelector("#_desktop_language_selector > div > div"));
-//        currency = OurWebDriver.driver.findElement(By.cssSelector("#currency-selector-label"));
-//        cart = OurWebDriver.driver.findElement(By.cssSelector(".header"));
-//        clothes = OurWebDriver.driver.findElement(By.cssSelector("#category-3"));
-//        accessories = OurWebDriver.driver.findElement(By.cssSelector("#category-6"));
-//        art = OurWebDriver.driver.findElement(By.cssSelector("#category-9"));
-
 
     public WebElement getCart() {
         return cart;
@@ -118,20 +109,6 @@ searchButton = OurWebDriver.driver.findElement(By.xpath("//button[@type='submit'
     public WebElement getCurrency() {
         return currency;
     }
-
-//    public LogUserInfo getLogUserInfo() {
-//        return logUserInfo;
-//    }
-
-//    public UnlogUserInfo getUnlogUserInfo() {
-//        return unlogUserInfo;
-//    }
-//    public LogUserInfo initLogUser() {
-//        return new LogUserInfo();
-//    }
-//    public UnlogUserInfo initUnlogUserInfo(){
-//        return new UnlogUserInfo();
-//    }
 
 
 

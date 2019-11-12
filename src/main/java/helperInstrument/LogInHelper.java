@@ -2,13 +2,11 @@ package main.java.helperInstrument;
 
 import main.java.pages.header.LogUserInfo;
 import main.java.pages.user.UserPage;
-import main.java.pages.header.UnlogUserInfo;
-import main.java.tools.OurWebDriver;
 
-import static org.testng.Assert.assertEquals;
-
+/**
+ * class LogInHelper  has method that opens logIn form, pass credentials. and
+ */
 public class LogInHelper {
-    //  private  UserPage userPage;
     private LogUserInfo logUserInfo;
 
     public LogInHelper() {
