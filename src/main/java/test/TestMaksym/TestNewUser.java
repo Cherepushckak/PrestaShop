@@ -1,3 +1,4 @@
+//
 //package main.java.test.TestMaksym;
 //
 //import main.java.data.User;
@@ -5,6 +6,7 @@
 //import main.java.pages.login.LoginPage;
 //import main.java.pages.main.MainPage;
 //import main.java.pages.register.RegisterPage;
+//import main.java.test.test;
 //import main.java.tools.OurWebDriver;
 //import org.testng.annotations.Test;
 //
@@ -21,7 +23,7 @@
 //		Thread.sleep(2000); // for demonstration purposes only
 //
 //		// click at sign in button to get new LoginPage
-//		LoginPage loginPage = mainPageUserUnregistered.clickSignIn();
+//		LoginPage loginPage = mainPageUserUnregistered.clickSign();
 //		Thread.sleep(2000); // for demonstration purposes only
 //
 //		// click at link "No account? Create one here" to get new RegisterPage
@@ -46,3 +48,4 @@
 //		webDriver.closeDriver ();
 //	}
 //}
+

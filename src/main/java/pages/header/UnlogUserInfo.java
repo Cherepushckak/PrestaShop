@@ -27,21 +27,19 @@ public class UnlogUserInfo {
 
         signInHeaderFull = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//span[@class='hidden-sm-down']"));
 
-        // signIn = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//span[@class='hidden-sm-down']"));
     }
 
     /**
      * method opens LoginForm method
      */
 
-    public LoginForm clickSignInHeaderFull() {
-        signInHeaderFull.click();
-        return new LoginForm();
-    }
-    //Why did u change it?????????????????///
-//    public LoginPage clickSignInHeaderFull() {
+//    public LoginForm clickSignInHeaderFull() {
 //        signInHeaderFull.click();
-//        return new LoginPage ();
-//
+//        return new LoginForm();
 //    }
+    public LoginPage clickSignInHeaderFull() {
+        signInHeaderFull.click();
+       return new LoginPage ();
+
+   }
 }

@@ -3,6 +3,8 @@ package main.java.test.TestNata;
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.login.LoginForm;
 
+import main.java.pages.login.LoginPage;
+import main.java.test.test;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 
@@ -10,24 +12,20 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
+@Listeners(test.class)
 
-public class SignInHeaderFullTest {
-
-
-
-    OurWebDriver webDriver = new OurWebDriver();
-    private WebElement runPage;
+public class SignInHeaderFullTest extends test {
 
     private WebElement actual;
 
 
     @BeforeMethod
     public void before() {
-        webDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        webDriver.driver.manage().window().maximize();
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
 
@@ -36,11 +34,10 @@ public class SignInHeaderFullTest {
 
         //Arrange
 
-
-        LoginForm loginForm = new UnlogUserInfo().clickSignInHeaderFull();
+        LoginPage loginPage = new UnlogUserInfo().clickSignInHeaderFull();
 
         //Act
-        actual = loginForm.emailClick();
+        actual = loginPage.getLoginForm().emailClick();
 
         //Assert
         Assert.assertTrue(actual.isDisplayed());
@@ -48,8 +45,4 @@ public class SignInHeaderFullTest {
 
     }
 
-    @AfterClass
-    public void afterClass() {
-        webDriver.closeDriver();
-    }
 }
