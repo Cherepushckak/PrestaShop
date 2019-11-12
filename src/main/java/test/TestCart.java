@@ -2,22 +2,11 @@ package main.java.test;
 
 import main.java.pages.cart.CartPage;
 import main.java.pages.main.MainPage;
-import main.java.tools.OurWebDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class TestCart {
-
-    @BeforeTest
-    public void beforeTest() {
-        OurWebDriver driver = new OurWebDriver();
-    }
-
+public class TestCart extends test {
 
     @Test
     public void itemPresentsNonLogin() {
@@ -29,9 +18,4 @@ public class TestCart {
         assertTrue(cartPage.getShoppingCart().getShoppingItemsList().isEmpty());
     }
 
-
-    @AfterTest(alwaysRun = true)
-    public void afterTest () {
-        OurWebDriver.driver.close();
-    }
 }
