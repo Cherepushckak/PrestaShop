@@ -11,6 +11,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
+
 public class test implements ITestListener {
     
     @Override
@@ -22,15 +23,14 @@ public class test implements ITestListener {
         return ( ( TakesScreenshot ) OurWebDriver.driver ).getScreenshotAs ( OutputType.BYTES );
     }
     
-
-    @BeforeClass
+    
+    @BeforeTest
     protected void setUpWebDriver () {
         OurWebDriver webDriver = new OurWebDriver ();
     }
 
-    @AfterClass ( alwaysRun = true )
+    @AfterTest ( alwaysRun = true )
     protected void closeWebDriver () {
         OurWebDriver.driver.quit ();
     }
-    
 }

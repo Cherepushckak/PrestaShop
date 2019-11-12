@@ -7,15 +7,13 @@ import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.user.UserPage;
 import org.testng.annotations.*;
 
-
-
 public class TestLoginForm extends test {
 	
 	@Severity ( SeverityLevel.CRITICAL )
 	@Description ( "Verify if customer can log in" )
 	@Test
 	public void testLoginForm () {
-		
+
 		UserPage userPage = new UnlogUserInfo ().clickSignIn ().getLoginForm ()
 				.logIn ( "admin@gmail.com", "admin" );
 		String expected = "Admin ";
