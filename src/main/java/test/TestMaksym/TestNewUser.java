@@ -1,3 +1,8 @@
+package main.java.test.TestMaksym;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import main.java.data.User;
 import main.java.data.UserRepository;
 import main.java.pages.login.LoginPage;
@@ -11,7 +16,10 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 @Listeners (test.class)
 
-public class TestNewUser {
+public class TestNewUser extends test {
+
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verify creation of the new user account")
 	@Test
 	public void testCreateNewUser() throws InterruptedException {
 
