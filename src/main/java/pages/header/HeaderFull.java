@@ -4,6 +4,7 @@ package main.java.pages.header;
 import main.java.pages.search.SearchPage;
 
 
+import main.java.pages.searchresult.SearchResultPage;
 import main.java.tools.OurWebDriver;
 
 import org.openqa.selenium.By;
@@ -82,9 +83,9 @@ searchButton = OurWebDriver.driver.findElement(By.xpath("//button[@type='submit'
      * method opens SearchPage
      * @return SearchPage
      */
-    public SearchPage searchButtonClick(){
+    public SearchResultPage searchButtonClick(){
         getSearchButton().click();
-        return new SearchPage();
+        return new SearchResultPage();
     }
     public HeaderFull clearSearchField(){
         getSearchField().clear();

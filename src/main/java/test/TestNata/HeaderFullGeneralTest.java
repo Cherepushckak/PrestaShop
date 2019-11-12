@@ -3,6 +3,7 @@ package main.java.test.TestNata;
 import main.java.data.SearchElements;
 import main.java.pages.header.HeaderFull;
 import main.java.pages.search.SearchPage;
+import main.java.pages.searchresult.SearchResultPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
@@ -31,7 +32,7 @@ public class HeaderFullGeneralTest extends test {
     @Test
     public void searchFieldTest() {
 
-        SearchPage searchPage = new HeaderFull().clearSearchField()
+        SearchResultPage searchResultPage = new HeaderFull().clearSearchField()
                 .sendKeysToSearchField(SearchElements.SEARCHING_PRODUCT)
                 .searchButtonClick();
 
