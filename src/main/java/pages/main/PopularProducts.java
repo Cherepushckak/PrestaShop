@@ -1,11 +1,7 @@
 package main.java.pages.main;
 
 import main.java.pages.search.Product;
-
-
-
 import main.java.tools.OurWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -13,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ *
  */
 public class PopularProducts {
     /**
@@ -23,6 +19,7 @@ public class PopularProducts {
 
 
     private WebElement allProducts;
+    private String partialProductName;
 
     /**
      * Default constructor
@@ -39,6 +36,10 @@ public class PopularProducts {
         return products;
     }
 
+    public WebElement getAllProducts() {
+        return allProducts;
+    }
+
     /**
      * method to create list of products and initialization of allProducts field
      */
@@ -49,25 +50,22 @@ public class PopularProducts {
         for (WebElement current : OurWebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
             products.add(new Product(current));
         }
-
-        /**
-         * method to get product by part of name
-         */
-
-       /* public Product getProductByPartialName (String partialProductName) {
-            Product result = null;
-            for (Product current : getProducts()) {
-                if (current.getNameProductText().toLowerCase()
-                .contains(partialProductName.toLowerCase())) {
-                    result = current;
-                    break;
-                }
-            }
-            return result;
-        }*/
     }
-//I made getter for my test
-    public WebElement getAllProducts() {
-        return allProducts;
+
+
+    /**
+     * method to get product by part of name
+     */
+
+    public Product getProductByPartialName(String partialProductName) {
+        Product result = null;
+        for (Product current : getProducts()) {
+            if (current.getNameProductText().toLowerCase()
+                    .contains(partialProductName.toLowerCase())) {
+                result = current;
+                break;
+            }
+        }
+        return result;
     }
 }

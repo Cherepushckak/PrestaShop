@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-
+    
     <test verbose="3" name="testLoginForm">
+
         <classes>
             <class name="main.java.test.TestLoginForm"></class>
         </classes>
@@ -35,6 +36,7 @@
     <test verbose="3" name="TestForgotLogin">
         <classes>
             <class name="main.java.test.TestForgotLogin"></class>
+            <class name="main.java.test.TestCart"></class>
         </classes>
     </test>
 </suite>
