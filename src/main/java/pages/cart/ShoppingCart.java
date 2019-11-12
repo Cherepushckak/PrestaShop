@@ -3,6 +3,7 @@ package main.java.pages.cart;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,17 @@ public class ShoppingCart {
     public List<ShoppingItem> getShoppingItemsList() {
         initShoppingItemsList();
         return shoppingItemsList;
+    }
+
+    public void deleteAllFromCart () {
+        for (ShoppingItem current: shoppingItemsList) {
+            if (current.getBasket().isEnabled()) {
+                current.clickBasket();
+            } else {
+                break;
+            }
+        }
+            OurWebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".no-items")));
     }
 
     /**

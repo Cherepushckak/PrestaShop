@@ -113,6 +113,7 @@ public class ShoppingItem {
 
     public void clickBasket () {
         basket.click();
-        OurWebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".no-items")));
     }
+
+
 }
