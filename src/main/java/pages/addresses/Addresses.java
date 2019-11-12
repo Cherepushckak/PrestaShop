@@ -11,9 +11,11 @@
 package main.java.pages.addresses;
 
 // Additional packages
+
 import java.util.ArrayList;
 import org.openqa.selenium.WebElement;
 import main.java.tools.OurWebDriver;
+
 
 // Addresses class
 public class Addresses {

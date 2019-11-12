@@ -2,6 +2,7 @@ package main.java.pages.search;
 
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
+
 import java.util.ArrayList;
 import java.util.Locale;
 import main.java.pages.search.Category;

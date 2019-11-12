@@ -1,32 +1,45 @@
 package main.java.pages.header;
 
+
+import main.java.pages.login.LoginForm;
+
+
 import main.java.pages.login.LoginPage;
 import main.java.tools.OurWebDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 /**
- * 
+ *
  */
 public class UnlogUserInfo {
 
     /**
-     * element signIn on HeaderFull
+     * element signInHeaderFull on HeaderFull
      */
-    private WebElement signIn;
+    private WebElement signInHeaderFull;
 
     /**
      * Default constructor
      */
     public UnlogUserInfo() {
-        signIn = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//span[@class='hidden-sm-down']"));
+
+        signInHeaderFull = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//span[@class='hidden-sm-down']"));
+
     }
 
     /**
      * method opens LoginForm method
      */
-    public LoginPage clickSignIn() {
-        signIn.click();
-        return new LoginPage ();
-    }
+
+//    public LoginForm clickSignInHeaderFull() {
+//        signInHeaderFull.click();
+//        return new LoginForm();
+//    }
+    public LoginPage clickSignInHeaderFull() {
+        signInHeaderFull.click();
+       return new LoginPage ();
+
+   }
 }
