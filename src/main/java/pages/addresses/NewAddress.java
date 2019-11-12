@@ -12,7 +12,7 @@ package main.java.pages.addresses;
 
 // Additional packages
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
 // NewAddress class
@@ -43,19 +43,19 @@ public class NewAddress {
 
     // Init address
     private void initNewAddress() {
-        newAddressContainer = WebDriver.driver.findElementByCssSelector("#content");
-        alias = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[1]/div[1]/input");
-        firstName = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[2]/div[1]/input");
-        lastName = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[3]/div[1]/input");
-        company = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[4]/div[1]/input");
-        vatNumber = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[5]/div[1]/input");
-        myAddress = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[6]/div[1]/input");
-        addressComplement = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[7]/div[1]/input");
-        zipPostalCode = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[8]/div[1]/input");
-        city = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[9]/div[1]/input");
-        country = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[10]/div[1]/select");
-        phone = WebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[11]/div[1]/input");
-        saveButton = WebDriver.driver.findElementByCssSelector("button.btn");
+        newAddressContainer = OurWebDriver.driver.findElementByCssSelector("#content");
+        alias = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[1]/div[1]/input");
+        firstName = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[2]/div[1]/input");
+        lastName = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[3]/div[1]/input");
+        company = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[4]/div[1]/input");
+        vatNumber = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[5]/div[1]/input");
+        myAddress = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[6]/div[1]/input");
+        addressComplement = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[7]/div[1]/input");
+        zipPostalCode = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[8]/div[1]/input");
+        city = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[9]/div[1]/input");
+        country = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[10]/div[1]/select");
+        phone = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[11]/div[1]/input");
+        saveButton = OurWebDriver.driver.findElementByCssSelector("button.btn");
     }
 
     // Getters and setters

@@ -2,7 +2,7 @@ package main.java.test.TestNata;
 
 import main.java.pages.header.LogCont;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LogContTest {
 
-    WebDriver webDriver = new WebDriver();
+    OurWebDriver webDriver = new OurWebDriver();
     LogCont logCont;
     private WebElement runPage;
     private WebElement actual;

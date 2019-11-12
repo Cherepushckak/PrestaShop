@@ -1,6 +1,6 @@
 package main.java.pages.search;
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -19,12 +19,12 @@ public class Categories {
         /*
          * Find open category name
          */
-        categoryName = WebDriver.driver.findElementByXPath("//a[@class='text-uppercase h6']");
+        categoryName = OurWebDriver.driver.findElementByXPath("//a[@class='text-uppercase h6']");
 
         /*
          * Create list of categories
          */
-        for (WebElement c: WebDriver.driver.findElementsByXPath("//li[@data-depth='0']")) {
+        for (WebElement c: OurWebDriver.driver.findElementsByXPath("//li[@data-depth='0']")) {
             categories.add(new Category(c));
         }
 
@@ -32,7 +32,7 @@ public class Categories {
           Find subcategories for categories
          */
         int i=1; //for check iteration
-        for (WebElement c: WebDriver.driver.findElementsByXPath("//li[@data-depth=1]/a")){
+        for (WebElement c: OurWebDriver.driver.findElementsByXPath("//li[@data-depth=1]/a")){
             if (i<3){
                 categories.get(0).addSubCategory(c);
             }
@@ -45,7 +45,7 @@ public class Categories {
          * Add collapse button
          */
         i = 0;
-        for (WebElement c: WebDriver.driver.findElementsByXPath("//div[contains(@class,'navbar-toggler')]")){
+        for (WebElement c: OurWebDriver.driver.findElementsByXPath("//div[contains(@class,'navbar-toggler')]")){
             categories.get(i).setCollapse(c);
             i++;
         }

@@ -1,8 +1,7 @@
 package main.java.pages.header;
 
-import main.java.pages.login.LoginForm;
 import main.java.pages.login.LoginPage;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -20,14 +19,14 @@ public class UnlogUserInfo {
      * Default constructor
      */
     public UnlogUserInfo() {
-        signIn = WebDriver.driver.findElement(By.xpath("//div[@class='user-info']//span[@class='hidden-sm-down']"));
+        signIn = OurWebDriver.driver.findElement(By.xpath("//div[@class='user-info']//span[@class='hidden-sm-down']"));
     }
 
     /**
      * method opens LoginForm method
      */
-    public LoginForm clickSignIn() {
+    public LoginPage clickSignIn() {
         signIn.click();
-        return new LoginForm ();
+        return new LoginPage ();
     }
 }

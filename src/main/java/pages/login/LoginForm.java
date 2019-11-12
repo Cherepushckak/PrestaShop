@@ -1,10 +1,15 @@
 package main.java.pages.login;
 
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
+import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  *
@@ -28,6 +33,7 @@ public class LoginForm {
 		setNoAccount ();
 		setShow ();
 		setSignIn ();
+		setNoAccount();
 	}
 	
 	public WebElement emailClick () {
@@ -35,6 +41,7 @@ public class LoginForm {
 		return email;
 	}
 	
+	@Step("Step 1")
 	public WebElement writeEmailClick ( String email ) {
 		emailClick ().sendKeys ( email );
 		return this.email;
@@ -44,6 +51,8 @@ public class LoginForm {
 		getPassword ().click ();
 		return password;
 	}
+	
+	@Step("Step 2")
 	public WebElement writePasswordClick ( String password ) {
 		passwordClick ().sendKeys ( password );
 		return this.password;
@@ -53,7 +62,7 @@ public class LoginForm {
 		getShow ().click ();
 		return show;
 	}
-	@Step("Step 1")
+	
 	public UserPage logIn ( String email, String password ) {
 		writeEmailClick ( email );
 		writePasswordClick ( password );
@@ -68,6 +77,11 @@ public class LoginForm {
 	public ForgotPassword forgotPasswordClick () {
 		getForgotPassword ().click ();
 		return new ForgotPassword ();
+	}
+
+	public RegisterPage noAccountClick () {
+		getNoAccount().click();
+		return new RegisterPage();
 	}
 	
 	public WebElement getEmail () {
@@ -95,29 +109,31 @@ public class LoginForm {
 	}
 	
 	public void setEmail () {
-		email = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+		email = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
 				"div:nth-child(2) input" ) );
 	}
 	
 	public void setPassword () {
-		password = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+		password = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
 				"div:nth-child(3) > div.col-md-6 > div > input" ) );
 	}
 	
 	public void setShow () {
-		show = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+		show = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
 				"div:nth-child(3) > div.col-md-6 > div > span > button" ) );
 	}
 	
 	public void setForgotPassword () {
-		forgotPassword = WebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
+		forgotPassword = OurWebDriver.driver.findElement ( By.cssSelector ( "#login-form > section > " +
 				"div.forgot-password > a" ) );
 	}
 	
 	public void setSignIn () {
-		signIn = WebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
+		signIn = OurWebDriver.driver.findElement ( By.cssSelector ( "#submit-login" ) );
 	}
 	
 	public void setNoAccount () {
+		noAccount = OurWebDriver.driver.findElement ( By.cssSelector ( "#content > div > a" ) );
 	}
 }
+

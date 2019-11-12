@@ -13,7 +13,7 @@ package main.java.pages.addresses;
 // Additional packages
 import java.util.ArrayList;
 import org.openqa.selenium.WebElement;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 
 // Addresses class
 public class Addresses {
@@ -35,15 +35,15 @@ public class Addresses {
 
     // Initialise list of addresses
     private void initAddressesList(ArrayList<Address> addresses) {
-        addressesList = WebDriver.driver.findElementByXPath("//section[@id='content']");
-        for (WebElement current : WebDriver.driver.findElementsByCssSelector("div.col-sm-6:nth-child(2)")) {
+        addressesList = OurWebDriver.driver.findElementByXPath("//section[@id='content']");
+        for (WebElement current : OurWebDriver.driver.findElementsByCssSelector("div.col-sm-6:nth-child(2)")) {
             addresses.add(new Address(current));
         }
     }
 
     // Initialise '+ Create new address' link
     private void createNewAddressLink() {
-        createNewAddressLink = WebDriver.driver.findElementByXPath("//section[@id='content']/div[4]/a");
+        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[4]/a");
     }
 
     // Getters and setters

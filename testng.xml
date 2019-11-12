@@ -12,37 +12,5 @@
             </class>
         </classes>
     </test>
-  
-  
-    <!-- Artemenko Maksym's tests -->
-    <test verbose="3" name="Maksym Artemenko's tests">
-        <classes>
-            <class name="main.java.test.TestNewUser">
-                <methods>
-                    <include name="testCreateNewUser"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-
-
-    <!-- Zyhmund Volodya's tests -->
-    <test verbose="3" name="Volodya's tests">
-        <classes>
-            <class name="main.java.test.TestCreateNewAddress">
-                <methods>
-                    <include name="launchBrowser"/>
-                    <include name="createNewAddress"/>
-                </methods>
-            </class>
-
-            <class name="main.java.test.TestCreateNewAddress">
-                <methods>
-                    <include name="createNewAddress2"/>
-                    <include name="terminateBrowser"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
 
 </suite>

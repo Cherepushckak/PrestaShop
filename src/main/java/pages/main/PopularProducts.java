@@ -2,7 +2,7 @@ package main.java.pages.main;
 
 
 
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import main.java.pages.search.Product;
 import org.openqa.selenium.WebElement;
@@ -42,9 +42,9 @@ public class PopularProducts {
      */
 
     private void initPopularProducts() {
-        allProducts = WebDriver.driver.findElement(By.cssSelector(".all-product-link.float-xs-left.float-md-right.h4"));
+        allProducts = OurWebDriver.driver.findElement(By.cssSelector(".all-product-link.float-xs-left.float-md-right.h4"));
         products = new ArrayList<Product>();
-        for (WebElement current : WebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
+        for (WebElement current : OurWebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
             products.add(new Product(current));
         }
 

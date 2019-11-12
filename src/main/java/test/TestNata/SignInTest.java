@@ -2,7 +2,7 @@ package main.java.test.TestNata;
 
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.login.LoginForm;
-import main.java.tools.WebDriver;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SignInTest {
 
-    WebDriver webDriver = new WebDriver();
+    OurWebDriver webDriver = new OurWebDriver();
     private WebElement runPage;
     private WebElement actual;
 
@@ -31,7 +31,7 @@ public class SignInTest {
     @Test
     public void signIn(){
 
-        LoginForm loginForm = new UnlogUserInfo().clickSignIn();
+        LoginForm loginForm = new UnlogUserInfo().clickSignIn().getLoginForm();
         //Act
         actual = webDriver.driver.findElementByCssSelector(".login-form");
         //Assert
