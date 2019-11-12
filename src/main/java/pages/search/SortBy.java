@@ -22,7 +22,9 @@ public class SortBy {
      * Default constructor
      */
     public SortBy() {
-        sortType = (ArrayList<WebElement>) OurWebDriver.driver.findElementByXPath("//div[@class='dropdown-menu']//a");
+        for( WebElement s : OurWebDriver.driver.findElementsByXPath("//div[@class='dropdown-menu']//a")) {
+            sortType.add(s);
+        }
     }
 
     /**
