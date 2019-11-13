@@ -75,6 +75,13 @@ public class LoginForm {
 		getSignIn().click();
 	}
 
+	@Step ("Logging in with email/password...")
+	public void logInVoid ( String email, String password ) {
+		writeEmailClick ( email );
+		writePasswordClick ( password );
+		signInClick ();
+	}
+
 	public ForgotPassword forgotPasswordClick() {
 		getForgotPassword().click();
 		return new ForgotPassword();
