@@ -106,6 +106,7 @@ public class ShoppingItem {
 
     public void clickDecreaseQuantity () {
         decreaseQuantity.click();
+        OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
     }
 
     public ProductPage clickName () {
@@ -125,9 +126,20 @@ public class ShoppingItem {
         quantity.click();
     }
 
+    private void quantityClear () {
+        quantity.clear();
+    }
 
+    private void quantitySetValue (String value) {
+        quantity.sendKeys(value);
+        OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
+    }
 
-
-
+    public void quantityChangeValue (String value) {
+        quantityClick();
+        quantityClear();
+        quantitySetValue(value);
+        quantity.submit();
+    }
 
 }
