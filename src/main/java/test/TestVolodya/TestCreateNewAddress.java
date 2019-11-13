@@ -1,5 +1,6 @@
 package main.java.test.TestVolodya;
 
+import main.java.helperInstrument.LogInHelper;
 import main.java.pages.user.Address;
 import main.java.data.AddressRepository;
 import main.java.pages.addresses.Addresses;
@@ -18,8 +19,9 @@ public class TestCreateNewAddress extends test {
     @Test
     public void createNewAddress() {
         // Log In and press addresses card-link
-        Addresses addressesPage = new UnlogUserInfo().clickSignInHeaderFull().getLoginForm()
-                .logIn("admin@gmail.com", "admin").getUserPageContainer().clickAddresses();
+//        Addresses addressesPage = new UnlogUserInfo().clickSignInHeaderFull().getLoginForm()
+//                .logIn("admin@gmail.com", "admin").getUserPageContainer().clickAddresses();
+        Addresses addressesPage = new LogInHelper().getUserPage().getUserPageContainer().clickAddresses();
 
         // Verify that we are on the page we expected (Create new address)
         String actualPageName = new AddressesPage().getActualPageName().getText();
