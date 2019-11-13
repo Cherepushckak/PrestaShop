@@ -4,12 +4,16 @@ package main.java.test.olegsTests;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+
 import main.java.helperInstrument.LogInHelper;
 import main.java.test.test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
+
+
+
 @Listeners( test.class)
 
 
@@ -24,10 +28,6 @@ public class TestLoginForm extends test {
 	@Test
 	public void testLoginForm () {
 
-		//change for this!!!!!!!!
-// String actual = new LogInHelper().getLogUserInfo().getUserNameFromHeader();
-
-		
 		LogInHelper logInHelper = new LogInHelper ();
 
 		

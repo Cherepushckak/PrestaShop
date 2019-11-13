@@ -85,6 +85,8 @@ public class AddressesPage extends HeaderFull {
         homeLowerLink = OurWebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[2]");
     }
 
+
+
     public WebElement getHomeTopLink() { return homeTopLink; }
     public void setHomeTopLink(WebElement homeTopLink) { this.homeTopLink = homeTopLink; }
 

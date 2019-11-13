@@ -40,7 +40,8 @@
     </test>
     <test verbose="3" name="TestCart">
         <classes>
-            <class name="main.java.test.TestCart"></class>
+            <class name="main.java.test.TestForgotLogin"></class>
+            <class name="main.java.test.testArtem.TestCartSmoke"></class>
         </classes>
     </test>
 </suite>

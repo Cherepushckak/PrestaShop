@@ -12,10 +12,15 @@ package main.java.pages.addresses;
 
 // Additional packages
 
+
+import java.util.ArrayList;
+import org.openqa.selenium.WebElement;
+
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
+
 
 
 // Addresses class
@@ -27,6 +32,7 @@ public class Addresses {
     // Fields
     private WebElement addressesList;
     private WebElement createNewAddressLink;
+    private WebElement actualAlias;
 
     /**
      * Default constructor
@@ -37,6 +43,7 @@ public class Addresses {
         this.addressesList = addressesList;
         initAddressesList(addresses);
         createNewAddressLink();
+        actualAlias();
     }
 
     // Initialise list of addresses
@@ -49,7 +56,11 @@ public class Addresses {
 
     // Initialise '+ Create new address' link
     private void createNewAddressLink() {
-        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[4]/a");
+        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[3]/a");
+    }
+
+    private void actualAlias() {
+        actualAlias = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/article/div/h4");
     }
 
     // Getters and setters
@@ -59,10 +70,12 @@ public class Addresses {
     public WebElement getCreateNewAddressLink() { return createNewAddressLink; }
     public void setCreateNewAddressLink(WebElement createNewAddressLink) { this.createNewAddressLink = createNewAddressLink; }
 
+    public WebElement getActualAlias() { return actualAlias; }
+    public void setActualAlias(WebElement actualAlias) { this.actualAlias = actualAlias; }
+
     // Click '+ Create new address' link
-    public NewAddress clickCreateNewAddressLink() {
+    public void clickCreateNewAddressLink() {
         createNewAddressLink.click();
-        return new NewAddress();
     }
 
 }
