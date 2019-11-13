@@ -5,48 +5,107 @@ import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class CertainLanguage extends HeaderFull {
+/**
+ * CertainLanguage allows to find language and nearby arrow buttons, to open dropDown list of languages,
+ * to choose one from the list.
+ */
+public class CertainLanguage {
 
+    /**
+     * element on the header
+     */
     private WebElement language;
+
+    /**
+     * element on the header
+     */
     private WebElement english;
+
+    /**
+     * element on the header
+     */
     private WebElement ukrainian;
+
+    /**
+     * element on the header
+     */
     private WebElement arrow;
+
+    /**
+     * element on the header
+     */
     private WebElement dropDownListLanguage;
 
+    /**
+     * locator that contains address of language field in DOM
+     */
+    private final By languageLocator = By.xpath("//div[@id='_desktop_language_selector']//span[@class='expand-more']");
+
+
+    /**
+     * locator that contains address of arrow field in DOM
+     */
+    private final By arrowLocator = By.xpath(
+            "//div[@id='_desktop_language_selector']//i[@class='material-icons expand-more']");
+
+    /**
+     * locator that contains address of english field in dropDownList in DOM
+     */
+    private final By englishLocator = By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='en']");
+
+    /**
+     * locator that contains address of ukrainian field in dropDownList in DOM
+     */
+    private final By ukrainianLocator = By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='uk']");
+
+    /**
+     * locator that contains address of dropDownListLanguage field in DOM
+     */
+    private final By dropDownListLanguageLocator = By.xpath(
+            "//div[@class='language-selector dropdown js-dropdown open']//ul[@class='dropdown-menu hidden-sm-down']");
+
+    /**
+     * constructor with method initCertainLanguage that bring up language and arrow values.
+     */
     public CertainLanguage() {
         initCertainLanguage();
     }
 
+    /**
+     * Method that bring up language and arrow values
+     */
     public void initCertainLanguage() {
         getLanguage();
         getArrow();
-        // return new CertainLanguage();
     }
 
     /**
-     * method puts webElement value to the field language;
+     * method puts locator to the field language;
      *
      * @return language webElement.
      */
     public WebElement getLanguage() {
-        language = OurWebDriver.driver.findElement(By.xpath("//div[@id='_desktop_language_selector']//span[@class='expand-more']"));
+        language = OurWebDriver.driver.findElement(languageLocator);
         return language;
     }
 
+    /**
+     * method make click on language and opens dropDownList
+     *
+     * @return instance of CertainLanguage
+     */
     public CertainLanguage clickLanguage() {
         getLanguage().click();
         return new CertainLanguage();
     }
 
-    //May be make a List of elements that contains 2 x languages?????///////////////////////////////
-
     /**
-     * method puts webElement value to the field arrow;
+     * method puts locator the field arrow;
      *
      * @return arrow.
      */
     public WebElement getArrow() {
-        arrow = OurWebDriver.driver.findElement(By.xpath("//div[@id='_desktop_language_selector']//i[@class='material-icons expand-more']"));
+        arrow = OurWebDriver.driver.findElement(arrowLocator);
         return arrow;
     }
 
@@ -58,12 +117,12 @@ public class CertainLanguage extends HeaderFull {
     }
 
     /**
-     * method puts webElement value to the field english;
+     * method puts locator to the field english;
      *
      * @return english webElement.
      */
     public WebElement getEnglish() {
-        english = OurWebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='en']"));
+        english = OurWebDriver.driver.findElement(englishLocator);
         return english;
     }
 
@@ -84,7 +143,7 @@ public class CertainLanguage extends HeaderFull {
      * @return ukrainian webElement.
      */
     public WebElement getUkrainian() {
-        ukrainian = OurWebDriver.driver.findElement(By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@data-iso-code='uk']"));
+        ukrainian = OurWebDriver.driver.findElement(ukrainianLocator);
         return ukrainian;
     }
 
@@ -106,8 +165,7 @@ public class CertainLanguage extends HeaderFull {
      * @return dropDown element.
      */
     public WebElement getDropDownListLanguage() {
-        dropDownListLanguage = OurWebDriver.driver.findElement(By.xpath(
-                "//div[@class='language-selector dropdown js-dropdown open']//ul[@class='dropdown-menu hidden-sm-down']"));
+        dropDownListLanguage = OurWebDriver.driver.findElement(dropDownListLanguageLocator);
         return dropDownListLanguage;
     }
 

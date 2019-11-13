@@ -20,15 +20,15 @@ public class Currency {
         //USD = driver.find...
     }
 
-    public void clickEUR () {
+    public void clickEUR() {
         EUR.click();
     }
 
-    public void clickUAH () {
+    public void clickUAH() {
         UAH.click();
     }
 
-    public void clickUSD () {
+    public void clickUSD() {
         USD.click();
     }
 

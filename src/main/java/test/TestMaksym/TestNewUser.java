@@ -1,3 +1,4 @@
+
 package main.java.test.TestMaksym;
 
 import io.qameta.allure.Description;
@@ -52,4 +53,5 @@ public class TestNewUser extends test {
 				"Expected user FirstName, LastName is not found in the main page's header after the User was created");
 	}
 }
+
 

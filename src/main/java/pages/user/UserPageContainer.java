@@ -2,8 +2,9 @@ package main.java.pages.user;
 
 import main.java.pages.addresses.Addresses;
 import main.java.pages.header.HeaderFull;
-import main.java.pages.header.UnlogUserInfo;
+
 import main.java.tools.OurWebDriver;
+
 import org.openqa.selenium.WebElement;
 
 /**
@@ -23,7 +24,7 @@ public class UserPageContainer extends HeaderFull {
     	// pages.user page elements initialization
 	    //We will get text from actualPageName later in test
 
-        //---Nata comented xpath id bad!!!!!!!!!!!1-------------------------------
+        //---Nata commented xpath is bad!!!!!!!!!!!1-------------------------------
     	//actualPageName = OurWebDriver.driver.findElementByXPath("//*[@id='main']/header/h1");
 
     	//Assert.assertTrue(actualPageName.contains("Your account"));

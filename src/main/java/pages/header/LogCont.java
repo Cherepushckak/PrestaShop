@@ -7,40 +7,73 @@ import org.openqa.selenium.WebElement;
 
 
 /**
- * Class contains webElement: logo and Contact Us
+ * Class contains webElement: logo and Contact Us,
+ * allows to open main page and contactUs form
  */
 public class LogCont {
 
-    /** element 'MyStore' on the pages.Header */
+    /**
+     * element 'MyStore' on the pages.Header
+     */
     private WebElement logo;
 
-    /** element 'ContactUS' on pages.Header*/
-    private WebElement contactUS;
     /**
-     * Default constructor
+     * element 'ContactUS' on pages.Header
+     */
+    private WebElement contactUS;
+
+    /**
+     * locator that contains address of logo field in DOM
+     */
+    private final By logoLocator = By.xpath("//img[@class='logo img-responsive']");
+
+    /**
+     * locator that contains address of contactUs field in DOM
+     */
+    private final By contactUsLocator = By.xpath("//div[@class='row']//div[@id='_desktop_contact_link']");
+
+    /**
+     * Default constructor that bring up init method.
      */
     public LogCont() {
+        initLogCont();
+    }
 
-        logo = OurWebDriver.driver.findElement(By.xpath("//img[@class='logo img-responsive']"));
-        contactUS = OurWebDriver.driver.findElement(By.xpath("//div[@class='row']//div[@id='_desktop_contact_link']"));
+    /**
+     * method that bring up logo and contactUs webElements.
+     */
+    public void initLogCont() {
+        logo = OurWebDriver.driver.findElement(logoLocator);
+        contactUS = OurWebDriver.driver.findElement(contactUsLocator);
 
     }
 
+
+    /**
+     * getter to logo field
+     */
     public WebElement getLogo() {
         return logo;
     }
 
+    /**
+     * getter to contactUs field
+     */
     public WebElement getContactUS() {
         return contactUS;
     }
 
-    /** method opens homePage          change for method that returns HomePage */
+    /**
+     * method opens homePage
+     */
     public MainPage clickLogo() {
         logo.click();
         return new MainPage();
     }
 
-    /** method opens Contact Us form  change for method that returns contactUs page*/
+    /**
+     * method opens Contact Us form  change for method that returns contactUs page
+     */
     public void clickContactUS() {
         contactUS.click();
     }

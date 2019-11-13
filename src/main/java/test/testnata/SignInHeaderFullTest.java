@@ -1,14 +1,11 @@
-package main.java.test.TestNata;
+package main.java.test.testnata;
 
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.login.LoginPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
-import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -34,10 +31,10 @@ public class SignInHeaderFullTest extends test {
         LoginPage loginPage = new UnlogUserInfo().clickSignInHeaderFull();
 
         //Act
-        actual = loginPage.getLoginForm().emailClick();
+        actual = loginPage.getLoginForm().getEmail();
 
         //Assert
-        Assert.assertTrue(actual.isDisplayed());
+        Assert.assertTrue(actual.isEnabled());
         System.out.println("LogIn form is opened");
 
     }

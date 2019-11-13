@@ -1,33 +1,22 @@
-package main.java.test.TestNata;
+package main.java.test.testnata;
 
 import main.java.data.SearchElements;
 import main.java.pages.header.HeaderFull;
-import main.java.pages.search.SearchPage;
 import main.java.pages.searchresult.SearchResultPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
 @Listeners(test.class)
 
 public class HeaderFullGeneralTest extends test {
     private WebElement actual;
-    private HeaderFull headerFull;
+    private final By productLocator = By.xpath("//img[@alt='Mountain fox cushion']");
 
-    @BeforeClass
-    public void beforeClass() {
-        headerFull = new HeaderFull();
-
-    }
-
-    @BeforeMethod
-    public void before() {
-        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    }
 
     @Test
     public void searchFieldTest() {
@@ -37,7 +26,7 @@ public class HeaderFullGeneralTest extends test {
                 .searchButtonClick();
 
         //No page is created!!!! temporally using this!!!
-        actual = OurWebDriver.driver.findElement(By.xpath("//img[@alt='Mountain fox cushion']"));
+        actual = OurWebDriver.driver.findElement(productLocator);
         Assert.assertTrue(actual.isDisplayed());
         System.out.println("SearchResult is present");
     }
