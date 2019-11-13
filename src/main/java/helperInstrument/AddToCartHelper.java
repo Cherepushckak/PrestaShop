@@ -1,4 +1,4 @@
-package main.java.helper;
+package main.java.helperInstrument;
 
 import main.java.pages.cart.CartPage;
 import main.java.pages.main.MainPage;
@@ -13,7 +13,7 @@ public class AddToCartHelper {
 
     public void init () {
         cartPage = new MainPage().getPopularProducts().getProductByPartialName("T-Shirt")
-                .clickProductName().setAddToCartButtonClick().clickCheckoutButton();
+                .clickProductName().getProductInfo().setAddToCartButtonClick().clickCheckoutButton();
     }
 
     public CartPage getCartPage() {

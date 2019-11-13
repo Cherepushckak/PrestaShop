@@ -46,7 +46,7 @@ public class LoginForm {
 		return email;
 	}
 	
-	@Step("Step 1")
+	@Step("{email}")
 	public WebElement writeEmailClick ( String email ) {
 		emailClick ().sendKeys ( email );
 		return this.email;
@@ -57,7 +57,7 @@ public class LoginForm {
 		return password;
 	}
 	
-	@Step("Step 2")
+	@Step("{password}")
 	public WebElement writePasswordClick ( String password ) {
 		passwordClick ().sendKeys ( password );
 		return this.password;

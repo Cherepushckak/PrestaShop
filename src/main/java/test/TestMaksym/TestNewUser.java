@@ -1,5 +1,8 @@
 package main.java.test.TestMaksym;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import main.java.data.User;
 import main.java.data.UserRepository;
 import main.java.pages.login.LoginPage;

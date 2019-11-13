@@ -1,6 +1,6 @@
 package main.java.test.testArtem;
 
-import main.java.helper.AddToCartHelper;
+import main.java.helperInstrument.AddToCartHelper;
 import main.java.pages.cart.CartPage;
 import main.java.pages.cart.ShoppingItem;
 import main.java.test.test;
