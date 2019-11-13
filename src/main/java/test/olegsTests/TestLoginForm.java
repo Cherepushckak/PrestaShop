@@ -1,16 +1,24 @@
-package main.java.test;
+package main.java.test.olegsTests;
 
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import main.java.pages.header.UnlogUserInfo;
-import main.java.pages.user.UserPage;
+
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
-@Listeners(test.class)
+
+
+
+import main.java.helperInstrument.LogInHelper;
+import main.java.test.test;
+@Listeners( test.class)
+
+
+
 
 
 
@@ -23,11 +31,13 @@ public class TestLoginForm extends test {
 
 		//change for this!!!!!!!!
 // String actual = new LogInHelper().getLogUserInfo().getUserNameFromHeader();
+
 		
-		UserPage userPage = new UnlogUserInfo ().clickSignInHeaderFull().getLoginForm ()
-				.logIn ( "admin@gmail.com", "admin" );
-		String expected = "Admin ";
-		String actual = userPage.getLogUserInformation ().getLogUserInfo ().getUserNameFromHeader ();
+		LogInHelper logInHelper = new LogInHelper ();
+
+		
+		String expected = "Admin admin";
+		String actual = logInHelper.getUserPage ().getLogUserInformation ().getLogUserInfo ().getUserNameFromHeader ();
 		assertEquals ( actual, expected );
 		
 	}

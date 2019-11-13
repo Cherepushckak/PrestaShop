@@ -1,33 +1,35 @@
 package main.java.helperInstrument;
 
-import main.java.pages.header.LogUserInfo;
 import main.java.pages.user.UserPage;
-import main.java.pages.header.UnlogUserInfo;
+
+
+import main.java.data.UserRepository;
+import main.java.pages.header.LogUserInformation;
 
 /**
  * class LogInHelper  has method that opens logIn form, pass credentials. and
  */
-public class LogInHelper extends UnlogUserInfo {
-    private LogUserInfo logUserInfo;
+public class LogInHelper {
+    //  private  UserPage userPage;
+    private UserPage userPage;
+
 
     public LogInHelper() {
         initLogUserInfo();
     }
 
     public void initLogUserInfo() {
-        logUserInfo = new UserPage()
-                .getLogUserInformation()
+
+        userPage = new LogUserInformation()
                 .getUnlogogUserInfo()
                 .clickSignInHeaderFull()
                 .getLoginForm()
-                .logIn("admin@gmail.com", "admin")
-                .getLogUserInformation()
-                .getLogUserInfo();
+                .logIn( new UserRepository().getAdmin ().getEmail (), new UserRepository ().getAdmin ().getPassword () );
 
     }
 
-    public LogUserInfo getLogUserInfoFromHelper() {
-        return logUserInfo;
+    public UserPage getUserPage() {
+        return userPage;
     }
 }
 

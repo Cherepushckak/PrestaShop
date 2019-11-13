@@ -27,10 +27,7 @@ public class MainPage extends HeaderFull {
     }
 
     public LoginPage clickSignIn() {
-        return getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull(); // takes method from headerFull
-    }   // takes method from headerFull. init class for unlogged user . uses its method click
-//    public LoginPage clickSignIn() {
-//        return getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull(); // takes method from headerFull
-//    }   // takes method from headerFull. init class for unlogged user . uses its method click
+        return getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull();
+    }
 
 }
