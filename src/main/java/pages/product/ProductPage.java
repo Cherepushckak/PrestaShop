@@ -13,7 +13,7 @@ public class ProductPage extends HeaderFull {
     /**
      * fields
      */
-    private WebElement addToCartButton;
+    private ProductInfo productInfo;
     // private WebDriver driver;
 
     /**
@@ -28,24 +28,14 @@ public class ProductPage extends HeaderFull {
      * init field Cart Button
      */
     public void initProductPage() {
-        addToCartButton = OurWebDriver.driver.findElement(By.cssSelector(".btn.btn-primary.add-to-cart"));
+        productInfo = new ProductInfo();
     }
 
     /**
      * getters
      */
 
-    public WebElement getAddToCartButton() {
-        return addToCartButton;
+    public ProductInfo getProductInfo() {
+        return productInfo;
     }
-
-    /**
-     * click Cart Button and move to AddedToCart class
-     */
-    public AddedToCart setAddToCartButtonClick() {
-        addToCartButton.click();
-        return new AddedToCart();
-    }
-
-
 }
