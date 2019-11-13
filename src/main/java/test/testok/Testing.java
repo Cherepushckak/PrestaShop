@@ -1,4 +1,4 @@
-package main.java.test.TestOK;
+package main.java.test.testok;
 
 import main.java.tools.OurWebDriver;
 import org.testng.annotations.AfterClass;
