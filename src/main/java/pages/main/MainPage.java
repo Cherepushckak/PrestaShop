@@ -27,7 +27,7 @@ public class MainPage extends HeaderFull {
     }
 
     public LoginPage clickSignIn() {
-        return getLogUserInformation().getUnlogogUserInfo().clickSignInHeaderFull();
+        return getLogUserInformation().getUncloggedUserInfo().clickSignInHeaderFull();
     }
 
 }

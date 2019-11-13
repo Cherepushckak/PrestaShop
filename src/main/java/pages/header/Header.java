@@ -6,6 +6,7 @@ package main.java.pages.header;
 public class Header {
 
     private LogCont logCont;
+
     /**
      * Default constructor
      */

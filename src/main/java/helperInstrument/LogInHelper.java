@@ -21,7 +21,7 @@ public class LogInHelper {
     public void initLogUserInfo() {
 
         userPage = new LogUserInformation()
-                .getUnlogogUserInfo()
+                .getUncloggedUserInfo()
                 .clickSignInHeaderFull()
                 .getLoginForm()
                 .logIn( new UserRepository().getAdmin ().getEmail (), new UserRepository ().getAdmin ().getPassword () );

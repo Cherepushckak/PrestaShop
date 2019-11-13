@@ -14,7 +14,7 @@ public class LogoTest extends test {
 
         int actual  = new HeaderFull()
         .getLogUserInformation()
-        .getUnlogogUserInfo()
+        .getUncloggedUserInfo()
         .clickSignInHeaderFull()
         .getLogCont()
         .clickLogo().getPopularProducts().getProducts().size();

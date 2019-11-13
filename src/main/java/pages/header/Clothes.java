@@ -3,12 +3,13 @@ package main.java.pages.header;
 import org.openqa.selenium.WebElement;
 
 /**
- * 
+ *
  */
 public class Clothes {
 
     private WebElement men;
     private WebElement women;
+
     /**
      * Default constructor
      */
@@ -17,11 +18,11 @@ public class Clothes {
         //Women = driver.find...
     }
 
-    public void clickMen(){
+    public void clickMen() {
         men.click();
     }
 
-    public void clickWomen(){
+    public void clickWomen() {
         women.click();
     }
 

@@ -31,10 +31,10 @@ public class SignInHeaderFullTest extends test {
         LoginPage loginPage = new UnlogUserInfo().clickSignInHeaderFull();
 
         //Act
-        actual = loginPage.getLoginForm().emailClick();
+        actual = loginPage.getLoginForm().getEmail();
 
         //Assert
-        Assert.assertTrue(actual.isDisplayed());
+        Assert.assertTrue(actual.isEnabled());
         System.out.println("LogIn form is opened");
 
     }
