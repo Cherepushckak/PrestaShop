@@ -74,7 +74,13 @@ public class LoginForm {
 		signInClick ();
 		return new UserPage ();
 	}
-	
+	@Step ("Logging in with email/password...")
+	public void logInVoid ( String email, String password ) {
+		writeEmailClick ( email );
+		writePasswordClick ( password );
+		signInClick ();
+	}
+	@Step ("Clicking at the link 'No account? Create one here' to get new RegisterPage")
 	public void signInClick () {
 		getSignIn ().click ();
 	}

@@ -3,6 +3,7 @@ package main.java.pages.user;
 import main.java.pages.addresses.Addresses;
 import main.java.pages.header.HeaderFull;
 import main.java.pages.header.UnlogUserInfo;
+import main.java.pages.register.RegisterPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -13,6 +14,7 @@ public class UserPageContainer extends HeaderFull {
 
     public WebElement actualPageName;
     private WebElement addresses;
+    private WebElement userInformation;
 
     /**
      * Default constructor
@@ -33,6 +35,7 @@ public class UserPageContainer extends HeaderFull {
         // This is 'Addresses' card-link on Your account page
         //Correct your address cause it doesn`t work
         addresses = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/a[2]/span");
+        userInformation = OurWebDriver.driver.findElementById("identity-link");
     }
 
     //------Fields commented--------!!!!!!!!!!
@@ -47,4 +50,8 @@ public class UserPageContainer extends HeaderFull {
         return new Addresses();
     }
 
+    public YourPersonalInformationPage clickUserInformation() {
+        userInformation.click();
+        return new YourPersonalInformationPage();
+    }
 }

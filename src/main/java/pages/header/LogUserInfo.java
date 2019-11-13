@@ -1,5 +1,6 @@
 package main.java.pages.header;
 
+import main.java.pages.user.UserPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -51,8 +52,9 @@ public class LogUserInfo extends LogUserInformation{
     /**
      * Method open 'Your Acount'
      */
-    public void clickUserAccount() {
+    public UserPage clickUserAccount() {
         userAccount.click();
+        return new UserPage();
     }
     
     public String getUserNameFromHeader() {
