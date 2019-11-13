@@ -24,6 +24,7 @@ public class Addresses {
     // Fields
     private WebElement addressesList;
     private WebElement createNewAddressLink;
+    private WebElement actualAlias;
 
     /**
      * Default constructor
@@ -34,6 +35,7 @@ public class Addresses {
         this.addressesList = addressesList;
         initAddressesList(addresses);
         createNewAddressLink();
+        actualAlias();
     }
 
     // Initialise list of addresses
@@ -49,12 +51,19 @@ public class Addresses {
         createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[3]/a");
     }
 
+    private void actualAlias() {
+        actualAlias = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/article/div/h4");
+    }
+
     // Getters and setters
     public WebElement getAddressesList() { return addressesList; }
     public void setAddressesList(WebElement addressesList) { this.addressesList = addressesList; }
 
     public WebElement getCreateNewAddressLink() { return createNewAddressLink; }
     public void setCreateNewAddressLink(WebElement createNewAddressLink) { this.createNewAddressLink = createNewAddressLink; }
+
+    public WebElement getActualAlias() { return actualAlias; }
+    public void setActualAlias(WebElement actualAlias) { this.actualAlias = actualAlias; }
 
     // Click '+ Create new address' link
     public void clickCreateNewAddressLink() {
