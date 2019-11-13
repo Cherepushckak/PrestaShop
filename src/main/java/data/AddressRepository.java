@@ -1,5 +1,7 @@
 package main.java.data;
 
+import main.java.pages.user.Address;
+
 public class AddressRepository {
 
     private static Address address1;
@@ -14,7 +16,7 @@ public class AddressRepository {
                 "SoftServe",
                 13,
                 "Lviv region, Lviv, Yaroslav Pasternak Street 5, SoftServe 2",
-                "",
+                "Bla Bla Bla",
                 79000,
                 "Lviv",
                 new String[]{"Ukraine"},
@@ -27,20 +29,16 @@ public class AddressRepository {
                 "Private Enterprise",
                 13,
                 "Home address",
-                "",
-                79000,
+                "...",
+                79002,
                 "Lviv",
                 new String[]{"Ukraine"},
                 987654321);
     }
 
-    public Address getAddress1() {
-        return address1;
-    }
+    public Address getAddress1() { return address1; }
 
-    public Address getAddress2() {
-        return address2;
-    }
+    public Address getAddress2() { return address2; }
 }
 
 

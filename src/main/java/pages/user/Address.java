@@ -8,7 +8,7 @@
  * Copyright: Made by Volodymyr Zyhmund
  */
 
-package main.java.data;
+package main.java.pages.user;
 
 // Address class
 public class Address {
@@ -83,9 +83,7 @@ public class Address {
         this.company = company;
     }
 
-    public Integer getVatNumber() {
-        return vatNumber;
-    }
+    public Integer getVatNumber() { return vatNumber; }
     public void setVatNumber(Integer vatNumber) {
         this.vatNumber = vatNumber;
     }

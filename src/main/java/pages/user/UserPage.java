@@ -18,5 +18,4 @@ public class UserPage extends HeaderFull {
 	public UserPageContainer getUserPageContainer() {
 		return new UserPageContainer();
 	}
-
 }
