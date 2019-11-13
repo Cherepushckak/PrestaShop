@@ -1,4 +1,4 @@
-package main.java.test.TestNata;
+package main.java.test.testnata;
 
 import main.java.data.SearchElements;
 import main.java.pages.header.HeaderFull;

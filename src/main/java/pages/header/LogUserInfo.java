@@ -13,6 +13,10 @@ import main.java.pages.user.UserPage;
 public class LogUserInfo extends LogUserInformation {
 
     /**
+     * field shows user name
+     */
+    private String userName;
+    /**
      * to sign out from the cabinet
      */
     private WebElement signOut;
@@ -68,7 +72,7 @@ public class LogUserInfo extends LogUserInformation {
     }
 
     /**
-     * Method open 'Your Acount'
+     * Method open 'Your Account'
      */
     public UserPage clickUserAccount() {
         userAccount.click();
@@ -81,7 +85,7 @@ public class LogUserInfo extends LogUserInformation {
      * @return userAccount
      */
     public String getUserNameFromHeader() {
-        String userName = userAccount.getText();
+        userName = userAccount.getText();
         return userName;
     }
 }

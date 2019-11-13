@@ -100,7 +100,7 @@ public class CertainLanguage {
     }
 
     /**
-     * method puts locatorto the field arrow;
+     * method puts locator the field arrow;
      *
      * @return arrow.
      */

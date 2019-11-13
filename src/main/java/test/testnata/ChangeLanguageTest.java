@@ -1,4 +1,4 @@
-package main.java.test.TestNata;
+package main.java.test.testnata;
 
 import main.java.pages.header.CertainLanguage;
 import main.java.test.test;
@@ -11,6 +11,9 @@ import org.testng.annotations.Test;
 
 @Listeners(test.class)
 
+/**
+ *
+ */
 public class ChangeLanguageTest extends test {
     /**
      * web element for saving actual element, used is assert

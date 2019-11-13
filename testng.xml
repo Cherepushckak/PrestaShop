@@ -15,22 +15,27 @@
     </test>
     <test verbose="3" name="ChangeLanguageTest">
         <classes>
-            <class name="main.java.test.TestNata.ChangeLanguageTest"></class>
+            <class name="main.java.test.testnata.ChangeLanguageTest"></class>
         </classes>
     </test>
-    <test verbose="3" name="LogContTest">
+    <test verbose="3" name="ContactUsTest">
         <classes>
-            <class name="main.java.test.TestNata.ContactUsTest"></class>
+            <class name="main.java.test.testnata.ContactUsTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="LogoTest">
+        <classes>
+            <class name="main.java.test.testnata.LogoTest"></class>
         </classes>
     </test>
     <test verbose="3" name="SignInHeaderFull">
         <classes>
-            <class name="main.java.test.TestNata.SignInHeaderFullTest"></class>
+            <class name="main.java.test.testnata.SignInHeaderFullTest"></class>
         </classes>
     </test>
     <test verbose="3" name="HeaderFullGeneralTest">
         <classes>
-            <class name="main.java.test.TestNata.HeaderFullGeneralTest"></class>
+            <class name="main.java.test.testnata.HeaderFullGeneralTest"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCart">

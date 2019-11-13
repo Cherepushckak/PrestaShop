@@ -1,4 +1,4 @@
-package main.java.test.TestNata;
+package main.java.test.testnata;
 
 import main.java.pages.header.LogCont;
 import main.java.test.test;
