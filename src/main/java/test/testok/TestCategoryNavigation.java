@@ -37,7 +37,7 @@ public class TestCategoryNavigation extends test {
     public void Step2(){
         //Arrange
         searchPage = new SearchPage();
-        addressBuffer = OurWebDriver.driver.getCurrentUrl();
+        addressBuffer = OurWebDriver.driver.getCurrentUrl();    //remember search page address
         //Act
         searchPage.getCategories().clickCategoryName();
         //Assert
@@ -63,7 +63,9 @@ public class TestCategoryNavigation extends test {
     @Test
     public void Step4(){
         //Arrange
+        addressBuffer = OurWebDriver.driver.getCurrentUrl();    //remember clothes page address
         //Act
+        //searchPage.getCategories()
         //Assert
 
     }
