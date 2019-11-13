@@ -1,8 +1,6 @@
 package main.java.pages.login;
 
 import io.qameta.allure.Step;
-import main.java.pages.header.HeaderFull;
-import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
 import main.java.tools.OurWebDriver;

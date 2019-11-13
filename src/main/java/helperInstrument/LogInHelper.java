@@ -1,10 +1,8 @@
 package main.java.helperInstrument;
 
-import main.java.pages.user.UserPage;
-
-
 import main.java.data.UserRepository;
 import main.java.pages.header.LogUserInformation;
+import main.java.pages.user.UserPage;
 
 /**
  * class LogInHelper  has method that opens logIn form, pass credentials. and

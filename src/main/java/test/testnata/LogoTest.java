@@ -1,9 +1,9 @@
 package main.java.test.testnata;
 
 import main.java.pages.header.HeaderFull;
+import main.java.test.test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import main.java.test.test;
 
 public class LogoTest extends test {
     @Test

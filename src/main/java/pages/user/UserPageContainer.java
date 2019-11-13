@@ -2,9 +2,7 @@ package main.java.pages.user;
 
 import main.java.pages.addresses.Addresses;
 import main.java.pages.header.HeaderFull;
-
 import main.java.tools.OurWebDriver;
-
 import org.openqa.selenium.WebElement;
 
 /**

@@ -4,17 +4,12 @@ package main.java.test.olegsTests;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-
-
+import main.java.helperInstrument.LogInHelper;
+import main.java.test.test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
-
-
-
-import main.java.helperInstrument.LogInHelper;
-import main.java.test.test;
 @Listeners( test.class)
 
 
