@@ -87,19 +87,21 @@ public class ShoppingItem {
     }
 
     public double getPriceValue() {
-        return Double.parseDouble(getPrice().getText().replace("₴", "").trim());
+        return Double.parseDouble(getPrice().getText().substring(1));
     }
 
     public int getQuantity () {
-        return Integer.parseInt(quantity.getCssValue("value"));
+        return Integer.parseInt(quantity.getAttribute("value"));
     }
 
     public double getTotalPriceValue () {
-        return Double.parseDouble(getTotalPrice().getText().replace("₴", "").trim());
+//        clickTotalPrice();
+        return Double.parseDouble(getTotalPrice().getText().substring(1));
     }
 
     public void clickIncreaseQuantity () {
         increaseQuantity.click();
+        OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
     }
 
     public void clickDecreaseQuantity () {
@@ -114,6 +116,18 @@ public class ShoppingItem {
     public void clickBasket () {
         basket.click();
     }
+
+    public void clickTotalPrice () {
+        totalPrice.click();
+    }
+
+    private void quantityClick () {
+        quantity.click();
+    }
+
+
+
+
 
 
 }
