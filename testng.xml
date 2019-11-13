@@ -15,7 +15,7 @@
     </test>
     <test verbose="3" name="LogContTest">
         <classes>
-            <class name="main.java.test.TestNata.LogContTest"></class>
+            <class name="main.java.test.TestNata.ContactUsTest"></class>
         </classes>
     </test>
     <test verbose="3" name="SignInHeaderFull">

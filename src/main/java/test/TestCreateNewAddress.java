@@ -1,13 +1,9 @@
 package main.java.test;
 
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import main.java.tools.OurWebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import org.testng.annotations.AfterTest;
-import main.java.tools.OurWebDriver;
 @Listeners(test.class)
 
 

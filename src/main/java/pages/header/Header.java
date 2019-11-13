@@ -12,4 +12,8 @@ public class Header {
     public Header() {
         logCont = new LogCont();
     }
+
+    public LogCont getLogCont() {
+        return logCont;
+    }
 }

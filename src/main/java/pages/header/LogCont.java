@@ -1,6 +1,7 @@
 package main.java.pages.header;
 
-import main.java.pages.main.MainPage;import main.java.tools.OurWebDriver;
+import main.java.pages.main.MainPage;
+import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

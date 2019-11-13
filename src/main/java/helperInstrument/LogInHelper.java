@@ -2,11 +2,12 @@ package main.java.helperInstrument;
 
 import main.java.pages.header.LogUserInfo;
 import main.java.pages.user.UserPage;
+import main.java.pages.header.UnlogUserInfo;
 
 /**
  * class LogInHelper  has method that opens logIn form, pass credentials. and
  */
-public class LogInHelper {
+public class LogInHelper extends UnlogUserInfo {
     private LogUserInfo logUserInfo;
 
     public LogInHelper() {
@@ -25,7 +26,8 @@ public class LogInHelper {
 
     }
 
-    public LogUserInfo getLogUserInfo() {
+    public LogUserInfo getLogUserInfoFromHelper() {
         return logUserInfo;
     }
 }
+

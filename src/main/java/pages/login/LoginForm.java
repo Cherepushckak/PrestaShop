@@ -1,17 +1,11 @@
 package main.java.pages.login;
 
-import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
-import main.java.pages.header.HeaderFull;
-import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  *

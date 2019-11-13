@@ -4,14 +4,12 @@ package main.java.test;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-
-import static org.testng.Assert.*;
-
-import io.qameta.allure.*;
-
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.user.UserPage;
-import org.testng.annotations.*;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 @Listeners(test.class)
 
 

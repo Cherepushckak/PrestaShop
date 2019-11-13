@@ -1,12 +1,8 @@
 package main.java.pages.header;
 
 
-import main.java.pages.search.SearchPage;
-
-
 import main.java.pages.searchresult.SearchResultPage;
 import main.java.tools.OurWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

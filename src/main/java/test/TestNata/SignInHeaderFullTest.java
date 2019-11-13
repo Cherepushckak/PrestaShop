@@ -4,11 +4,8 @@ import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.login.LoginPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
-import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
