@@ -23,7 +23,15 @@ public class SearchPage extends HeaderFull {
      * Default constructor
      */
     public SearchPage() {
-        //createHeaderFull();
     }
 
+    public Categories getCategories() {
+        categories = new Categories();
+        return categories;
+    }
+
+    public Description getDescription(){
+        description = new Description();
+        return description;
+    }
 }

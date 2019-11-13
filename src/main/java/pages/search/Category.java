@@ -29,4 +29,14 @@ public class Category {
         this.collapse = collapse;
     }
 
+    public SearchPage clickCategory(){
+        self.click();
+        return new SearchPage();
+    }
+
+    public SearchPage clickSubCategory(int index){
+        subCategory.get(index).click();
+        return new SearchPage();
+    }
+
 }
