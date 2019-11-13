@@ -5,7 +5,12 @@
     <test verbose="3" name="testLoginForm">
 
         <classes>
-            <class name="main.java.test.TestLoginForm"></class>
+            <class name="main.java.test.olegsTests.TestLoginForm"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestForgotLogin">
+        <classes>
+            <class name="main.java.test.olegsTests.TestForgotLogin"></class>
         </classes>
     </test>
     <test verbose="3" name="ChangeLanguageTest">
@@ -28,14 +33,8 @@
             <class name="main.java.test.TestNata.HeaderFullGeneralTest"></class>
         </classes>
     </test>
-    <test verbose="3" name="TestCreateNewAddress">
+    <test verbose="3" name="TestCart">
         <classes>
-            <class name="test.TestVolodya.TestCreateNewAddress"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestForgotLogin">
-        <classes>
-            <class name="main.java.test.TestForgotLogin"></class>
             <class name="main.java.test.TestCart"></class>
         </classes>
     </test>
