@@ -11,6 +11,7 @@
 package main.java.pages.addresses;
 
 // Additional packages
+import main.java.pages.user.Address;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -93,8 +94,57 @@ public class NewAddress {
     public WebElement getPhone() { return phone; }
     public void setPhone(WebElement phone) { this.phone = phone; }
 
+    // Method for clear field(s) on New address page
+    public void clearField(String ... field) {
+        try {
+
+            /*
+             * Read fields one-by-one from the parameters
+             */
+            for (String n : field) {
+                switch (n) {
+                    case ("alias"): alias.clear(); break;
+                    case ("firstName"): firstName.clear(); break;
+                    case ("lastName"): lastName.clear(); break;
+                    case ("company"): company.clear(); break;
+                    case ("vatNumber"): vatNumber.clear(); break;
+                    case ("myAddress"): myAddress.clear(); break;
+                    case ("addressComplement"): addressComplement.clear(); break;
+                    case ("zipPostalCode"): zipPostalCode.clear(); break;
+                    case ("city"): city.clear(); break;
+                    case ("country"): country.clear(); break;
+                    case ("phone"): phone.clear(); break;
+                    default: System.err.println("\tWrong field is entered!" +
+                                " Please, check input clear data and try again!"); break;
+                }
+            }
+        } catch (Exception e) {
+
+            /*
+             * If there is exception - show it
+             */
+            System.err.println(e.getMessage());
+        }
+        return ;
+
+    }
+
+    public void fillInField(Address address) {
+        new NewAddress().getAlias().sendKeys(address.getAlias());
+        new NewAddress().getFirstName().sendKeys(address.getFirstName());
+        new NewAddress().getLastName().sendKeys(address.getLastName());
+        new NewAddress().getCompany().sendKeys(address.getCompany());
+        new NewAddress().getVatNumber().sendKeys(address.getVatNumber().toString());
+        new NewAddress().getMyAddress().sendKeys(address.getMyAddress());
+        new NewAddress().getAddressComplement().sendKeys(address.getAddressComplement());
+        new NewAddress().getZipPostalCode().sendKeys(address.getZipPostalCode().toString());
+        new NewAddress().getCity().sendKeys(address.getCity());
+        new NewAddress().getCountry().sendKeys(address.getCountry());
+        new NewAddress().getPhone().sendKeys(address.getPhone().toString());
+    }
+
     // Click 'SAVE' button
-    private void clickSaveButton() {
+    public void clickSaveButton() {
         saveButton.click();
     }
 }

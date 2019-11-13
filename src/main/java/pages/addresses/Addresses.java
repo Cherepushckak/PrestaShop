@@ -46,7 +46,7 @@ public class Addresses {
 
     // Initialise '+ Create new address' link
     private void createNewAddressLink() {
-        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[4]/a");
+        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[3]/a");
     }
 
     // Getters and setters
@@ -57,9 +57,8 @@ public class Addresses {
     public void setCreateNewAddressLink(WebElement createNewAddressLink) { this.createNewAddressLink = createNewAddressLink; }
 
     // Click '+ Create new address' link
-    public NewAddress clickCreateNewAddressLink() {
+    public void clickCreateNewAddressLink() {
         createNewAddressLink.click();
-        return new NewAddress();
     }
 
 }
