@@ -1,27 +1,39 @@
 package main.java.pages.cart;
 
 import main.java.pages.header.HeaderFull;
+import main.java.tools.OurWebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
  * 
  */
 public class CartPage extends HeaderFull {
     private ShoppingCart shoppingCart;
+    private WebElement errorMessage;
 
     /**
      * Default constructor
      */
     public CartPage() {
         super();
-        initShoppingCart ();
+        initShoppingPage();
 
     }
 
-    public void initShoppingCart () {
+    public void initShoppingPage() {
         shoppingCart = new ShoppingCart();
+        errorMessage = OurWebDriver.driver.findElement(By.cssSelector(".alert.alert-danger"));
     }
 
     public ShoppingCart getShoppingCart() {
         return shoppingCart;
+    }
+
+    public WebElement getErrorMessage() {
+        OurWebDriver.getWait().until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(errorMessage));
+        return errorMessage;
     }
 }
