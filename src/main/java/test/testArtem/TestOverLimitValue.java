@@ -8,13 +8,11 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-
-public class TestCartZeroValue extends test {
-
+public class TestOverLimitValue extends test {
     @Test
-    public void cartZeroValue () {
+    public void cartOverLimitValue () {
         CartPage cartPage= new AddToCartHelper().getCartPage();
-        cartPage.getShoppingCart().getShoppingItemsList().get(0).clickDecreaseQuantity();
+        cartPage.getShoppingCart().getShoppingItemsList().get(0).quantityChangeValue("292");
         WebElement expected = cartPage.getAlertMessage().getMessage();
         assertTrue (expected.isDisplayed());
     }

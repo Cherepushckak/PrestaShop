@@ -3,8 +3,11 @@ package main.java.pages.cart;
 import main.java.pages.product.ProductPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * 
@@ -82,6 +85,10 @@ public class ShoppingItem {
         return basket;
     }
 
+    public WebElement getQuantity() {
+        return quantity;
+    }
+
     public String getNameText () {
        return getName().getText();
     }
@@ -90,7 +97,7 @@ public class ShoppingItem {
         return Double.parseDouble(getPrice().getText().substring(1));
     }
 
-    public int getQuantity () {
+    public int getQuantityValue() {
         return Integer.parseInt(quantity.getAttribute("value"));
     }
 
@@ -100,13 +107,17 @@ public class ShoppingItem {
     }
 
     public void clickIncreaseQuantity () {
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         increaseQuantity.click();
         OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     public void clickDecreaseQuantity () {
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         decreaseQuantity.click();
         OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     public ProductPage clickName () {
@@ -127,19 +138,21 @@ public class ShoppingItem {
     }
 
     private void quantityClear () {
-        quantity.clear();
+        quantity.sendKeys(Keys.BACK_SPACE);
     }
 
     private void quantitySetValue (String value) {
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         quantity.sendKeys(value);
-        OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
+        OurWebDriver.getWait().until(ExpectedConditions.visibilityOf(quantity));
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-    public void quantityChangeValue (String value) {
+    public void quantityChangeValue (String value){
         quantityClick();
         quantityClear();
         quantitySetValue(value);
-        quantity.submit();
+        quantity.sendKeys(Keys.ENTER);
     }
 
 }
