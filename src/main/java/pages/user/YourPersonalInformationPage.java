@@ -126,24 +126,6 @@ public class YourPersonalInformationPage extends HeaderFull {
         return birthday.getAttribute("value");
     }
     
-    public String getBirthdayValueInUSAFormat() {
-        String dateAtThePage = birthday.getAttribute("value");
-        String dateFormat = birthday.getAttribute("placeholder");
-        String outcomingDate;
-        switch (dateFormat) {
-            case "MM/DD/YYYY":
-                outcomingDate = dateAtThePage;
-                break;
-            case "YYYY-MM-DD":
-                String[] arrayDateAtThePage = dateAtThePage.split("-");
-                outcomingDate = arrayDateAtThePage[1] + "/" + arrayDateAtThePage[2] + "/" + arrayDateAtThePage[0];
-                break;
-            default:
-                throw new IllegalStateException("Unexpected date format: " + dateFormat);
-        }
-        return outcomingDate;
-    }
-    
     public void setBirthdayValue(String text) {
         birthday.sendKeys(text);
     }
@@ -219,7 +201,7 @@ public class YourPersonalInformationPage extends HeaderFull {
         assertTrue(getFirstNameValue().equals(user.getFirstName()));
         assertTrue(getLastNameValue().equals(user.getLastName()));
         assertTrue(getEmailValue().equals(user.getEmail()));
-        assertTrue(getBirthdayValueInUSAFormat().equals(user.getBirthday()));
+        assertTrue(getBirthdayValue ().equals ( user.getBirthday () ));
         
         assertTrue(checkboxReceiveOffers.isSelected() == user.getCheckboxReceiveOffers());
         assertTrue(checkboxSignUpNewsletter.isSelected() == user.getCheckboxReceiveOffers());

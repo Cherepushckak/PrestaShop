@@ -35,7 +35,6 @@ public class RegisterForm {
     }
     
     private void initRegisterForm() {
-        this.logInInstead = driver.findElement(By.linkText("Log in instead!"));
         this.titleMr = driver.findElement(By.cssSelector("input[name='id_gender'][value='1']"));
         this.titleMrs = driver.findElement(By.cssSelector("input[name='id_gender'][value='2']"));
         this.firstName = driver.findElement(By.cssSelector("input[name='firstname']"));
@@ -112,19 +111,12 @@ public class RegisterForm {
         return email.getAttribute("value");
     }
     
+    public void setEmail(String text) {
+        email.sendKeys(text);
+    }
     
-    public void setEmailValueAccordingToNeededFormat(String incomingDate) {
-        String dateFormat = birthday.getAttribute("placeholder");
-        switch (dateFormat) {
-            case "MM/DD/YYYY":
-                email.sendKeys(incomingDate);
-                break;
-            case "YYYY-MM-DD":
-                String[] arrayDate = incomingDate.split("/");
-                String outcomingDate = arrayDate[2] + "-" + arrayDate[0] + "-" + arrayDate[1];
-                email.sendKeys(outcomingDate);
-                break;
-        }
+    public void setBirthdayValueAccordingToNeededFormat(String incomingDate) {
+                birthday.sendKeys(incomingDate);
     }
     
     public String getPasswordValue() {
@@ -233,9 +225,9 @@ public class RegisterForm {
         
         setFirstNameValue(user.getFirstName());
         setLastNameValue(user.getLastName());
-        setEmailValueAccordingToNeededFormat(user.getEmail());
+        setEmail (user.getEmail ());
+        setBirthdayValueAccordingToNeededFormat (user.getBirthday ());
         setPasswordValue(user.getPassword());
-        setBirthdayValue(user.getBirthday());
         
         if (user.getCheckboxReceiveOffers() == Boolean.TRUE) {
             selectCheckboxReceiveOffers();

@@ -1,5 +1,8 @@
 package main.java.data;
 
+import main.java.helperInstrument.EnviromentHelper;
+
+import java.util.EventListener;
 import java.util.Random;
 
 public class UserRepository {
@@ -15,8 +18,8 @@ public class UserRepository {
                 Title.MR,
                 "Petro",
                 "Shevchenko",
-                System.getProperty ( "petroEmail" ),
-                System.getProperty ( "masterPass" ),
+                EnviromentHelper.getPetroEmail () ,
+                EnviromentHelper.getMasterPass (),
                 "01/06/2000",
                 Boolean.TRUE,
                 Boolean.FALSE);
@@ -25,8 +28,8 @@ public class UserRepository {
                 Title.MS,
                 "Maria",
                 "Kvitka",
-                System.getProperty ( "mariaEmail" ),
-                System.getProperty ( "masterPass" ),
+                EnviromentHelper.getMariaEmail (),
+                EnviromentHelper.getMasterPass (),
                 "03/03/2001",
                 Boolean.TRUE,
                 Boolean.TRUE);
@@ -39,13 +42,13 @@ public class UserRepository {
 
     }
 
-    private User createUniqueUser() {
+    public User createUniqueUser() {
         User uniqueUser = new User();
 
         uniqueUser.setTitle(Title.MR);
         uniqueUser.setFirstName("FirstName");
         uniqueUser.setLastName("LastName");
-        uniqueUser.setPassword(System.getProperty ( "masterPass" ));
+        uniqueUser.setPassword(EnviromentHelper.getMasterPass ());
         uniqueUser.setBirthday("1999-04-04");
         uniqueUser.setCheckboxReceiveOffers(Boolean.TRUE);
         uniqueUser.setCheckboxSignUpNewsletter(Boolean.TRUE);
@@ -53,7 +56,7 @@ public class UserRepository {
         //setting random email like test142@test.com
         Random random = new Random();
         Integer randomNumber = random.nextInt(999);
-        String uniqueEmail = System.getProperty ( "uniqueTest" ) + randomNumber + System.getProperty ( "uniqueGmail" );
+        String uniqueEmail = EnviromentHelper.getUniqueTest () + randomNumber + EnviromentHelper.getUniqueGmail ();
         uniqueUser.setEmail(uniqueEmail);
 
         return uniqueUser;
