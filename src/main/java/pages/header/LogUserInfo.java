@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import main.java.pages.login.LoginPage;
 import main.java.pages.user.UserPage;
+import io.qameta.allure.Step;
 
 /**
  * LogUserInfo is a child class of LogUserInformation,
@@ -61,6 +62,8 @@ public class LogUserInfo extends LogUserInformation {
     /**
      * Method sign out from the cabinet
      */
+    @Step("click signOut button, opens current page")
+
     public LoginPage clickSignOut() {
         signOut.click();
         return new LoginPage();
@@ -69,6 +72,8 @@ public class LogUserInfo extends LogUserInformation {
     /**
      * method find signOut element
      */
+    @Step("cheeck if button is enable")
+
     public boolean findSignOut() {
         return signOut.isEnabled();
     }
@@ -76,6 +81,8 @@ public class LogUserInfo extends LogUserInformation {
     /**
      * Method open 'Your Account'
      */
+    @Step("click userAccount, opens UserPage")
+
     public UserPage clickUserAccount() {
         userAccount.click();
         return new UserPage();
@@ -86,6 +93,8 @@ public class LogUserInfo extends LogUserInformation {
      *
      * @return userAccount
      */
+    @Step("shows name of the user")
+
     public String getUserNameFromHeader() {
         userName = userAccount.getText();
         return userName;

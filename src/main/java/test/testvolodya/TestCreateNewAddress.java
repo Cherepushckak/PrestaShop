@@ -1,4 +1,4 @@
-package main.java.test.TestVolodya;
+package main.java.test.testvolodya;
 
 import main.java.pages.user.Address;
 import main.java.data.AddressRepository;

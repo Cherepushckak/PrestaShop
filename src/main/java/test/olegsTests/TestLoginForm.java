@@ -12,29 +12,22 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-
-
-@Listeners( test.class)
-
-
-
-
-
+@Listeners(test.class)
 
 public class TestLoginForm extends test {
 
-	@Severity ( SeverityLevel.CRITICAL )
-	@Description ( "Verify if customer can log in" )
-	@Test
-	public void testLoginForm () {
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verify if customer can log in")
+    @Test
+    public void testLoginForm() {
 
-		LogInHelper logInHelper = new LogInHelper ();
+        LogInHelper logInHelper = new LogInHelper();
 
-		
-		String expected = "Admin admin";
-		String actual = logInHelper.getUserPage ().getLogUserInformation ().getLogUserInfo ().getUserNameFromHeader ();
-		assertEquals ( actual, expected );
-		
-	}
+
+        String expected = "Admin admin";
+        String actual = logInHelper.getUserPage().getLogUserInformation().getLogUserInfo().getUserNameFromHeader();
+        assertEquals(actual, expected);
+
+    }
 
 }

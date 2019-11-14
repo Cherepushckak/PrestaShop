@@ -9,9 +9,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 @Listeners(test.class)
 
-public class ContactUsTest extends test{
+public class ContactUsTest extends test {
 
     LogCont logCont;
     private WebElement actual;
@@ -22,8 +26,10 @@ public class ContactUsTest extends test{
         logCont = new LogCont();
     }
 
-
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verifies opening contctUs form")
     @Test
+
     public void clickContactUsTest() {
 
         //No ContactUs page!!!!!!!!!!

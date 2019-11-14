@@ -6,6 +6,8 @@ import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import main.java.pages.header.Currency;
+import io.qameta.allure.Step;
+
 
 
 /**
@@ -15,6 +17,7 @@ import main.java.pages.header.Currency;
  * ------------Have to finish it!!!!!!!!!!!!!!----------
  */
 public class HeaderFull extends Header {
+
 
     private WebElement clothes;
     private WebElement accessories;
@@ -84,15 +87,21 @@ public class HeaderFull extends Header {
      *
      * @return SearchPage
      */
+    @Step("click on search button, opens SearchPage")
+
     public SearchResultPage searchButtonClick() {
         getSearchButton().click();
         return new SearchResultPage();
     }
 
+    @Step("clear searchField")
+
     public HeaderFull clearSearchField() {
         getSearchField().clear();
         return new HeaderFull();
     }
+
+    @Step("entering data into searchField {searchingProduct}")
 
     public HeaderFull sendKeysToSearchField(String searchingProduct) {
 
@@ -108,10 +117,6 @@ public class HeaderFull extends Header {
     public LogUserInformation getLogUserInformation() {
         return new LogUserInformation();
     }
-
-//    public WebElement getCurrency() {
-//        return currency;
-//    }
 
 
     public Currency getCurrency() {
