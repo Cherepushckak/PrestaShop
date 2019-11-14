@@ -1,51 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" verbose="3">
 
-    <test verbose="3" name="testCreateNewUser">
+
+
+    <!-- Volodya's tests -->
+    <test name="Create new address">
         <classes>
-            <class name="main.java.test.TestMaksym.TestNewUser"></class>
+            <class name="main.java.test.testvolodya.TestCreateNewAddress"></class>
         </classes>
     </test>
-    <test verbose="3" name="testLoginForm">
+    <test name="Delete address entrie">
         <classes>
-            <class name="main.java.test.olegsTests.TestLoginForm"></class>
+            <class name="main.java.test.testvolodya.TestDeleteAddressEntrie"></class>
         </classes>
     </test>
-    <test verbose="3" name="TestForgotLogin">
-        <classes>
-            <class name="main.java.test.olegsTests.TestForgotLogin"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="ChangeLanguageTest">
-        <classes>
-            <class name="main.java.test.testnata.ChangeLanguageTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="ContactUsTest">
-        <classes>
-            <class name="main.java.test.testnata.ContactUsTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="LogoTest">
-        <classes>
-            <class name="main.java.test.testnata.LogoTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="SignInHeaderFull">
-        <classes>
-            <class name="main.java.test.testnata.SignInHeaderFullTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="HeaderFullGeneralTest">
-        <classes>
-            <class name="main.java.test.testnata.HeaderFullGeneralTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestCart">
-        <classes>
-<!--            <class name="main.java.test.TestForgotLogin"></class>-->
-            <class name="main.java.test.testArtem.TestCartSmoke"></class>
-        </classes>
-    </test>
+
 </suite>

@@ -24,7 +24,6 @@ public class AddressesPage extends HeaderFull {
     // Fields
     private WebElement homeTopLink;
     private WebElement yourAccountLink;
-//    private WebElement addresses;
     private WebElement actualPageName;
     private WebElement backToYourAccountLink;
     private WebElement homeLowerLink;
@@ -58,11 +57,6 @@ public class AddressesPage extends HeaderFull {
         yourAccountLink = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[2]/a/span");
     }
 
-//    // Initialise 'Addresses' link
-//    private void addresses() {
-//        addresses = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[3]/a/span");
-//    }
-
     // Initialise actual page name
     private void actualPageName() {
         actualPageName = OurWebDriver.driver.findElementByXPath("//section[@id='main']/header/h1");
@@ -80,7 +74,6 @@ public class AddressesPage extends HeaderFull {
     // Initialise '+ Create new address' link
     private void createNewAddressLink() {
         createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[*]/a");
-        // "//text()[contains(.,'Create new address')]"
     }
 
     // Initialise '< Back to your account' link
@@ -96,12 +89,7 @@ public class AddressesPage extends HeaderFull {
     // Getters
     public WebElement getHomeTopLink() { return homeTopLink; }
     public WebElement getYourAccountLink() { return yourAccountLink; }
-
-    public Addresses getAddressesList() {
-        return addressesList;
-    }
-
-    //    public WebElement getAddresses() { return addresses; }
+    public Addresses getAddressesList() { return addressesList; }
     public WebElement getActualPageName() { return actualPageName; }
     public WebElement getBackToYourAccountLink() { return backToYourAccountLink; }
     public WebElement getHomeLowerLink() { return homeLowerLink; }
@@ -111,9 +99,6 @@ public class AddressesPage extends HeaderFull {
 
     // Click 'Your account' link
     public void clickYourAccount() { yourAccountLink.click(); }
-
-//    // Click 'Addresses' link
-//    public void clickAddressess() { addresses.click(); }
 
     // Click '+ Create new address' link
     public void clickCreateNewAddressLink() { createNewAddressLink.click(); }
