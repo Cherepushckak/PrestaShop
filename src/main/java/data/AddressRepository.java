@@ -14,13 +14,13 @@ public class AddressRepository {
                 "Volodymyr",
                 "Zyhmund",
                 "SoftServe",
-                13,
+                137778,
                 "Lviv region, Lviv, Yaroslav Pasternak Street 5, SoftServe 2",
-                "Bla Bla Bla",
+                "Home",
                 79000,
                 "Lviv",
-                new String[]{"Ukraine"},
-                123456789);
+                "Ukraine",
+                931234567);
 
         address2 = new Address(
                 "My Address Two",
@@ -32,8 +32,8 @@ public class AddressRepository {
                 "...",
                 79002,
                 "Lviv",
-                new String[]{"Ukraine"},
-                987654321);
+                "Ukraine",
+                123456789);
     }
 
     public Address getAddress1() { return address1; }

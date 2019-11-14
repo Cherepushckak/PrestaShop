@@ -59,12 +59,12 @@ public class Address {
     }
 
     // Click 'Update' button
-    private void updateClick() {
+    public void clickUpdate() {
         updateButton.click();
     }
 
     // Click 'Delete' button
-    private void deleteClick() {
+    public void clickDelete() {
         deleteButton.click();
     }
 }
