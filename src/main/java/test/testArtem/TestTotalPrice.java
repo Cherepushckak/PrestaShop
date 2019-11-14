@@ -14,7 +14,7 @@ public class TestTotalPrice extends test {
         CartPage cartPage = new AddToCartHelper().getCartPage();
         cartPage.getShoppingCart().getShoppingItemsList().get(0).clickIncreaseQuantity();
         ShoppingItem fistItem = cartPage.getShoppingCart().getShoppingItemsList().get(0);
-        double expected = fistItem.getPriceValue() * fistItem.getQuantity();
+        double expected = fistItem.getPriceValue() * fistItem.getQuantityValue();
         double actual = fistItem.getTotalPriceValue();
         assertEquals(actual, expected);
     }

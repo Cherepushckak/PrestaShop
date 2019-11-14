@@ -11,11 +11,8 @@
 package main.java.pages.addresses;
 
 // Additional packages
-
-
 import java.util.ArrayList;
 import org.openqa.selenium.WebElement;
-
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -26,13 +23,11 @@ import java.util.ArrayList;
 // Addresses class
 public class Addresses {
 
-    // Collection of addresses
-    private ArrayList<Address> addresses = new ArrayList<>();
-
     // Fields
     private WebElement addressesList;
+    private ArrayList<Address> addressesContainer;
     private WebElement createNewAddressLink;
-    private WebElement actualAlias;
+    private WebElement alert;
 
     /**
      * Default constructor
@@ -41,41 +36,40 @@ public class Addresses {
 
     public Addresses(WebElement addressesList) {
         this.addressesList = addressesList;
-        initAddressesList(addresses);
+        initAddressesContainer();
         createNewAddressLink();
-        actualAlias();
+        alert();
     }
 
     // Initialise list of addresses
-    private void initAddressesList(ArrayList<Address> addresses) {
-        addressesList = OurWebDriver.driver.findElementByXPath("//section[@id='content']");
+    private void initAddressesContainer() {
+        addressesContainer = new ArrayList<>();
         for (WebElement current : OurWebDriver.driver.findElementsByCssSelector("div.col-sm-6:nth-child(2)")) {
-            addresses.add(new Address(current));
+            addressesContainer.add(new Address(current));
         }
     }
 
     // Initialise '+ Create new address' link
     private void createNewAddressLink() {
-        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[3]/a");
+        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[*]/a");
     }
 
-    private void actualAlias() {
-        actualAlias = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/article/div/h4");
+    // Initialise 'Alert'
+    private void alert() {
+        alert = OurWebDriver.driver.findElementByXPath("//aside[@id='notifications']/div/article/ul");
     }
 
-    // Getters and setters
+    // Getters
     public WebElement getAddressesList() { return addressesList; }
-    public void setAddressesList(WebElement addressesList) { this.addressesList = addressesList; }
+    public WebElement getAlert() {
+        alert();
+        return alert; }
 
-    public WebElement getCreateNewAddressLink() { return createNewAddressLink; }
-    public void setCreateNewAddressLink(WebElement createNewAddressLink) { this.createNewAddressLink = createNewAddressLink; }
-
-    public WebElement getActualAlias() { return actualAlias; }
-    public void setActualAlias(WebElement actualAlias) { this.actualAlias = actualAlias; }
+    public ArrayList<Address> getAddressesContainer() {
+        initAddressesContainer();
+        return addressesContainer;
+    }
 
     // Click '+ Create new address' link
-    public void clickCreateNewAddressLink() {
-        createNewAddressLink.click();
-    }
-
+    public void clickCreateNewAddressLink() { createNewAddressLink.click(); }
 }

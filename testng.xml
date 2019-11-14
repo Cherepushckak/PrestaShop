@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" verbose="3">
 
     <test verbose="3" name="testCreateNewUser">
         <classes>
@@ -42,13 +42,50 @@
             <class name="main.java.test.testnata.SearchFieldTest"></class>
         </classes>
     </test>
-    <test verbose="3" name="TestCart">
+    <test verbose="3" name="TestCartSmoke">
         <classes>
-<<<<<<< HEAD
-=======
-<!--            <class name="main.java.test.TestForgotLogin"></class>-->
->>>>>>> b034c2ba489a8cf0d5a0d90bc69183457f475eba
+
             <class name="main.java.test.testArtem.TestCartSmoke"></class>
+            <class name="main.java.test.testArtem.TestCartSmokeLogged"></class>
         </classes>
     </test>
+    <test verbose="3" name="TestCartTotalPrice">
+        <classes>
+            <class name="main.java.test.testArtem.TestTotalPrice"></class>
+            <class name="main.java.test.testArtem.TestTotalPriceLogged"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestCartZeroValue">
+        <classes>
+            <class name="main.java.test.testArtem.TestCartZeroValue"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestCartOverLimit">
+        <classes>
+            <class name="main.java.test.testArtem.TestOverLimitValue"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestCartBV">
+        <classes>
+            <class name="main.java.test.testArtem.TestBoundaryValue"></class>
+        </classes>
+    </test>
+
+    <!-- Volodya's tests -->
+    <test name="Create new address">
+        <classes>
+            <class name="main.java.test.testvolodya.CreateAddress"></class>
+        </classes>
+    </test>
+    <test name="Edit address entrie">
+        <classes>
+            <class name="main.java.test.testvolodya.EditAddress"></class>
+        </classes>
+    </test>
+    <test name="Delete address entrie">
+        <classes>
+            <class name="main.java.test.testvolodya.DeleteAddress"></class>
+        </classes>
+    </test>
+
 </suite>
