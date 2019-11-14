@@ -24,10 +24,12 @@ public class AddressesPage extends HeaderFull {
     // Fields
     private WebElement homeTopLink;
     private WebElement yourAccountLink;
-    private WebElement addresses;
+//    private WebElement addresses;
     private WebElement actualPageName;
     private WebElement backToYourAccountLink;
     private WebElement homeLowerLink;
+    private WebElement createNewAddressLink;
+    private Addresses addressesList;
 
     /**
      * Default constructor
@@ -35,11 +37,11 @@ public class AddressesPage extends HeaderFull {
     public AddressesPage() {
         homeTopLink();
         yourAccountLink();
-        //addresses();
         actualPageName();
         initAddressesList();
         backToYourAccountLink();
         homeLowerLink();
+        //createNewAddressLink();
     }
 
     // Array list of all top link divs: "//section[@id='wrapper']/div/nav/ol"
@@ -56,10 +58,10 @@ public class AddressesPage extends HeaderFull {
         yourAccountLink = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[2]/a/span");
     }
 
-    // Initialise 'Addresses' link
-    private void addresses() {
-        addresses = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[3]/a/span");
-    }
+//    // Initialise 'Addresses' link
+//    private void addresses() {
+//        addresses = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[3]/a/span");
+//    }
 
     // Initialise actual page name
     private void actualPageName() {
@@ -68,12 +70,18 @@ public class AddressesPage extends HeaderFull {
 
     // Initialise class addresses
     private void initAddressesList() {
-        new Addresses();
+        addressesList = new Addresses();
     }
 
     // Array list of all footer link divs: "//section[@id='main']/footer"
     // Array list of all footer link names: "//section[@id='main']/footer/a/span"
     // Array list of all footer links: "//section[@id='main']/footer/a"
+
+    // Initialise '+ Create new address' link
+    private void createNewAddressLink() {
+        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[*]/a");
+        // "//text()[contains(.,'Create new address')]"
+    }
 
     // Initialise '< Back to your account' link
     private void backToYourAccountLink() {
@@ -85,38 +93,34 @@ public class AddressesPage extends HeaderFull {
         homeLowerLink = OurWebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[2]");
     }
 
-
-
+    // Getters
     public WebElement getHomeTopLink() { return homeTopLink; }
-    public void setHomeTopLink(WebElement homeTopLink) { this.homeTopLink = homeTopLink; }
-
     public WebElement getYourAccountLink() { return yourAccountLink; }
-    public void setYourAccountLink(WebElement yourAccountLink) { this.yourAccountLink = yourAccountLink; }
 
-    public WebElement getAddresses() { return addresses; }
-    public void setAddresses(WebElement addresses) { this.addresses = addresses; }
+    public Addresses getAddressesList() {
+        return addressesList;
+    }
 
+    //    public WebElement getAddresses() { return addresses; }
     public WebElement getActualPageName() { return actualPageName; }
-    public void setActualPageName(WebElement actualPageName) { this.actualPageName = actualPageName; }
-
     public WebElement getBackToYourAccountLink() { return backToYourAccountLink; }
-    public void setBackToYourAccountLink(WebElement backToYourAccountLink) { this.backToYourAccountLink = backToYourAccountLink; }
-
     public WebElement getHomeLowerLink() { return homeLowerLink; }
-    public void setHomeLowerLink(WebElement homeLowerLink) { this.homeLowerLink = homeLowerLink; }
 
     // Click 'Home' link
-    private void clickHomeTop() { homeTopLink.click(); }
+    public void clickHomeTop() { homeTopLink.click(); }
 
     // Click 'Your account' link
-    private void clickYourAccount() { yourAccountLink.click(); }
+    public void clickYourAccount() { yourAccountLink.click(); }
 
-    // Click 'Addresses' link
-    private void clickAddressess() { addresses.click(); }
+//    // Click 'Addresses' link
+//    public void clickAddressess() { addresses.click(); }
+
+    // Click '+ Create new address' link
+    public void clickCreateNewAddressLink() { createNewAddressLink.click(); }
 
     // Click '< Back to your account' link
-    private void clickBackToYourAccount() { backToYourAccountLink.click(); }
+    public void clickBackToYourAccount() { backToYourAccountLink.click(); }
 
     // Click 'Home Lower' link
-    private void clickHome() { homeLowerLink.click(); }
+    public void clickHome() { homeLowerLink.click(); }
 }
