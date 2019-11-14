@@ -35,7 +35,6 @@ public class RegisterForm {
     }
 
     private void initRegisterForm() {
-        this.logInInstead = driver.findElement(By.linkText("Log in instead!"));
         this.titleMr =  driver.findElement(By.cssSelector("input[name='id_gender'][value='1']"));
         this.titleMrs = driver.findElement(By.cssSelector("input[name='id_gender'][value='2']"));
         this.firstName = driver.findElement(By.cssSelector("input[name='firstname']"));
