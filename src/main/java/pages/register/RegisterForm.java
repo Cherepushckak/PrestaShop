@@ -10,9 +10,9 @@ import org.openqa.selenium.WebElement;
 
 
 public class RegisterForm {
-
+    
     private WebDriver driver = OurWebDriver.driver;
-
+    
     private WebElement logInInstead;
     private WebElement titleMr;
     private WebElement titleMrs;
@@ -25,18 +25,18 @@ public class RegisterForm {
     private WebElement checkboxSignUpNewsletter;
     private WebElement checkboxIAgree;
     private WebElement buttonSave;
-
-
+    
+    
     /**
      * Default constructor
      */
     public RegisterForm() {
         initRegisterForm();
     }
-
+    
     private void initRegisterForm() {
         this.logInInstead = driver.findElement(By.linkText("Log in instead!"));
-        this.titleMr =  driver.findElement(By.cssSelector("input[name='id_gender'][value='1']"));
+        this.titleMr = driver.findElement(By.cssSelector("input[name='id_gender'][value='1']"));
         this.titleMrs = driver.findElement(By.cssSelector("input[name='id_gender'][value='2']"));
         this.firstName = driver.findElement(By.cssSelector("input[name='firstname']"));
         this.lastName = driver.findElement(By.cssSelector("input[name='lastname']"));
@@ -48,93 +48,120 @@ public class RegisterForm {
         this.checkboxIAgree = driver.findElement(By.cssSelector("input[name='psgdpr']"));
         this.buttonSave = driver.findElement(By.cssSelector("button.btn-primary"));
     }
-
-
+    
+    
     // Setters
-
+    
     public void clickLogInInstead() {
         logInInstead.click();
     }
-
+    
     public void setTitleMr() {
         titleMr.click();
     }
-
+    
     public void setTitleMrs() {
         titleMrs.click();
     }
-
+    
     public void selectCheckboxReceiveOffers() {
         if (!checkboxReceiveOffers.isSelected()) {
             checkboxReceiveOffers.click();
         }
     }
-
+    
     public void unselectCheckboxReceiveOffers() {
         if (checkboxReceiveOffers.isSelected()) {
             checkboxReceiveOffers.click();
         }
     }
-
+    
     public void selectCheckboxSignUpNewsletter() {
         if (!checkboxSignUpNewsletter.isSelected()) {
             checkboxSignUpNewsletter.click();
         }
     }
-
+    
     public void unselectCheckboxSignUpNewsletter() {
         if (checkboxSignUpNewsletter.isSelected()) {
             checkboxSignUpNewsletter.click();
         }
     }
-
+    
     public void selectCheckboxIAgree() {
         checkboxIAgree.click();
     }
-
+    
     public String getFirstNameValue() {
         return firstName.getAttribute("value");
     }
-
+    
     public void setFirstNameValue(String text) {
         firstName.sendKeys(text);
     }
-
+    
     public String getLastNameValue() {
         return lastName.getAttribute("value");
     }
-
+    
     public void setLastNameValue(String text) {
         lastName.sendKeys(text);
     }
-
+    
     public String getEmailValue() {
         return email.getAttribute("value");
     }
-
-
-    // Getters
-
-    public void setEmailValue(String text) {
-        email.sendKeys(text);
+    
+    
+    public void setEmailValueAccordingToNeededFormat(String incomingDate) {
+        String dateFormat = birthday.getAttribute("placeholder");
+        switch (dateFormat) {
+            case "MM/DD/YYYY":
+                email.sendKeys(incomingDate);
+                break;
+            case "YYYY-MM-DD":
+                String[] arrayDate = incomingDate.split("/");
+                String outcomingDate = arrayDate[2] + "-" + arrayDate[0] + "-" + arrayDate[1];
+                email.sendKeys(outcomingDate);
+                break;
+        }
     }
-
+    
     public String getPasswordValue() {
         return password.getAttribute("value");
     }
-
     public void setPasswordValue(String text) {
         password.sendKeys(text);
     }
-
-    public String getBirthdayValue() {
-        return birthday.getAttribute("value");
+    
+    public String getBirthdayValueInUSAFormat() {
+        
+        String dateAtThePage = birthday.getAttribute("value");
+        String dateFormat = birthday.getAttribute("placeholder");
+        String outcomingDate;
+        switch (dateFormat) {
+            case "MM/DD/YYYY":
+                outcomingDate = dateAtThePage;
+                break;
+            case "YYYY-MM-DD":
+                String[] arrayDateAtThePage = dateAtThePage.split("-");
+                outcomingDate = arrayDateAtThePage[1] + "/" + arrayDateAtThePage[2] + "/" + arrayDateAtThePage[0];
+                break;
+            default:
+                throw new IllegalStateException("Unexpected date format: " + dateFormat);
+        }
+        return outcomingDate;
     }
-
+    
+    public String getBirthdayValue() {
+        return password.getAttribute("value");
+    }
+    
+    
     public void setBirthdayValue(String text) {
         birthday.sendKeys(text);
     }
-
+    
     public Boolean isTitleMrSelected() {
         Boolean result = false;
         if (titleMr.isSelected()) {
@@ -142,7 +169,7 @@ public class RegisterForm {
         }
         return result;
     }
-
+    
     public Boolean isTitleMrsSelected() {
         Boolean result = false;
         if (titleMrs.isSelected()) {
@@ -150,7 +177,7 @@ public class RegisterForm {
         }
         return result;
     }
-
+    
     public Boolean isSignUpNewsLetterChecked() {
         Boolean result = false;
         if (checkboxSignUpNewsletter.isSelected()) {
@@ -158,7 +185,7 @@ public class RegisterForm {
         }
         return result;
     }
-
+    
     public Boolean isReceiveOffersChecked() {
         Boolean result = false;
         if (checkboxReceiveOffers.isSelected()) {
@@ -166,64 +193,64 @@ public class RegisterForm {
         }
         return result;
     }
-
-
+    
+    
     // Cleaners
-
+    
     public void clearFirstName() {
         firstName.clear();
     }
-
+    
     public void clearLastName() {
         lastName.clear();
     }
-
+    
     public void clearEmail() {
         email.clear();
     }
-
+    
     public void clearBirthday() {
         birthday.clear();
     }
-
-
+    
+    
     //
-
+    
     public void clickSaveButton() {
         buttonSave.click();
     }
-
+    
     // Business logic
-
+    
     public MainPage createAccountFor(User user) throws InterruptedException {
-
+        
         if (user.getTitle() == Title.MR) {
             setTitleMr();
         }
         if (user.getTitle() == Title.MS) {
             setTitleMrs();
         }
-
+        
         setFirstNameValue(user.getFirstName());
         setLastNameValue(user.getLastName());
-        setEmailValue(user.getEmail());
+        setEmailValueAccordingToNeededFormat(user.getEmail());
         setPasswordValue(user.getPassword());
         setBirthdayValue(user.getBirthday());
-
+        
         if (user.getCheckboxReceiveOffers() == Boolean.TRUE) {
             selectCheckboxReceiveOffers();
         }
         if (user.getCheckboxSignUpNewsletter() == Boolean.TRUE) {
             selectCheckboxSignUpNewsletter();
         }
-
+        
         selectCheckboxIAgree();
         Thread.sleep(3000); //for demonstration purpose
         clickSaveButton();
-
+        
         MainPage mainPage = new MainPage();
-
+        
         return mainPage;
     }
-
+    
 }

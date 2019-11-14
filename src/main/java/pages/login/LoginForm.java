@@ -84,7 +84,7 @@ public class LoginForm {
 
 	public ForgotPassword forgotPasswordClick() {
 		getForgotPassword().click();
-		return new ForgotPassword();
+		return new ForgotPassword ();
 	}
 
 	public RegisterPage noAccountClick() {

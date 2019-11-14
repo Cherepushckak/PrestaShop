@@ -15,8 +15,8 @@ public class UserRepository {
                 Title.MR,
                 "Petro",
                 "Shevchenko",
-                "petro.shevchenko@test.com",
-                "test123",
+                System.getProperty ( "petroEmail" ),
+                System.getProperty ( "masterPass" ),
                 "01/06/2000",
                 Boolean.TRUE,
                 Boolean.FALSE);
@@ -25,15 +25,15 @@ public class UserRepository {
                 Title.MS,
                 "Maria",
                 "Kvitka",
-                "maria.kvitka3@test.com",
-                "test123",
+                System.getProperty ( "mariaEmail" ),
+                System.getProperty ( "masterPass" ),
                 "03/03/2001",
                 Boolean.TRUE,
                 Boolean.TRUE);
 
         admin = new User();
-        admin.setEmail("admin@gmail.com");
-        admin.setPassword("admin");
+        admin.setEmail(System.getProperty ( "adminEmail" ));
+        admin.setPassword(System.getProperty ( "masterPass" ));
 
         uniqueUser = createUniqueUser();
 
@@ -45,15 +45,15 @@ public class UserRepository {
         uniqueUser.setTitle(Title.MR);
         uniqueUser.setFirstName("FirstName");
         uniqueUser.setLastName("LastName");
-        uniqueUser.setPassword("test123");
-        uniqueUser.setBirthday("04/04/1999");
+        uniqueUser.setPassword(System.getProperty ( "masterPass" ));
+        uniqueUser.setBirthday("1999-04-04");
         uniqueUser.setCheckboxReceiveOffers(Boolean.TRUE);
         uniqueUser.setCheckboxSignUpNewsletter(Boolean.TRUE);
 
         //setting random email like test142@test.com
         Random random = new Random();
         Integer randomNumber = random.nextInt(999);
-        String uniqueEmail = "test" + randomNumber + "@test.com";
+        String uniqueEmail = System.getProperty ( "uniqueTest" ) + randomNumber + System.getProperty ( "uniqueGmail" );
         uniqueUser.setEmail(uniqueEmail);
 
         return uniqueUser;
