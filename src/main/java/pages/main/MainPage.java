@@ -1,5 +1,6 @@
 package main.java.pages.main;
 
+import io.qameta.allure.Step;
 import main.java.pages.header.HeaderFull;
 import main.java.pages.login.LoginPage;
 
@@ -26,6 +27,7 @@ public class MainPage extends HeaderFull {
         return popularProducts;
     }
 
+    @Step("Clicking at 'sign in' button to get new LoginPage...")
     public LoginPage clickSignIn() {
         return getLogUserInformation().getUnloggedUserInfo().clickSignInHeaderFull();
     }

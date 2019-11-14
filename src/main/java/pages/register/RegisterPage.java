@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class RegisterPage extends HeaderFull {
 
-    WebDriver driver;
     public RegisterForm regform;
 
     /**
