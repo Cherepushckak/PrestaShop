@@ -17,7 +17,7 @@ import static org.testng.Assert.assertEquals;
 public class CreateAddress extends test {
 
     @Test
-    public void createAddress() throws InterruptedException {
+    public void createAddress() {
         // Log In
         new LogInHelper();
 
