@@ -59,26 +59,31 @@ public class TestCategoryNavigation extends test {
 
     /**
      * Step 4:
+     * Check "Clothes" subcategory "Men".
      */
     @Test
     public void Step4(){
         //Arrange
         addressBuffer = OurWebDriver.driver.getCurrentUrl();    //remember clothes page address
         //Act
-        //searchPage.getCategories()
+        searchPage.getCategories().clickCategory(0);
         //Assert
-
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"Men");
     }
 
     /**
      * Step 5:
+     * Return back, and check "Women" subcategory.
      */
     @Test
     public void Step5(){
         //Arrange
         //Act
+        OurWebDriver.driver.get(addressBuffer);
+        //searchPage = new SearchPage();
+        searchPage.getCategories().clickCategory(1);
         //Assert
-
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"Women");
     }
 
     /**
@@ -87,7 +92,9 @@ public class TestCategoryNavigation extends test {
     @Test
     public void Step6(){
         //Arrange
+
         //Act
+
         //Assert
 
     }

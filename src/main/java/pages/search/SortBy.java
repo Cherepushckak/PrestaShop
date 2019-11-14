@@ -35,5 +35,4 @@ public class SortBy {
         sortType.get(index).click();
     }
 
-
 }
