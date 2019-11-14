@@ -55,9 +55,7 @@ public class TestCreateNewAddress extends test {
 
         // Verification, that new address was successfully created
         String actualAlias = new AddressesPage().getAddressesList().getAddressesContainer().get(0).getAlias().getText();
-        System.out.println(actualAlias);
         String expectedAlias = new AddressRepository().getAddress1().getAlias();
-        System.out.println(expectedAlias);
         assertEquals ( actualAlias, expectedAlias );
     }
 
