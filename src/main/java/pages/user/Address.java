@@ -23,7 +23,7 @@ public class Address {
     private String addressComplement;
     private Integer zipPostalCode;
     private String city;
-    private String[] country;
+    private String country;
     private Integer phone;
 
     // Default empty method
@@ -38,7 +38,7 @@ public class Address {
                    String addressComplement,
                    Integer zipPostalCode,
                    String city,
-                   String[] country,
+                   String country,
                    Integer phone) {
 
         this.alias = alias;
@@ -110,10 +110,10 @@ public class Address {
     }
     public void setCity(String city) { this.city = city; }
 
-    public String[] getCountry() {
+    public String getCountry() {
         return country;
     }
-    public void setCountry(String[] country) { this.country = country; }
+    public void setCountry(String country) { this.country = country; }
 
     public Integer getPhone() {
         return phone;

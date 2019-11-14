@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 
 @Listeners(test.class)
 
-public class TestCreateNewAddress extends test {
+public class CreateAddress extends test {
 
     @Test
     public void createAddress() throws InterruptedException {

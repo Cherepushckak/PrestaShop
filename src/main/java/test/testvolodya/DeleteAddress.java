@@ -12,7 +12,7 @@ import static org.testng.Assert.assertEquals;
 
 @Listeners(test.class)
 
-public class TestDeleteAddressEntrie extends test {
+public class DeleteAddress extends test {
 
     @Test
     public void deleteAddress() throws InterruptedException {
