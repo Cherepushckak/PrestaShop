@@ -22,7 +22,7 @@ public class TestNoNewAccountForExistingUser extends test {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that new account can not be created for existing user")
     @Test
-    public void testCreateNewUser() throws InterruptedException {
+    public void TestNoNewAccountForExistingUser() throws InterruptedException {
 
         UserRepository userRepository = new UserRepository();
         MainPage mainPageUserUnregistered = new MainPage();

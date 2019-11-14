@@ -21,7 +21,7 @@ public class TestUserMayLogInAfterAccountCreation extends test {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that user may login after account creation")
     @Test
-    public void testCreateNewUser() throws InterruptedException {
+    public void TestUserMayLogInAfterAccountCreation() throws InterruptedException {
 
         UserRepository userRepository = new UserRepository();
         MainPage mainPageUserUnregistered = new MainPage();

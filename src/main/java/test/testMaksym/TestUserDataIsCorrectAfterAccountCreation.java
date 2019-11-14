@@ -21,7 +21,7 @@ public class TestUserDataIsCorrectAfterAccountCreation extends test {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that all User details were correctly saved after account creation")
     @Test
-    public void testCreateNewUser() throws InterruptedException {
+    public void TestUserDataIsCorrectAfterAccountCreation() throws InterruptedException {
 
         UserRepository userRepository = new UserRepository();
         MainPage mainPageUserUnregistered = new MainPage();

@@ -20,7 +20,7 @@ public class TestCreateAccountWithoutBirthday extends test {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that new account can be created without setting user's birthday")
     @Test
-    public void testCreateNewUser() throws InterruptedException {
+    public void TestCreateAccountWithoutBirthday() throws InterruptedException {
 
         UserRepository userRepository = new UserRepository();
         MainPage mainPageUserUnregistered = new MainPage();

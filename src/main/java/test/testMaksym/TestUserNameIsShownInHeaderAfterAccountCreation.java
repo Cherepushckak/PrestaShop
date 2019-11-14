@@ -19,7 +19,7 @@ public class TestUserNameIsShownInHeaderAfterAccountCreation extends test {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that immediately after new user creation, User's name is shown in the header")
     @Test
-    public void testCreateNewUser() throws InterruptedException {
+    public void TestUserNameIsShownInHeaderAfterAccountCreation() throws InterruptedException {
 
         UserRepository userRepository = new UserRepository();
         MainPage mainPageUserUnregistered = new MainPage();
