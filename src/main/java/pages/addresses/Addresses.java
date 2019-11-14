@@ -21,9 +21,9 @@ public class Addresses {
 
     // Fields
     private WebElement addressesList;
-    //private WebElement actualAlias;
-    private WebElement createNewAddressLink;
     private ArrayList<Address> addressesContainer;
+    private WebElement createNewAddressLink;
+    private WebElement alert;
 
     /**
      * Default constructor
@@ -32,35 +32,34 @@ public class Addresses {
 
     public Addresses(WebElement addressesList) {
         this.addressesList = addressesList;
-        // Collection of addresses
-       // ArrayList<Address> addresses = new ArrayList<>();
-        initAddressesContainer(/*addresses*/);
-        //actualAlias();
+        initAddressesContainer();
         createNewAddressLink();
+        alert();
     }
 
     // Initialise list of addresses
-    private void initAddressesContainer(/*ArrayList<Address> addresses*/) {
-       // addressesList = OurWebDriver.driver.findElementByXPath("//section[@id='content']");
+    private void initAddressesContainer() {
         addressesContainer = new ArrayList<>();
         for (WebElement current : OurWebDriver.driver.findElementsByCssSelector("div.col-sm-6:nth-child(2)")) {
             addressesContainer.add(new Address(current));
         }
     }
 
-//    private void actualAlias() {
-//        actualAlias = OurWebDriver.driver.findElementByXPath("//section[@id='main']/section/div/article/div/h4");
-//    }
-
     // Initialise '+ Create new address' link
     private void createNewAddressLink() {
         createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[*]/a");
-        // "//text()[contains(.,'Create new address')]"
+    }
+
+    // Initialise 'Alert'
+    private void alert() {
+        alert = OurWebDriver.driver.findElementByXPath("//aside[@id='notifications']/div/article/ul");
     }
 
     // Getters
     public WebElement getAddressesList() { return addressesList; }
-//    public WebElement getActualAlias() { return actualAlias; }
+    public WebElement getAlert() {
+        alert();
+        return alert; }
 
     public ArrayList<Address> getAddressesContainer() {
         initAddressesContainer();
