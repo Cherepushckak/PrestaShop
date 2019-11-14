@@ -17,21 +17,12 @@ public class SignInHeaderFullTest extends test {
 
     private WebElement actual;
     
-    @BeforeMethod
-    public void before() {
-        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    }
-
-    
     @Test
     public void signIn() {
 
-        //Arrange
-
-        LoginPage loginPage = new UnlogUserInfo().clickSignInHeaderFull();
-
         //Act
-        actual = loginPage.getLoginForm().getEmail();
+         actual  = new UnlogUserInfo().clickSignInHeaderFull().getLoginForm().getEmail();
+
 
         //Assert
         Assert.assertTrue(actual.isEnabled());

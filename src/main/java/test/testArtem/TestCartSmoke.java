@@ -1,6 +1,6 @@
 package main.java.test.testArtem;
 
-import main.java.helperInstrument.AddToCartHelper;
+import main.java.helperinstrument.AddToCartHelper;
 import main.java.pages.cart.CartPage;
 import main.java.test.test;
 import org.testng.annotations.Test;

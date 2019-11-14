@@ -12,7 +12,8 @@ public class LogUserInformation {
         return new LogUserInfo();
     }
 
-    public UnlogUserInfo getUncloggedUserInfo() {
+    public UnlogUserInfo getUnloggedUserInfo() {
         return new UnlogUserInfo();
     }
 }
+

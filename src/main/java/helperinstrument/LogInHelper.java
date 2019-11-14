@@ -1,4 +1,4 @@
-package main.java.helperInstrument;
+package main.java.helperinstrument;
 
 
 import main.java.data.UserRepository;
@@ -21,7 +21,7 @@ public class LogInHelper {
     public void initLogUserInfo() {
 
         userPage = new LogUserInformation()
-                .getUncloggedUserInfo()
+                .getUnloggedUserInfo()
                 .clickSignInHeaderFull()
                 .getLoginForm()
                 .logIn( new UserRepository().getAdmin ().getEmail (), new UserRepository ().getAdmin ().getPassword () );

@@ -35,12 +35,11 @@
     </test>
     <test verbose="3" name="HeaderFullGeneralTest">
         <classes>
-            <class name="main.java.test.testnata.HeaderFullGeneralTest"></class>
+            <class name="main.java.test.testnata.SearchFieldTest"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCart">
         <classes>
-            <class name="main.java.test.TestForgotLogin"></class>
             <class name="main.java.test.testArtem.TestCartSmoke"></class>
         </classes>
     </test>

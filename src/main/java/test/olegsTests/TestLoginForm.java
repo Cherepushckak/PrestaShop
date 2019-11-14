@@ -5,7 +5,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-import main.java.helperInstrument.LogInHelper;
+import main.java.helperinstrument.LogInHelper;
 import main.java.test.test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;

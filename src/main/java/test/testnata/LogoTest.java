@@ -1,4 +1,4 @@
-package main.java.test.testnata;
+package main.java.test.testnata;;
 
 import main.java.pages.header.HeaderFull;
 
@@ -16,7 +16,7 @@ public class LogoTest extends test {
 
         int actual  = new HeaderFull()
         .getLogUserInformation()
-        .getUncloggedUserInfo()
+        .getUnloggedUserInfo()
         .clickSignInHeaderFull()
         .getLogCont()
         .clickLogo().getPopularProducts().getProducts().size();

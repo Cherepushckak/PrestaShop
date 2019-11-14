@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 @Listeners(test.class)
 
-public class HeaderFullGeneralTest extends test {
+public class SearchFieldTest extends test {
     private WebElement actual;
     private final By productLocator = By.xpath("//img[@alt='Mountain fox cushion']");
 
