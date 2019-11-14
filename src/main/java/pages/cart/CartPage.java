@@ -25,7 +25,6 @@ public class CartPage extends HeaderFull {
 
     public void initShoppingPage() {
         shoppingCart = new ShoppingCart();
-        errorMessage = OurWebDriver.driver.findElement(By.cssSelector(".alert.alert-danger"));
     }
 
     public ShoppingCart getShoppingCart() {

@@ -11,17 +11,18 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
+
 @Listeners(test.class)
 
 public class SignInHeaderFullTest extends test {
 
     private WebElement actual;
-    
+
     @Test
     public void signIn() {
 
         //Act
-         actual  = new UnlogUserInfo().clickSignInHeaderFull().getLoginForm().getEmail();
+        actual = new UnlogUserInfo().clickSignInHeaderFull().getLoginForm().getEmail();
 
 
         //Assert

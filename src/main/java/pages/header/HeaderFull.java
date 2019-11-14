@@ -5,6 +5,7 @@ import main.java.pages.searchresult.SearchResultPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import main.java.pages.header.Currency;
 
 
 /**
@@ -21,9 +22,10 @@ public class HeaderFull extends Header {
     private WebElement searchField;
     private WebElement searchButton;
 
-    private CertainLanguage certainLanguage;
+//    private CertainLanguage certainLanguage;
+//    private Currency currency;
     private WebElement cart;
-    private WebElement currency;
+    //  private WebElement currency;
     private LogUserInfo logUserInfo;
     private UnlogUserInfo unlogUserInfo;
     private final By searchFieldLocator = By.cssSelector(".ui-autocomplete-input");
@@ -37,7 +39,7 @@ public class HeaderFull extends Header {
 
     public void initHeaderFull() {
         getCertainLanguage();
-
+        getCurrency();
 
         //------------We have to create HeaderFull perfectly, so when I check webElement I'll add it to method!---------
         //
@@ -53,7 +55,7 @@ public class HeaderFull extends Header {
 
 
     public CertainLanguage getCertainLanguage() {
-        return certainLanguage;
+        return new CertainLanguage();
     }
 
     public WebElement getClothes() {
@@ -107,9 +109,12 @@ public class HeaderFull extends Header {
         return new LogUserInformation();
     }
 
-    public WebElement getCurrency() {
-        return currency;
+//    public WebElement getCurrency() {
+//        return currency;
+//    }
+
+
+    public Currency getCurrency() {
+        return new Currency();
     }
-
-
 }
