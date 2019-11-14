@@ -12,7 +12,6 @@ package main.java.pages.addresses;
 
 // Additional packages
 import main.java.tools.OurWebDriver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 // Address class
@@ -28,40 +27,35 @@ public class Address {
     /**
      * Default constructor
      */
-    Address(WebElement addressContainer) {
+    public Address(WebElement addressContainer) {
         this.addressContainer = addressContainer;
         initAddress();
+        alias();
     }
 
     // Init address
     private void initAddress() {
-        addressContainer = OurWebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
-        alias = OurWebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/h4"));
-        allFieldsAddress = OurWebDriver.driver.findElement(By.xpath("//article[@id='address-13']/div[1]/address"));
-        updateButton = OurWebDriver.driver.findElement(By.cssSelector(".address-footer>a:nth-child(1)"));
-        deleteButton = OurWebDriver.driver.findElement(By.cssSelector(".address-footer>a:nth-child(2)"));
+        addressContainer = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div");
+        alias = OurWebDriver.driver.findElementByXPath("//section[@id='main']/section/div/article/div/h4");
+        allFieldsAddress = OurWebDriver.driver
+                .findElementByXPath("//section[@id='main']/section/div/article/div/address");
+        updateButton = OurWebDriver.driver.findElementByCssSelector(".address-footer>a:nth-child(1)");
+        deleteButton = OurWebDriver.driver.findElementByCssSelector(".address-footer>a:nth-child(2)");
     }
 
-    // Getters and setters
-    private WebElement getAddressContainer() {
+    // Initialise 'alias' link
+    private void alias() {
+        alias = OurWebDriver.driver.findElementByXPath("//section[@id='main']/section/div/article/div/h4");
+    }
+
+    // Getters
+    public WebElement getAddressContainer() {
         return addressContainer;
     }
-    private void setAddressContainer(WebElement addressContainer) {
-        this.addressContainer = addressContainer;
-    }
-
-    private WebElement getAlias() {
-        return alias;
-    }
-    private void setAlias(WebElement alias) {
-        this.alias = alias;
-    }
-
-    private WebElement getAllFieldsAddress() {
+    public WebElement getAlias() {
+        return alias; }
+    public WebElement getAllFieldsAddress() {
         return allFieldsAddress;
-    }
-    private void setAllFieldsAddress(WebElement allFieldsAddress) {
-        this.allFieldsAddress = allFieldsAddress;
     }
 
     // Click 'Update' button

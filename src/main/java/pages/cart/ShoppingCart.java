@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -53,15 +54,17 @@ public class ShoppingCart {
         return shoppingItemsList;
     }
 
-    public void deleteAllFromCart () {
-        for (ShoppingItem current: shoppingItemsList) {
+    public void deleteAllFromCart() {
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        for (ShoppingItem current : shoppingItemsList) {
             if (current.getBasket().isEnabled()) {
                 current.clickBasket();
             } else {
                 break;
             }
         }
-            OurWebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".no-items")));
+        OurWebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".no-items")));
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     /**

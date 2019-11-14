@@ -11,23 +11,19 @@
 package main.java.pages.addresses;
 
 // Additional packages
-
 import java.util.ArrayList;
 import org.openqa.selenium.WebElement;
-
 import main.java.tools.OurWebDriver;
 
 
 // Addresses class
 public class Addresses {
 
-    // Collection of addresses
-    private ArrayList<Address> addresses = new ArrayList<>();
-
     // Fields
     private WebElement addressesList;
+    //private WebElement actualAlias;
     private WebElement createNewAddressLink;
-    private WebElement actualAlias;
+    private ArrayList<Address> addressesContainer;
 
     /**
      * Default constructor
@@ -36,41 +32,41 @@ public class Addresses {
 
     public Addresses(WebElement addressesList) {
         this.addressesList = addressesList;
-        initAddressesList(addresses);
+        // Collection of addresses
+       // ArrayList<Address> addresses = new ArrayList<>();
+        initAddressesContainer(/*addresses*/);
+        //actualAlias();
         createNewAddressLink();
-        actualAlias();
     }
 
     // Initialise list of addresses
-    private void initAddressesList(ArrayList<Address> addresses) {
-        addressesList = OurWebDriver.driver.findElementByXPath("//section[@id='content']");
+    private void initAddressesContainer(/*ArrayList<Address> addresses*/) {
+       // addressesList = OurWebDriver.driver.findElementByXPath("//section[@id='content']");
+        addressesContainer = new ArrayList<>();
         for (WebElement current : OurWebDriver.driver.findElementsByCssSelector("div.col-sm-6:nth-child(2)")) {
-            addresses.add(new Address(current));
+            addressesContainer.add(new Address(current));
         }
     }
 
+//    private void actualAlias() {
+//        actualAlias = OurWebDriver.driver.findElementByXPath("//section[@id='main']/section/div/article/div/h4");
+//    }
+
     // Initialise '+ Create new address' link
     private void createNewAddressLink() {
-        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[3]/a");
+        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[*]/a");
+        // "//text()[contains(.,'Create new address')]"
     }
 
-    private void actualAlias() {
-        actualAlias = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/article/div/h4");
-    }
-
-    // Getters and setters
+    // Getters
     public WebElement getAddressesList() { return addressesList; }
-    public void setAddressesList(WebElement addressesList) { this.addressesList = addressesList; }
+//    public WebElement getActualAlias() { return actualAlias; }
 
-    public WebElement getCreateNewAddressLink() { return createNewAddressLink; }
-    public void setCreateNewAddressLink(WebElement createNewAddressLink) { this.createNewAddressLink = createNewAddressLink; }
-
-    public WebElement getActualAlias() { return actualAlias; }
-    public void setActualAlias(WebElement actualAlias) { this.actualAlias = actualAlias; }
+    public ArrayList<Address> getAddressesContainer() {
+        initAddressesContainer();
+        return addressesContainer;
+    }
 
     // Click '+ Create new address' link
-    public void clickCreateNewAddressLink() {
-        createNewAddressLink.click();
-    }
-
+    public void clickCreateNewAddressLink() { createNewAddressLink.click(); }
 }
