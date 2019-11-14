@@ -60,9 +60,8 @@ public class LogUserInfo extends LogUserInformation {
     /**
      * Method sign out from the cabinet
      */
-    public LoginPage clickSignOut() {
+    public void clickSignOut() {
         signOut.click();
-        return new LoginPage();
     }
 
     /**

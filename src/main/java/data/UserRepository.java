@@ -53,7 +53,7 @@ public class UserRepository {
         //setting random email like test142@test.com
         Random random = new Random();
         Integer randomNumber = random.nextInt(999);
-        String uniqueEmail = "test" + randomNumber + "@test.com";
+        String uniqueEmail = "test1" + randomNumber + "@test.com";
         uniqueUser.setEmail(uniqueEmail);
 
         return uniqueUser;

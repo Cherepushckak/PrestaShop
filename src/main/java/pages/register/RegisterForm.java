@@ -218,7 +218,6 @@ public class RegisterForm {
         }
 
         selectCheckboxIAgree();
-        Thread.sleep(3000); //for demonstration purpose
         clickSaveButton();
 
         MainPage mainPage = new MainPage();
