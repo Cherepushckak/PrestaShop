@@ -30,8 +30,6 @@ public class ShoppingItem {
     private WebElement basket;
     private WebElement quantity;
 
-
-
     /**
      * constructor
      */
@@ -87,23 +85,10 @@ public class ShoppingItem {
         return quantity;
     }
 
-    public String getNameText () {
-       return getName().getText();
-    }
-
-    public double getPriceValue() {
-        return Double.parseDouble(getPrice().getText().substring(1));
-    }
-
-    public int getQuantityValue() {
-        return Integer.parseInt(quantity.getAttribute("value"));
-    }
-
-    public double getTotalPriceValue () {
-//        clickTotalPrice();
-        return Double.parseDouble(getTotalPrice().getText().substring(1));
-    }
-
+    /**
+     * click increase quantity atomic method
+     * using explicitly wait to check the total price
+     */
     public void clickIncreaseQuantity () {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         increaseQuantity.click();
@@ -111,6 +96,10 @@ public class ShoppingItem {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
+    /**
+     * click decrease quantity atomic method
+     * using explicitly wait to check the total price
+     */
     public void clickDecreaseQuantity () {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         decreaseQuantity.click();
@@ -118,27 +107,87 @@ public class ShoppingItem {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-    public ProductPage clickName () {
+    /**
+     * click at name field atomic method
+     */
+    private void clickName () {
         name.click();
-        return new ProductPage();
     }
 
-    public void clickBasket () {
+    /**
+     * click at basket field atomic method
+     */
+    protected void clickBasket () {
         basket.click();
     }
 
-    public void clickTotalPrice () {
+    /**
+     * click at total price field atomic method
+     */
+    private void clickTotalPrice () {
         totalPrice.click();
     }
 
+    /**
+     * click at quantity field atomic method
+     */
     private void quantityClick () {
         quantity.click();
     }
 
+    /**
+     * clear quantity field atomic method
+     */
     private void quantityClear () {
         quantity.sendKeys(Keys.BACK_SPACE);
     }
 
+    /**
+     * get name of product item method
+     * @return name of product item
+     */
+    public String getNameText () {
+       return getName().getText();
+    }
+
+    /**
+     * get actual price of product item method
+     * @return price of product item
+     */
+    public double getPriceValue() {
+        return Double.parseDouble(getPrice().getText().substring(1));
+    }
+
+    /**
+     * get quantity of product item method
+     * @return quantity of product item
+     */
+    public int getQuantityValue() {
+        return Integer.parseInt(quantity.getAttribute("value"));
+    }
+
+    /**
+     * get total price of one product item method
+     * @return total price of product item
+     */
+    public double getTotalPriceValue () {
+        return Double.parseDouble(getTotalPrice().getText().substring(1));
+    }
+
+    /**
+     * go to Product Page by clicking name of product method
+     * @return Product page
+     */
+    public ProductPage goToProductPageByName() {
+        clickName();
+        return new ProductPage();
+    }
+
+    /**
+     * typing value at quantity field method
+     * using explicitly wait to check the total price
+     * @param value of quantity
+     */
     private void quantitySetValue (String value) {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         quantity.sendKeys(value);
@@ -146,11 +195,14 @@ public class ShoppingItem {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
+    /**
+     * change and confirmation value of quantity field method
+     * @param value of quantity
+     */
     public void quantityChangeValue (String value){
         quantityClick();
         quantityClear();
         quantitySetValue(value);
         quantity.sendKeys(Keys.ENTER);
     }
-
 }

@@ -2,14 +2,16 @@ package main.java.pages.main;
 
 import io.qameta.allure.Step;
 import main.java.pages.common.AParentPage;
-import main.java.pages.header.HeaderFull;
 import main.java.pages.login.LoginPage;
 
 /**
- *
+ *describes home page
  */
 public class MainPage extends AParentPage {
 
+    /**
+     * fields
+     */
     private PopularProducts popularProducts;
 
     /**
@@ -20,10 +22,16 @@ public class MainPage extends AParentPage {
         initPopularProducts();
     }
 
+    /**
+     * fields Popular Product composition
+     */
     private void initPopularProducts() {
         popularProducts = new PopularProducts();
     }
 
+    /**
+     * getters
+     */
     public PopularProducts getPopularProducts() {
         return popularProducts;
     }
