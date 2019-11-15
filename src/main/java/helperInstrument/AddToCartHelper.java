@@ -13,7 +13,7 @@ public class AddToCartHelper {
 
     public void init () {
         cartPage = new MainPage().getPopularProducts().getProductByPartialName("T-Shirt")
-                .clickProductName().getProductInfo().setAddToCartButtonClick().clickCheckoutButton();
+                .goToParentPage().getProductInfo().setAddToCartButtonClick().clickCheckoutButton();
     }
 
     public CartPage getCartPage() {
