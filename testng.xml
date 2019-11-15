@@ -32,14 +32,19 @@
             <class name="main.java.test.testnata.LogoTest"></class>
         </classes>
     </test>
-    <test verbose="3" name="SignInHeaderFull">
+    <test verbose="3" name="SignInHeaderFullTest">
         <classes>
             <class name="main.java.test.testnata.SignInHeaderFullTest"></class>
         </classes>
     </test>
-    <test verbose="3" name="HeaderFullGeneralTest">
+    <test verbose="3" name="SearchFieldTest">
         <classes>
             <class name="main.java.test.testnata.SearchFieldTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ChangeCurrencyForUSD">
+    <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyForUSD"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartSmoke">

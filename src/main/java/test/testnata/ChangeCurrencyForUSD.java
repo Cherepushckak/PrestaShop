@@ -16,10 +16,11 @@ import io.qameta.allure.SeverityLevel;
  */
 
 public class ChangeCurrencyForUSD extends test {
+
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verifies if currency is changed for USD on CartPage")
     @Test
-
+    @io.qameta.allure.Issue("1234")
     public void changeCurrency() throws InterruptedException {
         String actual = new AddToCartHelper().getCartPage().getCurrency().openDropDownList().chooseUSD().getCurrencyItem().getText();
         System.out.println("Currency is changed to USD");
