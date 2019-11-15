@@ -15,7 +15,7 @@ import static org.testng.Assert.assertEquals;
 public class DeleteAddress extends test {
 
     @Test
-    public void deleteAddress() throws InterruptedException {
+    public void deleteAddress() {
         // Log In
         new LogInHelper();
 
