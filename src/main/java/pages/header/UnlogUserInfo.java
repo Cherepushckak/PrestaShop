@@ -3,9 +3,10 @@ package main.java.pages.header;
 
 import main.java.pages.login.LoginPage;
 import main.java.tools.OurWebDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import io.qameta.allure.Step;
+
 
 /**
  * Class contains webElement signInHeaderFull,
@@ -30,6 +31,8 @@ public class UnlogUserInfo extends LogUserInformation {
     /**
      * method opens LoginForm method
      */
+    @Step("click signIn on the horizontal menu, opens LogInPage")
+
     public LoginPage clickSignInHeaderFull() {
 
         signInHeaderFull.click();

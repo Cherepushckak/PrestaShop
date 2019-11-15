@@ -2,12 +2,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
 
-    <test verbose="3" name="testCreateNewUser">
+    <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
         <classes>
-            <class name="main.java.test.TestMaksym.TestNewUser"></class>
+            <class
+                    name="main.java.test.testMaksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
         </classes>
     </test>
-    <test verbose="3" name="testLoginForm">
+    <test verbose="3" name="Verify that all User details were correctly saved after account creation">
+        <classes>
+            <class name="main.java.test.testMaksym.TestUserDataIsCorrectAfterAccountCreation"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="Verify that user may login after account creation">
+        <classes>
+            <class
+                    name="main.java.test.testMaksym.TestUserMayLogInAfterAccountCreation"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="Verify that new account can not be created for existing user">
+        <classes>
+            <class
+                    name="main.java.test.testMaksym.TestNoNewAccountForExistingUser"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="Account could be created without setting User's birthday">
+        <classes>
+            <class name="main.java.test.testMaksym.TestCreateAccountWithoutBirthday"></class>
+        </classes>
+    </test>
+        <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.olegsTests.TestLoginForm"></class>
         </classes>
@@ -32,18 +55,24 @@
             <class name="main.java.test.testnata.LogoTest"></class>
         </classes>
     </test>
-    <test verbose="3" name="SignInHeaderFull">
+    <test verbose="3" name="SignInHeaderFullTest">
         <classes>
             <class name="main.java.test.testnata.SignInHeaderFullTest"></class>
         </classes>
     </test>
-    <test verbose="3" name="HeaderFullGeneralTest">
+    <test verbose="3" name="SearchFieldTest">
         <classes>
-            <class name="main.java.test.testnata.HeaderFullGeneralTest"></class>
+            <class name="main.java.test.testnata.SearchFieldTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ChangeCurrencyForUSD">
+    <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyForUSD"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartSmoke">
         <classes>
+
             <class name="main.java.test.testArtem.TestCartSmoke"></class>
             <class name="main.java.test.testArtem.TestCartSmokeLogged"></class>
         </classes>

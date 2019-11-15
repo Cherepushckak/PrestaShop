@@ -1,4 +1,4 @@
-package main.java.test.TestMaksym;
+package main.java.test.testMaksym;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -11,6 +11,7 @@ import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
 import main.java.pages.user.YourPersonalInformationPage;
 import main.java.test.test;
+
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -43,7 +44,7 @@ public class TestNewUser extends test {
         MainPage mainPageUserRegistered = registerPage.regform.createAccountFor(user);
 
         // actual User name from the Page's header
-        String userNameAtTheHeader = mainPageUserRegistered.getLogUserInformation().getLogUserInfo().getUserNameFromHeader();
+        String userNameAtTheHeader = mainPageUserRegistered.initHeaderFull().getLogUserInformation().getLogUserInfo().getUserNameFromHeader();
 
         // expected User name
         String userNameFromObjectUser = user.getFirstName() + " " + user.getLastName();
@@ -52,7 +53,7 @@ public class TestNewUser extends test {
                 "Expected user FirstName, LastName is not found in the main page's header after the User was created");
 
         // User page is opened
-        UserPage userPage = mainPageUserRegistered.getLogUserInformation().getLogUserInfo().clickUserAccount();
+        UserPage userPage = mainPageUserRegistered.initHeaderFull().getLogUserInformation().getLogUserInfo().clickUserAccount();
         Thread.sleep(500); // for demonstration purposes only
 
         // Your Personal Information Page is opened

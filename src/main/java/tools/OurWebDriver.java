@@ -1,5 +1,6 @@
 package main.java.tools;
 
+import main.java.helperinstrument.EnviromentHelper;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -7,25 +8,21 @@ import java.util.concurrent.TimeUnit;
 
 public class OurWebDriver {
     static public ChromeDriver driver;
-    private static final String startURL = "http://3.124.147.74"; // Default URL for site
-
     private static WebDriverWait wait;
-
-
-
+    
     public OurWebDriver() {
 
         if ((System.getProperty("os.name")).contains("Mac OS")) {
-            System.setProperty("webdriver.chrome.driver", "../Webdriver/chromedriver");
+            System.setProperty("webdriver.chrome.driver", EnviromentHelper.getMacDriver () );
        } else {
-            System.setProperty("webdriver.chrome.driver", "..\\Webdriver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", EnviromentHelper.getWinDriver ());
         }
 
 
         driver = new ChromeDriver();
         driver.manage().window().maximize(); // Maximize test browser window
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get(startURL); // GoTo startURL
+        driver.get(EnviromentHelper.getPrestaUrl ()); // GoTo startURL
         wait = new WebDriverWait(driver, 5);
     }
 

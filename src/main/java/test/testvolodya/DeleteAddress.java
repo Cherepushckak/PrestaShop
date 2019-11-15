@@ -1,6 +1,5 @@
 package main.java.test.testvolodya;
-
-import main.java.helperInstrument.LogInHelper;
+import main.java.helperinstrument.LogInHelper;
 import main.java.pages.addresses.*;
 import main.java.pages.header.CertainLanguage;
 import main.java.pages.user.UserPage;
