@@ -26,6 +26,7 @@ public class Product {
         initProduct();
     }
 
+
     /**
      * method to init product fields
      */

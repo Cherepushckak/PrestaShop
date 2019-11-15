@@ -1,12 +1,22 @@
-package main.java.test.testnata;
+package main.java.test.testnata;;
 
 import main.java.pages.header.HeaderFull;
+
+import main.java.test.test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import main.java.test.test;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
+
 
 public class LogoTest extends test {
+
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verifies if logo button returns HomePage, where popular product list id present")
     @Test
+
     public void clickLogoTest() {
 
         //Arrange
@@ -14,7 +24,7 @@ public class LogoTest extends test {
 
         int actual  = new HeaderFull()
         .getLogUserInformation()
-        .getUncloggedUserInfo()
+        .getUnloggedUserInfo()
         .clickSignInHeaderFull()
         .getLogCont()
         .clickLogo().getPopularProducts().getProducts().size();

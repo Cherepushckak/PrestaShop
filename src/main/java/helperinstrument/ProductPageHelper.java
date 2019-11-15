@@ -1,6 +1,4 @@
-package main.java.helperInstrument;
-
-
+package main.java.helperinstrument;
 import main.java.pages.main.MainPage;
 import main.java.pages.product.ProductTabs;
 import org.testng.Assert;

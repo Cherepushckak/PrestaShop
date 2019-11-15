@@ -1,10 +1,10 @@
 package main.java.test.testvolodya;
-
-import main.java.helperInstrument.LogInHelper;
+import main.java.data.AddressRepository;
+import main.java.helperinstrument.LogInHelper;
+import main.java.pages.addresses.AddressesPage;
+import main.java.pages.addresses.NewAddress;
 import main.java.pages.header.CertainLanguage;
 import main.java.pages.user.Address;
-import main.java.data.AddressRepository;
-import main.java.pages.addresses.*;
 import main.java.pages.user.UserPage;
 import main.java.test.test;
 import org.testng.annotations.Listeners;

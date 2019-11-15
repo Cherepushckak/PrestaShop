@@ -29,7 +29,7 @@ public class MainPage extends HeaderFull {
 
     @Step("Clicking at 'sign in' button to get new LoginPage...")
     public LoginPage clickSignIn() {
-        return getLogUserInformation().getUncloggedUserInfo().clickSignInHeaderFull();
+        return getLogUserInformation().getUnloggedUserInfo().clickSignInHeaderFull();
     }
 
 }

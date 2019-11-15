@@ -4,6 +4,7 @@ package main.java.pages.header;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import io.qameta.allure.Step;
 
 /**
  * CertainLanguage allows to find language and nearby arrow buttons, to open dropDown list of languages,
@@ -94,6 +95,7 @@ public class CertainLanguage {
      *
      * @return instance of CertainLanguage
      */
+    @Step("click language")
     public CertainLanguage clickLanguage() {
         getLanguage().click();
         return new CertainLanguage();
@@ -132,6 +134,7 @@ public class CertainLanguage {
      *
      * @return language webElement.
      */
+    @Step("click English language in dropDown")
     public CertainLanguage clickEnglishInDropDown() {
         getEnglish().click();
         return new CertainLanguage();
@@ -153,7 +156,7 @@ public class CertainLanguage {
      *
      * @return language webElement.
      */
-
+    @Step("click ukrainian language in dropDown")
     public WebElement clickUkrainianInDropDown() {
         getUkrainian().click();
         return language;
