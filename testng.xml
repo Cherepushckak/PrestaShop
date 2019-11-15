@@ -32,12 +32,12 @@
     </test>
         <test verbose="3" name="testLoginForm">
         <classes>
-            <class name="main.java.test.olegsTests.TestLoginForm"></class>
+            <class name="main.java.test.olegstests.TestLoginForm"></class>
         </classes>
     </test>
     <test verbose="3" name="TestForgotLogin">
         <classes>
-            <class name="main.java.test.olegsTests.TestForgotLogin"></class>
+            <class name="main.java.test.olegstests.TestForgotLogin"></class>
         </classes>
     </test>
     <test verbose="3" name="ChangeLanguageTest">

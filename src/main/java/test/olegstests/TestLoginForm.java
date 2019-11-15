@@ -1,4 +1,4 @@
-package main.java.test.olegsTests;
+package main.java.test.olegstests;
 
 
 import io.qameta.allure.Description;
@@ -22,8 +22,7 @@ public class TestLoginForm extends test {
     public void testLoginForm() {
 
         LogInHelper logInHelper = new LogInHelper();
-
-
+        logInHelper.initLogUserInfo ();
         String expected = "Admin admin";
         String actual = logInHelper.getUserPage().getLogUserInformation().getLogUserInfo().getUserNameFromHeader();
         assertEquals(actual, expected);

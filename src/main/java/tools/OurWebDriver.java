@@ -15,7 +15,7 @@ public class OurWebDriver {
         if ((System.getProperty("os.name")).contains("Mac OS")) {
             System.setProperty("webdriver.chrome.driver", EnviromentHelper.getMacDriver () );
        } else {
-            System.setProperty("webdriver.chrome.driver", EnviromentHelper.getWinDriver ());
+                System.setProperty("webdriver.chrome.driver", EnviromentHelper.getWinDriver ());
         }
 
 

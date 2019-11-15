@@ -1,4 +1,4 @@
-package main.java.test.olegsTests;
+package main.java.test.olegstests;
 
 
 import main.java.pages.header.UnlogUserInfo;

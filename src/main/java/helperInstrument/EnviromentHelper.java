@@ -2,7 +2,7 @@ package main.java.helperInstrument;
 
 public class EnviromentHelper {
 	private static String prestaUrl = System.getProperty ( "prestaUrl" );
-	private static String macDriver =System.getProperty ( "macDriver" );
+	private static String macDriver = System.getProperty ( "macDriver" );
 	private static String winDriver = System.getProperty ( "winDriver" );
 	private static String masterPass = System.getProperty ( "masterPass" );
 	private static String mariaEmail = System.getProperty ( "mariaEmail" );
@@ -31,6 +31,11 @@ public class EnviromentHelper {
 		return masterPass;
 	}
 	
+	public static String getAlternativePass(String alternativePass){
+		masterPass = alternativePass;
+		return masterPass;
+	}
+	
 	public static String getMariaEmail () {
 		return mariaEmail;
 	}
@@ -40,6 +45,11 @@ public class EnviromentHelper {
 	}
 	
 	public static String getAdminEmail () {
+		return adminEmail;
+	}
+	
+	public static String getAlternativeEmail(String alternativeEmail){
+		adminEmail = alternativeEmail;
 		return adminEmail;
 	}
 	

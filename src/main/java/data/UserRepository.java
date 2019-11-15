@@ -71,10 +71,8 @@ public class UserRepository {
         return maria;
     }
 
-    public User getAdmin() {
-        return admin;
-    }
-
+    public User getAdmin() { return admin; }
+    
     public User getUniqueUser() {
         return uniqueUser;
     }
