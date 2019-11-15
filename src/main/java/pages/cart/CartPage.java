@@ -1,5 +1,6 @@
 package main.java.pages.cart;
 
+import main.java.pages.common.AParentPage;
 import main.java.pages.header.HeaderFull;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.Alert;
@@ -12,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 /**
  *
  */
-public class CartPage extends HeaderFull {
+public class CartPage extends AParentPage {
     private ShoppingCart shoppingCart;
 
     /**

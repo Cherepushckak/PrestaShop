@@ -13,7 +13,7 @@ public class TestCartSmokeLogged extends test {
 
     @Test
     public void itemPresentsLogin () {
-        MainPage userPage = new LogInHelper().getUserPage().getLogCont().clickLogo();
+        MainPage userPage = new LogInHelper().getUserPage().initHeader().getLogCont().clickLogo();
         CartPage cartPage = new AddToCartHelper().getCartPage();
 
         String actual = cartPage.getShoppingCart().getShoppingItemsList().get(0).getNameText();

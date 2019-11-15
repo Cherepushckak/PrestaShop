@@ -46,6 +46,7 @@ public class TestUserMayLogInAfterAccountCreation extends test {
 
         // sign out, Main Page is shown (clickSignOut() is void method)
         mainPageUserRegistered
+                .initHeaderFull()
                 .getLogUserInformation()
                 .getLogUserInfo()
                 .clickSignOut();
@@ -59,6 +60,7 @@ public class TestUserMayLogInAfterAccountCreation extends test {
 
         // Assert SignOut button is present on the page, which means User is signed in
         assertTrue(userPage
+                        .initHeaderFull()
                 .getLogUserInformation()
                 .getLogUserInfo()
                 .findSignOut()

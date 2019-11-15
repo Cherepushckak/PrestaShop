@@ -46,6 +46,7 @@ public class TestCreateAccountWithoutBirthday extends test {
 
         // Assert SignOut button is present on the page, which means User is signed in
         assertTrue(mainPageUserRegistered
+                        .initHeaderFull()
                         .getLogUserInformation()
                         .getLogUserInfo()
                         .findSignOut()

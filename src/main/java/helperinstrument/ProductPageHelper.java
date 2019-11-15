@@ -19,7 +19,7 @@ public class ProductPageHelper {
         productTabs = new MainPage()
                 .getPopularProducts()
                 .getProductByPartialName("HUMMINGBIRD PRINTED SWEATER")
-                .clickProductName()
+                .goToProductPage()
                 .initProductTabs();
     }
 

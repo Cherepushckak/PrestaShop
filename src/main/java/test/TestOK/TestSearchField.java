@@ -22,10 +22,10 @@ public class TestSearchField extends test {
 
         //Step 2: Write text in search field.
         mainPage = new MainPage();
-        mainPage.sendKeysToSearchField("Shirt");
+        mainPage.initHeaderFull().sendKeysToSearchField("Shirt");
         
         //Step 3: Click on search button.
-        searchResultPage = mainPage.searchButtonClick();
+        searchResultPage = mainPage.initHeaderFull().searchButtonClick();
 
         //Assert
         //Step 4: Check the result.

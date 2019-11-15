@@ -13,7 +13,7 @@ public class TestTotalPriceLogged extends test {
 
     @Test
     public void testPriceLogged () {
-        MainPage userPage = new LogInHelper().getUserPage().getLogCont().clickLogo();
+        MainPage userPage = new LogInHelper().getUserPage().initHeader().getLogCont().clickLogo();
         CartPage cartPage = new AddToCartHelper().getCartPage();
         cartPage.getShoppingCart().getShoppingItemsList().get(0).clickIncreaseQuantity();
         ShoppingItem fistItem = cartPage.getShoppingCart().getShoppingItemsList().get(0);

@@ -1,5 +1,6 @@
 package main.java.pages.search;
 
+import main.java.pages.common.AParentPage;
 import main.java.pages.common.PagePath;
 import main.java.pages.header.HeaderFull;
 
@@ -7,7 +8,7 @@ import main.java.pages.header.HeaderFull;
 /**
  * 
  */
-public class SearchPage extends HeaderFull {
+public class SearchPage extends AParentPage {
     //elements
     //private WebElement description;
     //instants

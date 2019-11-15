@@ -22,7 +22,7 @@ public class ChangeCurrencyForUSD extends test {
     @Test
     @io.qameta.allure.Issue("1234")
     public void changeCurrency() throws InterruptedException {
-        String actual = new AddToCartHelper().getCartPage().getCurrency().openDropDownList().chooseUSD().getCurrencyItem().getText();
+        String actual = new AddToCartHelper().getCartPage().initHeaderFull().getCurrency().openDropDownList().chooseUSD().getCurrencyItem().getText();
         System.out.println("Currency is changed to USD");
 
         String expected = "USD $";

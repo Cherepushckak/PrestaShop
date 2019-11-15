@@ -9,29 +9,41 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ *Class that describes composition of main page and includes list of products
  */
 public class PopularProducts {
     /**
-     * List with product items, uses class pages.Product from package pages.Search (it`s the same class we use in main page)
+     * List with product items, uses class Product from package search (it`s the same class we use in main page)
      */
     private List<Product> products;
-
-
+    /**
+     * fields
+     */
     private WebElement allProducts;
-    private String partialProductName;
+   // private String partialProductName;
 
     /**
-     * Default constructor
+     * Default constructor uses init method for initialization of fields
      */
     public PopularProducts() {
         initPopularProducts();
     }
 
     /**
-     * getter for list of popular products
+     * method for initialization of fields
      */
+    private void initPopularProducts() {
+        allProducts = OurWebDriver.driver.findElement(By.cssSelector
+                (".all-product-link.float-xs-left.float-md-right.h4"));
+        products = new ArrayList<Product>();
+        for (WebElement current : OurWebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
+            products.add(new Product(current));
+        }
+    }
 
+    /**
+     * getters
+     */
     public List<Product> getProducts() {
         return products;
     }
@@ -41,22 +53,8 @@ public class PopularProducts {
     }
 
     /**
-     * method to create list of products and initialization of allProducts field
-     */
-
-    private void initPopularProducts() {
-        allProducts = OurWebDriver.driver.findElement(By.cssSelector(".all-product-link.float-xs-left.float-md-right.h4"));
-        products = new ArrayList<Product>();
-        for (WebElement current : OurWebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
-            products.add(new Product(current));
-        }
-    }
-
-
-    /**
      * method to get product by part of name
      */
-
     public Product getProductByPartialName(String partialProductName) {
         Product result = null;
         for (Product current : getProducts()) {

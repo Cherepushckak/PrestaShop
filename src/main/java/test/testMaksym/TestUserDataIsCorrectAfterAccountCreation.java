@@ -46,6 +46,7 @@ public class TestUserDataIsCorrectAfterAccountCreation extends test {
 
         // User page is opened
         UserPage userPage = mainPageUserRegistered
+                .initHeaderFull()
                 .getLogUserInformation()
                 .getLogUserInfo()
                 .clickUserAccount();
