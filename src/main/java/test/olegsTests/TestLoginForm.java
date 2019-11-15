@@ -37,7 +37,7 @@ public class TestLoginForm extends test {
 
 		
 		String expected = "Admin admin";
-		String actual = logInHelper.getUserPage ().getLogUserInformation ().getLogUserInfo ().getUserNameFromHeader ();
+		String actual = logInHelper.getUserPage ().initHeaderFull().getLogUserInformation ().getLogUserInfo ().getUserNameFromHeader ();
 		assertEquals ( actual, expected );
 		
 	}

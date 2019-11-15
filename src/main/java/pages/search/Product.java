@@ -52,13 +52,19 @@ public class Product {
         name.click();
     }
 
-    //get name in String format
-
+    /**
+     * get name in String format
+     * @return name of product
+     */
     public String getNameProductText () {
         return getName().getText();
     }
 
-    public ProductPage goToParentPage() {
+    /**
+     * click name and go to Product Page
+     * @return Product Page
+     */
+    public ProductPage goToProductPage() {
         clickName();
         return new ProductPage();
     }

@@ -10,14 +10,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 
+ * describes one product item in cart
  */
 public class ShoppingItem {
+
     /**
      * container of one item
      */
-
     private WebElement shoppingItemContainer;
+
     /**
      * fields
      */
@@ -32,16 +33,15 @@ public class ShoppingItem {
 
 
     /**
-     * Default constructor
+     * constructor
      */
     public ShoppingItem(WebElement shoppingItemContainer) {
         initShoppingItem();
     }
 
     /**
-     * initialization
+     * initialization of variables
      */
-
     private void initShoppingItem () {
         name = OurWebDriver.driver.findElement(By.cssSelector(".product-line-info>.label"));
         increaseQuantity = OurWebDriver.driver.findElement(By.cssSelector(".material-icons.touchspin-up"));
@@ -52,11 +52,9 @@ public class ShoppingItem {
         quantity = OurWebDriver.driver.findElement(By.cssSelector(".js-cart-line-product-quantity.form-control"));
     }
 
-
     /**
      * getters
      */
-
     public WebElement getShoppingItemContainer() {
         return shoppingItemContainer;
     }

@@ -1,11 +1,12 @@
 package main.java.pages.user;
 
+import main.java.pages.common.AParentPage;
 import main.java.pages.header.HeaderFull;
 
 /**
  * 
  */
-public class UserPage extends HeaderFull {
+public class UserPage extends AParentPage {
 
 	// Fields
 	public UserPageContainer userPageContainer;

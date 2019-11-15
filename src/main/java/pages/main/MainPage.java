@@ -1,13 +1,14 @@
 package main.java.pages.main;
 
 import io.qameta.allure.Step;
+import main.java.pages.common.AParentPage;
 import main.java.pages.header.HeaderFull;
 import main.java.pages.login.LoginPage;
 
 /**
  *
  */
-public class MainPage extends HeaderFull {
+public class MainPage extends AParentPage {
 
     private PopularProducts popularProducts;
 
@@ -29,7 +30,7 @@ public class MainPage extends HeaderFull {
 
     @Step("Clicking at 'sign in' button to get new LoginPage...")
     public LoginPage clickSignIn() {
-        return getLogUserInformation().getUncloggedUserInfo().clickSignInHeaderFull();
+        return initHeaderFull().getLogUserInformation().getUncloggedUserInfo().clickSignInHeaderFull();
     }
 
 }
