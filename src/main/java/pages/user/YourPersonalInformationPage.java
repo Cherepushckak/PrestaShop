@@ -4,12 +4,10 @@ import io.qameta.allure.Step;
 import main.java.data.Title;
 import main.java.data.User;
 import main.java.pages.header.HeaderFull;
-import main.java.pages.main.MainPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-//import sun.jvm.hotspot.utilities.Assert;
 
 import static org.testng.Assert.assertTrue;
 

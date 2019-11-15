@@ -62,11 +62,11 @@ public class LogUserInfo extends LogUserInformation {
     /**
      * Method sign out from the cabinet
      */
+
     @Step("click signOut button, opens current page")
 
-    public LoginPage clickSignOut() {
+    public void clickSignOut() {
         signOut.click();
-        return new LoginPage();
     }
 
     /**
