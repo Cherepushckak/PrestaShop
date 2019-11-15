@@ -26,6 +26,7 @@ public class LogoTest extends test {
         .getLogUserInformation()
         .getUnloggedUserInfo()
         .clickSignInHeaderFull()
+                .initHeader()
         .getLogCont()
         .clickLogo().getPopularProducts().getProducts().size();
 

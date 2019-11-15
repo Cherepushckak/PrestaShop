@@ -44,6 +44,7 @@ public class TestUserNameIsShownInHeaderAfterAccountCreation extends test {
 
         // actual User name from the Page's header
         String userNameAtTheHeader = mainPageUserRegistered
+                .initHeaderFull()
                 .getLogUserInformation()
                 .getLogUserInfo()
                 .getUserNameFromHeader();
