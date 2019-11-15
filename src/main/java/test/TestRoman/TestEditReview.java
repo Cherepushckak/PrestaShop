@@ -10,9 +10,7 @@ import main.java.pages.product.ProductTabs;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import main.java.helperInstrument.LogInHelper;
-import main.java.helperInstrument.ProductPageHelper;
+import main.java.helperinstrument.*;
 import main.java.test.test;
 
 @Listeners(test.class)
