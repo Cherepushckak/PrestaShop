@@ -37,4 +37,12 @@ public class ProductPage extends AParentPage {
     public ProductInfo getProductInfo() {
         return productInfo;
     }
+
+
+    //Added by Roman Shamakhin
+    public ProductTabs initProductTabs() {
+        return new ProductTabs();
+    }
+    //Added by Roman Shamakhin
+
 }

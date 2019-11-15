@@ -11,6 +11,9 @@ import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
 import main.java.pages.user.YourPersonalInformationPage;
 import main.java.test.test;
+
+import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

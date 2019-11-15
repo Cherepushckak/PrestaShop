@@ -4,6 +4,8 @@ import main.java.pages.main.MainPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import io.qameta.allure.Step;
+
 
 
 /**
@@ -66,6 +68,8 @@ public class LogCont {
     /**
      * method opens homePage
      */
+    @Step("click logo, opens MainPage")
+
     public MainPage clickLogo() {
         logo.click();
         return new MainPage();
@@ -74,6 +78,8 @@ public class LogCont {
     /**
      * method opens Contact Us form  change for method that returns contactUs page
      */
+    @Step("click contactUs")
+
     public void clickContactUS() {
         contactUS.click();
     }

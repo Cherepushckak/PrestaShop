@@ -30,7 +30,7 @@ public class MainPage extends AParentPage {
 
     @Step("Clicking at 'sign in' button to get new LoginPage...")
     public LoginPage clickSignIn() {
-        return initHeaderFull().getLogUserInformation().getUncloggedUserInfo().clickSignInHeaderFull();
+        return initHeaderFull().getLogUserInformation().getUnloggedUserInfo().clickSignInHeaderFull();
     }
 
 }
