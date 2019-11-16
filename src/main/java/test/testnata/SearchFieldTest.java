@@ -1,7 +1,7 @@
 package main.java.test.testnata;
 
 import main.java.pages.searchresult.SearchResultPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,9 +13,9 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
-public class SearchFieldTest extends test {
+public class SearchFieldTest extends BasicTest {
     private WebElement actual;
     private final By productLocator = By.xpath("//img[@alt='Mountain fox cushion']");
 

@@ -2,11 +2,11 @@ package main.java.test.TestOK;
 
 import main.java.pages.main.MainPage;
 import main.java.pages.searchresult.SearchResultPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestSearchField extends test {
+public class TestSearchField extends BasicTest {
 
 
     @Test

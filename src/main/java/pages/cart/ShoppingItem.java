@@ -1,5 +1,6 @@
 package main.java.pages.cart;
 
+import io.qameta.allure.Step;
 import main.java.pages.product.ProductPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
@@ -87,22 +88,38 @@ public class ShoppingItem {
 
     /**
      * click increase quantity atomic method
+     */
+    public void clickIncreaseQuantity() {
+        increaseQuantity.click();
+    }
+
+    /**
+     * click decrease quantity atomic method
+     */
+    public void clickDecreaseQuantity() {
+        decreaseQuantity.click();
+    }
+
+    /**
+     * increase quantity value
      * using explicitly wait to check the total price
      */
-    public void clickIncreaseQuantity () {
+    @Step("Click up arrow to increase quantity of product")
+    public void changeValueByIncreasing() {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        increaseQuantity.click();
+        clickIncreaseQuantity();
         OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     /**
-     * click decrease quantity atomic method
+     * decrease quantity value
      * using explicitly wait to check the total price
      */
-    public void clickDecreaseQuantity () {
+    @Step("Click down arrow to decrease quantity of product")
+    public void changeValueByDecreasing() {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        decreaseQuantity.click();
+        clickDecreaseQuantity();
         OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
@@ -146,6 +163,7 @@ public class ShoppingItem {
      * get name of product item method
      * @return name of product item
      */
+    @Step("Check added item by name")
     public String getNameText () {
        return getName().getText();
     }
@@ -154,6 +172,7 @@ public class ShoppingItem {
      * get actual price of product item method
      * @return price of product item
      */
+    @Step("Get actual price value of product")
     public double getPriceValue() {
         return Double.parseDouble(getPrice().getText().substring(1));
     }
@@ -162,6 +181,7 @@ public class ShoppingItem {
      * get quantity of product item method
      * @return quantity of product item
      */
+    @Step("Get quantity value of product")
     public int getQuantityValue() {
         return Integer.parseInt(quantity.getAttribute("value"));
     }
@@ -170,6 +190,7 @@ public class ShoppingItem {
      * get total price of one product item method
      * @return total price of product item
      */
+    @Step("Verify that total price meets the prerequisites")
     public double getTotalPriceValue () {
         return Double.parseDouble(getTotalPrice().getText().substring(1));
     }
@@ -199,6 +220,7 @@ public class ShoppingItem {
      * change and confirmation value of quantity field method
      * @param value of quantity
      */
+    @Step("Clear, set and confirm new value at quantity of selected item")
     public void quantityChangeValue (String value){
         quantityClick();
         quantityClear();

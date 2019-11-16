@@ -1,5 +1,6 @@
 package main.java.pages.cart;
 
+import io.qameta.allure.Step;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -68,6 +69,7 @@ public class ShoppingCart {
      * deleting all product items from cart method
      * using explicitly wait to check that all items was deleted
      */
+    @Step("Click basket to all product items")
     public void deleteAllFromCart() {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         for (ShoppingItem current : shoppingItemsList) {

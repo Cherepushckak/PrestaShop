@@ -1,7 +1,7 @@
 package main.java.test.testnata;
 
 import main.java.pages.header.LogCont;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,9 +13,9 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
-public class ContactUsTest extends test {
+public class ContactUsTest extends BasicTest {
 
     LogCont logCont;
     private WebElement actual;

@@ -1,5 +1,6 @@
 package main.java.pages.product;
 
+import io.qameta.allure.Step;
 import main.java.pages.cart.CartPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
@@ -51,6 +52,7 @@ public class AddedToCart {
     /**
      *checkout button click method proceed to Cart Page
      */
+    @Step("Click checkout button")
     public CartPage clickCheckoutButton () {
         OurWebDriver.getWait().until(ExpectedConditions.visibilityOfElementLocated
                 (By.cssSelector(".cart-content-btn>.btn.btn-primary")));

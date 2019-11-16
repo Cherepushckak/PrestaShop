@@ -1,5 +1,6 @@
 package main.java.pages.product;
 
+import io.qameta.allure.Step;
 import main.java.pages.common.AParentPage;
 
 /**

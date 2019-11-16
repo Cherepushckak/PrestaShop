@@ -11,12 +11,12 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import main.java.helperinstrument.*;
-import main.java.test.test;
+import main.java.test.BasicTest;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
 
-public class TestEditReview extends test {
+public class TestEditReview extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify updating of existing review")
@@ -28,7 +28,7 @@ public class TestEditReview extends test {
         String updateReviewDetail = "Update detail";
 
         new LogInHelper();
-        new LogCont().clickLogo();
+        new LogCont().goToMainPage();
         ProductTabs productTabs = new ProductPageHelper().getProductTabs();
 
         int amountReview = productTabs.getAmountReview();

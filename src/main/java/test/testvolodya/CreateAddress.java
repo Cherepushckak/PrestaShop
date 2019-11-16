@@ -6,15 +6,15 @@ import main.java.pages.addresses.NewAddress;
 import main.java.pages.header.CertainLanguage;
 import main.java.pages.user.Address;
 import main.java.pages.user.UserPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
-public class CreateAddress extends test {
+public class CreateAddress extends BasicTest {
 
     @Test
     public void createAddress() {

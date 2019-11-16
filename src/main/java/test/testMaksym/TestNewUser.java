@@ -10,14 +10,14 @@ import main.java.pages.main.MainPage;
 import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
 import main.java.pages.user.YourPersonalInformationPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
 
-public class TestNewUser extends test {
+public class TestNewUser extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify creation of the new user account")

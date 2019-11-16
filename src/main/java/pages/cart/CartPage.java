@@ -1,5 +1,6 @@
 package main.java.pages.cart;
 
+import io.qameta.allure.Step;
 import main.java.pages.common.AParentPage;
 import org.openqa.selenium.NoSuchElementException;
 
@@ -47,6 +48,7 @@ public class CartPage extends AParentPage {
      * method that checks present of alert pop-up at Cart Page
      * @return true/false of presents alert pop-up
      */
+    @Step("Check thar alert message is present")
     public boolean isAlertMessagePresent() {
         try {
             if (new AlertMessage().getMessage().isDisplayed()) {

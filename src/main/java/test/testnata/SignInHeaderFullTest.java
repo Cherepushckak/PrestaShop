@@ -3,15 +3,15 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import main.java.pages.header.UnlogUserInfo;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
-public class SignInHeaderFullTest extends test {
+public class SignInHeaderFullTest extends BasicTest {
 
     private WebElement actual;
 

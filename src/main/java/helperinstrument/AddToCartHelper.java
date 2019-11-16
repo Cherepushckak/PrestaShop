@@ -24,8 +24,13 @@ public class AddToCartHelper {
      * initialisation of path
      */
     public void init () {
-        cartPage = new MainPage().getPopularProducts().getProductByPartialName("T-Shirt")
-                .goToProductPage().getProductInfo().setAddToCartButtonClick().clickCheckoutButton();
+        cartPage = new MainPage()
+                .getPopularProducts()
+                .getProductByPartialName("T-Shirt")
+                .goToProductPage()
+                .getProductInfo()
+                .setAddToCartButtonClick()
+                .clickCheckoutButton();
     }
 
     /**

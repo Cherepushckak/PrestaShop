@@ -1,5 +1,6 @@
 package main.java.pages.main;
 
+import io.qameta.allure.Step;
 import main.java.pages.search.Product;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
@@ -57,6 +58,7 @@ public class PopularProducts {
      * method to get product by part of name
      * @return product item
      */
+    @Step("Search product by part of name at popular products")
     public Product getProductByPartialName(String partialProductName) {
         Product result = null;
         for (Product current : getProducts()) {
