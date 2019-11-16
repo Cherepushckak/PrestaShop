@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Categories {
 
     private WebElement categoryName;
-    private ArrayList<Category> categories;
+    private ArrayList<Category> categories= new ArrayList<Category>();
     /**
      * Default constructor
      */
@@ -59,8 +59,13 @@ public class Categories {
         categoryName.click();
     }
 
-    public void clickCategory(int index) {
-        //categories.get(index).click();
+    public SearchPage clickCategory(int index) {
+        SearchPage searchPage = categories.get(index).clickCategory();
+        return searchPage;
+    }
+
+    public Category getCategory(int index){
+        return categories.get(index);
     }
 
 

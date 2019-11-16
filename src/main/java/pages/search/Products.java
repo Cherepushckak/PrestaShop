@@ -18,7 +18,14 @@ public class Products {
      */
     //Nata added wait
     public Products() {
-        getProductsArrayList();
+    }
+
+    public ArrayList<Product> getProducts(){
+        for (WebElement p : OurWebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
+            this.products.add(new Product(p));
+        }
+        return products;
+        //getProductsArrayList();
     }
 
     //Nata created for test!!!!!!!!
@@ -32,7 +39,6 @@ public class Products {
 
     public int getProductsCount() {
         return getProductsArrayList().size();
-
     }
 
 }

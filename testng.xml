@@ -113,7 +113,7 @@
         </classes>
     </test>
 
-    <!-- Volodya's tests -->
+    &lt;!&ndash; Volodya's tests &ndash;&gt;
     <test name="Create new address">
         <classes>
             <class name="main.java.test.testvolodya.CreateAddress"></class>
@@ -132,6 +132,18 @@
     <test name="Delete address entry">
         <classes>
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
+        </classes>
+    </test>-->
+
+    <!-- Oleg Kmet test -->
+    <test name="Test search field">
+        <classes>
+            <class name="main.java.test.testok.TestSearchField"></class>
+        </classes>
+    </test>
+    <test name="Test category navigation">
+        <classes>
+            <class name="main.java.test.testok.TestCategoryNavigation"></class>
         </classes>
     </test>
 

@@ -24,7 +24,21 @@ public class SearchPage extends AParentPage {
      * Default constructor
      */
     public SearchPage() {
-        //createHeaderFull();
     }
 
+    //geters
+    public Categories getCategories() {
+        categories = new Categories();
+        return categories;
+    }
+
+    public Description getDescription(){
+        description = new Description();
+        return description;
+    }
+
+    public PagePath getPagePath(){
+        pagePath = new PagePath();
+        return pagePath;
+    }
 }

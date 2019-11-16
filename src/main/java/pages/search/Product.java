@@ -25,14 +25,15 @@ public class Product {
      * @param productContainer
      */
     public Product(WebElement productContainer) {
-        this.productContainer = productContainer;
-        initProduct();
+        initProduct(productContainer);
     }
 
     /**
      * method to init product fields
      */
-    private void initProduct() {
+
+    private void initProduct(WebElement productContainer) {
+        this.productContainer = productContainer;
         name = productContainer.findElement(By.cssSelector(".h3.product-title>a"));
     }
 

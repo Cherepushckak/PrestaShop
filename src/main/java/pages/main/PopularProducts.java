@@ -2,6 +2,7 @@ package main.java.pages.main;
 
 import io.qameta.allure.Step;
 import main.java.pages.search.Product;
+import main.java.pages.search.SearchPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -69,5 +70,14 @@ public class PopularProducts {
             }
         }
         return result;
+    }
+
+    /**
+     * Go to search page
+     * @return SearchPage
+     */
+    public SearchPage clickAllProducts(){
+        allProducts.click();
+        return new SearchPage();
     }
 }
