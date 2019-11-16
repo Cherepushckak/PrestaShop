@@ -79,29 +79,37 @@
     <!-- Artem's tests -->
     <test verbose="3" name="TestCartSmoke">
         <classes>
-            <class name="main.java.test.testArtem.TestCartSmoke"></class>
-            <class name="main.java.test.testArtem.TestCartSmokeLogged"></class>
+            <class name="main.java.test.testartem.TestCartSmoke"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestCartSmokeLogged">
+        <classes>
+            <class name="main.java.test.testartem.TestCartSmokeLogged"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartTotalPrice">
         <classes>
-            <class name="main.java.test.testArtem.TestTotalPrice"></class>
-            <class name="main.java.test.testArtem.TestTotalPriceLogged"></class>
+            <class name="main.java.test.testartem.TestTotalPrice"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestCartTotalPriceLogged">
+        <classes>
+            <class name="main.java.test.testartem.TestTotalPriceLogged"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartZeroValue">
         <classes>
-            <class name="main.java.test.testArtem.TestCartZeroValue"></class>
+            <class name="main.java.test.testartem.TestCartZeroValue"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartOverLimit">
         <classes>
-            <class name="main.java.test.testArtem.TestOverLimitValue"></class>
+            <class name="main.java.test.testartem.TestOverLimitValue"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartBV">
         <classes>
-            <class name="main.java.test.testArtem.TestBoundaryValue"></class>
+            <class name="main.java.test.testartem.TestBoundaryValue"></class>
         </classes>
     </test>
 

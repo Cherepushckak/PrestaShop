@@ -1,5 +1,6 @@
 package main.java.pages.cart;
 
+import io.qameta.allure.Step;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -23,6 +24,7 @@ public class AlertMessage {
     /**
      * getters
      */
+    @Step("Verify of getting alert message")
     public WebElement getMessage() {
         return message;
     }

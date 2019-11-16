@@ -1,5 +1,6 @@
 package main.java.pages.cart;
 
+import io.qameta.allure.Step;
 import main.java.pages.product.ProductPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
@@ -29,8 +30,6 @@ public class ShoppingItem {
     private WebElement totalPrice;
     private WebElement basket;
     private WebElement quantity;
-
-
 
     /**
      * constructor
@@ -87,58 +86,129 @@ public class ShoppingItem {
         return quantity;
     }
 
-    public String getNameText () {
-       return getName().getText();
-    }
-
-    public double getPriceValue() {
-        return Double.parseDouble(getPrice().getText().substring(1));
-    }
-
-    public int getQuantityValue() {
-        return Integer.parseInt(quantity.getAttribute("value"));
-    }
-
-    public double getTotalPriceValue () {
-//        clickTotalPrice();
-        return Double.parseDouble(getTotalPrice().getText().substring(1));
-    }
-
-    public void clickIncreaseQuantity () {
-        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    /**
+     * click increase quantity atomic method
+     */
+    public void clickIncreaseQuantity() {
         increaseQuantity.click();
-        OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
-        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-    public void clickDecreaseQuantity () {
-        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    /**
+     * click decrease quantity atomic method
+     */
+    public void clickDecreaseQuantity() {
         decreaseQuantity.click();
+    }
+
+    /**
+     * increase quantity value
+     * using explicitly wait to check the total price
+     */
+    @Step("Click up arrow to increase quantity of product")
+    public void changeValueByIncreasing() {
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        clickIncreaseQuantity();
         OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-    public ProductPage clickName () {
-        name.click();
-        return new ProductPage();
+    /**
+     * decrease quantity value
+     * using explicitly wait to check the total price
+     */
+    @Step("Click down arrow to decrease quantity of product")
+    public void changeValueByDecreasing() {
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        clickDecreaseQuantity();
+        OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-    public void clickBasket () {
+    /**
+     * click at name field atomic method
+     */
+    private void clickName () {
+        name.click();
+    }
+
+    /**
+     * click at basket field atomic method
+     */
+    protected void clickBasket () {
         basket.click();
     }
 
-    public void clickTotalPrice () {
+    /**
+     * click at total price field atomic method
+     */
+    private void clickTotalPrice () {
         totalPrice.click();
     }
 
+    /**
+     * click at quantity field atomic method
+     */
     private void quantityClick () {
         quantity.click();
     }
 
+    /**
+     * clear quantity field atomic method
+     */
     private void quantityClear () {
         quantity.sendKeys(Keys.BACK_SPACE);
     }
 
+    /**
+     * get name of product item method
+     * @return name of product item
+     */
+    @Step("Check added item by name")
+    public String getNameText () {
+       return getName().getText();
+    }
+
+    /**
+     * get actual price of product item method
+     * @return price of product item
+     */
+    @Step("Get actual price value of product")
+    public double getPriceValue() {
+        return Double.parseDouble(getPrice().getText().substring(1));
+    }
+
+    /**
+     * get quantity of product item method
+     * @return quantity of product item
+     */
+    @Step("Get quantity value of product")
+    public int getQuantityValue() {
+        return Integer.parseInt(quantity.getAttribute("value"));
+    }
+
+    /**
+     * get total price of one product item method
+     * @return total price of product item
+     */
+    @Step("Verify that total price meets the prerequisites")
+    public double getTotalPriceValue () {
+        return Double.parseDouble(getTotalPrice().getText().substring(1));
+    }
+
+    /**
+     * go to Product Page by clicking name of product method
+     * @return Product page
+     */
+    public ProductPage goToProductPageByName() {
+        clickName();
+        return new ProductPage();
+    }
+
+    /**
+     * typing value at quantity field method
+     * using explicitly wait to check the total price
+     * @param value of quantity
+     */
     private void quantitySetValue (String value) {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         quantity.sendKeys(value);
@@ -146,11 +216,15 @@ public class ShoppingItem {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
+    /**
+     * change and confirmation value of quantity field method
+     * @param value of quantity
+     */
+    @Step("Clear, set and confirm new value at quantity of selected item")
     public void quantityChangeValue (String value){
         quantityClick();
         quantityClear();
         quantitySetValue(value);
         quantity.sendKeys(Keys.ENTER);
     }
-
 }

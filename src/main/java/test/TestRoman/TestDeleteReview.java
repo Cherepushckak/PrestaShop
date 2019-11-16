@@ -12,12 +12,12 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import main.java.helperinstrument.*;
-import main.java.test.test;
+import main.java.test.BasicTest;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
 
-public class TestDeleteReview extends test {
+public class TestDeleteReview extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify deleting of existing reviews")
@@ -27,7 +27,7 @@ public class TestDeleteReview extends test {
         WebElement buttonCreateReview;
 
         new LogInHelper();
-        new LogCont().clickLogo();
+        new LogCont().goToMainPage();
         ProductTabs productTabs = new ProductPageHelper().getProductTabs();
 
         productTabs

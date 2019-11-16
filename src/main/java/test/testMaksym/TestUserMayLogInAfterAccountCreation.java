@@ -9,14 +9,14 @@ import main.java.pages.login.LoginPage;
 import main.java.pages.main.MainPage;
 import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 
-public class TestUserMayLogInAfterAccountCreation extends test {
+public class TestUserMayLogInAfterAccountCreation extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that user may login after account creation")

@@ -1,5 +1,6 @@
 package main.java.pages.main;
 
+import io.qameta.allure.Step;
 import main.java.pages.search.Product;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
@@ -12,15 +13,16 @@ import java.util.List;
  *Class that describes composition of main page and includes list of products
  */
 public class PopularProducts {
+
     /**
      * List with product items, uses class Product from package search (it`s the same class we use in main page)
      */
     private List<Product> products;
+
     /**
      * fields
      */
     private WebElement allProducts;
-   // private String partialProductName;
 
     /**
      * Default constructor uses init method for initialization of fields
@@ -54,7 +56,9 @@ public class PopularProducts {
 
     /**
      * method to get product by part of name
+     * @return product item
      */
+    @Step("Search product by part of name at popular products")
     public Product getProductByPartialName(String partialProductName) {
         Product result = null;
         for (Product current : getProducts()) {
