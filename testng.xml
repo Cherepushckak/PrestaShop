@@ -2,12 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
 
-<<<<<<< HEAD
-    <!--<test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
-=======
     <!-- Maksym's tests -->
     <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
->>>>>>> 715a3b314fd61d1c790e956b709f18734296d674
         <classes>
             <class
                     name="main.java.test.testMaksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
@@ -138,12 +134,13 @@
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
         </classes>
     </test>-->
-    
-<!--    <test name="Test search field">
+
+    <!-- Oleg Kmet test -->
+    <test name="Test search field">
         <classes>
             <class name="main.java.test.testok.TestSearchField"></class>
         </classes>
-    </test> -->
+    </test>
     <test name="Test category navigation">
         <classes>
             <class name="main.java.test.testok.TestCategoryNavigation"></class>
