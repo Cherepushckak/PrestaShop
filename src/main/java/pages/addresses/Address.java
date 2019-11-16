@@ -49,14 +49,7 @@ public class Address {
     }
 
     // Getters
-    public WebElement getAddressContainer() {
-        return addressContainer;
-    }
-    public WebElement getAlias() {
-        return alias; }
-    public WebElement getAllFieldsAddress() {
-        return allFieldsAddress;
-    }
+    public WebElement getAlias() { return alias; }
 
     // Click 'Update' button
     @Step("Click 'Update' button")
@@ -69,6 +62,6 @@ public class Address {
     @Step("Click 'Delete' button")
     public Addresses clickDelete() {
         deleteButton.click();
-        return new Addresses ();
+        return new Addresses();
     }
 }

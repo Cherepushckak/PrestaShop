@@ -42,6 +42,38 @@
     </test>
 
     <!-- Nata's tests -->
+    <test verbose="3" name="ChangeLanguageTest">
+        <classes>
+            <class name="main.java.test.testnata.ChangeLanguageTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ContactUsTest">
+        <classes>
+            <class name="main.java.test.testnata.ContactUsTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="LogoTest">
+        <classes>
+            <class name="main.java.test.testnata.LogoTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="SignInHeaderFullTest">
+        <classes>
+            <class name="main.java.test.testnata.SignInHeaderFullTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="SearchFieldTest">
+        <classes>
+            <class name="main.java.test.testnata.SearchFieldTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ChangeCurrencyForUSD">
+        <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyForUSD"></class>
+        </classes>
+    </test>
+
+    <!-- Nata's tests -->
     <test verbose="3" name="ChangeCurrencyAfterChangingLanguageTest">
         <classes>
             <class name="main.java.test.testnata.ChangeCurrencyAfterChangingLanguageTest"></class>
@@ -121,7 +153,6 @@
         </classes>
     </test>
 
-
     <!-- Volodya's tests -->
     <test name="Create new address">
         <classes>
@@ -141,6 +172,11 @@
     <test name="Delete address entry">
         <classes>
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
+        </classes>
+    </test>
+    <test name="Create two addresses entries">
+        <classes>
+            <class name="main.java.test.testvolodya.Create2Addresses"></class>
         </classes>
     </test>
 
