@@ -37,7 +37,7 @@ public class CreateAddressVerifyExpected extends BasicTest {
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
         // Verify, that new address alias, is as we expected
-        String actualAlias = new AddressesPage().getAddressesList().getAddressesContainer().get(0).getAlias().getText();
+        String actualAlias = new Addresses().getAddressesContainer().get(0).getAlias().getText();
         String expectedAlias = new AddressRepository().getAddress1().getAlias();
         assertEquals ( actualAlias, expectedAlias );
     }

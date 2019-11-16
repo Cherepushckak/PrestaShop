@@ -70,14 +70,9 @@ public class EditAddress extends BasicTest {
         Addresses addresses2 = new NewAddress().clickSaveButton();
 
         // Verification, that address was successfully updated
-        String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
+        String actualAlert = new Addresses().getAlert().getText();
         String expectedAlert = "Address successfully updated!";
         assertEquals ( actualAlert, expectedAlert );
-
-        // Verify, that new address alias, is as we expected
-        String actualAlias = new AddressesPage().getAddressesList().getAddressesContainer().get(0).getAlias().getText();
-        String expectedAlias = new AddressRepository().getAddress2().getAlias();
-        assertEquals ( actualAlias, expectedAlias );
     }
 
 }

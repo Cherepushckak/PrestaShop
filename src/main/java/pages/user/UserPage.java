@@ -21,9 +21,6 @@ import org.testng.annotations.Listeners;
 // UserPage class
 public class UserPage extends AParentPage {
 
-	// Fields
-	public UserPageContainer userPageContainer;
-
 	// Default constructor
 	public UserPage() {
 		getUserPageContainer();
