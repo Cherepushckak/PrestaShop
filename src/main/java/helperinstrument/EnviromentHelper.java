@@ -1,9 +1,8 @@
-package main.java.helperinstrument;
-
+package main.java.helperInstrument;
 
 public class EnviromentHelper {
 	private static String prestaUrl = System.getProperty ( "prestaUrl" );
-	private static String macDriver =System.getProperty ( "macDriver" );
+	private static String macDriver = System.getProperty ( "macDriver" );
 	private static String winDriver = System.getProperty ( "winDriver" );
 	private static String masterPass = System.getProperty ( "masterPass" );
 	private static String mariaEmail = System.getProperty ( "mariaEmail" );
