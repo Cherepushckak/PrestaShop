@@ -8,13 +8,13 @@ import main.java.data.UserRepository;
 import main.java.pages.login.LoginPage;
 import main.java.pages.main.MainPage;
 import main.java.pages.register.RegisterPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
 
-public class TestUserNameIsShownInHeaderAfterAccountCreation extends test {
+public class TestUserNameIsShownInHeaderAfterAccountCreation extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that immediately after new user creation, User's name is shown in the header")

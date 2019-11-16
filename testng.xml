@@ -2,7 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
 
+<<<<<<< HEAD
     <!--<test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
+=======
+    <!-- Maksym's tests -->
+    <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
+>>>>>>> 715a3b314fd61d1c790e956b709f18734296d674
         <classes>
             <class
                     name="main.java.test.testMaksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
@@ -30,6 +35,8 @@
             <class name="main.java.test.testMaksym.TestCreateAccountWithoutBirthday"></class>
         </classes>
     </test>
+
+    <!-- Oleg's tests -->
         <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.olegsTests.TestLoginForm"></class>
@@ -40,6 +47,8 @@
             <class name="main.java.test.olegsTests.TestForgotLogin"></class>
         </classes>
     </test>
+
+    <!-- Nata's tests -->
     <test verbose="3" name="ChangeLanguageTest">
         <classes>
             <class name="main.java.test.testnata.ChangeLanguageTest"></class>
@@ -70,32 +79,41 @@
             <class name="main.java.test.testnata.ChangeCurrencyForUSD"></class>
         </classes>
     </test>
+
+    <!-- Artem's tests -->
     <test verbose="3" name="TestCartSmoke">
         <classes>
-
-            <class name="main.java.test.testArtem.TestCartSmoke"></class>
-            <class name="main.java.test.testArtem.TestCartSmokeLogged"></class>
+            <class name="main.java.test.testartem.TestCartSmoke"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestCartSmokeLogged">
+        <classes>
+            <class name="main.java.test.testartem.TestCartSmokeLogged"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartTotalPrice">
         <classes>
-            <class name="main.java.test.testArtem.TestTotalPrice"></class>
-            <class name="main.java.test.testArtem.TestTotalPriceLogged"></class>
+            <class name="main.java.test.testartem.TestTotalPrice"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="TestCartTotalPriceLogged">
+        <classes>
+            <class name="main.java.test.testartem.TestTotalPriceLogged"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartZeroValue">
         <classes>
-            <class name="main.java.test.testArtem.TestCartZeroValue"></class>
+            <class name="main.java.test.testartem.TestCartZeroValue"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartOverLimit">
         <classes>
-            <class name="main.java.test.testArtem.TestOverLimitValue"></class>
+            <class name="main.java.test.testartem.TestOverLimitValue"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartBV">
         <classes>
-            <class name="main.java.test.testArtem.TestBoundaryValue"></class>
+            <class name="main.java.test.testartem.TestBoundaryValue"></class>
         </classes>
     </test>
 
@@ -105,12 +123,17 @@
             <class name="main.java.test.testvolodya.CreateAddress"></class>
         </classes>
     </test>
-    <test name="Edit address entrie">
+    <test name="Verify that new address match expected">
+        <classes>
+            <class name="main.java.test.testvolodya.CreateAddressVerifyExpected"></class>
+        </classes>
+    </test>
+    <test name="Edit address entry">
         <classes>
             <class name="main.java.test.testvolodya.EditAddress"></class>
         </classes>
     </test>
-    <test name="Delete address entrie">
+    <test name="Delete address entry">
         <classes>
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
         </classes>

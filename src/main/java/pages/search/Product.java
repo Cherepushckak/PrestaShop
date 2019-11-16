@@ -1,5 +1,6 @@
 package main.java.pages.search;
 
+import io.qameta.allure.Step;
 import main.java.pages.product.ProductPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -26,7 +27,6 @@ public class Product {
     public Product(WebElement productContainer) {
         initProduct(productContainer);
     }
-
 
     /**
      * method to init product fields
@@ -66,6 +66,7 @@ public class Product {
      * click name and go to Product Page
      * @return Product Page
      */
+    @Step("Go to Product page by clicking at product name")
     public ProductPage goToProductPage() {
         clickName();
         return new ProductPage();
