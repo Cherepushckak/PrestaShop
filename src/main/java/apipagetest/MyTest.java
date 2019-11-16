@@ -15,7 +15,7 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
-public class MyTets {
+public class MyTest {
 
     //    given()
 //                .auth()

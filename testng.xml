@@ -92,7 +92,7 @@
     </test>
     <test verbose="3" name="TestCartSmoke">
         <classes>
-            <class name="main.java.test.testartem.TestCartSmoke"></class>
+            <class name="main.java.test.testartem.TestCartSmokeLogged"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartTotalPrice">
