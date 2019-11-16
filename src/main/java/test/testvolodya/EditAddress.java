@@ -28,10 +28,11 @@ import static org.testng.Assert.assertEquals;
 // EditAddress class
 public class EditAddress extends test {
 
+    // Severity and description for Allure report
     @Severity(SeverityLevel.NORMAL)
     @Description("Verify that address entry can be updated")
     @Test
-    public void editAddress() throws InterruptedException {
+    public void editAddress() {
         // Log In to PrestaShop
         UserPage userPage = new LogInHelper().getUserPage();
 
@@ -41,12 +42,12 @@ public class EditAddress extends test {
         // Click 'Addresses' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
-        // Press 'Update' button on the 1st item
-        System.err.println("\tATTENTION!\n\tDeleting address!_\n");
-        new AddressesPage().getAddressesList().getAddressesContainer().get(0).clickUpdate();
+        // Press 'Update' button on the 1st item and return Addresses page
+        System.err.println("\tATTENTION!\n\tUpdating address!_\n");
+        Addresses addresses1 = new AddressesPage().getAddressesList().getAddressesContainer().get(0).clickUpdate();
 
         // Clear all the fields before filling in
-        new NewAddress().clearField(
+        NewAddress newAddress = new NewAddress().clearField(
                 "alias",
                 "firstName",
                 "lastName",
@@ -59,21 +60,19 @@ public class EditAddress extends test {
                 "country",
                 "phone");
 
-        // Fill in all required fields from addresses repository from create address1.
+        // Fill in all required fields from addresses repository from create address2.
         Address address = new AddressRepository().getAddress2();
-        new NewAddress().fillInField(address);
+        NewAddress newAddress2 = new NewAddress().fillInField(address);
 
-        // Click 'SAVE' button
-        new NewAddress().clickSaveButton();
+        // Click 'SAVE' button and return Addresses page
+        Addresses addresses2 = new NewAddress().clickSaveButton();
 
-        // Verification, that new address was successfully created
+        // Verification, that address was successfully updated
         String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
-        System.out.println(actualAlert);
         String expectedAlert = "Address successfully updated!";
-        System.out.println(expectedAlert);
         assertEquals ( actualAlert, expectedAlert );
 
-        // Verification, new address alias, that it is the same as we expected
+        // Verify, that new address alias, is as we expected
         String actualAlias = new AddressesPage().getAddressesList().getAddressesContainer().get(0).getAlias().getText();
         String expectedAlias = new AddressRepository().getAddress2().getAlias();
         assertEquals ( actualAlias, expectedAlias );

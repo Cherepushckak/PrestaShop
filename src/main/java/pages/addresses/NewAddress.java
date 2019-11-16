@@ -95,7 +95,7 @@ public class NewAddress {
     public void setPhone(WebElement phone) { this.phone = phone; }
 
     // Method for clear field(s) on New address page
-    public void clearField(String ... field) {
+    public NewAddress clearField(String ... field) {
         try {
 
             /*
@@ -125,11 +125,11 @@ public class NewAddress {
              */
             System.err.println(e.getMessage());
         }
-        return ;
+        return new NewAddress();
 
     }
 
-    public void fillInField(Address address) {
+    public NewAddress fillInField(Address address) {
         new NewAddress().getAlias().sendKeys(address.getAlias());
         new NewAddress().getFirstName().sendKeys(address.getFirstName());
         new NewAddress().getLastName().sendKeys(address.getLastName());
@@ -141,10 +141,13 @@ public class NewAddress {
         new NewAddress().getCity().sendKeys(address.getCity());
         new NewAddress().getCountry().sendKeys(address.getCountry());
         new NewAddress().getPhone().sendKeys(address.getPhone().toString());
+
+        return new NewAddress();
     }
 
     // Click 'SAVE' button
-    public void clickSaveButton() {
+    public Addresses clickSaveButton() {
         saveButton.click();
+        return new Addresses();
     }
 }

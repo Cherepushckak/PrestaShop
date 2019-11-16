@@ -33,6 +33,7 @@ import static org.testng.Assert.assertEquals;
 // CreateAddress class
 public class CreateAddress extends test {
 
+    // Severity and description for Allure report
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that new address entry can be created")
     @Test
@@ -44,10 +45,10 @@ public class CreateAddress extends test {
         CertainLanguage certainLanguage = new CertainLanguage().clickLanguage().clickEnglishInDropDown();
 
         // Click 'Add new address' card-link
-        new UserPage().getUserPageContainer().clickAddresses();
+        Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
         // Clear all the fields before filling in
-        new NewAddress().clearField(
+        NewAddress newAddress = new NewAddress().clearField(
                 "alias",
                 "firstName",
                 "lastName",
@@ -62,12 +63,12 @@ public class CreateAddress extends test {
 
         // Fill in all necessary fields from addresses repository.
         Address address = new AddressRepository().getAddress1();
-        new NewAddress().fillInField(address);
+        NewAddress newAddress1 = new NewAddress().fillInField(address);
 
-        // Click 'SAVE' button
-        new NewAddress().clickSaveButton();
+        // Click 'SAVE' button and return addresses page
+        Addresses addresses1 = new NewAddress().clickSaveButton();
 
-        // Verification, that new address was successfully created
+        // Verify alert, that new address was successfully created
         String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
         String expectedAlert = "Address successfully added!";
         assertEquals ( actualAlert, expectedAlert );

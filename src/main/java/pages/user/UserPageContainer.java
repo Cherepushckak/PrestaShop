@@ -1,46 +1,43 @@
+/*
+ * main.java.pages.addresses;
+ *
+ * Version 1.0
+ *
+ * 09.11.2019
+ *
+ * Copyright: Made by Volodymyr Zyhmund
+ */
+
 package main.java.pages.user;
 
+// Additional packages
 import main.java.pages.addresses.Addresses;
 import main.java.pages.header.HeaderFull;
+import main.java.test.test;
 import main.java.tools.OurWebDriver;
-
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 
-/**
- *
- */
+// Listeners are waiting for the error and if it occurs - make a screenshot of error page
+@Listeners(test.class)
+
+// UserPageContainer class
 public class UserPageContainer extends HeaderFull {
 
+    // Fields
     public WebElement actualPageName;
     private WebElement addresses;
     private WebElement userInformation;
 
-    /**
-     * Default constructor
-     */
+    // Default constructor
     public UserPageContainer() {
+        // Calls extended constructor
     	super();
 
-    	// pages.user page elements initialization
-	    //We will get text from actualPageName later in test
-
-        //---Nata commented xpath is bad!!!!!!!!!!!1-------------------------------
-    	//actualPageName = OurWebDriver.driver.findElementByXPath("//*[@id='main']/header/h1");
-
-    	//Assert.assertTrue(actualPageName.contains("Your account"));
-	    //We will get text from pageName later in test
-    	//pageName = OurWebDriver.driver.findElementByXPath("//*[@id='main']/header/h1");
-
-        // This is 'Addresses' card-link on Your account page
-        //Correct your address cause it doesn`t work
+    	// 'Add new address' and 'Addresses' button locator
         addresses = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/a[2]/span");
-        userInformation = OurWebDriver.driver.findElementById("identity-link");
-    }
 
-    //------Fields commented--------!!!!!!!!!!
-    // Check container label
-    public void actualPageName() {
-        actualPageName.getText();
+        userInformation = OurWebDriver.driver.findElementById("identity-link");
     }
 
     // Click on 'ADDRESSES' link and return Addresses page

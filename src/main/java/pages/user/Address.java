@@ -27,8 +27,9 @@ public class Address {
     private Integer phone;
 
     // Default empty method
-    public Address(){};
+    public Address(){}
 
+    // Default constructor
     public Address(String alias,
                    String firstName,
                    String lastName,
@@ -54,72 +55,40 @@ public class Address {
         this.phone = phone;
     }
 
-    // Getters and setters
+    // Getters
     public String getAlias() {
         return alias;
     }
-    public void setAlias(String alias) {
-        this.alias = alias;
-    }
-
     public String getFirstName() {
         return firstName;
     }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
     }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getCompany() {
         return company;
     }
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
     public Integer getVatNumber() { return vatNumber; }
-    public void setVatNumber(Integer vatNumber) {
-        this.vatNumber = vatNumber;
-    }
-
     public String getMyAddress() {
         return myAddress;
     }
-    public void setMyAddress(String myAddress) {
-        this.myAddress = myAddress;
-    }
-
     public String getAddressComplement() {
         return addressComplement;
     }
-    public void setAddressComplement(String addressComplement) { this.addressComplement = addressComplement; }
-
     public Integer getZipPostalCode() {
         return zipPostalCode;
     }
-    public void setZipPostalCode(Integer zipPostalCode) { this.zipPostalCode = zipPostalCode; }
-
     public String getCity() {
         return city;
     }
-    public void setCity(String city) { this.city = city; }
-
     public String getCountry() {
         return country;
     }
-    public void setCountry(String country) { this.country = country; }
-
     public Integer getPhone() {
         return phone;
     }
-    public void setPhone(Integer phone) { this.phone = phone; }
 
+    // Override
     @Override
     public String toString() { return super.toString(); }
 }
