@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
 
-     <!--Maksym's tests
+     <!--Maksym's tests-->
     <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
         <classes>
             <class
@@ -32,7 +32,7 @@
         </classes>
     </test>
 
-     Oleg's tests
+     <!--Oleg's tests-->
         <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.olegsTests.TestLoginForm"></class>
@@ -44,7 +44,7 @@
         </classes>
     </test>
 
-     Nata's tests
+     <!--Nata's tests-->
     <test verbose="3" name="ChangeLanguageTest">
         <classes>
             <class name="main.java.test.testnata.ChangeLanguageTest"></class>
@@ -76,7 +76,7 @@
         </classes>
     </test>
 
-     Artem's tests
+     <!--Artem's tests-->
     <test verbose="3" name="TestCartSmoke">
         <classes>
             <class name="main.java.test.testartem.TestCartSmoke"></class>
@@ -113,7 +113,7 @@
         </classes>
     </test>
 
-      Volodya's tests
+     <!-- Volodya's tests-->
     <test name="Create new address">
         <classes>
             <class name="main.java.test.testvolodya.CreateAddress"></class>
@@ -133,7 +133,7 @@
         <classes>
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
         </classes>
-    </test>-->
+    </test>
 
     <!-- Oleg Kmet test -->
     <test name="Test search field">
@@ -146,5 +146,10 @@
             <class name="main.java.test.testok.TestCategoryNavigation"></class>
         </classes>
     </test>
+<!--    <test name="Test sort type">
+        <classes>
+            <class name="main.java.test.testok.TestSortType"></class>
+        </classes>
+    </test>-->
 
 </suite>

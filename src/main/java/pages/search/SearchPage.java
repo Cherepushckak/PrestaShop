@@ -41,4 +41,9 @@ public class SearchPage extends AParentPage {
         pagePath = new PagePath();
         return pagePath;
     }
+
+    public SortBy getSortBy(){
+        sortBy = new SortBy();
+        return sortBy;
+    }
 }
