@@ -36,7 +36,6 @@ public class Currency {
      * symbol of certain currency on the horizontal menu
      */
     private WebElement currencyItem;
-    //private List dropDownListOfCurrency;
 
     /**
      * locator for currencyElement webElement
@@ -49,10 +48,6 @@ public class Currency {
     private final By certainItemLocator =
             By.xpath("//*[@id='_desktop_currency_selector']/div/button/span");
 
-    /**
-     * locator for dropDownList webElement
-     */
-    private final By dropDownListCurrencyLocator = By.xpath("//ul[@class='dropdown-menu hidden-sm-down']//a[@rel='nofollow']");
 
     /**
      * locator for EUR webElement
@@ -77,7 +72,6 @@ public class Currency {
     }
 
     public void initCurrency() {
-        // getCurrencyElement();
         getCurrencyItem();
     }
 
@@ -95,10 +89,6 @@ public class Currency {
 
         return OurWebDriver.driver.findElement(currencyElementLocator);
     }
-
-    //public List getDropDownListOfCurrency() {
-//        return OurWebDriver.driver.findElements(dropDownListCurrencyLocator);
-//    }
 
     /**
      * Method opens dropDown list od currency items.
@@ -120,13 +110,6 @@ public class Currency {
 
         getCurrencyItem().click();
     }
-
-//    public void addElementToList() {
-//        dropDownListOfCurrency = new ArrayList<CertainCurrency>();
-//        for (WebElement certainLanguage : OurWebDriver.driver.findElements(certainItemLocator)) {
-//            dropDownListOfCurrency.add(certainLanguage);
-//        }
-//    }
 
     /**
      * method verifies if the element Currency is present on hte horizontal menu.
@@ -160,26 +143,34 @@ public class Currency {
     }
 
     /**
-     * Method use clickEUR() method.
+     * Method use clickEUR() to choose EUR from the dropDown list.
      *
      * @return new instance of Currency.
      */
-    @Step("choose EUR in dropDown")
-
+    @Step("choose EUR in list")
     public Currency chooseEUR() {
         clickEUR();
         return new Currency();
     }
 
     /**
-     * Method use clickUSD() method.
+     * Method use clickUSD() to choose USD from the dropDown list.
      *
      * @return new instance of Currency.
      */
     @Step("choose USD in dropDown")
-
     public Currency chooseUSD() {
         clickUSD();
+        return new Currency();
+    }
+
+    /**
+     * Method use clickUAH to choose UAH from the dropDown list.
+     * @return new instance of Currency.
+     */
+    @Step("choose UAH in the list")
+    public Currency chooseUAH(){
+        clickUAH();
         return new Currency();
     }
 
@@ -194,7 +185,7 @@ public class Currency {
      * method clicks on the UAH webElement in dropDown list
      */
     public void clickUAH() {
-        UAH.click();
+        getUAH().click();
     }
 
     /**

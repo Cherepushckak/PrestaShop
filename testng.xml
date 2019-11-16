@@ -73,6 +73,49 @@
         </classes>
     </test>
 
+    <!-- Nata's tests -->
+    <test verbose="3" name="ChangeCurrencyAfterChangingLanguageTest">
+        <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyAfterChangingLanguageTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ChangeCurrencyForEUR">
+        <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyForEURFromCartTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ChangeLanguageTest">
+        <classes>
+            <class name="main.java.test.testnata.ChangeLanguageTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ContactUsTest">
+        <classes>
+            <class name="main.java.test.testnata.ContactUsTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="LogoTest">
+        <classes>
+            <class name="main.java.test.testnata.LogoTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="SignInHeaderFullTest">
+        <classes>
+            <class name="main.java.test.testnata.SignInHeaderFullTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="SearchFieldTest">
+        <classes>
+            <class name="main.java.test.testnata.SearchFieldTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ChangeCurrencyForUSD">
+        <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyForEURFromCartTest"></class>
+
+        </classes>
+    </test>
+
     <!-- Artem's tests -->
     <test verbose="3" name="TestCartSmoke">
         <classes>
@@ -119,6 +162,11 @@
     <test name="Delete address entry">
         <classes>
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
+        </classes>
+    </test>
+    <test name="Create two addresses entries">
+        <classes>
+            <class name="main.java.test.testvolodya.Create2Addresses"></class>
         </classes>
     </test>
 

@@ -1,44 +1,45 @@
 package main.java.test.testnata;
 
+import main.java.helperinstrument.ChangeLanguageHelper;
 import main.java.pages.header.CertainLanguage;
+import main.java.pages.header.Header;
+import main.java.pages.header.HeaderFull;
 import main.java.test.BasicTest;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
+
 @Listeners(BasicTest.class)
 
-/**
- *
- */
+
 public class ChangeLanguageTest extends BasicTest {
-    /**
-     * web element for saving actual element, used is assert
-     */
-    private WebElement actual;
 
-    private WebElement newActual;
-    private final By actualLocator = By.xpath("//div[@class='language-selector dropdown js-dropdown']");
+//
+//    @Description("BeforeTest checks if language on main page is English,")
+//    @BeforeTest
+//    public void beforeTest() {
+//        changeLanguageHelper.checkIfLanguageIsEnglish();
+//    }
 
-    /**
-     * test checks the possibility to choose Ukrainian language from the dropDown list
-     */
     @Severity(SeverityLevel.CRITICAL)
-    @Description( "Verifies the possibility to choose Ukrainian language from the dropDown list" )
+    @Description("Verifies the possibility to choose Ukrainian language from the list")
     @Test
-
-    public void changeLanguageForUkrainian(){
+    public void changeLanguageForUkrainian() {
         //Act
-        actual = new CertainLanguage().clickLanguage().clickUkrainianInDropDown();
-//change assert!!!!!!!11 for smth wrriten on ukrainian
-        newActual = OurWebDriver.driver.findElement(actualLocator);
-        Assert.assertTrue(newActual.isDisplayed());
+      HeaderFull headerFull = new ChangeLanguageHelper().changeLanguageForUkrainina();
+        String actual = headerFull.getLogCont().getContactUS().getText();
+
+        //mvn doesn't accept cyrillic
+        Assert.assertTrue(actual != "Contact us");
+
         System.out.println("Language is changed for Ukrainian");
 
     }

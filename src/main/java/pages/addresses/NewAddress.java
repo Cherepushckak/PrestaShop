@@ -11,6 +11,7 @@
 package main.java.pages.addresses;
 
 // Additional packages
+import io.qameta.allure.Step;
 import main.java.pages.user.Address;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +20,6 @@ import org.openqa.selenium.WebElement;
 public class NewAddress {
 
     // Fields
-    private WebElement newAddressContainer;
     private WebElement alias;
     private WebElement firstName;
     private WebElement lastName;
@@ -33,16 +33,13 @@ public class NewAddress {
     private WebElement phone;
     private WebElement saveButton;
 
-    /**
-     * Default constructor
-     */
+    // Default constructor
     public NewAddress() {
         initNewAddress();
     }
 
-    // Init address
+    // Init address locators
     private void initNewAddress() {
-        newAddressContainer = OurWebDriver.driver.findElementByCssSelector("#content");
         alias = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[1]/div[1]/input");
         firstName = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[2]/div[1]/input");
         lastName = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div/div/form/section/div[3]/div[1]/input");
@@ -58,49 +55,23 @@ public class NewAddress {
     }
 
     // Getters and setters
-    public WebElement getNewAddressContainer() { return newAddressContainer; }
-    public void setNewAddressContainer(WebElement newAddressContainer) { this.newAddressContainer = newAddressContainer; }
+    private WebElement getAlias() { return alias; }
+    private WebElement getFirstName() { return firstName; }
+    private WebElement getLastName() { return lastName; }
+    private WebElement getCompany() { return company; }
+    private WebElement getVatNumber() { return vatNumber; }
+    private WebElement getMyAddress() { return myAddress; }
+    private WebElement getAddressComplement() { return addressComplement; }
+    private WebElement getZipPostalCode() { return zipPostalCode; }
+    private WebElement getCity() { return city; }
+    private WebElement getCountry() { return country; }
+    private WebElement getPhone() { return phone; }
 
-    public WebElement getAlias() { return alias; }
-    public void setAlias(WebElement alias) { this.alias = alias; }
-
-    public WebElement getFirstName() { return firstName; }
-    public void setFirstName(WebElement firstName) { this.firstName = firstName; }
-
-    public WebElement getLastName() { return lastName; }
-    public void setLastName(WebElement lastName) { this.lastName = lastName; }
-
-    public WebElement getCompany() { return company; }
-    public void setCompany(WebElement company) { this.company = company; }
-
-    public WebElement getVatNumber() { return vatNumber; }
-    public void setVatNumber(WebElement vatNumber) { this.vatNumber = vatNumber; }
-
-    public WebElement getMyAddress() { return myAddress; }
-    public void setMyAddress(WebElement myAddress) { this.myAddress = myAddress; }
-
-    public WebElement getAddressComplement() { return addressComplement; }
-    public void setAddressComplement(WebElement addressComplement) { this.addressComplement = addressComplement; }
-
-    public WebElement getZipPostalCode() { return zipPostalCode; }
-    public void setZipPostalCode(WebElement zipPostalCode) { this.zipPostalCode = zipPostalCode; }
-
-    public WebElement getCity() { return city; }
-    public void setCity(WebElement city) { this.city = city; }
-
-    public WebElement getCountry() { return country; }
-    public void setCountry(WebElement country) { this.country = country; }
-
-    public WebElement getPhone() { return phone; }
-    public void setPhone(WebElement phone) { this.phone = phone; }
-
-    // Method for clear field(s) on New address page
+    @Step("Clear field(s) on 'New address' page")
     public NewAddress clearField(String ... field) {
         try {
 
-            /*
-             * Read fields one-by-one from the parameters
-             */
+             // Read fields one-by-one from the parameters
             for (String n : field) {
                 switch (n) {
                     case ("alias"): alias.clear(); break;
@@ -120,15 +91,14 @@ public class NewAddress {
             }
         } catch (Exception e) {
 
-            /*
-             * If there is exception - show it
-             */
+             // If there is exception - show it
             System.err.println(e.getMessage());
         }
         return new NewAddress();
 
     }
 
+    @Step("Fill in field(s) on 'New address' page")
     public NewAddress fillInField(Address address) {
         new NewAddress().getAlias().sendKeys(address.getAlias());
         new NewAddress().getFirstName().sendKeys(address.getFirstName());
@@ -145,7 +115,7 @@ public class NewAddress {
         return new NewAddress();
     }
 
-    // Click 'SAVE' button
+    @Step("Click 'SAVE' button")
     public Addresses clickSaveButton() {
         saveButton.click();
         return new Addresses();
