@@ -12,6 +12,7 @@ package main.java.test.testvolodya;
 
 // Additional packages
 import io.qameta.allure.*;
+import main.java.test.BasicTest;
 import org.testng.annotations.*;
 import main.java.pages.addresses.*;
 import main.java.data.AddressRepository;

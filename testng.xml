@@ -42,6 +42,16 @@
     </test>
 
     <!-- Nata's tests -->
+    <test verbose="3" name="ChangeCurrencyAfterChangingLanguageTest">
+        <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyAfterChangingLanguageTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ChangeCurrencyForEUR">
+        <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyForEURFromCartTest"></class>
+        </classes>
+    </test>
     <test verbose="3" name="ChangeLanguageTest">
         <classes>
             <class name="main.java.test.testnata.ChangeLanguageTest"></class>
@@ -69,7 +79,8 @@
     </test>
     <test verbose="3" name="ChangeCurrencyForUSD">
         <classes>
-            <class name="main.java.test.testnata.ChangeCurrencyForUSD"></class>
+            <class name="main.java.test.testnata.ChangeCurrencyForEURFromCartTest"></class>
+
         </classes>
     </test>
 
@@ -109,6 +120,7 @@
             <class name="main.java.test.testartem.TestBoundaryValue"></class>
         </classes>
     </test>
+
 
     <!-- Volodya's tests -->
     <test name="Create new address">

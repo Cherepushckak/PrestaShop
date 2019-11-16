@@ -25,10 +25,7 @@ public class HeaderFull extends Header {
     private WebElement searchField;
     private WebElement searchButton;
 
-//    private CertainLanguage certainLanguage;
-//    private Currency currency;
     private WebElement cart;
-    //  private WebElement currency;
     private LogUserInfo logUserInfo;
     private UnlogUserInfo unlogUserInfo;
     private final By searchFieldLocator = By.cssSelector(".ui-autocomplete-input");
@@ -43,9 +40,6 @@ public class HeaderFull extends Header {
     public void initHeaderFull() {
         getCertainLanguage();
         getCurrency();
-
-        //------------We have to create HeaderFull perfectly, so when I check webElement I'll add it to method!---------
-        //
         searchField = OurWebDriver.driver.findElement(searchFieldLocator);
         searchButton = OurWebDriver.driver.findElement(searchButtonLocator);
         clothes = OurWebDriver.driver.findElement(clothesLocator);

@@ -17,6 +17,7 @@ import main.java.pages.user.Address;
 import main.java.pages.header.CertainLanguage;
 import main.java.helperinstrument.LogInHelper;
 import main.java.data.AddressRepository;
+
 import main.java.pages.user.UserPage;
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
@@ -39,7 +40,7 @@ public class EditAddress extends BasicTest {
         UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
-        CertainLanguage certainLanguage = new CertainLanguage().clickLanguage().clickEnglishInDropDown();
+        CertainLanguage certainLanguage = new CertainLanguage().openListOfLanguages().chooseEnglishInDropDown();
 
         // Click 'Addresses' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
