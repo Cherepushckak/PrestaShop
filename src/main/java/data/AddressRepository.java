@@ -12,11 +12,11 @@ package main.java.data;
 
 // Additional packages
 import main.java.pages.user.Address;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
 // AddressRepository class
 public class AddressRepository {
