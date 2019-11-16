@@ -14,8 +14,7 @@ public class LogInHelper {
     private UserPage userPage;
 
 
-    public LogInHelper() {
-    }
+    public LogInHelper() { initLogUserInfo (); }
 
     public void initLogUserInfo() {
 
@@ -24,14 +23,6 @@ public class LogInHelper {
                 .clickSignInHeaderFull()
                 .getLoginForm()
                 .logIn( new UserRepository().getAdmin ().getEmail (), new UserRepository ().getAdmin ().getPassword () );
-    }
-    public void initWrongLogUserInfo() {
-        
-        userPage = new LogUserInformation()
-                .getUnloggedUserInfo()
-                .clickSignInHeaderFull()
-                .getLoginForm()
-                .logIn( "some@gmail.com", "somes" );
     }
 
     public UserPage getUserPage() {

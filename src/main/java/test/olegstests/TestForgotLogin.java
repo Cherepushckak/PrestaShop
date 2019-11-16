@@ -14,7 +14,11 @@ public class TestForgotLogin extends test {
 	
 	@Test
 	public void testForgotPassword(){
-		ForgotLoginMessage forgotLoginMessage = new UnlogUserInfo ().clickSignInHeaderFull ().getLoginForm ().forgotPasswordClick ().writeEmail ();
+		ForgotLoginMessage forgotLoginMessage = new UnlogUserInfo ()
+				.clickSignInHeaderFull ()
+				.getLoginForm ()
+				.forgotPasswordClick ()
+				.writeEmail ();
 	}
 }
 

@@ -22,11 +22,9 @@ public class TestLoginForm extends test {
     public void testLoginForm() {
 
         LogInHelper logInHelper = new LogInHelper();
-        logInHelper.initLogUserInfo ();
         String expected = "Admin admin";
         String actual = logInHelper.getUserPage().getLogUserInformation().getLogUserInfo().getUserNameFromHeader();
         assertEquals(actual, expected);
-
     }
 
 }
