@@ -1,4 +1,4 @@
-package main.java.test.olegsTests;
+package main.java.test.olegstests;
 
 
 import main.java.pages.header.UnlogUserInfo;
@@ -14,7 +14,11 @@ public class TestForgotLogin extends BasicTest {
 	
 	@Test
 	public void testForgotPassword(){
-		ForgotLoginMessage forgotLoginMessage = new UnlogUserInfo ().clickSignInHeaderFull ().getLoginForm ().forgotPasswordClick ().writeEmail ();
+		ForgotLoginMessage forgotLoginMessage = new UnlogUserInfo ()
+				.clickSignInHeaderFull ()
+				.getLoginForm ()
+				.forgotPasswordClick ()
+				.writeEmail ();
 	}
 }
 

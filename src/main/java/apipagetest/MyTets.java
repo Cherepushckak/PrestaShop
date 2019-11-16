@@ -2,7 +2,7 @@ package main.java.apipagetest;
 
 import io.restassured.RestAssured.*;
 import io.restassured.matcher.RestAssuredMatchers.*;
-import main.java.helperinstrument.EnviromentHelper;
+import main.java.helperInstrument.EnviromentHelper;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -29,7 +29,7 @@ public class MyTets {
     public void testingApi() throws IOException {
 
         given().auth().basic("8EK95K35AXZ1FL416IG25475KBC48S7T", "")
-                .get(EnviromentHelper.getPrestaUrl() + "/api/addresses/12")
+                .get( EnviromentHelper.getPrestaUrl() + "/api/addresses/12")
                 .then()
                 .log().all()
            //    .body("api shopName=\"ShBr2k\".addresses.", CoreMatchers.is(12))

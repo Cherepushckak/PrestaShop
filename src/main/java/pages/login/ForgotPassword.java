@@ -15,9 +15,10 @@ public class ForgotPassword {
 	}
 	
 	public void initResentLink(){
-		setEmailAddress ();
-		setSendResetLink ();
-		setBackToLogin ();
+		emailAddress = OurWebDriver.driver.findElement ( By.cssSelector ( "#email" ) );
+		sendResetLink = OurWebDriver.driver.findElement ( By.cssSelector ( "#content > form > section > div > " +
+				"button.form-control-submit.btn.btn-primary.hidden-xs-down" ) );
+		backToLogin = OurWebDriver.driver.findElement ( By.cssSelector ( "#main > footer > a" ) );
 	}
 	
 	public WebElement emailAddressClick (){
@@ -41,28 +42,21 @@ public class ForgotPassword {
 		return new ForgotLoginMessage ();
 	}
 	
-	public WebElement getEmailAddress () {
-		return emailAddress;
+	public void writeNegativeEmail( String email){
+		emailAddressClick ().sendKeys ( email );
+		sendResetLinkClick ();
 	}
 	
-	public void setEmailAddress (  ) {
-		emailAddress = OurWebDriver.driver.findElement ( By.cssSelector ( "#email" ) );
+	public WebElement getEmailAddress () {
+		return emailAddress;
 	}
 	
 	public WebElement getSendResetLink () {
 		return sendResetLink;
 	}
 	
-	public void setSendResetLink (  ) {
-		sendResetLink = OurWebDriver.driver.findElement ( By.cssSelector ( "#content > form > section > div > " +
-				"button.form-control-submit.btn.btn-primary.hidden-xs-down" ) );
-	}
-	
 	public WebElement getBackToLogin () {
 		return backToLogin;
 	}
 	
-	public void setBackToLogin (  ) {
-		backToLogin = OurWebDriver.driver.findElement ( By.cssSelector ( "#main > footer > a" ) );
-	}
 }
