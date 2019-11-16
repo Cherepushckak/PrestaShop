@@ -5,14 +5,14 @@ import io.qameta.allure.Step;
 import main.java.pages.header.HeaderFull;
 import main.java.pages.search.SearchPage;
 import main.java.pages.searchresult.SearchResultPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
-public class TestSearchField extends test {
+public class TestSearchField extends BasicTest {
 
     //Arrange
     private SearchResultPage searchResultPage;

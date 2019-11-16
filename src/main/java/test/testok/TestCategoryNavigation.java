@@ -3,15 +3,15 @@ package main.java.test.testok;
 import io.qameta.allure.Description;
 import main.java.pages.main.MainPage;
 import main.java.pages.search.SearchPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import main.java.tools.OurWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
-public class TestCategoryNavigation extends test {
+public class TestCategoryNavigation extends BasicTest {
 
     //Arrange
     private MainPage mainPage;
