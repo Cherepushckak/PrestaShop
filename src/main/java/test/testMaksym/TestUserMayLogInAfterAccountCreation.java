@@ -9,14 +9,14 @@ import main.java.pages.login.LoginPage;
 import main.java.pages.main.MainPage;
 import main.java.pages.register.RegisterPage;
 import main.java.pages.user.UserPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 
-public class TestUserMayLogInAfterAccountCreation extends test {
+public class TestUserMayLogInAfterAccountCreation extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that user may login after account creation")
@@ -46,6 +46,7 @@ public class TestUserMayLogInAfterAccountCreation extends test {
 
         // sign out, Main Page is shown (clickSignOut() is void method)
         mainPageUserRegistered
+                .initHeaderFull()
                 .getLogUserInformation()
                 .getLogUserInfo()
                 .clickSignOut();
@@ -59,6 +60,7 @@ public class TestUserMayLogInAfterAccountCreation extends test {
 
         // Assert SignOut button is present on the page, which means User is signed in
         assertTrue(userPage
+                        .initHeaderFull()
                 .getLogUserInformation()
                 .getLogUserInfo()
                 .findSignOut()

@@ -1,18 +1,17 @@
 package main.java.pages.cart;
 
-import main.java.pages.header.HeaderFull;
-import main.java.tools.OurWebDriver;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
+import io.qameta.allure.Step;
+import main.java.pages.common.AParentPage;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
- *
+ *describes Cart Page
  */
-public class CartPage extends HeaderFull {
+public class CartPage extends AParentPage {
+
+    /**
+     * variable to init Shopping Cart composition
+     */
     private ShoppingCart shoppingCart;
 
     /**
@@ -21,21 +20,35 @@ public class CartPage extends HeaderFull {
     public CartPage() {
         super();
         initShoppingPage();
-
     }
 
+    /**
+     * init Shopping Cart composition method
+     */
     public void initShoppingPage() {
         shoppingCart = new ShoppingCart();
     }
 
-    public ShoppingCart getShoppingCart() {
-        return shoppingCart;
-    }
-
+    /**
+     * init Alert pop-up aggregation method
+     * @return
+     */
     public AlertMessage getAlertMessage() {
         return new AlertMessage();
     }
 
+    /**
+     * getters
+     */
+    public ShoppingCart getShoppingCart() {
+        return shoppingCart;
+    }
+
+    /**
+     * method that checks present of alert pop-up at Cart Page
+     * @return true/false of presents alert pop-up
+     */
+    @Step("Check thar alert message is present")
     public boolean isAlertMessagePresent() {
         try {
             if (new AlertMessage().getMessage().isDisplayed()) {
@@ -47,5 +60,4 @@ public class CartPage extends HeaderFull {
             return false;
         }
     }
-
 }

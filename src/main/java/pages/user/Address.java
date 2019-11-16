@@ -10,6 +10,13 @@
 
 package main.java.pages.user;
 
+import io.qameta.allure.Step;
+import main.java.test.BasicTest;
+import org.testng.annotations.Listeners;
+
+// Listeners are waiting for the error and if it occurs - make a screenshot of error page
+@Listeners(BasicTest.class)
+
 // Address class
 public class Address {
 
@@ -27,8 +34,9 @@ public class Address {
     private Integer phone;
 
     // Default empty method
-    public Address(){};
+    public Address(){}
 
+    // Default constructor
     public Address(String alias,
                    String firstName,
                    String lastName,
@@ -54,72 +62,61 @@ public class Address {
         this.phone = phone;
     }
 
-    // Getters and setters
+    // Getters
+    @Step("Fill in 'Alias' field")
     public String getAlias() {
         return alias;
     }
-    public void setAlias(String alias) {
-        this.alias = alias;
-    }
 
+    @Step("Fill in 'First name' field")
     public String getFirstName() {
         return firstName;
     }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
 
+    @Step("Fill in 'Last name' field")
     public String getLastName() {
         return lastName;
     }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
+    @Step("Fill in 'Company' field")
     public String getCompany() {
         return company;
     }
-    public void setCompany(String company) {
-        this.company = company;
-    }
 
+    @Step("Fill in 'VAT number' field")
     public Integer getVatNumber() { return vatNumber; }
-    public void setVatNumber(Integer vatNumber) {
-        this.vatNumber = vatNumber;
-    }
 
+    @Step("Fill in 'Address' field")
     public String getMyAddress() {
         return myAddress;
     }
-    public void setMyAddress(String myAddress) {
-        this.myAddress = myAddress;
-    }
 
+    @Step("Fill in 'Address Complement' field")
     public String getAddressComplement() {
         return addressComplement;
     }
-    public void setAddressComplement(String addressComplement) { this.addressComplement = addressComplement; }
 
+    @Step("Fill in 'Zip/Postal Code' field")
     public Integer getZipPostalCode() {
         return zipPostalCode;
     }
-    public void setZipPostalCode(Integer zipPostalCode) { this.zipPostalCode = zipPostalCode; }
 
+    @Step("Fill in 'City' field")
     public String getCity() {
         return city;
     }
-    public void setCity(String city) { this.city = city; }
 
+    @Step("Fill in 'Country' field")
     public String getCountry() {
         return country;
     }
-    public void setCountry(String country) { this.country = country; }
 
+    @Step("Fill in 'Phone' field")
     public Integer getPhone() {
         return phone;
     }
-    public void setPhone(Integer phone) { this.phone = phone; }
 
+    // Override
     @Override
     public String toString() { return super.toString(); }
 }

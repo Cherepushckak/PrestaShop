@@ -1,14 +1,34 @@
+/*
+ * main.java.pages.addresses;
+ *
+ * Version 1.0
+ *
+ * 09.11.2019
+ *
+ * Copyright: Made by Volodymyr Zyhmund
+ */
+
 package main.java.data;
 
+// Additional packages
+import io.qameta.allure.Step;
 import main.java.pages.user.Address;
+import main.java.test.BasicTest;
+import org.testng.annotations.Listeners;
 
+// Listeners are waiting for the error and if it occurs - make a screenshot of error page
+@Listeners(BasicTest.class)
+
+// AddressRepository class
 public class AddressRepository {
 
+    // Fields
     private static Address address1;
     private static Address address2;
 
     public AddressRepository() {
 
+        // Repository addresses list for creating new form
         address1 = new Address(
                 "My Address",
                 "Volodymyr",
@@ -36,8 +56,11 @@ public class AddressRepository {
                 123456789);
     }
 
+    // Getters
+    @Step("Take address1 data from repository")
     public Address getAddress1() { return address1; }
 
+    @Step("Take address2 data from repository")
     public Address getAddress2() { return address2; }
 }
 

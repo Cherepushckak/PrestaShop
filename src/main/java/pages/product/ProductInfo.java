@@ -1,5 +1,6 @@
 package main.java.pages.product;
 
+import io.qameta.allure.Step;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -40,6 +41,7 @@ public class ProductInfo {
     /**
      * click Cart Button and move to AddedToCart class
      */
+    @Step("Click at add cart button")
     public AddedToCart setAddToCartButtonClick() {
         addToCartButton.click();
         return new AddedToCart();

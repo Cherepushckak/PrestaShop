@@ -17,14 +17,11 @@ import java.util.ArrayList;
  */
 public class SortBy {
 
-    private ArrayList<WebElement> sortType;
+    private ArrayList<WebElement> sortTypes = new ArrayList<WebElement>();
     /**
      * Default constructor
      */
     public SortBy() {
-        for( WebElement s : OurWebDriver.driver.findElementsByXPath("//div[@class='dropdown-menu']//a")) {
-            sortType.add(s);
-        }
     }
 
     /**
@@ -32,8 +29,12 @@ public class SortBy {
      * @param index
      */
     public void selectSort(int index){
-        sortType.get(index).click();
+        sortTypes.get(index).click();
     }
 
+    public ArrayList<WebElement> getSortTypes(){
+        sortTypes.addAll(OurWebDriver.driver.findElementsByXPath("//div[@class='dropdown-menu']//a"));
+        return sortTypes;
+    }
 
 }

@@ -1,22 +1,32 @@
+/*
+ * main.java.pages.addresses;
+ *
+ * Version 1.0
+ *
+ * 09.11.2019
+ *
+ * Copyright: Made by Volodymyr Zyhmund
+ */
+
 package main.java.pages.user;
 
-import main.java.pages.header.HeaderFull;
+// Additional packages
+import main.java.pages.common.AParentPage;
+import main.java.test.BasicTest;
+import org.testng.annotations.Listeners;
 
-/**
- * 
- */
-public class UserPage extends HeaderFull {
+// Listeners are waiting for the error and if it occurs - make a screenshot of error page
+@Listeners(BasicTest.class)
 
-	// Fields
-	public UserPageContainer userPageContainer;
+// UserPage class
+public class UserPage extends AParentPage {
 
-	/**
-	 * Default constructor
-	 */
+	// Default constructor
 	public UserPage() {
 		getUserPageContainer();
 	}
 
+	// Getter
 	public UserPageContainer getUserPageContainer() {
 		return new UserPageContainer();
 	}
