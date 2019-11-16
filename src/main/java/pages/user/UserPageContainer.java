@@ -13,13 +13,13 @@ package main.java.pages.user;
 // Additional packages
 import main.java.pages.addresses.Addresses;
 import main.java.pages.header.HeaderFull;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
 // UserPageContainer class
 public class UserPageContainer extends HeaderFull {
