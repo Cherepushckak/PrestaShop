@@ -66,7 +66,7 @@ public class EditAddress extends BasicTest {
         Address address = new AddressRepository().getAddress2();
         NewAddress newAddress2 = new NewAddress().fillInField(address);
 
-        // Click 'SAVE' button and return Addresses page
+        // Click 'SAVE' button
         Addresses addresses2 = new NewAddress().clickSaveButton();
 
         // Verification, that address was successfully updated

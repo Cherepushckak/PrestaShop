@@ -2,113 +2,113 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
 
-    <!-- Maksym's tests -->
-    <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
-        <classes>
-            <class name="main.java.test.testMaksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="Verify that all User details were correctly saved after account creation">
-        <classes>
-            <class name="main.java.test.testMaksym.TestUserDataIsCorrectAfterAccountCreation"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="Verify that user may login after account creation">
-        <classes>
-            <class name="main.java.test.testMaksym.TestUserMayLogInAfterAccountCreation"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="Verify that new account can not be created for existing user">
-        <classes>
-            <class name="main.java.test.testMaksym.TestNoNewAccountForExistingUser"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="Account could be created without setting User's birthday">
-        <classes>
-            <class name="main.java.test.testMaksym.TestCreateAccountWithoutBirthday"></class>
-        </classes>
-    </test>
+<!--    &lt;!&ndash; Maksym's tests &ndash;&gt;-->
+<!--    <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testMaksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="Verify that all User details were correctly saved after account creation">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testMaksym.TestUserDataIsCorrectAfterAccountCreation"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="Verify that user may login after account creation">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testMaksym.TestUserMayLogInAfterAccountCreation"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="Verify that new account can not be created for existing user">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testMaksym.TestNoNewAccountForExistingUser"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="Account could be created without setting User's birthday">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testMaksym.TestCreateAccountWithoutBirthday"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <!-- Oleg's tests -->
-    <test verbose="3" name="testLoginForm">
-        <classes>
-            <class name="main.java.test.olegsTests.TestLoginForm"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestForgotLogin">
-        <classes>
-            <class name="main.java.test.olegsTests.TestForgotLogin"></class>
-        </classes>
-    </test>
+<!--    &lt;!&ndash; Oleg's tests &ndash;&gt;-->
+<!--    <test verbose="3" name="testLoginForm">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.olegsTests.TestLoginForm"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="TestForgotLogin">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.olegsTests.TestForgotLogin"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <!-- Nata's tests -->
-    <test verbose="3" name="ChangeLanguageTest">
-        <classes>
-            <class name="main.java.test.testnata.ChangeLanguageTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="ContactUsTest">
-        <classes>
-            <class name="main.java.test.testnata.ContactUsTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="LogoTest">
-        <classes>
-            <class name="main.java.test.testnata.LogoTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="SignInHeaderFullTest">
-        <classes>
-            <class name="main.java.test.testnata.SignInHeaderFullTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="SearchFieldTest">
-        <classes>
-            <class name="main.java.test.testnata.SearchFieldTest"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="ChangeCurrencyForUSD">
-        <classes>
-            <class name="main.java.test.testnata.ChangeCurrencyForUSD"></class>
-        </classes>
-    </test>
+<!--    &lt;!&ndash; Nata's tests &ndash;&gt;-->
+<!--    <test verbose="3" name="ChangeLanguageTest">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testnata.ChangeLanguageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="ContactUsTest">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testnata.ContactUsTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="LogoTest">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testnata.LogoTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="SignInHeaderFullTest">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testnata.SignInHeaderFullTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="SearchFieldTest">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testnata.SearchFieldTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="ChangeCurrencyForUSD">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testnata.ChangeCurrencyForUSD"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <!-- Artem's tests -->
-    <test verbose="3" name="TestCartSmoke">
-        <classes>
-            <class name="main.java.test.testartem.TestCartSmoke"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestCartSmoke">
-        <classes>
-            <class name="main.java.test.testartem.TestCartSmoke"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestCartTotalPrice">
-        <classes>
-            <class name="main.java.test.testartem.TestTotalPrice"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestCartTotalPrice">
-        <classes>
-            <class name="main.java.test.testartem.TestTotalPriceLogged"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestCartZeroValue">
-        <classes>
-            <class name="main.java.test.testartem.TestCartZeroValue"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestCartOverLimit">
-        <classes>
-            <class name="main.java.test.testartem.TestOverLimitValue"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestCartBV">
-        <classes>
-            <class name="main.java.test.testartem.TestBoundaryValue"></class>
-        </classes>
-    </test>
+<!--    &lt;!&ndash; Artem's tests &ndash;&gt;-->
+<!--    <test verbose="3" name="TestCartSmoke">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testartem.TestCartSmoke"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="TestCartSmoke">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testartem.TestCartSmoke"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="TestCartTotalPrice">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testartem.TestTotalPrice"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="TestCartTotalPrice">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testartem.TestTotalPriceLogged"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="TestCartZeroValue">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testartem.TestCartZeroValue"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="TestCartOverLimit">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testartem.TestOverLimitValue"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="3" name="TestCartBV">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testartem.TestBoundaryValue"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <!-- Volodya's tests -->
     <test name="Create new address">
@@ -131,17 +131,22 @@
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
         </classes>
     </test>
+    <test name="Create two addresses entries">
+        <classes>
+            <class name="main.java.test.testvolodya.Create2Addresses"></class>
+        </classes>
+    </test>
 
-    <!-- Oleg Kmet test -->
-    <test name="Test search field">
-        <classes>
-            <class name="main.java.test.testok.TestSearchField"></class>
-        </classes>
-    </test>
-    <test name="Test category navigation">
-        <classes>
-            <class name="main.java.test.testok.TestCategoryNavigation"></class>
-        </classes>
-    </test>
+<!--    &lt;!&ndash; Oleg Kmet test &ndash;&gt;-->
+<!--    <test name="Test search field">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testok.TestSearchField"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Test category navigation">-->
+<!--        <classes>-->
+<!--            <class name="main.java.test.testok.TestCategoryNavigation"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>

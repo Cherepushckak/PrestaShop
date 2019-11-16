@@ -43,7 +43,7 @@ public class DeleteAddress extends BasicTest {
         // Click 'Add new address' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
-        // Click 'Delete' button and return Addresses page
+        // Click 'Delete' button
         System.err.println("\tATTENTION!\n\tDeleting address!_\n");
         Addresses emptyAddressesPage = new AddressesPage().getAddressesList().getAddressesContainer().get(0).clickDelete();
 

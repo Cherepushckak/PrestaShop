@@ -17,7 +17,6 @@ import io.qameta.allure.SeverityLevel;
 import main.java.data.AddressRepository;
 import main.java.helperinstrument.LogInHelper;
 import main.java.pages.addresses.Addresses;
-import main.java.pages.addresses.AddressesPage;
 import main.java.pages.addresses.NewAddress;
 import main.java.pages.header.CertainLanguage;
 import main.java.pages.user.Address;
@@ -30,14 +29,14 @@ import static org.testng.Assert.assertEquals;
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
 @Listeners(BasicTest.class)
 
-// CreateAddress class
-public class CreateAddress extends BasicTest {
+// Create2Addresses class
+public class Create2Addresses extends BasicTest {
 
     // Severity and description for Allure report
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that new address entry can be created")
     @Test
-    public void createAddress() {
+    public void create2Addresses() {
         // Log In to PrestaShop
         UserPage userPage = new LogInHelper().getUserPage();
 
@@ -58,7 +57,6 @@ public class CreateAddress extends BasicTest {
                 "addressComplement",
                 "zipPostalCode",
                 "city",
-                "country",
                 "phone");
 
         // Fill in all necessary fields from addresses repository.
@@ -68,10 +66,39 @@ public class CreateAddress extends BasicTest {
         // Click 'SAVE' button
         Addresses addresses1 = new NewAddress().clickSaveButton();
 
-        // Verify alert, that new address was successfully created
-        String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
-        String expectedAlert = "Address successfully added!";
-        assertEquals ( actualAlert, expectedAlert );
+        // Click '+ Create new address' button
+        NewAddress createOneMoreAddress = new Addresses().clickCreateNewAddressLink();
+
+        // Clear all the fields before filling in
+        NewAddress newAddress2 = new NewAddress().clearField(
+                "alias",
+                "firstName",
+                "lastName",
+                "company",
+                "vatNumber",
+                "myAddress",
+                "addressComplement",
+                "zipPostalCode",
+                "city",
+                "phone");
+
+        // Fill in all necessary fields from addresses repository.
+        Address address2 = new AddressRepository().getAddress2();
+        NewAddress newAddresses2 = new NewAddress().fillInField(address2);
+
+        // Click 'SAVE' button
+        Addresses addresses2 = new NewAddress().clickSaveButton();
+
+        // Verify, that there are 2 addresses on the 'Your addresses' page
+        int actualAddressesCount = new Addresses().getAddressesContainer().size();
+        int expectedAddressesCount = 2;
+        assertEquals ( actualAddressesCount, expectedAddressesCount );
+
+        // Click 'Delete' to delete 2nd address
+        Addresses delete1stAddress = new Addresses().getAddressesContainer().get(1).clickDelete();
+
+        // Click 'Delete' to delete 1st address
+        Addresses delete2ndAddress = new Addresses().getAddressesContainer().get(0).clickDelete();
     }
 
 }
