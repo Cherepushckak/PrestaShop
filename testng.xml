@@ -105,12 +105,17 @@
             <class name="main.java.test.testvolodya.CreateAddress"></class>
         </classes>
     </test>
-    <test name="Edit address entrie">
+    <test name="Verify that new address match expected">
+        <classes>
+            <class name="main.java.test.testvolodya.CreateAddressVerifyExpected"></class>
+        </classes>
+    </test>
+    <test name="Edit address entry">
         <classes>
             <class name="main.java.test.testvolodya.EditAddress"></class>
         </classes>
     </test>
-    <test name="Delete address entrie">
+    <test name="Delete address entry">
         <classes>
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
         </classes>
