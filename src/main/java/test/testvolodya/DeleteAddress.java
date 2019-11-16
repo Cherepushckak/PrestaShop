@@ -1,4 +1,16 @@
+/*
+ * main.java.pages.addresses;
+ *
+ * Version 1.0
+ *
+ * 09.11.2019
+ *
+ * Copyright: Made by Volodymyr Zyhmund
+ */
+
 package main.java.test.testvolodya;
+
+// Additional packages
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -9,39 +21,35 @@ import main.java.pages.user.UserPage;
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 
-@Listeners(BasicTest.class)
+// Listeners are waiting for the error and if it occurs - make a screenshot of error page
+@Listeners(test.class)
 
-public class DeleteAddress extends BasicTest {
+// CreateAddress class
+public class DeleteAddress extends test {
 
-    @Severity(SeverityLevel.NORMAL)
+    // Severity and description for Allure report
+    @Severity(SeverityLevel.MINOR)
     @Description("Verify that address entry can be deleted")
     @Test
     public void deleteAddress() {
-        // Log In
-        new LogInHelper();
+        // Log In to PrestaShop
+        UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
-        new CertainLanguage().clickLanguage().clickEnglishInDropDown();
+        CertainLanguage certainLanguage = new CertainLanguage().clickLanguage().clickEnglishInDropDown();
 
-        // Click addresses card-link
-        new UserPage().getUserPageContainer().clickAddresses();
+        // Click 'Add new address' card-link
+        Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
-        // Verify that we are on the page we expected (Create new address)
-        String actualPageName = new AddressesPage().getActualPageName().getText();
-        String expectedPageName = "Your addresses";
-
-        // Press 'Delete' button
+        // Click 'Delete' button and return Addresses page
         System.err.println("\tATTENTION!\n\tDeleting address!_\n");
-        new AddressesPage().getAddressesList().getAddressesContainer().get(0).clickDelete();
+        Addresses emptyAddressesPage = new AddressesPage().getAddressesList().getAddressesContainer().get(0).clickDelete();
 
-        // Verification, that new address was successfully created
+        // Verification, that address was successfully deleted
         String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
-        System.out.println(actualAlert);
         String expectedAlert = "Address successfully deleted!";
-        System.out.println(expectedAlert);
         assertEquals ( actualAlert, expectedAlert );
     }
 

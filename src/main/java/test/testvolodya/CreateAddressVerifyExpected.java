@@ -22,20 +22,21 @@ import static org.testng.Assert.assertEquals;
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
 @Listeners(test.class)
 
-// CreateAddress class
+// CreateAddressVerifyExpected class
 public class CreateAddressVerifyExpected extends test {
 
+    // Severity and description for Allure report
     @Severity(SeverityLevel.MINOR)
     @Description("Verify that new address entry match expected")
     @Test
-    public void CreateAddressVerifyExpected() {
+    public void createAddressVerifyExpected() {
         // Log In to PrestaShop
         UserPage userPage = new main.java.helperinstrument.LogInHelper().getUserPage();
 
         // Click 'Add new address' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
-        // Verification, that new address alias, is the same as we expected
+        // Verify, that new address alias, is as we expected
         String actualAlias = new AddressesPage().getAddressesList().getAddressesContainer().get(0).getAlias().getText();
         String expectedAlias = new AddressRepository().getAddress1().getAlias();
         assertEquals ( actualAlias, expectedAlias );
