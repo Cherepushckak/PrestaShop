@@ -1,4 +1,4 @@
-package main.java.helperInstrument;
+package main.java.helperinstrument;
 
 public class EnviromentHelper {
 	private static String prestaUrl = System.getProperty ( "prestaUrl" );

@@ -5,25 +5,28 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 /**
- *
+ *Class that describes one container of product
  */
 public class Product {
+
     /**
      * container of one product
      */
     private WebElement productContainer;
+
     /**
      * name of product
      */
     private WebElement name;
 
-
     /**
-     * Default constructor
+     *constructor with
+     * @param productContainer
      */
     public Product(WebElement productContainer) {
         initProduct(productContainer);
     }
+
 
     /**
      * method to init product fields
@@ -35,34 +38,36 @@ public class Product {
     }
 
     /**
-     * getter for productContainer
+     * getters
      */
-
     public WebElement getProductContainer() {
         return productContainer;
     }
-
-    /**
-     * name
-     */
-
-    //getter
-
     public WebElement getName() {
         return name;
     }
 
-    //name click
-
-    public ProductPage clickProductName() {
+    /**
+     * atomic click at name method
+     */
+    private void clickName () {
         name.click();
-        return new ProductPage();
     }
 
-    //get name in String format
-
+    /**
+     * get name in String format
+     * @return name of product
+     */
     public String getNameProductText () {
         return getName().getText();
     }
 
+    /**
+     * click name and go to Product Page
+     * @return Product Page
+     */
+    public ProductPage goToProductPage() {
+        clickName();
+        return new ProductPage();
+    }
 }

@@ -5,6 +5,9 @@ import main.java.pages.searchresult.SearchResultPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import main.java.pages.header.Currency;
+import io.qameta.allure.Step;
+
 
 
 /**
@@ -15,15 +18,17 @@ import org.openqa.selenium.WebElement;
  */
 public class HeaderFull extends Header {
 
+
     private WebElement clothes;
     private WebElement accessories;
     private WebElement art;
     private WebElement searchField;
     private WebElement searchButton;
 
-    private CertainLanguage certainLanguage;
+//    private CertainLanguage certainLanguage;
+//    private Currency currency;
     private WebElement cart;
-    private WebElement currency;
+    //  private WebElement currency;
     private LogUserInfo logUserInfo;
     private UnlogUserInfo unlogUserInfo;
     private final By searchFieldLocator = By.cssSelector(".ui-autocomplete-input");
@@ -37,7 +42,7 @@ public class HeaderFull extends Header {
 
     public void initHeaderFull() {
         getCertainLanguage();
-
+        getCurrency();
 
         //------------We have to create HeaderFull perfectly, so when I check webElement I'll add it to method!---------
         //
@@ -53,7 +58,7 @@ public class HeaderFull extends Header {
 
 
     public CertainLanguage getCertainLanguage() {
-        return certainLanguage;
+        return new CertainLanguage();
     }
 
     public WebElement getClothes() {
@@ -82,15 +87,21 @@ public class HeaderFull extends Header {
      *
      * @return SearchPage
      */
+    @Step("click on search button, opens SearchPage")
+
     public SearchResultPage searchButtonClick() {
         getSearchButton().click();
         return new SearchResultPage();
     }
 
+    @Step("clear searchField")
+
     public HeaderFull clearSearchField() {
         getSearchField().clear();
         return new HeaderFull();
     }
+
+    @Step("entering data into searchField {searchingProduct}")
 
     public HeaderFull sendKeysToSearchField(String searchingProduct) {
 
@@ -107,9 +118,8 @@ public class HeaderFull extends Header {
         return new LogUserInformation();
     }
 
-    public WebElement getCurrency() {
-        return currency;
+
+    public Currency getCurrency() {
+        return new Currency();
     }
-
-
 }
