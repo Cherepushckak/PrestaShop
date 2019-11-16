@@ -185,6 +185,7 @@ public class YourPersonalInformationPage extends HeaderFull {
         buttonSave.click();
     }
 
+
     @Step ("Verification that all user details are as expected")
     public void checkUserDetailsFor(User user) throws InterruptedException {
 

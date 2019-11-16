@@ -1,13 +1,13 @@
 package main.java.pages.cart;
 
 import io.qameta.allure.Step;
-import main.java.pages.common.AParentPage;
+import main.java.pages.common.ParentPage;
 import org.openqa.selenium.NoSuchElementException;
 
 /**
  *describes Cart Page
  */
-public class CartPage extends AParentPage {
+public class CartPage extends ParentPage {
 
     /**
      * variable to init Shopping Cart composition

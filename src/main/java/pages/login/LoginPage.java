@@ -1,12 +1,11 @@
 package main.java.pages.login;
 
-import main.java.pages.common.AParentPage;
-import main.java.pages.header.HeaderFull;
+import main.java.pages.common.ParentPage;
 
 /**
  * 
  */
-public class LoginPage extends AParentPage {
+public class LoginPage extends ParentPage {
     /**
      * Default constructor
      */

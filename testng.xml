@@ -5,83 +5,83 @@
     <!-- Maksym's tests -->
     <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
         <classes>
-            <class name="main.java.test.testMaksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
+            <class name="main.java.test.maksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
         </classes>
     </test>
     <test verbose="3" name="Verify that all User details were correctly saved after account creation">
         <classes>
-            <class name="main.java.test.testMaksym.TestUserDataIsCorrectAfterAccountCreation"></class>
+            <class name="main.java.test.maksym.TestUserDataIsCorrectAfterAccountCreation"></class>
         </classes>
     </test>
     <test verbose="3" name="Verify that user may login after account creation">
         <classes>
-            <class name="main.java.test.testMaksym.TestUserMayLogInAfterAccountCreation"></class>
+            <class name="main.java.test.maksym.TestUserMayLogInAfterAccountCreation"></class>
         </classes>
     </test>
     <test verbose="3" name="Verify that new account can not be created for existing user">
         <classes>
-            <class name="main.java.test.testMaksym.TestNoNewAccountForExistingUser"></class>
+            <class name="main.java.test.maksym.TestNoNewAccountForExistingUser"></class>
         </classes>
     </test>
     <test verbose="3" name="Account could be created without setting User's birthday">
         <classes>
-            <class name="main.java.test.testMaksym.TestCreateAccountWithoutBirthday"></class>
+            <class name="main.java.test.maksym.TestCreateAccountWithoutBirthday"></class>
         </classes>
     </test>
 
     <!-- Oleg's tests -->
     <test verbose="3" name="testLoginForm">
         <classes>
-            <class name="main.java.test.olegstests.TestLoginForm"></class>
+            <class name="main.java.test.oleg.TestLoginForm"></class>
         </classes>
     </test>
     <test verbose="3" name="TestForgotLogin">
         <classes>
-            <class name="main.java.test.olegstests.TestForgotLogin"></class>
+            <class name="main.java.test.oleg.TestForgotLogin"></class>
         </classes>
     </test>
 
     <!-- Nata's tests -->
     <test verbose="3" name="ChangeLanguageTest">
         <classes>
-            <class name="main.java.test.testnata.ChangeLanguageTest"></class>
+            <class name="main.java.test.nata.ChangeLanguageTest"></class>
         </classes>
     </test>
     <test verbose="3" name="ContactUsTest">
         <classes>
-            <class name="main.java.test.testnata.ContactUsTest"></class>
+            <class name="main.java.test.nata.ContactUsTest"></class>
         </classes>
     </test>
     <test verbose="3" name="SearchFieldTest">
         <classes>
-            <class name="main.java.test.testnata.SearchFieldTest"></class>
+            <class name="main.java.test.nata.SearchFieldTest"></class>
         </classes>
     </test>
 
     <!-- Nata's tests -->
     <test verbose="3" name="ChangeCurrencyAfterChangingLanguageTest">
         <classes>
-            <class name="main.java.test.testnata.ChangeCurrencyAfterChangingLanguageTest"></class>
+            <class name="main.java.test.nata.ChangeCurrencyAfterChangingLanguageTest"></class>
         </classes>
     </test>
     <test verbose="3" name="ChangeCurrencyForEUR">
         <classes>
-            <class name="main.java.test.testnata.ChangeCurrencyForEURFromCartTest"></class>
+            <class name="main.java.test.nata.ChangeCurrencyForEURFromCartTest"></class>
         </classes>
     </test>
     <test verbose="3" name="LogoTest">
         <classes>
-            <class name="main.java.test.testnata.LogoTest"></class>
+            <class name="main.java.test.nata.LogoTest"></class>
         </classes>
     </test>
     <test verbose="3" name="SignInHeaderFullTest">
         <classes>
-            <class name="main.java.test.testnata.SignInHeaderFullTest"></class>
+            <class name="main.java.test.nata.SignInHeaderFullTest"></class>
         </classes>
     </test>
     <test verbose="3" name="ChangeCurrencyForUSD">
         <classes>
-            <class name="main.java.test.testnata.ChangeCurrencyForEURFromCartTest"></class>
+            <class name="main.java.test.nata.ChangeCurrencyForEURFromCartTest"></class>
 
         </classes>
     </test>
@@ -89,81 +89,81 @@
     <!-- Artem's tests -->
     <test verbose="3" name="TestCartSmoke">
         <classes>
-            <class name="main.java.test.testartem.TestCartSmoke"></class>
+            <class name="main.java.test.artem.TestCartSmoke"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartSmokeLogged">
         <classes>
-            <class name="main.java.test.testartem.TestCartSmokeLogged"></class>
+            <class name="main.java.test.artem.TestCartSmokeLogged"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartTotalPrice">
         <classes>
-            <class name="main.java.test.testartem.TestTotalPrice"></class>
+            <class name="main.java.test.artem.TestTotalPrice"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartTotalPriceLogged">
         <classes>
-            <class name="main.java.test.testartem.TestTotalPriceLogged"></class>
+            <class name="main.java.test.artem.TestTotalPriceLogged"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartZeroValue">
         <classes>
-            <class name="main.java.test.testartem.TestCartZeroValue"></class>
+            <class name="main.java.test.artem.TestCartZeroValue"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartOverLimit">
         <classes>
-            <class name="main.java.test.testartem.TestOverLimitValue"></class>
+            <class name="main.java.test.artem.TestOverLimitValue"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartBV">
         <classes>
-            <class name="main.java.test.testartem.TestBoundaryValue"></class>
+            <class name="main.java.test.artem.TestBoundaryValue"></class>
         </classes>
     </test>
 
     <!-- Volodya's tests -->
     <test name="Create new address">
         <classes>
-            <class name="main.java.test.testvolodya.CreateAddress"></class>
+            <class name="main.java.test.volodya.CreateAddress"></class>
         </classes>
     </test>
     <test name="Verify that new address match expected">
         <classes>
-            <class name="main.java.test.testvolodya.CreateAddressVerifyExpected"></class>
+            <class name="main.java.test.volodya.CreateAddressVerifyExpected"></class>
         </classes>
     </test>
     <test name="Edit address entry">
         <classes>
-            <class name="main.java.test.testvolodya.EditAddress"></class>
+            <class name="main.java.test.volodya.EditAddress"></class>
         </classes>
     </test>
     <test name="Delete address entry">
         <classes>
-            <class name="main.java.test.testvolodya.DeleteAddress"></class>
+            <class name="main.java.test.volodya.DeleteAddress"></class>
         </classes>
     </test>
     <test name="Create two addresses entries">
         <classes>
-            <class name="main.java.test.testvolodya.Create2Addresses"></class>
+            <class name="main.java.test.volodya.Create2Addresses"></class>
         </classes>
     </test>
 
     <!-- Oleg Kmet test -->
     <test name="Test search field">
         <classes>
-            <class name="main.java.test.testok.TestSearchField"></class>
+            <class name="main.java.test.ok.TestSearchField"></class>
         </classes>
     </test>
     <test name="Test category navigation">
         <classes>
-            <class name="main.java.test.testok.TestCategoryNavigation"></class>
+            <class name="main.java.test.ok.TestCategoryNavigation"></class>
         </classes>
     </test>
     <test name="Test negative data in login form">
         <classes>
-            <class name="main.java.test.olegstests.TestNegativeLoginForm"></class>
+            <class name="main.java.test.oleg.TestNegativeLoginForm"></class>
         </classes>
     </test>
 
