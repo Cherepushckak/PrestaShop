@@ -8,11 +8,12 @@ public class Category {
 
     private WebElement self;
     private String categoryName;
-    private ArrayList<WebElement> subCategory;
+    private ArrayList<WebElement> subCategory = new ArrayList<WebElement>();
     private WebElement collapse;
     private boolean isCollapsed;
 
     public Category(WebElement self){
+        initCategory(self);
     }
 
     private void initCategory(WebElement self) {
@@ -21,13 +22,18 @@ public class Category {
         isCollapsed = false;
     }
 
-    /*
+    /**
      * Add sub category to list
+     * @param subCategory
      */
     public void addSubCategory(WebElement subCategory){
         this.subCategory.add(subCategory);
     }
 
+    /**
+     *
+     * @param collapse
+     */
     public void setCollapse(WebElement collapse){
         this.collapse = collapse;
     }

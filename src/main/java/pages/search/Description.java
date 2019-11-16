@@ -16,6 +16,10 @@ public class Description {
     public Description() {
     }
 
+    /**
+     *
+     * @return Name of description block
+     */
     public String getDescriptionName(){
         descriptionName = OurWebDriver.driver.findElementByXPath("//div[@class='block-category card card-block']/h1");
         return descriptionName.getText();

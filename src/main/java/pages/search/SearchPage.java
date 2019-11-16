@@ -26,6 +26,7 @@ public class SearchPage extends AParentPage {
     public SearchPage() {
     }
 
+    //geters
     public Categories getCategories() {
         categories = new Categories();
         return categories;
@@ -34,5 +35,10 @@ public class SearchPage extends AParentPage {
     public Description getDescription(){
         description = new Description();
         return description;
+    }
+
+    public PagePath getPagePath(){
+        pagePath = new PagePath();
+        return pagePath;
     }
 }

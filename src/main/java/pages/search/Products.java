@@ -37,9 +37,8 @@ public class Products {
         return products;
     }
 
-    /*public int getProductsCount() {
+    public int getProductsCount() {
         return getProductsArrayList().size();
-
-    }*/
+    }
 
 }

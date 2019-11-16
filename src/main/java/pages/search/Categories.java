@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Categories {
 
     private WebElement categoryName;
-    private ArrayList<Category> categories;
+    private ArrayList<Category> categories= new ArrayList<Category>();
     /**
      * Default constructor
      */

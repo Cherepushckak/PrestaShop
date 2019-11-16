@@ -1,11 +1,15 @@
 package main.java.test.testok;
 
+import io.qameta.allure.Description;
 import main.java.pages.main.MainPage;
 import main.java.pages.search.SearchPage;
 import main.java.test.test;
 import main.java.tools.OurWebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+@Listeners(test.class)
 
 public class TestCategoryNavigation extends test {
 
@@ -15,28 +19,21 @@ public class TestCategoryNavigation extends test {
     private String addressBuffer;
 
     //Act
-    /**
-     * Step 1:
-     * Open search page.
-     */
-    @Test
+    @Description("Open search page.")
+    @Test(priority = 1)
     public void Step1(){
         //Arrange
         mainPage = new MainPage();
         //Act
-        mainPage.getPopularProducts().getAllProducts().click();
+        searchPage = mainPage.getPopularProducts().clickAllProducts();
         //Assert
-        Assert.assertEquals(OurWebDriver.driver.getCurrentUrl(),addressBuffer);
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"HOME");
     }
 
-    /**
-     * Step 2:
-     * Check "Home" category.
-     */
-    @Test
+    @Description("Check \"Home\" category.")
+    @Test(priority = 2)
     public void Step2(){
         //Arrange
-        searchPage = new SearchPage();
         addressBuffer = OurWebDriver.driver.getCurrentUrl();    //remember search page address
         //Act
         searchPage.getCategories().clickCategoryName();
@@ -44,91 +41,83 @@ public class TestCategoryNavigation extends test {
         Assert.assertEquals(OurWebDriver.driver.getCurrentUrl(),addressBuffer);
     }
 
-    /**
-     * Step 3:
-     * Check "Clothes" category.
-     */
-    @Test
+    @Description("Check \"Clothes\" category.")
+    @Test(priority = 3)
     public void Step3(){
         //Arrange
         //Act
         searchPage.getCategories().clickCategory(0);
         //Assert
-        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"Clothes");
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"CLOTHES");
     }
 
-    /**
-     * Step 4:
-     * Check "Clothes" subcategory "Men".
-     */
-    @Test
+    @Description("Check \"Clothes\" subcategory \"Men\".")
+    @Test(priority = 4)
     public void Step4(){
         //Arrange
-        addressBuffer = OurWebDriver.driver.getCurrentUrl();    //remember clothes page address
         //Act
         searchPage.getCategories().clickCategory(0);
         //Assert
-        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"Men");
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"MEN");
     }
 
-    /**
-     * Step 5:
-     * Return back, and check "Women" subcategory.
-     */
-    @Test
+    @Description("Return back, and check \"Women\" subcategory.")
+    @Test(priority = 5)
     public void Step5(){
         //Arrange
         //Act
-        OurWebDriver.driver.get(addressBuffer);
-        //searchPage = new SearchPage();
+        searchPage.getPagePath().clickElement(1);
         searchPage.getCategories().clickCategory(1);
         //Assert
-        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"Women");
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"WOMEN");
     }
 
-    /**
-     * Step 6:
-     */
-    @Test
+    @Description("Open search page, and check \"Accessories\" category.")
+    @Test(priority = 6)
     public void Step6(){
         //Arrange
-
         //Act
-
+        searchPage.getPagePath().clickElement(0);
+        mainPage = new MainPage();                          //Need to refresh main page obj
+        searchPage = mainPage.getPopularProducts().clickAllProducts();
+        searchPage.getCategories().clickCategory(1);
         //Assert
-
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"ACCESSORIES");
     }
 
-    /**
-     * Step 7:
-     */
-    @Test
+    @Description("Check \"Accessories\" subcategory \"Stationery\".")
+    @Test(priority = 7)
     public void Step7(){
         //Arrange
         //Act
+        searchPage.getCategories().clickCategory(0);
         //Assert
-
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"STATIONERY");
     }
 
-    /**
-     * Step 8:
-     */
-    @Test
+    @Description("Return back, and check subcategory \"Home Accessories\".")
+    @Test(priority = 8)
     public void Step8(){
         //Arrange
         //Act
+        searchPage.getPagePath().clickElement(1);
+        searchPage.getCategories().clickCategory(1);
         //Assert
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"HOME ACCESSORIES");
 
     }
 
-    /**
-     * Step 9:
-     */
-    @Test
+    @Description("Open search page, and check \"Art\" category.")
+    @Test(priority = 9)
     public void Step9(){
         //Arrange
         //Act
+        searchPage.getPagePath().clickElement(0);
+        mainPage = new MainPage();                          //Need to refresh main page obj
+        searchPage = mainPage.getPopularProducts().clickAllProducts();
+        searchPage.getCategories().clickCategory(2);
         //Assert
+        Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"ART");
 
     }
 
