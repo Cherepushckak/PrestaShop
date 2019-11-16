@@ -11,6 +11,7 @@
 package main.java.pages.addresses;
 
 // Additional packages
+import io.qameta.allure.Step;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -24,16 +25,14 @@ public class Address {
     private WebElement updateButton;
     private WebElement deleteButton;
 
-    /**
-     * Default constructor
-     */
+    // Default constructor
     public Address(WebElement addressContainer) {
         this.addressContainer = addressContainer;
         initAddress();
         alias();
     }
 
-    // Init address
+    @Step("Initialize single address container")
     private void initAddress() {
         addressContainer = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div");
         alias = OurWebDriver.driver.findElementByXPath("//section[@id='main']/section/div/article/div/h4");
@@ -43,7 +42,8 @@ public class Address {
         deleteButton = OurWebDriver.driver.findElementByCssSelector(".address-footer>a:nth-child(2)");
     }
 
-    // Initialise 'alias' link
+    // Initialise 'alias'
+    @Step("Initialize 'alias'")
     private void alias() {
         alias = OurWebDriver.driver.findElementByXPath("//section[@id='main']/section/div/article/div/h4");
     }
@@ -59,12 +59,14 @@ public class Address {
     }
 
     // Click 'Update' button
+    @Step("Click 'Update' button")
     public Addresses clickUpdate() {
         updateButton.click();
         return new Addresses();
     }
 
     // Click 'Delete' button
+    @Step("Click 'Delete' button")
     public Addresses clickDelete() {
         deleteButton.click();
         return new Addresses ();

@@ -17,11 +17,11 @@ import org.testng.annotations.*;
 import main.java.pages.addresses.*;
 import main.java.data.AddressRepository;
 import main.java.pages.user.UserPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import static org.testng.Assert.assertEquals;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
 // CreateAddressVerifyExpected class
 public class CreateAddressVerifyExpected extends BasicTest {
@@ -38,7 +38,7 @@ public class CreateAddressVerifyExpected extends BasicTest {
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
         // Verify, that new address alias, is as we expected
-        String actualAlias = new AddressesPage().getAddressesList().getAddressesContainer().get(0).getAlias().getText();
+        String actualAlias = new Addresses().getAddressesContainer().get(0).getAlias().getText();
         String expectedAlias = new AddressRepository().getAddress1().getAlias();
         assertEquals ( actualAlias, expectedAlias );
     }

@@ -34,7 +34,6 @@ import static org.testng.Assert.assertEquals;
 // CreateAddress class
 public class CreateAddress extends BasicTest {
 
-
     // Severity and description for Allure report
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that new address entry can be created")

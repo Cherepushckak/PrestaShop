@@ -12,17 +12,14 @@ package main.java.pages.user;
 
 // Additional packages
 import main.java.pages.common.AParentPage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
 // UserPage class
 public class UserPage extends AParentPage {
-
-	// Fields
-	public UserPageContainer userPageContainer;
 
 	// Default constructor
 	public UserPage() {

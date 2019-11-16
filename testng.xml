@@ -20,8 +20,7 @@
     </test>
     <test verbose="3" name="Verify that new account can not be created for existing user">
         <classes>
-            <class
-                    name="main.java.test.testMaksym.TestNoNewAccountForExistingUser"></class>
+            <class name="main.java.test.testMaksym.TestNoNewAccountForExistingUser"></class>
         </classes>
     </test>
     <test verbose="3" name="Account could be created without setting User's birthday">
@@ -81,6 +80,7 @@
     <test verbose="3" name="ChangeCurrencyForUSD">
         <classes>
             <class name="main.java.test.testnata.ChangeCurrencyForEURFromCartTest"></class>
+
         </classes>
     </test>
 
@@ -90,9 +90,9 @@
             <class name="main.java.test.testartem.TestCartSmoke"></class>
         </classes>
     </test>
-    <test verbose="3" name="TestCartSmokeLogged">
+    <test verbose="3" name="TestCartSmoke">
         <classes>
-            <class name="main.java.test.testartem.TestCartSmokeLogged"></class>
+            <class name="main.java.test.testartem.TestCartSmoke"></class>
         </classes>
     </test>
     <test verbose="3" name="TestCartTotalPrice">
@@ -100,7 +100,7 @@
             <class name="main.java.test.testartem.TestTotalPrice"></class>
         </classes>
     </test>
-    <test verbose="3" name="TestCartTotalPriceLogged">
+    <test verbose="3" name="TestCartTotalPrice">
         <classes>
             <class name="main.java.test.testartem.TestTotalPriceLogged"></class>
         </classes>
@@ -121,7 +121,8 @@
         </classes>
     </test>
 
-    <!--&lt;!&ndash; Volodya's tests &ndash;&gt;-->
+
+    <!-- Volodya's tests -->
     <test name="Create new address">
         <classes>
             <class name="main.java.test.testvolodya.CreateAddress"></class>
