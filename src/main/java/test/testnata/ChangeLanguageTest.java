@@ -1,7 +1,7 @@
 package main.java.test.testnata;
 
 import main.java.pages.header.CertainLanguage;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,12 +12,12 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
 /**
  *
  */
-public class ChangeLanguageTest extends test {
+public class ChangeLanguageTest extends BasicTest {
     /**
      * web element for saving actual element, used is assert
      */

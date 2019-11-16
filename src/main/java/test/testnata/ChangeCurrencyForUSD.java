@@ -1,7 +1,7 @@
 package main.java.test.testnata;
 
 import main.java.helperinstrument.AddToCartHelper;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -9,13 +9,13 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
 /**
  *
  */
 
-public class ChangeCurrencyForUSD extends test {
+public class ChangeCurrencyForUSD extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verifies if currency is changed for USD on CartPage")

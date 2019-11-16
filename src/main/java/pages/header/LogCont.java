@@ -66,12 +66,18 @@ public class LogCont {
     }
 
     /**
+     * click logo atomic method
+     */
+    private void clickLogo() {
+        logo.click();
+    }
+
+    /**
      * method opens homePage
      */
     @Step("click logo, opens MainPage")
-
-    public MainPage clickLogo() {
-        logo.click();
+    public MainPage goToMainPage() {
+        clickLogo();
         return new MainPage();
     }
 
