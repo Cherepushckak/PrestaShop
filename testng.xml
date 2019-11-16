@@ -79,16 +79,6 @@
             <class name="main.java.test.testartem.TestCartSmoke"></class>
         </classes>
     </test>
-    <test verbose="3" name="TestCartSmoke">
-        <classes>
-            <class name="main.java.test.testartem.TestCartSmoke"></class>
-        </classes>
-    </test>
-    <test verbose="3" name="TestCartTotalPrice">
-        <classes>
-            <class name="main.java.test.testartem.TestTotalPrice"></class>
-        </classes>
-    </test>
     <test verbose="3" name="TestCartTotalPrice">
         <classes>
             <class name="main.java.test.testartem.TestTotalPriceLogged"></class>
