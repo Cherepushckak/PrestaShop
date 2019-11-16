@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
 
+    <!-- Maksym's tests -->
     <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
         <classes>
             <class
@@ -30,6 +31,8 @@
             <class name="main.java.test.testMaksym.TestCreateAccountWithoutBirthday"></class>
         </classes>
     </test>
+
+    <!-- Oleg's tests -->
         <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.olegsTests.TestLoginForm"></class>
@@ -40,6 +43,8 @@
             <class name="main.java.test.olegsTests.TestForgotLogin"></class>
         </classes>
     </test>
+
+    <!-- Nata's tests -->
     <test verbose="3" name="ChangeLanguageTest">
         <classes>
             <class name="main.java.test.testnata.ChangeLanguageTest"></class>
@@ -70,6 +75,8 @@
             <class name="main.java.test.testnata.ChangeCurrencyForUSD"></class>
         </classes>
     </test>
+
+    <!-- Artem's tests -->
     <test verbose="3" name="TestCartSmoke">
         <classes>
             <class name="main.java.test.testartem.TestCartSmoke"></class>
@@ -112,12 +119,17 @@
             <class name="main.java.test.testvolodya.CreateAddress"></class>
         </classes>
     </test>
-    <test name="Edit address entrie">
+    <test name="Verify that new address match expected">
+        <classes>
+            <class name="main.java.test.testvolodya.CreateAddressVerifyExpected"></class>
+        </classes>
+    </test>
+    <test name="Edit address entry">
         <classes>
             <class name="main.java.test.testvolodya.EditAddress"></class>
         </classes>
     </test>
-    <test name="Delete address entrie">
+    <test name="Delete address entry">
         <classes>
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
         </classes>
