@@ -6,15 +6,15 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
 import main.java.helperinstrument.LogInHelper;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-@Listeners(test.class)
+@Listeners(BasicTest.class)
 
-public class TestLoginForm extends test {
+public class TestLoginForm extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify if customer can log in")
@@ -24,10 +24,11 @@ public class TestLoginForm extends test {
         LogInHelper logInHelper = new LogInHelper();
 
 
-        String expected = "Admin admin";
-        String actual = logInHelper.getUserPage().getLogUserInformation().getLogUserInfo().getUserNameFromHeader();
-        assertEquals(actual, expected);
 
-    }
+		String expected = "Admin admin";
+		String actual = logInHelper.getUserPage ().initHeaderFull().getLogUserInformation ().getLogUserInfo ().getUserNameFromHeader ();
+		assertEquals ( actual, expected );
+		
+	}
 
 }

@@ -62,6 +62,7 @@ public class LoginForm {
 		return show;
 	}
 
+	@Step("Logging in with email/password...")
 	public UserPage logIn(String email, String password) {
 		writeEmailClick(email);
 		writePasswordClick(password);

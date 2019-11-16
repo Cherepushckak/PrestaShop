@@ -19,10 +19,18 @@ public class FilterBlock {
         setBlockName(blockName);
     }
 
+    /**
+     * Set block name
+     * @param blockName
+     */
     public void setBlockName(String blockName) {
         this.blockName = blockName;
     }
 
+    /**
+     * Adding a checkbox to filter block
+     * @param checkBox
+     */
     public void addCheckBox(WebElement checkBox) {
         checkBoxes.add(checkBox);
     }
