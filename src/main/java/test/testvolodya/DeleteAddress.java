@@ -1,4 +1,7 @@
 package main.java.test.testvolodya;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import main.java.helperinstrument.LogInHelper;
 import main.java.pages.addresses.*;
 import main.java.pages.header.CertainLanguage;
@@ -13,6 +16,8 @@ import static org.testng.Assert.assertEquals;
 
 public class DeleteAddress extends test {
 
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Verify that address entry can be deleted")
     @Test
     public void deleteAddress() {
         // Log In

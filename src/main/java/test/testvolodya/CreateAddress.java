@@ -1,6 +1,22 @@
+/*
+ * main.java.pages.addresses;
+ *
+ * Version 1.0
+ *
+ * 09.11.2019
+ *
+ * Copyright: Made by Volodymyr Zyhmund
+ */
+
 package main.java.test.testvolodya;
+
+// Additional packages
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import main.java.data.AddressRepository;
 import main.java.helperinstrument.LogInHelper;
+import main.java.pages.addresses.Addresses;
 import main.java.pages.addresses.AddressesPage;
 import main.java.pages.addresses.NewAddress;
 import main.java.pages.header.CertainLanguage;
@@ -9,33 +25,42 @@ import main.java.pages.user.UserPage;
 import main.java.test.test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 
+// Listeners are waiting for the error and if it occurs - make a screenshot of error page
 @Listeners(test.class)
 
+// CreateAddress class
 public class CreateAddress extends test {
 
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verify that new address entry can be created")
     @Test
     public void createAddress() {
-        // Log In
-        new LogInHelper();
+        // Log In to PrestaShop
+        UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
-        new CertainLanguage().clickLanguage().clickEnglishInDropDown();
+        CertainLanguage certainLanguage = new CertainLanguage().clickLanguage().clickEnglishInDropDown();
 
-        // Click addresses card-link
+        // Click 'Add new address' card-link
         new UserPage().getUserPageContainer().clickAddresses();
 
-        // Verify that we are on the page we expected (Create new address)
-        String actualPageName = new AddressesPage().getActualPageName().getText();
-        String expectedPageName = "New address";
-
         // Clear all the fields before filling in
-        new NewAddress().clearField("alias", "firstName", "lastName", "company", "vatNumber", "myAddress",
-                "addressComplement", "zipPostalCode", "city", "country", "phone");
+        new NewAddress().clearField(
+                "alias",
+                "firstName",
+                "lastName",
+                "company",
+                "vatNumber",
+                "myAddress",
+                "addressComplement",
+                "zipPostalCode",
+                "city",
+                "country",
+                "phone");
 
-        // Fill in all required fields from addresses repository from create address1.
+        // Fill in all necessary fields from addresses repository.
         Address address = new AddressRepository().getAddress1();
         new NewAddress().fillInField(address);
 
@@ -44,15 +69,8 @@ public class CreateAddress extends test {
 
         // Verification, that new address was successfully created
         String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
-        System.out.println(actualAlert);
         String expectedAlert = "Address successfully added!";
-        System.out.println(expectedAlert);
         assertEquals ( actualAlert, expectedAlert );
-
-        // Verification, new address alias, that it is the same as we expected
-        String actualAlias = new AddressesPage().getAddressesList().getAddressesContainer().get(0).getAlias().getText();
-        String expectedAlias = new AddressRepository().getAddress1().getAlias();
-        assertEquals ( actualAlias, expectedAlias );
     }
 
 }
