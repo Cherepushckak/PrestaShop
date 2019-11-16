@@ -86,8 +86,8 @@ public class CertainLanguage {
      * @return language webElement.
      */
     public WebElement getLanguage() {
-        language = OurWebDriver.driver.findElement(languageLocator);
-        return language;
+
+        return OurWebDriver.driver.findElement(languageLocator);
     }
 
     /**
@@ -95,11 +95,12 @@ public class CertainLanguage {
      *
      * @return instance of CertainLanguage
      */
-    @Step("click language")
-    public CertainLanguage clickLanguage() {
+    @Step("open list of languages")
+    public CertainLanguage openListOfLanguages() {
         getLanguage().click();
         return new CertainLanguage();
     }
+
 
     /**
      * method puts locator the field arrow;
@@ -107,8 +108,7 @@ public class CertainLanguage {
      * @return arrow.
      */
     public WebElement getArrow() {
-        arrow = OurWebDriver.driver.findElement(arrowLocator);
-        return arrow;
+        return OurWebDriver.driver.findElement(arrowLocator);
     }
 
     /**
@@ -124,8 +124,7 @@ public class CertainLanguage {
      * @return english webElement.
      */
     public WebElement getEnglish() {
-        english = OurWebDriver.driver.findElement(englishLocator);
-        return english;
+        return OurWebDriver.driver.findElement(englishLocator);
     }
 
     /**
@@ -134,8 +133,8 @@ public class CertainLanguage {
      *
      * @return language webElement.
      */
-    @Step("click English language in dropDown")
-    public CertainLanguage clickEnglishInDropDown() {
+    @Step("choose English language in dropDown")
+    public CertainLanguage chooseEnglishInDropDown() {
         getEnglish().click();
         return new CertainLanguage();
     }
@@ -146,8 +145,7 @@ public class CertainLanguage {
      * @return ukrainian webElement.
      */
     public WebElement getUkrainian() {
-        ukrainian = OurWebDriver.driver.findElement(ukrainianLocator);
-        return ukrainian;
+        return OurWebDriver.driver.findElement(ukrainianLocator);
     }
 
     /**
@@ -156,10 +154,15 @@ public class CertainLanguage {
      *
      * @return language webElement.
      */
-    @Step("click ukrainian language in dropDown")
-    public WebElement clickUkrainianInDropDown() {
+    @Step("choose ukrainian language in dropDown")
+    public HeaderFull chooseUkrainianInDropDown() {
         getUkrainian().click();
-        return language;
+        return new HeaderFull();
+    }
+
+    @Step("showContentOfTheLanguageElement")
+    public String showContentOfTheLanguageElement(){
+        return getLanguage().getText();
     }
 
     /**
@@ -168,8 +171,7 @@ public class CertainLanguage {
      * @return dropDown element.
      */
     public WebElement getDropDownListLanguage() {
-        dropDownListLanguage = OurWebDriver.driver.findElement(dropDownListLanguageLocator);
-        return dropDownListLanguage;
+        return OurWebDriver.driver.findElement(dropDownListLanguageLocator);
     }
 
 }

@@ -12,6 +12,7 @@ package main.java.test.testvolodya;
 
 // Additional packages
 import io.qameta.allure.*;
+import main.java.test.BasicTest;
 import org.testng.annotations.*;
 import main.java.pages.addresses.*;
 import main.java.data.AddressRepository;
@@ -23,7 +24,7 @@ import static org.testng.Assert.assertEquals;
 @Listeners(test.class)
 
 // CreateAddressVerifyExpected class
-public class CreateAddressVerifyExpected extends test {
+public class CreateAddressVerifyExpected extends BasicTest {
 
     // Severity and description for Allure report
     @Severity(SeverityLevel.MINOR)

@@ -5,8 +5,7 @@
     <!-- Maksym's tests -->
     <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
         <classes>
-            <class
-                    name="main.java.test.testMaksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
+            <class name="main.java.test.testMaksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
         </classes>
     </test>
     <test verbose="3" name="Verify that all User details were correctly saved after account creation">
@@ -16,8 +15,7 @@
     </test>
     <test verbose="3" name="Verify that user may login after account creation">
         <classes>
-            <class
-                    name="main.java.test.testMaksym.TestUserMayLogInAfterAccountCreation"></class>
+            <class name="main.java.test.testMaksym.TestUserMayLogInAfterAccountCreation"></class>
         </classes>
     </test>
     <test verbose="3" name="Verify that new account can not be created for existing user">
@@ -33,7 +31,7 @@
     </test>
 
     <!-- Oleg's tests -->
-        <test verbose="3" name="testLoginForm">
+    <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.olegsTests.TestLoginForm"></class>
         </classes>
@@ -45,6 +43,16 @@
     </test>
 
     <!-- Nata's tests -->
+    <test verbose="3" name="ChangeCurrencyAfterChangingLanguageTest">
+        <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyAfterChangingLanguageTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="ChangeCurrencyForEUR">
+        <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyForEURFromCartTest"></class>
+        </classes>
+    </test>
     <test verbose="3" name="ChangeLanguageTest">
         <classes>
             <class name="main.java.test.testnata.ChangeLanguageTest"></class>
@@ -71,8 +79,8 @@
         </classes>
     </test>
     <test verbose="3" name="ChangeCurrencyForUSD">
-    <classes>
-            <class name="main.java.test.testnata.ChangeCurrencyForUSD"></class>
+        <classes>
+            <class name="main.java.test.testnata.ChangeCurrencyForEURFromCartTest"></class>
         </classes>
     </test>
 
@@ -133,7 +141,7 @@
         <classes>
             <class name="main.java.test.testvolodya.DeleteAddress"></class>
         </classes>
-    </test>-->
+    </test>
 
     <!-- Oleg Kmet test -->
     <test name="Test search field">
