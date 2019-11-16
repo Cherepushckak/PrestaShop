@@ -1,16 +1,15 @@
 package main.java.test.olegstests;
 
-import main.java.helperinstrument.LogInHelper;
 import main.java.pages.header.LogUserInformation;
 import main.java.pages.login.LoginForm;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-@Listeners ( test.class)
-public class TestNegativeLoginForm extends test{
+@Listeners(BasicTest.class)
+public class TestNegativeLoginForm extends BasicTest{
 	@Test
 	public void testLoginFormWithWrongData(){
 		new LogUserInformation ()
