@@ -153,7 +153,6 @@
         </classes>
     </test>
 
-
     <!-- Volodya's tests -->
     <test name="Create new address">
         <classes>

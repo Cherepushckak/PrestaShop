@@ -41,7 +41,7 @@ public class Create2Addresses extends BasicTest {
         UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
-        CertainLanguage certainLanguage = new CertainLanguage().clickLanguage().clickEnglishInDropDown();
+        CertainLanguage certainLanguage = new CertainLanguage().openListOfLanguages().chooseEnglishInDropDown();
 
         // Click 'Add new address' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
