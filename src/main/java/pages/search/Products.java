@@ -17,9 +17,13 @@ public class Products {
      * Default constructor
      */
     public Products() {
+    }
+
+    public ArrayList<Product> getProducts(){
         for (WebElement p : OurWebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
-                this.products.add(new Product(p));
+            this.products.add(new Product(p));
         }
+        return products;
     }
 
     public int getProductsCount() {

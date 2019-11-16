@@ -13,6 +13,9 @@ public class Category {
     private boolean isCollapsed;
 
     public Category(WebElement self){
+    }
+
+    private void initCategory(WebElement self) {
         this.self = self;
         categoryName = self.getText();
         isCollapsed = false;
