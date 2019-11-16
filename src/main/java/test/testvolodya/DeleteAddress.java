@@ -19,6 +19,7 @@ import main.java.pages.addresses.*;
 import main.java.pages.header.CertainLanguage;
 import main.java.pages.user.UserPage;
 import main.java.test.BasicTest;
+import main.java.test.test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
@@ -38,7 +39,7 @@ public class DeleteAddress extends BasicTest {
         UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
-        CertainLanguage certainLanguage = new CertainLanguage().clickLanguage().clickEnglishInDropDown();
+        CertainLanguage certainLanguage = new CertainLanguage().openListOfLanguages().chooseEnglishInDropDown();
 
         // Click 'Add new address' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();

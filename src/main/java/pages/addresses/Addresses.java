@@ -12,7 +12,11 @@ package main.java.pages.addresses;
 
 // Additional packages
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.concurrent.TimeUnit;
+=======
+
+>>>>>>> e15512db727e82213edefc8fd961b4ebdd40c34e
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import main.java.tools.OurWebDriver;
@@ -57,7 +61,13 @@ public class Addresses {
 
     // Getters
     @Step("Return addresses list")
+<<<<<<< HEAD
     public WebElement getAddressesList() { return addressesList; }
+=======
+    public WebElement getAddressesList() {
+        return addressesList;
+    }
+>>>>>>> e15512db727e82213edefc8fd961b4ebdd40c34e
 
     @Step("Return alert")
     public WebElement getAlert() {
@@ -72,11 +82,15 @@ public class Addresses {
 
     @Step("Click '+ Create new address' link")
     public NewAddress clickCreateNewAddressLink() {
+<<<<<<< HEAD
         createNewAddressLink();
         OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         OurWebDriver.getWait().until(ExpectedConditions.elementToBeClickable(createNewAddressLink));
         createNewAddressLink.click();
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+=======
+        createNewAddressLink.click();
+>>>>>>> e15512db727e82213edefc8fd961b4ebdd40c34e
         return new NewAddress();
     }
 }
