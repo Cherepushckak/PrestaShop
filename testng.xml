@@ -154,12 +154,12 @@
             <class name="main.java.test.volodya.Create2Addresses"></class>
         </classes>
     </test>
-    <test name="Create two addresses entries">
+    <test name="Verify API Addresses URL status code">
         <classes>
             <class name="main.java.test.volodya.APItestGETStatusCode"></class>
         </classes>
     </test>
-    <test name="Create two addresses entries">
+    <test name="Verify API Addresses body contain expected sub-string">
         <classes>
             <class name="main.java.test.volodya.APItestGETaddressesJSON"></class>
         </classes>
