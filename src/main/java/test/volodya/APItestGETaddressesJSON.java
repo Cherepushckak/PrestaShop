@@ -14,7 +14,6 @@ package main.java.test.volodya;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import main.java.pages.addresses.Addresses;
 import main.java.test.BasicTest;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -24,13 +23,10 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.io.IOException;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
 @Listeners(BasicTest.class)
 
-// CreateAddressVerifyExpected class
+// APItestGETaddressesJSON class
 public class APItestGETaddressesJSON {
 
     // Severity and description for Allure report
