@@ -49,7 +49,11 @@ public class Address {
     }
 
     // Getters
+    @Step("Return 'Alias'")
     public WebElement getAlias() { return alias; }
+    public WebElement getAllFieldsAddress() { return allFieldsAddress; }
+
+    @Step("Return 'Address body'")
     public WebElement getAllFieldsAddress() { return allFieldsAddress; }
 
     // Click 'Update' button
