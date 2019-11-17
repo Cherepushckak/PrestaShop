@@ -31,12 +31,15 @@ public class CreateAddressVerifyExpected extends BasicTest {
     @Description("Verify that new address entry match expected")
     @Test
     public void createAddressVerifyExpected() {
+        // Arrange
         // Log In to PrestaShop
         UserPage userPage = new main.java.helperinstrument.LogInHelper().getUserPage();
 
+        // Act
         // Click 'Add new address' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
+        // Assert
         // Verify, that new address alias, is as we expected
         String actualAlias = new Addresses().getAddressesContainer().get(0).getAlias().getText();
         String expectedAlias = new AddressRepository().getAddress1().getAlias();
