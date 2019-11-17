@@ -44,7 +44,6 @@ public class TestCategoryNavigation extends BasicTest {
     @Description("Check \"Clothes\" category.")
     @Test(priority = 3)
     public void Step3(){
-        //Arrange
         //Act
         searchPage.getCategories().clickCategory(0);
         //Assert
@@ -54,7 +53,6 @@ public class TestCategoryNavigation extends BasicTest {
     @Description("Check \"Clothes\" subcategory \"Men\".")
     @Test(priority = 4)
     public void Step4(){
-        //Arrange
         //Act
         searchPage.getCategories().clickCategory(0);
         //Assert
@@ -64,7 +62,6 @@ public class TestCategoryNavigation extends BasicTest {
     @Description("Return back, and check \"Women\" subcategory.")
     @Test(priority = 5)
     public void Step5(){
-        //Arrange
         //Act
         searchPage.getPagePath().clickElement(1);
         searchPage.getCategories().clickCategory(1);
@@ -75,7 +72,6 @@ public class TestCategoryNavigation extends BasicTest {
     @Description("Open search page, and check \"Accessories\" category.")
     @Test(priority = 6)
     public void Step6(){
-        //Arrange
         //Act
         searchPage.getPagePath().clickElement(0);
         mainPage = new MainPage();                          //Need to refresh main page obj
@@ -88,7 +84,6 @@ public class TestCategoryNavigation extends BasicTest {
     @Description("Check \"Accessories\" subcategory \"Stationery\".")
     @Test(priority = 7)
     public void Step7(){
-        //Arrange
         //Act
         searchPage.getCategories().clickCategory(0);
         //Assert
@@ -98,7 +93,6 @@ public class TestCategoryNavigation extends BasicTest {
     @Description("Return back, and check subcategory \"Home Accessories\".")
     @Test(priority = 8)
     public void Step8(){
-        //Arrange
         //Act
         searchPage.getPagePath().clickElement(1);
         searchPage.getCategories().clickCategory(1);
@@ -110,7 +104,6 @@ public class TestCategoryNavigation extends BasicTest {
     @Description("Open search page, and check \"Art\" category.")
     @Test(priority = 9)
     public void Step9(){
-        //Arrange
         //Act
         searchPage.getPagePath().clickElement(0);
         mainPage = new MainPage();                          //Need to refresh main page obj
@@ -120,7 +113,4 @@ public class TestCategoryNavigation extends BasicTest {
         Assert.assertEquals(searchPage.getDescription().getDescriptionName(),"ART");
 
     }
-
-    //Assert
-
 }
