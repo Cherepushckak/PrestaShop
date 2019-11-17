@@ -56,6 +56,14 @@ public class PopularProducts {
     }
 
     /**
+     * Method shows text on top of container Popular Products
+     * @return
+     */
+    @Step("shows text of all products")
+    public String showTextOfAllProducts(){
+     return  getAllProducts().getText();
+    }
+    /**
      * method to get product by part of name
      * @return product item
      */
@@ -71,6 +79,7 @@ public class PopularProducts {
         }
         return result;
     }
+
 
     /**
      * Go to search page

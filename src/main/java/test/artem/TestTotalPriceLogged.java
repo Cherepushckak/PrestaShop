@@ -10,7 +10,6 @@ import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-
 import static org.testng.Assert.assertEquals;
 @Listeners( BasicTest.class)
 

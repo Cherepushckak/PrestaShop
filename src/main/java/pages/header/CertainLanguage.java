@@ -1,41 +1,16 @@
 package main.java.pages.header;
 
 
+import io.qameta.allure.Step;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import io.qameta.allure.Step;
 
 /**
  * CertainLanguage allows to find language and nearby arrow buttons, to open dropDown list of languages,
  * to choose one from the list.
  */
 public class CertainLanguage {
-
-    /**
-     * element on the header
-     */
-    private WebElement language;
-
-    /**
-     * element on the header
-     */
-    private WebElement english;
-
-    /**
-     * element on the header
-     */
-    private WebElement ukrainian;
-
-    /**
-     * element on the header
-     */
-    private WebElement arrow;
-
-    /**
-     * element on the header
-     */
-    private WebElement dropDownListLanguage;
 
     /**
      * locator that contains address of language field in DOM
@@ -160,7 +135,7 @@ public class CertainLanguage {
         return new HeaderFull();
     }
 
-    @Step("showContentOfTheLanguageElement")
+    @Step("shows content of the language element")
     public String showContentOfTheLanguageElement(){
         return getLanguage().getText();
     }

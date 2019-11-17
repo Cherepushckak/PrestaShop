@@ -12,7 +12,8 @@ import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static main.java.helperinstrument.PageNavigationHelper.*;
+import static main.java.helperinstrument.PageNavigationHelper.openRegisterPage;
+import static main.java.helperinstrument.PageNavigationHelper.openYourPersonalInformationPage;
 
 @Listeners(BasicTest.class)
 public class TestUserDataIsCorrectAfterAccountCreation extends BasicTest {

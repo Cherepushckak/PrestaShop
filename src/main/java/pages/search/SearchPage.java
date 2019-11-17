@@ -1,7 +1,7 @@
 package main.java.pages.search;
 
-import main.java.pages.common.ParentPage;
 import main.java.pages.common.PagePath;
+import main.java.pages.common.ParentPage;
 
 
 /**

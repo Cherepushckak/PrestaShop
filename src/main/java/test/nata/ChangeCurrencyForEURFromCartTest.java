@@ -1,19 +1,16 @@
 package main.java.test.nata;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import main.java.helperinstrument.AddToCartHelper;
 import main.java.test.BasicTest;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 
 @Listeners(BasicTest.class)
 
-/**
- *
- */
 
 public class ChangeCurrencyForEURFromCartTest extends BasicTest {
 
@@ -21,25 +18,22 @@ public class ChangeCurrencyForEURFromCartTest extends BasicTest {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verifies if currency is changed for USD on CartPage")
     @Test
-    @io.qameta.allure.Issue("1234")
     public void changeCurrency() {
-
+        String expected = "EUR";
         //Act
-        Boolean actualBoolean = new AddToCartHelper()
+        String actual = addToCartHelper()
                 .getCartPage()
                 .initHeaderFull()
                 .getCurrency()
-                .openDropDownList()
                 .chooseEUR()
-                .getCurrencyItem()
-                .getText()
-                .contains("€");
+                .showValueOfTheCurrencyItem().substring(0, 3);
+        System.out.println(actual);
 
         //Assert
-        Assert.assertTrue(actualBoolean);
+
+        Assert.assertEquals(actual, expected);
 
         System.out.println("Currency is changed to EUR");
-
 
     }
 
