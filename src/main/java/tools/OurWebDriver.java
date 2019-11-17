@@ -1,9 +1,5 @@
 package main.java.tools;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8144abc15321ad5308937936db605254f61a5704
 import main.java.helperinstrument.EnviromentHelper;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;

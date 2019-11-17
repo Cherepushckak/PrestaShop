@@ -1,4 +1,4 @@
-package main.java.test.testartem;
+package main.java.test.artem;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
