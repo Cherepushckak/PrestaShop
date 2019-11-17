@@ -4,13 +4,13 @@ import main.java.pages.header.LogUserInformation;
 import main.java.pages.header.UnlogUserInfo;
 import main.java.pages.login.ForgotLoginMessage;
 import main.java.pages.login.LoginForm;
-import main.java.test.test;
+import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-@Listeners ( test.class )
+@Listeners ( BasicTest.class )
 public class TestNegativeForgotLogin {
 	@Test
 	public void testNegativeForgotLogin () {

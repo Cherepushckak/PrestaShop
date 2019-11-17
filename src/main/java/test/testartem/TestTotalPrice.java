@@ -1,6 +1,7 @@
 package main.java.test.testartem;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Issue;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import main.java.pages.cart.CartPage;
@@ -16,6 +17,7 @@ public class TestTotalPrice extends BasicTest {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verification of total price and product of quantity and item price not logged user")
     @Test
+    @Issue("CDXLI-462")
     public void testPriceNonLogged () {
         //Arrange
         CartPage cartPage = addToCartHelper()

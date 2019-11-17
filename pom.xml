@@ -31,7 +31,7 @@
                 <version>2.8</version>
                 <configuration>
                     <properties>
-                        <allure.issues.tracker.pattern>http://example.com/%s</allure.issues.tracker.pattern>
+                        <allure.link.issue.pattern>http://ssu-jira.softserveinc.com/browse/%s</allure.link.issue.pattern>
                     </properties>
                 </configuration>
             </plugin>
@@ -70,18 +70,18 @@
             <version>${selenium.version}</version>
         </dependency>
         <!--  dependency for testing api (should be before testNG), xml for easy parsing -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>3.0.6</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.rest-assured</groupId>-->
+<!--            <artifactId>rest-assured</artifactId>-->
+<!--            <version>3.0.6</version>-->
+<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>3.0.0</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.rest-assured</groupId>-->
+<!--            <artifactId>rest-assured</artifactId>-->
+<!--            <version>3.0.0</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>io.rest-assured</groupId>
