@@ -1,6 +1,9 @@
 package main.java.tools;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8144abc15321ad5308937936db605254f61a5704
 import main.java.helperinstrument.EnviromentHelper;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,7 +21,6 @@ public class OurWebDriver {
        } else {
                 System.setProperty("webdriver.chrome.driver", EnviromentHelper.getWinDriver ());
         }
-
 
         driver = new ChromeDriver();
         driver.manage().window().maximize(); // Maximize test browser window

@@ -1,7 +1,5 @@
 package main.java.data;
 
-import main.java.helperinstrument.EnviromentHelper;
-
 public class User {
 
     private Title title;

@@ -1,12 +1,11 @@
 package main.java.pages.forgot;
 
-import main.java.pages.common.AParentPage;
-import main.java.pages.header.HeaderFull;
+import main.java.pages.common.ParentPage;
 
 /**
  * 
  */
-public class ForgotPage extends AParentPage {
+public class ForgotPage extends ParentPage {
 
     /**
      * Default constructor

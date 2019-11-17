@@ -13,12 +13,12 @@ package main.java.pages.addresses;
 // Additional packages
 
 import io.qameta.allure.Step;
-import main.java.pages.common.AParentPage;
+import main.java.pages.common.ParentPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
 // AddressesPage class, which extends APageParent class
-public class AddressesPage extends AParentPage {
+public class AddressesPage extends ParentPage {
 
     // Fields
     private WebElement homeTopLink;
