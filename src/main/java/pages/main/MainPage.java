@@ -1,13 +1,13 @@
 package main.java.pages.main;
 
 import io.qameta.allure.Step;
-import main.java.pages.common.AParentPage;
+import main.java.pages.common.ParentPage;
 import main.java.pages.login.LoginPage;
 
 /**
  *describes home page
  */
-public class MainPage extends AParentPage {
+public class MainPage extends ParentPage {
 
     /**
      * fields
@@ -36,9 +36,15 @@ public class MainPage extends AParentPage {
         return popularProducts;
     }
 
-    @Step("Clicking at 'sign in' button to get new LoginPage...")
+    @Step("Clicking at 'sign in' button to get new LoginPage")
     public LoginPage clickSignIn() {
         return initHeaderFull().getLogUserInformation().getUnloggedUserInfo().clickSignInHeaderFull();
     }
+
+    @Step("Clicking at 'sign out' button")
+    public void signOut() {
+        initHeaderFull().getLogUserInformation().getLogUserInfo().clickSignOut();
+    }
+
 
 }
