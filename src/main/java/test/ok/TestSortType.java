@@ -19,7 +19,6 @@ public class TestSortType extends BasicTest {
     private SearchPage searchPage;
     private SortHelper sortHelper;
     //Act
-    //Assert
     @Description("Go to search page.")
     @Test(priority=1)
     public void Step1(){
@@ -72,4 +71,5 @@ public class TestSortType extends BasicTest {
         //Assert
         Assert.assertTrue(sortHelper.checkPriceSort(false));
     }
+    //Assert
 }
