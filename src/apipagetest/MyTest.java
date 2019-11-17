@@ -1,4 +1,4 @@
 package apipagetest;
 
-public class MyTets {
+public class MyTest {
 }

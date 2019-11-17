@@ -12,15 +12,12 @@ package main.java.test.testvolodya;
 
 // Additional packages
 import io.qameta.allure.*;
-import main.java.pages.user.*;
-import org.testng.annotations.*;
 import main.java.pages.addresses.*;
 import main.java.pages.user.Address;
 import main.java.pages.header.CertainLanguage;
 import main.java.helperinstrument.LogInHelper;
 import main.java.data.AddressRepository;
 
-import main.java.pages.addresses.*;
 import main.java.pages.user.UserPage;
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
@@ -43,7 +40,7 @@ public class EditAddress extends BasicTest {
         UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
-        CertainLanguage certainLanguage = new CertainLanguage().clickLanguage().clickEnglishInDropDown();
+        CertainLanguage certainLanguage = new CertainLanguage().openListOfLanguages().chooseEnglishInDropDown();
 
         // Click 'Addresses' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
@@ -70,18 +67,13 @@ public class EditAddress extends BasicTest {
         Address address = new AddressRepository().getAddress2();
         NewAddress newAddress2 = new NewAddress().fillInField(address);
 
-        // Click 'SAVE' button and return Addresses page
+        // Click 'SAVE' button
         Addresses addresses2 = new NewAddress().clickSaveButton();
 
         // Verification, that address was successfully updated
-        String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
+        String actualAlert = new Addresses().getAlert().getText();
         String expectedAlert = "Address successfully updated!";
         assertEquals ( actualAlert, expectedAlert );
-
-        // Verify, that new address alias, is as we expected
-        String actualAlias = new AddressesPage().getAddressesList().getAddressesContainer().get(0).getAlias().getText();
-        String expectedAlias = new AddressRepository().getAddress2().getAlias();
-        assertEquals ( actualAlias, expectedAlias );
     }
 
 }
