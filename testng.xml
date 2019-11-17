@@ -28,6 +28,11 @@
             <class name="main.java.test.maksym.TestCreateAccountWithoutBirthday"></class>
         </classes>
     </test>
+    <test verbose="3" name="API request to get details of User Maria Kvitka">
+        <classes>
+            <class name="main.java.test.maksym.APITestGetUserMariaDetails"></class>
+        </classes>
+    </test>
 
      <!--Oleg's tests-->
         <test verbose="3" name="testLoginForm">
