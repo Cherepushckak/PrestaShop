@@ -11,12 +11,10 @@
 package main.java.pages.addresses;
 
 // Additional packages
-
 import io.qameta.allure.Step;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
