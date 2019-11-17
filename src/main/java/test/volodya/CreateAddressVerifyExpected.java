@@ -18,13 +18,11 @@ import io.qameta.allure.SeverityLevel;
 import main.java.data.AddressRepository;
 import main.java.pages.addresses.Addresses;
 import main.java.pages.user.UserPage;
-<<<<<<< HEAD
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-=======
->>>>>>> db068f612be89ad75e39c9e30836ff5d64a487da
+
 import static org.testng.Assert.assertEquals;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page

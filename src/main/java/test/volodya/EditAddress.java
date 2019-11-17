@@ -11,7 +11,7 @@
 package main.java.test.volodya;
 
 // Additional packages
-<<<<<<< HEAD
+
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -23,14 +23,14 @@ import main.java.pages.addresses.AddressesPage;
 import main.java.pages.addresses.NewAddress;
 import main.java.pages.header.CertainLanguage;
 import main.java.pages.user.Address;
-=======
+
 import io.qameta.allure.*;
 import main.java.pages.addresses.*;
 import main.java.pages.user.Address;
 import main.java.pages.header.CertainLanguage;
 import main.java.helperinstrument.LogInHelper;
 import main.java.data.AddressRepository;
->>>>>>> db068f612be89ad75e39c9e30836ff5d64a487da
+
 import main.java.pages.user.UserPage;
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
