@@ -22,4 +22,8 @@ Report will be generated based on /target/allure-results dir and placed to targe
 Open index.html in any browser <br>
 
 **Environment variables**
+Using environment variables:
+1. Tap edit Run/Debug configurations menu
+2. Click 'edit configurations'
+3. On VM options bar tap all needed environments variable
 // TBD

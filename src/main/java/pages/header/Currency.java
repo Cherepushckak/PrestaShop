@@ -1,10 +1,11 @@
 
 package main.java.pages.header;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
-import main.java.tools.OurWebDriver;
 import io.qameta.allure.Step;
+import main.java.tools.OurWebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 /**
@@ -12,30 +13,6 @@ import io.qameta.allure.Step;
  */
 public class Currency {
 
-//    /**
-//     * webElement EUR is dropDown list
-//     */
-//    private WebElement EUR;
-//
-//    /**
-//     * webElement UAH is dropDown list
-//     */
-//    private WebElement UAH;
-//
-//    /**
-//     * webElement USD is dropDown list
-//     */
-//    private WebElement USD;
-//
-//    /**
-//     * webElement- pointer to the currency
-//     */
-//    private WebElement currencyElement;
-//
-//    /**
-//     * symbol of certain currency on the horizontal menu
-//     */
-//    private WebElement currencyItem;
 
     /**
      * locator for currencyElement webElement
@@ -85,12 +62,13 @@ public class Currency {
 
     /**
      * Method shows value of the currency item.
+     *
      * @return value of the item.
      */
 
     @Step("shows value of the currency item ")
-    public String showValueOfTheCurrencyItem(){
-
+    public String showValueOfTheCurrencyItem() {
+        OurWebDriver.getWait().until(ExpectedConditions.elementToBeClickable(certainItemLocator));
         return getCurrencyItem().getText();
     }
 
@@ -155,14 +133,14 @@ public class Currency {
     /**
      * method clicks on the UAH webElement in dropDown list
      */
-    public void clickUAH() {
+    private void clickUAH() {
         getUAH().click();
     }
 
     /**
      * method clicks on the USD webElement in dropDown list
      */
-    public void clickUSD() {
+    private void clickUSD() {
         getUSD().click();
     }
 
@@ -192,10 +170,12 @@ public class Currency {
 
     /**
      * Method uses openDropDownList and clickUAH  to choose UAH from the dropDown list.
+     *
      * @return new instance of Currency.
      */
+
     @Step("choose UAH in the list")
-    public Currency chooseUAH(){
+    public Currency chooseUAH() {
         openDropDownList();
         clickUAH();
         return new Currency();

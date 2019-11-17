@@ -1,10 +1,9 @@
 package main.java.pages.searchresult;
 
-import main.java.pages.common.AParentPage;
-import main.java.pages.header.HeaderFull;
+import main.java.pages.common.ParentPage;
 import main.java.pages.search.Products;
 
-public class SearchResultPage extends AParentPage {
+public class SearchResultPage extends ParentPage {
 
     private Products products;
     /**

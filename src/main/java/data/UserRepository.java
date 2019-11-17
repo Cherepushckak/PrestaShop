@@ -1,5 +1,7 @@
 package main.java.data;
 
+
+import io.qameta.allure.Step;
 import main.java.helperinstrument.EnviromentHelper;
 
 import java.util.Random;
@@ -71,10 +73,9 @@ public class UserRepository {
         return maria;
     }
 
-    public User getAdmin() {
-        return admin;
-    }
+    public User getAdmin() { return admin; }
 
+    @Step ("Taking User with unique email...")
     public User getUniqueUser() {
         return uniqueUser;
     }

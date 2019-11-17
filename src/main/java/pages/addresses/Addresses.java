@@ -11,11 +11,14 @@
 package main.java.pages.addresses;
 
 // Additional packages
-import java.util.ArrayList;
 
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebElement;
 import main.java.tools.OurWebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 // Addresses class
 public class Addresses {
@@ -39,7 +42,7 @@ public class Addresses {
     @Step("Get addresses collection")
     private void initAddressesContainer() {
         addressesContainer = new ArrayList<>();
-        for (WebElement current : OurWebDriver.driver.findElementsByCssSelector("div.col-sm-6:nth-child(2)")) {
+        for (WebElement current : OurWebDriver.driver.findElementsByCssSelector(".col-lg-4.col-md-6.col-sm-6")) {
             addressesContainer.add(new Address(current));
         }
     }
@@ -56,9 +59,7 @@ public class Addresses {
 
     // Getters
     @Step("Return addresses list")
-    public WebElement getAddressesList() {
-        return addressesList;
-    }
+    public WebElement getAddressesList() { return addressesList; }
 
     @Step("Return alert")
     public WebElement getAlert() {
@@ -73,7 +74,12 @@ public class Addresses {
 
     @Step("Click '+ Create new address' link")
     public NewAddress clickCreateNewAddressLink() {
+        createNewAddressLink();
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        OurWebDriver.getWait().until(ExpectedConditions.elementToBeClickable(createNewAddressLink));
         createNewAddressLink.click();
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
         return new NewAddress();
     }
 }

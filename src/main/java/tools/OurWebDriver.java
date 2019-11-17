@@ -1,5 +1,6 @@
 package main.java.tools;
 
+
 import main.java.helperinstrument.EnviromentHelper;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,7 +16,7 @@ public class OurWebDriver {
         if ((System.getProperty("os.name")).contains("Mac OS")) {
             System.setProperty("webdriver.chrome.driver", EnviromentHelper.getMacDriver () );
        } else {
-            System.setProperty("webdriver.chrome.driver", EnviromentHelper.getWinDriver ());
+                System.setProperty("webdriver.chrome.driver", EnviromentHelper.getWinDriver ());
         }
 
 
