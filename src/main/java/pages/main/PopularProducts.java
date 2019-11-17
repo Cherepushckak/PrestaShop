@@ -36,8 +36,6 @@ public class PopularProducts {
      * method for initialization of fields
      */
     private void initPopularProducts() {
-        allProducts = OurWebDriver.driver.findElement(By.cssSelector
-                (".all-product-link.float-xs-left.float-md-right.h4"));
         products = new ArrayList<Product>();
         for (WebElement current : OurWebDriver.driver.findElements(By.cssSelector(".thumbnail-container"))) {
             products.add(new Product(current));
@@ -52,6 +50,8 @@ public class PopularProducts {
     }
 
     public WebElement getAllProducts() {
+        allProducts = OurWebDriver.driver.findElement(By.cssSelector
+                (".all-product-link.float-xs-left.float-md-right.h4"));
         return allProducts;
     }
 
@@ -77,7 +77,7 @@ public class PopularProducts {
      * @return SearchPage
      */
     public SearchPage clickAllProducts(){
-        allProducts.click();
+        getAllProducts().click();
         return new SearchPage();
     }
 }
