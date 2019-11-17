@@ -40,4 +40,9 @@ public class SearchPage extends ParentPage {
         pagePath = new PagePath();
         return pagePath;
     }
+
+    public SortBy getSortBy(){
+        sortBy = new SortBy();
+        return sortBy;
+    }
 }
