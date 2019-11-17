@@ -8,7 +8,7 @@
  * Copyright: Made by Volodymyr Zyhmund
  */
 
-package main.java.test.testvolodya;
+package main.java.test.volodya;
 
 // Additional packages
 import io.qameta.allure.Description;
