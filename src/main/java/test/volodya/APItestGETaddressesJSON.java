@@ -31,7 +31,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @Listeners(BasicTest.class)
 
 // CreateAddressVerifyExpected class
-public class APItestGETaddressesJSON extends BasicTest {
+public class APItestGETaddressesJSON {
 
     // Severity and description for Allure report
     @Severity(SeverityLevel.MINOR)

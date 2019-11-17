@@ -28,7 +28,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @Listeners(BasicTest.class)
 
 // APItestGETStatusCode class
-public class APItestGETStatusCode extends BasicTest {
+public class APItestGETStatusCode {
 
     // Severity and description for Allure report
     @Severity(SeverityLevel.MINOR)

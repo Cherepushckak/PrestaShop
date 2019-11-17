@@ -154,6 +154,16 @@
             <class name="main.java.test.volodya.Create2Addresses"></class>
         </classes>
     </test>
+    <test name="Create two addresses entries">
+        <classes>
+            <class name="main.java.test.volodya.APItestGETStatusCode"></class>
+        </classes>
+    </test>
+    <test name="Create two addresses entries">
+        <classes>
+            <class name="main.java.test.volodya.APItestGETaddressesJSON"></class>
+        </classes>
+    </test>
 
     <!-- Oleg Kmet test -->
     <test name="Test search field">
