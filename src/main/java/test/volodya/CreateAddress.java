@@ -40,12 +40,14 @@ public class CreateAddress extends BasicTest {
     @Description("Verify that new address entry can be created")
     @Test
     public void createAddress() {
+        // Arrange
         // Log In to PrestaShop
         UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
         CertainLanguage certainLanguage = new CertainLanguage().openListOfLanguages().chooseEnglishInDropDown();
 
+        // Act
         // Click 'Add new address' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
@@ -60,7 +62,6 @@ public class CreateAddress extends BasicTest {
                 "addressComplement",
                 "zipPostalCode",
                 "city",
-                "country",
                 "phone");
 
         // Fill in all necessary fields from addresses repository.
@@ -70,6 +71,7 @@ public class CreateAddress extends BasicTest {
         // Click 'SAVE' button
         Addresses addresses1 = new NewAddress().clickSaveButton();
 
+        // Assert
         // Verify alert, that new address was successfully created
         String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
         String expectedAlert = "Address successfully added!";

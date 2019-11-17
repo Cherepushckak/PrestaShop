@@ -36,15 +36,17 @@ public class Create2Addresses extends BasicTest {
 
     // Severity and description for Allure report
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Verify that new address entry can be created")
+    @Description("Verify that two addresses can be created")
     @Test
     public void create2Addresses() {
+        // Arrange
         // Log In to PrestaShop
         UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
         CertainLanguage certainLanguage = new CertainLanguage().openListOfLanguages().chooseEnglishInDropDown();
 
+        // Act
         // Click 'Add new address' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
@@ -91,6 +93,7 @@ public class Create2Addresses extends BasicTest {
         // Click 'SAVE' button
         Addresses addresses2 = new NewAddress().clickSaveButton();
 
+        // Assert
         // Verify, that there are 2 addresses on the 'Your addresses' page
         int actualAddressesCount = new Addresses().getAddressesContainer().size();
         int expectedAddressesCount = 2;

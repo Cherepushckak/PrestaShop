@@ -11,45 +11,41 @@
 package main.java.test.volodya;
 
 // Additional packages
-
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import main.java.data.AddressRepository;
+import main.java.helperinstrument.LogInHelper;
 import main.java.pages.addresses.Addresses;
 import main.java.pages.user.UserPage;
-<<<<<<< HEAD
 import main.java.test.BasicTest;
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-=======
->>>>>>> db068f612be89ad75e39c9e30836ff5d64a487da
-import static org.testng.Assert.assertEquals;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
 @Listeners(BasicTest.class)
 
-// CreateAddressVerifyExpected class
-public class CreateAddressVerifyExpected extends BasicTest {
+// Create2Addresses class
+public class VerifyAddressData extends BasicTest {
 
     // Severity and description for Allure report
-    @Severity(SeverityLevel.MINOR)
-    @Description("Verify that new address entry match expected")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verify that address body data contains expected data")
     @Test
-    public void createAddressVerifyExpected() {
+    public void verifyAddressData() {
         // Arrange
         // Log In to PrestaShop
-        UserPage userPage = new main.java.helperinstrument.LogInHelper().getUserPage();
+        UserPage userPage = new LogInHelper().getUserPage();
 
         // Act
-        // Click 'Add new address' card-link
+        // Click 'Addresses' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
         // Assert
-        // Verify, that new address alias, is as we expected
-        String actualAlias = new Addresses().getAddressesContainer().get(0).getAlias().getText();
-        String expectedAlias = new AddressRepository().getAddress1().getAlias();
-        assertEquals ( actualAlias, expectedAlias );
+        // Verify, that there are 2 addresses on the 'Your addresses' page
+        String actualAllFieldsAddress = new Addresses().getAddressesContainer().get(0).getAllFieldsAddress().getText();
+        String expectedAllFieldsAddress = "Marta";
+        Assert.assertTrue(actualAllFieldsAddress.contains(expectedAllFieldsAddress));
     }
+
 }

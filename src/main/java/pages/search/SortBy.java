@@ -18,10 +18,13 @@ import java.util.ArrayList;
 public class SortBy {
 
     private ArrayList<WebElement> sortTypes = new ArrayList<WebElement>();
+    private WebElement expendButton;
+    private boolean isAriaExpanded = false;
     /**
      * Default constructor
      */
     public SortBy() {
+        getSortTypes();
     }
 
     /**
@@ -29,7 +32,13 @@ public class SortBy {
      * @param index
      */
     public void selectSort(int index){
-        sortTypes.get(index).click();
+        if (isAriaExpanded){
+            sortTypes.get(index).click();
+        }
+        else{
+            clickExpendButton();
+            sortTypes.get(index).click();
+        }
     }
 
     public ArrayList<WebElement> getSortTypes(){
@@ -37,4 +46,9 @@ public class SortBy {
         return sortTypes;
     }
 
+    public void clickExpendButton(){
+        expendButton = OurWebDriver.driver.findElementByXPath("//div[@class='row sort-by-row']//button[@data-toggle]");
+        isAriaExpanded = Boolean.getBoolean(expendButton.getAttribute("aria-expanded"));
+        expendButton.click();
+    }
 }
