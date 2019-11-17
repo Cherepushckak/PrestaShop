@@ -31,7 +31,7 @@ public class APItestGETaddressesJSON {
 
     // Severity and description for Allure report
     @Severity(SeverityLevel.MINOR)
-    @Description("Verify that new address entry match expected")
+    @Description("Verify that actual response contains expected sub-string")
     @Test
     public void apiTestGET() throws IOException {
         // Arrange
