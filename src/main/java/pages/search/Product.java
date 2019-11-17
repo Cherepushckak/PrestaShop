@@ -41,13 +41,13 @@ public class Product {
         this.productContainer = productContainer;
         name = productContainer.findElement(By.cssSelector(".h3.product-title>a"));
         System.out.println(name.getText());
+
         //get price
         WebElement priceElement = productContainer.findElement(By.cssSelector("span.price"));
         String priceString = priceElement.getText();
         priceString = priceString.substring(1,priceString.length()-1);
         price = Float.parseFloat(priceString);
         System.out.println(price);
-        ////div[@class='thumbnail-container']//span[@class='price']
     }
 
     /**

@@ -19,7 +19,6 @@ public class TestSortType extends BasicTest {
     private SearchPage searchPage;
     private SortHelper sortHelper;
     //Act
-    //Assert
     @Description("Go to search page.")
     @Test(priority=1)
     public void Step1(){
@@ -46,7 +45,6 @@ public class TestSortType extends BasicTest {
     @Description("Set sort type: Name, Z to A")
     @Test(priority=3)
     public void Step3(){
-        //Arrange
         //Act
         searchPage.getSortBy().selectSort(2);
         //Assert
@@ -56,7 +54,6 @@ public class TestSortType extends BasicTest {
     @Description("Set sort type: Price, low to hight")
     @Test(priority=4)
     public void Step4(){
-        //Arrange
         //Act
         searchPage.getSortBy().selectSort(3);
         //Assert
@@ -66,7 +63,6 @@ public class TestSortType extends BasicTest {
     @Description("Set sort type: Price, hight to low")
     @Test(priority=5)
     public void Step5(){
-        //Arrange
         //Act
         searchPage.getSortBy().selectSort(4);
         //Assert
