@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
 
-     <!--&lt;!&ndash;Maksym's tests&ndash;&gt;
+     <!--Maksym's tests-->
     <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
         <classes>
             <class name="main.java.test.maksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
@@ -29,7 +29,7 @@
         </classes>
     </test>
 
-     &lt;!&ndash;Oleg's tests&ndash;&gt;
+     <!--Oleg's tests-->
         <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.oleg.TestLoginForm"></class>
@@ -41,7 +41,7 @@
         </classes>
     </test>
 
-     &lt;!&ndash;Nata's tests&ndash;&gt;
+     <!--Nata's tests-->
     <test verbose="3" name="ChangeLanguageTest">
         <classes>
             <class name="main.java.test.nata.ChangeLanguageTest"></class>
@@ -58,7 +58,7 @@
         </classes>
     </test>
 
-    &lt;!&ndash; Nata's tests &ndash;&gt;
+    <!-- Nata's tests -->
     <test verbose="3" name="ChangeCurrencyAfterChangingLanguageTest">
         <classes>
             <class name="main.java.test.nata.ChangeCurrencyAfterChangingLanguageTest"></class>
@@ -86,7 +86,7 @@
         </classes>
     </test>
 
-     &lt;!&ndash;Artem's tests&ndash;&gt;
+     <!--Artem's tests-->
     <test verbose="3" name="TestCartSmoke">
         <classes>
             <class name="main.java.test.artem.TestCartSmoke"></class>
@@ -123,7 +123,7 @@
         </classes>
     </test>
 
-     &lt;!&ndash; Volodya's tests&ndash;&gt;
+     <!-- Volodya's tests-->
     <test name="Create new address">
         <classes>
             <class name="main.java.test.volodya.CreateAddress"></class>
@@ -148,10 +148,10 @@
         <classes>
             <class name="main.java.test.volodya.Create2Addresses"></class>
         </classes>
-    </test>-->
+    </test>
 
     <!-- Oleg Kmet test -->
-<!--    <test name="Test search field">
+    <test name="Test search field">
         <classes>
             <class name="main.java.test.ok.TestSearchField"></class>
         </classes>
@@ -160,19 +160,18 @@
         <classes>
             <class name="main.java.test.ok.TestCategoryNavigation"></class>
         </classes>
-    </test>-->
+    </test>
     <test name="Test sort type">
         <classes>
-            <class name="main.java.test.testok.TestSortType"></class>
+            <class name="main.java.test.ok.TestSortType"></class>
         </classes>
     </test>
 
 
-  <!--  <test name="Test negative data in login form">
+    <test name="Test negative data in login form">
         <classes>
             <class name="main.java.test.oleg.TestNegativeLoginForm"></class>
         </classes>
     </test>
--->
 
 </suite>
