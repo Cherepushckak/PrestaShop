@@ -1,12 +1,11 @@
 package main.java.pages.product;
 
-import io.qameta.allure.Step;
-import main.java.pages.common.AParentPage;
+import main.java.pages.common.ParentPage;
 
 /**
  *class that describes product page
  */
-public class ProductPage extends AParentPage {
+public class ProductPage extends ParentPage {
 
     /**
      * fields

@@ -11,7 +11,7 @@
 package main.java.pages.user;
 
 // Additional packages
-import main.java.pages.common.AParentPage;
+import main.java.pages.common.ParentPage;
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 
@@ -19,7 +19,7 @@ import org.testng.annotations.Listeners;
 @Listeners(BasicTest.class)
 
 // UserPage class
-public class UserPage extends AParentPage {
+public class UserPage extends ParentPage {
 
 	// Default constructor
 	public UserPage() {
