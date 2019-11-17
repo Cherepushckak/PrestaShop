@@ -129,9 +129,14 @@
             <class name="main.java.test.volodya.CreateAddress"></class>
         </classes>
     </test>
-    <test name="Verify that new address match expected">
+    <test name="Verify that new address alias match expected">
         <classes>
             <class name="main.java.test.volodya.CreateAddressVerifyExpected"></class>
+        </classes>
+    </test>
+    <test name="Verify that address body match expected">
+        <classes>
+            <class name="main.java.test.volodya.VerifyAddressData"></class>
         </classes>
     </test>
     <test name="Edit address entry">
