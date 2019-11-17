@@ -9,11 +9,16 @@ public class Header {
 
     /**
      * Default constructor
+     * creats new LogCont.
      */
     public Header() {
         logCont = new LogCont();
     }
 
+    /**
+     * getter to LogCont
+     * @return logCont
+     */
     public LogCont getLogCont() {
         return logCont;
     }

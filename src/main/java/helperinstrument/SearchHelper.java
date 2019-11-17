@@ -1,8 +1,8 @@
 package main.java.helperinstrument;
 
-import main.java.pages.searchresult.SearchResultPage;
 import main.java.data.SearchElements;
 import main.java.pages.header.HeaderFull;
+import main.java.pages.searchresult.SearchResultPage;
 
 public class SearchHelper {
     private SearchResultPage searchResultPage;

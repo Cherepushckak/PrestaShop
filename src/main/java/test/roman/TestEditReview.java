@@ -4,14 +4,14 @@ package main.java.test.roman;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-
+import main.java.helperinstrument.LogInHelper;
+import main.java.helperinstrument.ProductPageHelper;
 import main.java.pages.header.LogCont;
 import main.java.pages.product.ProductTabs;
+import main.java.test.BasicTest;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import main.java.helperinstrument.*;
-import main.java.test.BasicTest;
 
 @Listeners(BasicTest.class)
 
