@@ -38,7 +38,7 @@ public class CreateAddress extends BasicTest {
     @Description("Verify that new address entry can be created")
     @Test
     public void createAddress() {
-		// Arrange
+        // Arrange
         // Log In to PrestaShop
         UserPage userPage = new LogInHelper().getUserPage();
 
