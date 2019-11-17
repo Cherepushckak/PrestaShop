@@ -178,7 +178,7 @@
     </test>
     <test name="Test sort type">
         <classes>
-            <class name="main.java.test.testok.TestSortType"></class>
+            <class name="main.java.test.ok.TestSortType"></class>
         </classes>
     </test>
 

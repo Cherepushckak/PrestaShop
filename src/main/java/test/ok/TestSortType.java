@@ -1,4 +1,4 @@
-package main.java.test.testok;
+package main.java.test.ok;
 
 import io.qameta.allure.Description;
 import main.java.helperInstrument.SortHelper;
