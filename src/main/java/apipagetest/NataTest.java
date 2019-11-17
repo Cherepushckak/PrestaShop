@@ -1,21 +1,14 @@
 package main.java.apipagetest;
 
-import io.restassured.RestAssured.*;
-import io.restassured.matcher.RestAssuredMatchers.*;
+
 import main.java.helperinstrument.EnviromentHelper;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.Matchers.*;
+
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.List;
-
 import static io.restassured.RestAssured.given;
 
-public class MyTets {
+public class NataTest {
 
     //    given()
 //                .auth()

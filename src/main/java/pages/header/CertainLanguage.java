@@ -12,30 +12,30 @@ import io.qameta.allure.Step;
  */
 public class CertainLanguage {
 
-    /**
-     * element on the header
-     */
-    private WebElement language;
-
-    /**
-     * element on the header
-     */
-    private WebElement english;
-
-    /**
-     * element on the header
-     */
-    private WebElement ukrainian;
-
-    /**
-     * element on the header
-     */
-    private WebElement arrow;
-
-    /**
-     * element on the header
-     */
-    private WebElement dropDownListLanguage;
+//    /**
+//     * element on the header
+//     */
+//    private WebElement language;
+//
+//    /**
+//     * element on the header
+//     */
+//    private WebElement english;
+//
+//    /**
+//     * element on the header
+//     */
+//    private WebElement ukrainian;
+//
+//    /**
+//     * element on the header
+//     */
+//    private WebElement arrow;
+//
+//    /**
+//     * element on the header
+//     */
+//    private WebElement dropDownListLanguage;
 
     /**
      * locator that contains address of language field in DOM
@@ -160,7 +160,7 @@ public class CertainLanguage {
         return new HeaderFull();
     }
 
-    @Step("showContentOfTheLanguageElement")
+    @Step("shows content of the language element")
     public String showContentOfTheLanguageElement(){
         return getLanguage().getText();
     }

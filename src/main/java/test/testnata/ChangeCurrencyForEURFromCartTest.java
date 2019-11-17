@@ -31,10 +31,8 @@ public class ChangeCurrencyForEURFromCartTest extends BasicTest {
                 .getCartPage()
                 .initHeaderFull()
                 .getCurrency()
-                .openDropDownList()
                 .chooseEUR()
-                .getCurrencyItem()
-                .getText()
+                .showValueOfTheCurrencyItem()
                 .contains("€");
 
         //Assert

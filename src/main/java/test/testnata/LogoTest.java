@@ -1,4 +1,6 @@
-package main.java.test.testnata;;
+package main.java.test.testnata;
+
+;
 
 import main.java.pages.header.HeaderFull;
 
@@ -10,11 +12,10 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
 
-
 public class LogoTest extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Verifies if logo button returns HomePage, where popular product list id present")
+    @Description("Verifies if logo button returns HomePage, where popular product list is present")
     @Test
 
     public void clickLogoTest() {
@@ -22,15 +23,15 @@ public class LogoTest extends BasicTest {
         //Arrange
         int expected = 8;
 
-        int actual  = new HeaderFull()
-        .getLogUserInformation()
-        .getUnloggedUserInfo()
-        .clickSignInHeaderFull()
+        int actual = new HeaderFull()
+                .getLogUserInformation()
+                .getUnloggedUserInfo()
+                .clickSignInHeaderFull()
                 .initHeader()
-        .getLogCont()
-        .goToMainPage().getPopularProducts().getProducts().size();
+                .getLogCont()
+                .goToMainPage().getPopularProducts().getProducts().size();
 
         Assert.assertEquals(actual, expected);
-        System.out.println("list of products is present");
+        System.out.println("list of products is present. There are " + actual + " popular products on the main page. ");
     }
 }
