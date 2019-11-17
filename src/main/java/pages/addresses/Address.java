@@ -50,7 +50,7 @@ public class Address {
 
     // Getters
     public WebElement getAlias() { return alias; }
-	public WebElement getAllFieldsAddress() { return allFieldsAddress; }
+    public WebElement getAllFieldsAddress() { return allFieldsAddress; }
 
     // Click 'Update' button
     @Step("Click 'Update' button")

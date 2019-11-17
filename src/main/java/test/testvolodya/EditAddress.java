@@ -17,12 +17,10 @@ import main.java.pages.user.Address;
 import main.java.pages.header.CertainLanguage;
 import main.java.helperinstrument.LogInHelper;
 import main.java.data.AddressRepository;
-
 import main.java.pages.user.UserPage;
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
