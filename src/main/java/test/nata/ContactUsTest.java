@@ -1,5 +1,8 @@
 package main.java.test.nata;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import main.java.pages.header.LogCont;
 import main.java.test.BasicTest;
 import main.java.tools.OurWebDriver;
@@ -9,9 +12,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 
 @Listeners(BasicTest.class)
 
@@ -27,7 +27,7 @@ public class ContactUsTest extends BasicTest {
     }
 
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Verifies opening contctUs form")
+    @Description("Verifies opening contactUs form")
     @Test
 
     public void clickContactUsTest() {

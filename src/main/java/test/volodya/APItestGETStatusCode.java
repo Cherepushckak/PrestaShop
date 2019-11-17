@@ -32,7 +32,7 @@ public class APItestGETStatusCode {
 
     // Severity and description for Allure report
     @Severity(SeverityLevel.MINOR)
-    @Description("Verify that new address entry match expected")
+    @Description("Verify status code of GET request for URL \"http://3.124.147.74/api/addresses\"")
     @Test
     public void apiTestGET() throws IOException {
         // Arrange
@@ -61,7 +61,7 @@ public class APItestGETStatusCode {
 
         // Assert
         // Check status code
-        System.out.println("\tStatus code of GET request for URL \"http://3.124.147.74/api/addresses\"  is: " + response.code());
+        System.out.println("\tStatus code of GET request for URL \"http://3.124.147.74/api/addresses\" is: " + response.code());
         assertThat(response.code(), equalTo(200));
     }
 }

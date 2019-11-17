@@ -10856,13 +10856,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 1006,
 									"top": 497,
-=======
-									"left": 1094,
-									"top": 510,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -10882,13 +10877,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 1014,
 									"top": 484,
-=======
-									"left": 1108,
-									"top": 505,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -10908,13 +10898,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 989,
 									"top": 522,
-=======
-									"left": 1065,
-									"top": 519,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -10934,13 +10919,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 963,
 									"top": 468,
-=======
-									"left": 1090,
-									"top": 498,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -10960,13 +10940,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 973,
 									"top": 459,
-=======
-									"left": 1103,
-									"top": 496,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -10986,13 +10961,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 945,
 									"top": 489,
-=======
-									"left": 1062,
-									"top": 502,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -11012,13 +10982,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 1049,
 									"top": 526,
-=======
-									"left": 1098,
-									"top": 523,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -11037,13 +11002,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 1055,
 									"top": 513,
-=======
-									"left": 1110,
-									"top": 517,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -11062,13 +11022,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 1038,
 									"top": 551,
-=======
-									"left": 1073,
-									"top": 536,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -11117,11 +11072,7 @@
 								"$ref": "AAAAAAFuNoC8NPy4S40="
 							},
 							"lineStyle": 1,
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 							"points": "934:473;1063:559",
-=======
-							"points": "1068:484;1092:559",
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFuN1VyhgZeUG8="
@@ -11178,13 +11129,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 973,
 									"top": 456,
-=======
-									"left": 1006,
-									"top": 497,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -11204,13 +11150,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 972,
 									"top": 471,
-=======
-									"left": 1014,
-									"top": 484,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -11230,13 +11171,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 974,
 									"top": 427,
-=======
-									"left": 989,
-									"top": 522,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -11287,18 +11223,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-<<<<<<< HEAD
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": 937,
 									"top": 629,
-=======
-									"left": 963,
-									"top": 468,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
-=======
-									"left": 1080,
-									"top": 636,
->>>>>>> 65ee89be081872134b3e076fc2c32a7fcaca8ea4
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -14853,13 +14779,8 @@ j
 									"visible": false,
 									"fillColor": "#008400",
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": -464,
 									"top": -272,
-=======
-									"left": 544,
-									"top": 24,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"width": 10,
 									"height": 10
 								},
@@ -14875,13 +14796,8 @@ j
 									"visible": false,
 									"fillColor": "#008400",
 									"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"left": -464,
 									"top": -272,
-=======
-									"left": 544,
-									"top": 24,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									"width": 10,
 									"height": 10
 								}
@@ -14892,17 +14808,10 @@ j
 							"fillColor": "#008400",
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 							"left": 1120,
 							"top": 320,
 							"width": 67.078125,
 							"height": 48,
-=======
-							"left": 896,
-							"top": 688,
-							"width": 76.447265625,
-							"height": 45,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 							"nameCompartment": {
 								"$ref": "AAAAAAFuMejm7+NAAlI="
 							},
@@ -14921,68 +14830,39 @@ j
 						},
 						{
 							"_type": "UMLClassView",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 							"_id": "AAAAAAFuMeGQpMfqjnw=",
-=======
-							"_id": "AAAAAAFuMfj1ifOoqKM=",
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 							"_parent": {
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"model": {
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 								"$ref": "AAAAAAFuMeGQpMfoat4="
-=======
-								"$ref": "AAAAAAFuMfj1ifOmMmw="
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 							},
 							"subViews": [
 								{
 									"_type": "UMLNameCompartmentView",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 									"_id": "AAAAAAFuMeGQpcfrVyg=",
 									"_parent": {
 										"$ref": "AAAAAAFuMeGQpMfqjnw="
 									},
 									"model": {
 										"$ref": "AAAAAAFuMeGQpMfoat4="
-=======
-									"_id": "AAAAAAFuMfj1ivOpiT8=",
-									"_parent": {
-										"$ref": "AAAAAAFuMfj1ifOoqKM="
-									},
-									"model": {
-										"$ref": "AAAAAAFuMfj1ifOmMmw="
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 									},
 									"subViews": [
 										{
 											"_type": "LabelView",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 											"_id": "AAAAAAFuMeGQpcfslls=",
 											"_parent": {
 												"$ref": "AAAAAAFuMeGQpcfrVyg="
-=======
-											"_id": "AAAAAAFuMfj1ivOqzgA=",
-											"_parent": {
-												"$ref": "AAAAAAFuMfj1ivOpiT8="
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 											},
 											"visible": false,
 											"fillColor": "#ffff49",
 											"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 											"left": 736,
 											"top": -584,
-=======
-											"left": 1032,
-											"top": 96,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 											"height": 13
 										},
 										{
 											"_type": "LabelView",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 											"_id": "AAAAAAFuMeGQpcftTL8=",
 											"_parent": {
 												"$ref": "AAAAAAFuMeGQpcfrVyg="
@@ -15000,52 +14880,22 @@ j
 											"_id": "AAAAAAFuMeGQpcfuYuc=",
 											"_parent": {
 												"$ref": "AAAAAAFuMeGQpcfrVyg="
-=======
-											"_id": "AAAAAAFuMfj1ivOrRIE=",
-											"_parent": {
-												"$ref": "AAAAAAFuMfj1ivOpiT8="
-											},
-											"fillColor": "#ffff49",
-											"font": "Arial;13;1",
-											"left": 781,
-											"top": 783,
-											"width": 84.51904296875,
-											"height": 13,
-											"text": "RegisterForm"
-										},
-										{
-											"_type": "LabelView",
-											"_id": "AAAAAAFuMfj1ivOsFDc=",
-											"_parent": {
-												"$ref": "AAAAAAFuMfj1ivOpiT8="
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 											},
 											"visible": false,
 											"fillColor": "#ffff49",
 											"font": "Arial;13;0",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
 											"left": 736,
 											"top": -584,
 											"width": 80.9072265625,
-=======
-											"left": 1032,
-											"top": 96,
-											"width": 86.67724609375,
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 											"height": 13,
 											"text": "(from Register)"
 										},
 										{
 											"_type": "LabelView",
-<<<<<<< HEAD:StarUML/Architecture v.1.1.mdj
+
 											"_id": "AAAAAAFuMeGQpcfvT9M=",
 											"_parent": {
 												"$ref": "AAAAAAFuMeGQpcfrVyg="
-=======
-											"_id": "AAAAAAFuMfj1ivOtEnc=",
-											"_parent": {
-												"$ref": "AAAAAAFuMfj1ivOpiT8="
->>>>>>> e4dcf68a8f86f9de5324076f264b87cced4dd213:Draft/StarUML/Architecture v.1.1.mdj
 											},
 											"visible": false,
 											"fillColor": "#ffff49",

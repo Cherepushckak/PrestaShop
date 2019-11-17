@@ -1,6 +1,8 @@
-package main.java.helperInstrument;
+package main.java.helperinstrument;
+
 
 public class EnviromentHelper {
+
 	private static String prestaUrl = System.getProperty ( "prestaUrl" );
 	private static String macDriver = System.getProperty ( "macDriver" );
 	private static String winDriver = System.getProperty ( "winDriver" );
@@ -50,4 +52,5 @@ public class EnviromentHelper {
 	public static String getUniqueGmail () {
 		return uniqueGmail;
 	}
+
 }

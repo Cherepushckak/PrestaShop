@@ -1,9 +1,12 @@
 package main.java.pages.product;
 
 import main.java.pages.common.ParentPage;
+import main.java.tools.OurWebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 /**
- *class that describes product page
+ * class that describes product page
  */
 public class ProductPage extends ParentPage {
 
@@ -11,6 +14,8 @@ public class ProductPage extends ParentPage {
      * fields
      */
     private ProductInfo productInfo;
+
+    private By priceLocator = By.xpath("//span[@itemprop='price']");
 
     /**
      * Default constructor
@@ -41,4 +46,19 @@ public class ProductPage extends ParentPage {
     }
     //Added by Roman Shamakhin
 
+    /**
+     * getter to price element
+     * @return price element
+     */
+    public WebElement getPrice(){
+        return OurWebDriver.driver.findElement(priceLocator);
+}
+
+    /**
+     * method shows price of the product
+     * @return string value.
+     */
+    public String showPrice(){
+        return getPrice().getText();
+    }
 }

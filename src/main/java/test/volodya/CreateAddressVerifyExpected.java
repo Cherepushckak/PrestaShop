@@ -11,12 +11,17 @@
 package main.java.test.volodya;
 
 // Additional packages
-import io.qameta.allure.*;
-import main.java.test.BasicTest;
-import org.testng.annotations.*;
-import main.java.pages.addresses.*;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import main.java.data.AddressRepository;
+import main.java.pages.addresses.Addresses;
 import main.java.pages.user.UserPage;
+import main.java.test.BasicTest;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertEquals;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
