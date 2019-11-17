@@ -12,7 +12,6 @@
         <testng.version>7.0.0</testng.version>
         <maven.surefile.plugin.version>2.22.2</maven.surefile.plugin.version>
     </properties>
-
     <build>
         <sourceDirectory>src</sourceDirectory>
         <plugins>
@@ -29,20 +28,16 @@
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
                 <version>2.8</version>
-                <configuration>
-                    <properties>
-                        <allure.link.issue.pattern>http://ssu-jira.softserveinc.com/browse/%s</allure.link.issue.pattern>
-                    </properties>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefile.plugin.version}</version>
                 <configuration>
-
                     <systemPropertyVariables>
-                    <allure.results.directory>target/allure-results</allure.results.directory>
+                        <allure.results.directory>target/allure-results</allure.results.directory>
+                        <allure.link.issue.pattern>http://ssu-jira.softserveinc.com/browse/{}
+                        </allure.link.issue.pattern>
                     </systemPropertyVariables>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
@@ -59,7 +54,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
         </plugins>
     </build>
     <dependencies>
@@ -70,18 +64,18 @@
             <version>${selenium.version}</version>
         </dependency>
         <!--  dependency for testing api (should be before testNG), xml for easy parsing -->
-<!--        <dependency>-->
-<!--            <groupId>io.rest-assured</groupId>-->
-<!--            <artifactId>rest-assured</artifactId>-->
-<!--            <version>3.0.6</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>io.rest-assured</groupId>-->
+        <!--            <artifactId>rest-assured</artifactId>-->
+        <!--            <version>3.0.6</version>-->
+        <!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-<!--        <dependency>-->
-<!--            <groupId>io.rest-assured</groupId>-->
-<!--            <artifactId>rest-assured</artifactId>-->
-<!--            <version>3.0.0</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>io.rest-assured</groupId>-->
+        <!--            <artifactId>rest-assured</artifactId>-->
+        <!--            <version>3.0.0</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>io.rest-assured</groupId>
