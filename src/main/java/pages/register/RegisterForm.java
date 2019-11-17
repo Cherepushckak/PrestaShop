@@ -1,8 +1,5 @@
 package main.java.pages.register;
 
-import main.java.data.Title;
-import main.java.data.User;
-import main.java.pages.main.MainPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -49,12 +46,9 @@ public class RegisterForm {
     }
 
 
-    // Setters
 
-    public void clickLogInInstead() {
-        logInInstead.click();
-    }
 
+    // Setters and getters
     public void setTitleMr() {
         titleMr.click();
     }
@@ -111,9 +105,6 @@ public class RegisterForm {
         return email.getAttribute("value");
     }
 
-
-    // Getters
-
     public void setEmailValue(String text) {
         email.sendKeys(text);
     }
@@ -168,7 +159,6 @@ public class RegisterForm {
 
 
     // Cleaners
-
     public void clearFirstName() {
         firstName.clear();
     }
@@ -192,36 +182,8 @@ public class RegisterForm {
         buttonSave.click();
     }
 
-    // Business logic
-
-    public MainPage createAccountFor(User user) throws InterruptedException {
-
-        if (user.getTitle() == Title.MR) {
-            setTitleMr();
-        }
-        if (user.getTitle() == Title.MS) {
-            setTitleMrs();
-        }
-
-        setFirstNameValue(user.getFirstName());
-        setLastNameValue(user.getLastName());
-        setEmailValue(user.getEmail());
-        setPasswordValue(user.getPassword());
-        setBirthdayValue(user.getBirthday());
-
-        if (user.getCheckboxReceiveOffers() == Boolean.TRUE) {
-            selectCheckboxReceiveOffers();
-        }
-        if (user.getCheckboxSignUpNewsletter() == Boolean.TRUE) {
-            selectCheckboxSignUpNewsletter();
-        }
-
-        selectCheckboxIAgree();
-        clickSaveButton();
-
-        MainPage mainPage = new MainPage();
-
-        return mainPage;
+    public void clickLogInInstead() {
+        logInInstead.click();
     }
 
 }

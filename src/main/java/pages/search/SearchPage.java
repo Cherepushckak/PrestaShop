@@ -1,14 +1,13 @@
 package main.java.pages.search;
 
-import main.java.pages.common.AParentPage;
+import main.java.pages.common.ParentPage;
 import main.java.pages.common.PagePath;
-import main.java.pages.header.HeaderFull;
 
 
 /**
  * 
  */
-public class SearchPage extends AParentPage {
+public class SearchPage extends ParentPage {
     //elements
     //private WebElement description;
     //instants
