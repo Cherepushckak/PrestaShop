@@ -19,6 +19,7 @@ import main.java.pages.addresses.*;
 import main.java.pages.header.CertainLanguage;
 import main.java.pages.user.UserPage;
 import main.java.test.BasicTest;
+import main.java.test.test;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;

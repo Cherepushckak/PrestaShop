@@ -17,6 +17,7 @@ import org.testng.annotations.*;
 import main.java.pages.addresses.*;
 import main.java.data.AddressRepository;
 import main.java.pages.user.UserPage;
+import main.java.test.BasicTest;
 import static org.testng.Assert.assertEquals;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
