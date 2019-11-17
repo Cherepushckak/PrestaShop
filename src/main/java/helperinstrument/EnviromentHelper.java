@@ -1,4 +1,4 @@
-package main.java.helperInstrument;
+package main.java.helperinstrument;
 
 public class EnviromentHelper {
 	private static String prestaUrl = System.getProperty ( "prestaUrl" );
@@ -10,6 +10,7 @@ public class EnviromentHelper {
 	private static String adminEmail = System.getProperty ( "adminEmail" );
 	private static String uniqueTest = System.getProperty ( "uniqueTest" );
 	private static String uniqueGmail = System.getProperty ( "uniqueGmail" );
+	private static String prestaKey = System.getProperty("prestaKey");
 
 	public EnviromentHelper() {
 
@@ -49,5 +50,9 @@ public class EnviromentHelper {
 
 	public static String getUniqueGmail () {
 		return uniqueGmail;
+	}
+
+	public static String getPrestaKey() {
+		return prestaKey;
 	}
 }

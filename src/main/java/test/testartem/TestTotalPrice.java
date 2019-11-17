@@ -13,8 +13,8 @@ import static org.testng.Assert.*;
 
 public class TestTotalPrice extends BasicTest {
 
-    @Severity(SeverityLevel.NORMAL)
-    @Description("Verification of total price and amount of quantity and item price not logged user")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Verification of total price and product of quantity and item price not logged user")
     @Test
     public void testPriceNonLogged () {
         //Arrange

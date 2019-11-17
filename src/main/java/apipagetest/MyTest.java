@@ -2,7 +2,7 @@ package main.java.apipagetest;
 
 import io.restassured.RestAssured.*;
 import io.restassured.matcher.RestAssuredMatchers.*;
-import main.java.helperInstrument.EnviromentHelper;
+import main.java.helperinstrument.EnviromentHelper;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;

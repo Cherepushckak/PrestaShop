@@ -16,7 +16,7 @@ import static org.testng.Assert.assertEquals;
 
 public class TestTotalPriceLogged extends BasicTest {
 
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Description("Verification of total price and amount of quantity and item price logged user")
     @Test
     public void testPriceLogged () {

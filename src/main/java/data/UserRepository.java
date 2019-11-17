@@ -1,7 +1,7 @@
 package main.java.data;
 
 
-import main.java.helperInstrument.EnviromentHelper;
+import main.java.helperinstrument.EnviromentHelper;
 
 import java.util.Random;
 

@@ -122,6 +122,11 @@
             <class name="main.java.test.testartem.TestBoundaryValue"></class>
         </classes>
     </test>
+    <test verbose="3" name="APItest">
+        <classes>
+            <class name="main.java.test.testartem.ArtemAPITest"></class>
+        </classes>
+    </test>
 
     <!-- Volodya's tests -->
     <test name="Create new address">

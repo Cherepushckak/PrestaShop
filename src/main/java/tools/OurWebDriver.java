@@ -1,7 +1,7 @@
 package main.java.tools;
 
 
-import main.java.helperInstrument.EnviromentHelper;
+import main.java.helperinstrument.EnviromentHelper;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
