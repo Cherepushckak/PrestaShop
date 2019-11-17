@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class TestSortType extends BasicTest {
     //Arrange
-    private MainPage mainPage;
+    private MainPage mainPage = new MainPage();
     private SearchPage searchPage;
     private SortHelper sortHelper;
     //Act
@@ -24,7 +24,6 @@ public class TestSortType extends BasicTest {
     @Test(priority=1)
     public void Step1(){
         //Arrange
-        mainPage = new MainPage();
         //Act
         searchPage = mainPage.getPopularProducts().clickAllProducts();
         //Assert
