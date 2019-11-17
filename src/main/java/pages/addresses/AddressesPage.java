@@ -12,23 +12,28 @@ package main.java.pages.addresses;
 
 // Additional packages
 
-import io.qameta.allure.Step;
-import main.java.pages.common.AParentPage;
+import main.java.pages.common.ParentPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.WebElement;
 
-// AddressesPage class, which extends APageParent class
-public class AddressesPage extends AParentPage {
+/**
+ * AddressesPage class, which extends APageParent class
+ */
+public class AddressesPage extends ParentPage {
 
     // Fields
     private WebElement homeTopLink;
     private WebElement yourAccountLink;
+//    private WebElement addresses;
     private WebElement actualPageName;
     private WebElement backToYourAccountLink;
     private WebElement homeLowerLink;
+    private WebElement createNewAddressLink;
     private Addresses addressesList;
 
-    // Default constructor
+    /**
+     * Default constructor
+     */
     public AddressesPage() {
         homeTopLink();
         yourAccountLink();
@@ -36,60 +41,86 @@ public class AddressesPage extends AParentPage {
         initAddressesList();
         backToYourAccountLink();
         homeLowerLink();
+        //createNewAddressLink();
     }
 
+    // Array list of all top link divs: "//section[@id='wrapper']/div/nav/ol"
+    // Array list of all top link names: "//section[@id='wrapper']/div/nav/ol/li/a/span"
+    // Array list of all top links: "//section[@id='wrapper']/div/nav/ol/li/a"
+
+    // Initialise 'Home' top link
     private void homeTopLink() {
         homeTopLink = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[1]/a/span");
     }
 
+    // Initialise 'Your account' link
     private void yourAccountLink() {
         yourAccountLink = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[2]/a/span");
     }
 
+//    // Initialise 'Addresses' link
+//    private void addresses() {
+//        addresses = OurWebDriver.driver.findElementByXPath("//section[@id='wrapper']/div/nav/ol/li[3]/a/span");
+//    }
+
+    // Initialise actual page name
     private void actualPageName() {
         actualPageName = OurWebDriver.driver.findElementByXPath("//section[@id='main']/header/h1");
     }
 
+    // Initialise class addresses
     private void initAddressesList() {
         addressesList = new Addresses();
     }
 
+    // Array list of all footer link divs: "//section[@id='main']/footer"
+    // Array list of all footer link names: "//section[@id='main']/footer/a/span"
+    // Array list of all footer links: "//section[@id='main']/footer/a"
+
+    // Initialise '+ Create new address' link
+    private void createNewAddressLink() {
+        createNewAddressLink = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div[*]/a");
+        // "//text()[contains(.,'Create new address')]"
+    }
+
+    // Initialise '< Back to your account' link
     private void backToYourAccountLink() {
         backToYourAccountLink = OurWebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[1]");
     }
 
+    // Initialise 'Home' lower link
     private void homeLowerLink() {
         homeLowerLink = OurWebDriver.driver.findElementByXPath("//section[@id='main']/footer/a[2]");
     }
 
     // Getters
-    @Step("Return 'Home' top link")
     public WebElement getHomeTopLink() { return homeTopLink; }
-
-    @Step("Return 'Your account' top link")
     public WebElement getYourAccountLink() { return yourAccountLink; }
 
-    @Step("Return list of addresses")
-    public Addresses getAddressesList() { return addressesList; }
+    public Addresses getAddressesList() {
+        return addressesList;
+    }
 
-    @Step("Return actual page name")
+    //    public WebElement getAddresses() { return addresses; }
     public WebElement getActualPageName() { return actualPageName; }
-
-    @Step("Return '< Back to your account' link")
     public WebElement getBackToYourAccountLink() { return backToYourAccountLink; }
-
-    @Step("Return '^ Home' link")
     public WebElement getHomeLowerLink() { return homeLowerLink; }
 
-    @Step("Click 'Home' top link")
+    // Click 'Home' link
     public void clickHomeTop() { homeTopLink.click(); }
 
-    @Step("Click 'Your account' link")
+    // Click 'Your account' link
     public void clickYourAccount() { yourAccountLink.click(); }
 
-    @Step("Click '< Back to your account' link")
+//    // Click 'Addresses' link
+//    public void clickAddressess() { addresses.click(); }
+
+    // Click '+ Create new address' link
+    public void clickCreateNewAddressLink() { createNewAddressLink.click(); }
+
+    // Click '< Back to your account' link
     public void clickBackToYourAccount() { backToYourAccountLink.click(); }
 
-    @Step("Click '^ Home' lower link")
+    // Click 'Home Lower' link
     public void clickHome() { homeLowerLink.click(); }
 }
