@@ -58,7 +58,6 @@ public class CreateAddress extends BasicTest {
                 "addressComplement",
                 "zipPostalCode",
                 "city",
-                "country",
                 "phone");
 
         // Fill in all necessary fields from addresses repository.

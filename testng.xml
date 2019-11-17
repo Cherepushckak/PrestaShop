@@ -129,9 +129,14 @@
             <class name="main.java.test.volodya.CreateAddress"></class>
         </classes>
     </test>
-    <test name="Verify that new address match expected">
+    <test name="Verify that new address alias match expected">
         <classes>
             <class name="main.java.test.volodya.CreateAddressVerifyExpected"></class>
+        </classes>
+    </test>
+    <test name="Verify that address body match expected">
+        <classes>
+            <class name="main.java.test.volodya.VerifyAddressData"></class>
         </classes>
     </test>
     <test name="Edit address entry">
@@ -147,6 +152,16 @@
     <test name="Create two addresses entries">
         <classes>
             <class name="main.java.test.volodya.Create2Addresses"></class>
+        </classes>
+    </test>
+    <test name="Verify API Addresses URL status code">
+        <classes>
+            <class name="main.java.test.volodya.APItestGETStatusCode"></class>
+        </classes>
+    </test>
+    <test name="Verify API Addresses body contain expected sub-string">
+        <classes>
+            <class name="main.java.test.volodya.APItestGETaddressesJSON"></class>
         </classes>
     </test>
 

@@ -34,7 +34,7 @@ public class Create2Addresses extends BasicTest {
 
     // Severity and description for Allure report
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Verify that new address entry can be created")
+    @Description("Verify that two addresses can be created")
     @Test
     public void create2Addresses() {
         // Log In to PrestaShop
