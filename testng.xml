@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
-    
-     <!--Maksym's tests-->
+
+     <!--&lt;!&ndash;Maksym's tests&ndash;&gt;
     <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
         <classes>
             <class name="main.java.test.testMaksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
@@ -29,7 +29,7 @@
         </classes>
     </test>
 
-     <!--Oleg's tests-->
+     &lt;!&ndash;Oleg's tests&ndash;&gt;
         <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.olegstests.TestLoginForm"></class>
@@ -41,7 +41,7 @@
         </classes>
     </test>
 
-     <!--Nata's tests-->
+     &lt;!&ndash;Nata's tests&ndash;&gt;
     <test verbose="3" name="ChangeLanguageTest">
         <classes>
             <class name="main.java.test.testnata.ChangeLanguageTest"></class>
@@ -58,7 +58,7 @@
         </classes>
     </test>
 
-    <!-- Nata's tests -->
+    &lt;!&ndash; Nata's tests &ndash;&gt;
     <test verbose="3" name="ChangeCurrencyAfterChangingLanguageTest">
         <classes>
             <class name="main.java.test.testnata.ChangeCurrencyAfterChangingLanguageTest"></class>
@@ -86,7 +86,7 @@
         </classes>
     </test>
 
-     <!--Artem's tests-->
+     &lt;!&ndash;Artem's tests&ndash;&gt;
     <test verbose="3" name="TestCartSmoke">
         <classes>
             <class name="main.java.test.testartem.TestCartSmoke"></class>
@@ -118,7 +118,7 @@
         </classes>
     </test>
 
-     <!-- Volodya's tests-->
+     &lt;!&ndash; Volodya's tests&ndash;&gt;
     <test name="Create new address">
         <classes>
             <class name="main.java.test.testvolodya.CreateAddress"></class>
@@ -143,10 +143,10 @@
         <classes>
             <class name="main.java.test.testvolodya.Create2Addresses"></class>
         </classes>
-    </test>
+    </test>-->
 
     <!-- Oleg Kmet test -->
-    <test name="Test search field">
+<!--    <test name="Test search field">
         <classes>
             <class name="main.java.test.testok.TestSearchField"></class>
         </classes>
@@ -155,19 +155,19 @@
         <classes>
             <class name="main.java.test.testok.TestCategoryNavigation"></class>
         </classes>
-    </test>
-<!--    <test name="Test sort type">
+    </test>-->
+    <test name="Test sort type">
         <classes>
             <class name="main.java.test.testok.TestSortType"></class>
         </classes>
-    </test>-->
+    </test>
 
 
-    <test name="Test negative data in login form">
+  <!--  <test name="Test negative data in login form">
         <classes>
             <class name="main.java.test.olegstests.TestNegativeLoginForm"></class>
         </classes>
     </test>
-
+-->
 
 </suite>

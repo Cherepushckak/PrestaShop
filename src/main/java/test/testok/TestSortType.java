@@ -6,6 +6,7 @@ import main.java.pages.header.HeaderFull;
 import main.java.pages.main.MainPage;
 import main.java.pages.search.SearchPage;
 import main.java.test.BasicTest;
+import main.java.tools.OurWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -37,6 +38,7 @@ public class TestSortType extends BasicTest {
         sortHelper = new SortHelper();
         //Act
         searchPage.getSortBy().selectSort(1);
+        ;
         //Assert
         Assert.assertTrue(sortHelper.checkNameSort(true));
     }
@@ -45,7 +47,6 @@ public class TestSortType extends BasicTest {
     @Test(priority=3)
     public void Step3(){
         //Arrange
-        sortHelper = new SortHelper();
         //Act
         searchPage.getSortBy().selectSort(2);
         //Assert
@@ -56,7 +57,6 @@ public class TestSortType extends BasicTest {
     @Test(priority=4)
     public void Step4(){
         //Arrange
-        sortHelper = new SortHelper();
         //Act
         searchPage.getSortBy().selectSort(3);
         //Assert
@@ -67,7 +67,6 @@ public class TestSortType extends BasicTest {
     @Test(priority=5)
     public void Step5(){
         //Arrange
-        sortHelper = new SortHelper();
         //Act
         searchPage.getSortBy().selectSort(4);
         //Assert

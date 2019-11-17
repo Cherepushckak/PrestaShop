@@ -23,7 +23,7 @@ public class Product {
     /**
      * price of product
      */
-    private int price;
+    private float price;
 
     /**
      *constructor with
@@ -40,13 +40,14 @@ public class Product {
     private void initProduct(WebElement productContainer) {
         this.productContainer = productContainer;
         name = productContainer.findElement(By.cssSelector(".h3.product-title>a"));
-
+        System.out.println(name.getText());
         //get price
-        /*WebElement priceElement = productContainer.findElement(By.cssSelector("span.price"));
+        WebElement priceElement = productContainer.findElement(By.cssSelector("span.price"));
         String priceString = priceElement.getText();
-        priceString = priceString.replaceFirst("","₴");
-        price = Integer.parseInt(priceString);
-        ////div[@class='thumbnail-container']//span[@class='price']*/
+        priceString = priceString.substring(1,priceString.length()-1);
+        price = Float.parseFloat(priceString);
+        System.out.println(price);
+        ////div[@class='thumbnail-container']//span[@class='price']
     }
 
     /**
@@ -78,7 +79,7 @@ public class Product {
      * get price of product
      * @return int price
      */
-    public int getProductPrice(){return price;}
+    public float getProductPrice(){return price;}
 
     /**
      * click name and go to Product Page

@@ -24,6 +24,7 @@ public class SortBy {
      * Default constructor
      */
     public SortBy() {
+        getSortTypes();
     }
 
     /**
