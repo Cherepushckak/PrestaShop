@@ -1,8 +1,12 @@
 package main.java.pages.product;
 
+import io.qameta.allure.Step;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -23,7 +27,7 @@ public class ReviewInfo {
     }
 
 
-    public void initReviewInfo() {
+    private void initReviewInfo() {
 
         reviewTitle = OurWebDriver.driver.findElement(By.xpath("//p[@class='revws-review-title']"));
         reviewDetail = OurWebDriver.driver.findElement(By.xpath("//p[@class='revws-review-content']"));
@@ -51,12 +55,14 @@ public class ReviewInfo {
     }
 
 
+    @Step("Go to manage exist review")
     public ManageReview clickButtonEditReview(boolean isNewReview, String rating, String textTitleReview, String textDetailReview) {
         editButton.click();
         return new ManageReview(isNewReview, rating, textTitleReview, textDetailReview);
     }
 
 
+    @Step("Go to delete exist review")
     public DeleteReview clickButtonDeleteReview() {
         deleteButton.click();
         return new DeleteReview();
