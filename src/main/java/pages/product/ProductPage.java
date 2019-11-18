@@ -1,5 +1,6 @@
 package main.java.pages.product;
 
+import io.qameta.allure.Step;
 import main.java.pages.common.ParentPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
@@ -41,6 +42,7 @@ public class ProductPage extends ParentPage {
 
 
     //Added by Roman Shamakhin
+    @Step("Init main tab of product")
     public ProductTabs initProductTabs() {
         return new ProductTabs();
     }
@@ -48,17 +50,19 @@ public class ProductPage extends ParentPage {
 
     /**
      * getter to price element
+     *
      * @return price element
      */
-    public WebElement getPrice(){
+    public WebElement getPrice() {
         return OurWebDriver.driver.findElement(priceLocator);
-}
+    }
 
     /**
      * method shows price of the product
+     *
      * @return string value.
      */
-    public String showPrice(){
+    public String showPrice() {
         return getPrice().getText();
     }
 }

@@ -1,6 +1,7 @@
 package main.java.test.artem;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Issue;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import main.java.pages.cart.CartPage;
@@ -15,9 +16,10 @@ import static org.testng.Assert.assertEquals;
 
 public class TestTotalPriceLogged extends BasicTest {
 
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Description("Verification of total price and amount of quantity and item price logged user")
     @Test
+    @Issue("CDXLI-462")
     public void testPriceLogged () {
         //Arrange
         MainPage userPage =loginHelper()

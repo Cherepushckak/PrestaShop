@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
 
-     <!--Maksym's tests-->
+    <!--Maksym's tests-->
     <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
         <classes>
             <class name="main.java.test.maksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
@@ -28,9 +28,14 @@
             <class name="main.java.test.maksym.TestCreateAccountWithoutBirthday"></class>
         </classes>
     </test>
+    <test verbose="3" name="API request to get details of User Maria Kvitka">
+        <classes>
+            <class name="main.java.test.maksym.APITestGetUserMariaDetails"></class>
+        </classes>
+    </test>
 
-     <!--Oleg's tests-->
-        <test verbose="3" name="testLoginForm">
+    <!--Oleg's tests-->
+    <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.oleg.TestLoginForm"></class>
         </classes>
@@ -40,9 +45,13 @@
             <class name="main.java.test.oleg.TestForgotLogin"></class>
         </classes>
     </test>
+    <test name="Test negative data in login form">
+        <classes>
+            <class name="main.java.test.oleg.TestNegativeLoginForm"></class>
+        </classes>
+    </test>
 
     <!-- Nata's tests -->
-
     <test verbose="3" name="ChangeCurrencyForEURFromCartTest">
         <classes>
             <class name="main.java.test.nata.ChangeCurrencyForEURFromCartTest"></class>
@@ -63,8 +72,11 @@
             <class name="main.java.test.nata.VerifyLogoButtonTest"></class>
         </classes>
     </test>
-
-
+    <test verbose="3" name="API test">
+        <classes>
+            <class name="main.java.test.nata.TestApi"></class>
+        </classes>
+    </test>
     <test verbose="3" name="SignInHeaderFullTest">
         <classes>
             <class name="main.java.test.nata.SignInHeaderFullTest"></class>
@@ -76,14 +88,12 @@
         </classes>
     </test>
 
-
-     <!--Artem's tests-->
+    <!--Artem's tests-->
     <test verbose="3" name="TestCartSmoke">
         <classes>
             <class name="main.java.test.artem.TestCartSmoke"></class>
         </classes>
     </test>
-
     <test verbose="3" name="TestCartSmokeLogged">
         <classes>
             <class name="main.java.test.artem.TestCartSmokeLogged"></class>
@@ -94,7 +104,6 @@
             <class name="main.java.test.artem.TestTotalPrice"></class>
         </classes>
     </test>
-
     <test verbose="3" name="TestCartTotalPriceLogged">
         <classes>
             <class name="main.java.test.artem.TestTotalPriceLogged"></class>
@@ -115,8 +124,13 @@
             <class name="main.java.test.artem.TestBoundaryValue"></class>
         </classes>
     </test>
+    <test verbose="3" name="APItest">
+        <classes>
+            <class name="main.java.test.artem.ArtemAPITest"></class>
+        </classes>
+    </test>
 
-     <!-- Volodya's tests-->
+    <!-- Volodya's tests-->
     <test name="Create new address">
         <classes>
             <class name="main.java.test.volodya.CreateAddress"></class>
@@ -175,10 +189,25 @@
         </classes>
     </test>
 
-
-    <test name="Test negative data in login form">
+    <!-- Roman's test -->
+    <test name="Create new ProductReview">
         <classes>
-            <class name="main.java.test.oleg.TestNegativeLoginForm"></class>
+            <class name="main.java.test.roman.TestAddReview"></class>
+        </classes>
+    </test>
+    <test name="Update existing ProductReview">
+        <classes>
+            <class name="main.java.test.roman.TestEditReview"></class>
+        </classes>
+    </test>
+    <test name="Delete existing ProductReview">
+        <classes>
+            <class name="main.java.test.roman.TestDeleteReview"></class>
+        </classes>
+    </test>
+    <test name="Test API. Verify adding two equals customers with length password less than 5 chars.">
+        <classes>
+            <class name="main.java.test.roman.TestAPIAddCustomer"></class>
         </classes>
     </test>
 

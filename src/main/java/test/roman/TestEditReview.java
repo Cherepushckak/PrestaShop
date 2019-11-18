@@ -4,14 +4,16 @@ package main.java.test.roman;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import main.java.helperinstrument.LogInHelper;
-import main.java.helperinstrument.ProductPageHelper;
+
 import main.java.pages.header.LogCont;
 import main.java.pages.product.ProductTabs;
-import main.java.test.BasicTest;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import main.java.helperinstrument.LogInHelper;
+import main.java.helperinstrument.ProductPageHelper;
+import main.java.test.BasicTest;
 
 @Listeners(BasicTest.class)
 
@@ -29,6 +31,7 @@ public class TestEditReview extends BasicTest {
 
         new LogInHelper();
         new LogCont().goToMainPage();
+
         ProductTabs productTabs = new ProductPageHelper().getProductTabs();
 
         int amountReview = productTabs.getAmountReview();
@@ -46,11 +49,6 @@ public class TestEditReview extends BasicTest {
                 .initReviewInfo()
                 .clickButtonEditReview(false, updateRating, updateReviewTitle, updateReviewDetail);
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         // Test ReviewTitleText
         String actualReviewTitleText = productTabs.clickReviewTab().initReviewInfo().getReviewTitleText();

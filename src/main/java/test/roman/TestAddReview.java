@@ -4,14 +4,20 @@ package main.java.test.roman;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import main.java.helperinstrument.LogInHelper;
-import main.java.helperinstrument.ProductPageHelper;
+
 import main.java.pages.header.LogCont;
 import main.java.pages.product.ProductTabs;
-import main.java.test.BasicTest;
+import main.java.tools.OurWebDriver;
+
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import main.java.helperinstrument.LogInHelper;
+import main.java.helperinstrument.ProductPageHelper;
+import main.java.test.BasicTest;
+
+import java.util.concurrent.TimeUnit;
 
 @Listeners(BasicTest.class)
 
@@ -23,12 +29,15 @@ public class TestAddReview extends BasicTest {
     @Test
     public void testAddReview() {
 
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
         String newRating = "4";
         String newReviewTitle = "New title";
         String newReviewDetail = "New detail";
 
         new LogInHelper();
         new LogCont().goToMainPage();
+
         ProductTabs productTabs = new ProductPageHelper().getProductTabs();
 
         int amountReview = productTabs.getAmountReview();
@@ -46,11 +55,6 @@ public class TestAddReview extends BasicTest {
                 .initReviews()
                 .clickButtonCreateReview(true, newRating, newReviewTitle, newReviewDetail);
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         // Test ReviewTitleText
         String ReviewTitleText = productTabs.clickReviewTab().initReviewInfo().getReviewTitleText();
