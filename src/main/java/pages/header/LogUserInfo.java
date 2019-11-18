@@ -1,13 +1,10 @@
 package main.java.pages.header;
 
-import main.java.pages.login.LoginPage;
+import io.qameta.allure.Step;
 import main.java.pages.user.UserPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import main.java.pages.login.LoginPage;
-import main.java.pages.user.UserPage;
-import io.qameta.allure.Step;
 
 /**
  * LogUserInfo is a child class of LogUserInformation,

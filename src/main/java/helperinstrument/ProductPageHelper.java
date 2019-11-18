@@ -1,7 +1,7 @@
 package main.java.helperinstrument;
+
 import main.java.pages.main.MainPage;
 import main.java.pages.product.ProductTabs;
-import org.testng.Assert;
 
 
 public class ProductPageHelper {

@@ -4,7 +4,6 @@ package main.java.test.oleg;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-
 import main.java.helperinstrument.LogInHelper;
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;

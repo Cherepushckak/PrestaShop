@@ -21,6 +21,11 @@ public class Product {
     private WebElement name;
 
     /**
+     * price of product
+     */
+    private float price;
+
+    /**
      *constructor with
      * @param productContainer
      */
@@ -35,6 +40,12 @@ public class Product {
     private void initProduct(WebElement productContainer) {
         this.productContainer = productContainer;
         name = productContainer.findElement(By.cssSelector(".h3.product-title>a"));
+
+        //get price
+        WebElement priceElement = productContainer.findElement(By.cssSelector("span.price"));
+        String priceString = priceElement.getText();
+        priceString = priceString.substring(1,priceString.length()-1);
+        price = Float.parseFloat(priceString);
     }
 
     /**
@@ -61,6 +72,12 @@ public class Product {
     public String getNameProductText () {
         return getName().getText();
     }
+
+    /**
+     * get price of product
+     * @return int price
+     */
+    public float getProductPrice(){return price;}
 
     /**
      * click name and go to Product Page

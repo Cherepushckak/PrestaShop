@@ -2,7 +2,7 @@ package main.java.data;
 
 
 import io.qameta.allure.Step;
-import main.java.helperInstrument.EnviromentHelper;
+import main.java.helperinstrument.EnviromentHelper;
 
 import java.util.Random;
 

@@ -2,11 +2,9 @@ package main.java.test;
 
 
 import io.qameta.allure.Attachment;
-import io.qameta.allure.Step;
 import main.java.helperinstrument.AddToCartHelper;
+import main.java.helperinstrument.ChangeLanguageHelper;
 import main.java.helperinstrument.LogInHelper;
-import main.java.pages.cart.CartPage;
-import main.java.pages.user.UserPage;
 import main.java.tools.OurWebDriver;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -51,5 +49,12 @@ public class BasicTest implements ITestListener {
      */
     protected LogInHelper loginHelper() {
         return new LogInHelper();
+    }
+
+    /**
+     * @return new instance of changeLanguageHelper helper
+     */
+    protected ChangeLanguageHelper changeLanguageHelper() {
+        return new ChangeLanguageHelper();
     }
 }

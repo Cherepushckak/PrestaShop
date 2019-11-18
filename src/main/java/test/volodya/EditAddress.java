@@ -11,12 +11,18 @@
 package main.java.test.volodya;
 
 // Additional packages
-import io.qameta.allure.*;
-import main.java.pages.addresses.*;
-import main.java.pages.user.Address;
-import main.java.pages.header.CertainLanguage;
-import main.java.helperinstrument.LogInHelper;
+
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import main.java.data.AddressRepository;
+import main.java.helperinstrument.LogInHelper;
+import main.java.pages.addresses.Addresses;
+import main.java.pages.addresses.AddressesPage;
+import main.java.pages.addresses.NewAddress;
+import main.java.pages.header.CertainLanguage;
+import main.java.pages.user.Address;
 import main.java.pages.user.UserPage;
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
@@ -34,12 +40,14 @@ public class EditAddress extends BasicTest {
     @Description("Verify that address entry can be updated")
     @Test
     public void editAddress() {
+        // Arrange
         // Log In to PrestaShop
         UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
         CertainLanguage certainLanguage = new CertainLanguage().openListOfLanguages().chooseEnglishInDropDown();
 
+        // Act
         // Click 'Addresses' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
@@ -67,6 +75,7 @@ public class EditAddress extends BasicTest {
         // Click 'SAVE' button
         Addresses addresses2 = new NewAddress().clickSaveButton();
 
+        // Assert
         // Verification, that address was successfully updated
         String actualAlert = new Addresses().getAlert().getText();
         String expectedAlert = "Address successfully updated!";

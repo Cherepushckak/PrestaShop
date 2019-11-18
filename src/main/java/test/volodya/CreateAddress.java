@@ -11,6 +11,7 @@
 package main.java.test.volodya;
 
 // Additional packages
+
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -25,6 +26,7 @@ import main.java.pages.user.UserPage;
 import main.java.test.BasicTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertEquals;
 
 // Listeners are waiting for the error and if it occurs - make a screenshot of error page
@@ -38,12 +40,14 @@ public class CreateAddress extends BasicTest {
     @Description("Verify that new address entry can be created")
     @Test
     public void createAddress() {
+        // Arrange
         // Log In to PrestaShop
         UserPage userPage = new LogInHelper().getUserPage();
 
         // Change language to English
         CertainLanguage certainLanguage = new CertainLanguage().openListOfLanguages().chooseEnglishInDropDown();
 
+        // Act
         // Click 'Add new address' card-link
         Addresses addresses = new UserPage().getUserPageContainer().clickAddresses();
 
@@ -67,6 +71,7 @@ public class CreateAddress extends BasicTest {
         // Click 'SAVE' button
         Addresses addresses1 = new NewAddress().clickSaveButton();
 
+        // Assert
         // Verify alert, that new address was successfully created
         String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
         String expectedAlert = "Address successfully added!";
