@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 @Listeners(BasicTest.class)
-public class APITestGetUserMariaDetails extends BasicTest {
+public class TestAPIGetUserMariaApiStatus extends BasicTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("API request to get details of User Maria Kvitka")
@@ -37,5 +37,7 @@ public class APITestGetUserMariaDetails extends BasicTest {
         // ******* ASSERT *******
 
         assertEquals(response.getStatusCode(), 200);
+
+
     }
 }

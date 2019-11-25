@@ -56,7 +56,7 @@ public class UserRepository {
 
         //setting random email like test142@test.com
         Random random = new Random();
-        Integer randomNumber = random.nextInt(999);
+        Integer randomNumber = random.nextInt(9999);
 
         String uniqueEmail = EnviromentHelper.getUniqueTest () + randomNumber + EnviromentHelper.getUniqueGmail ();
 
