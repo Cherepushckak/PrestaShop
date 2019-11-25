@@ -54,7 +54,7 @@ public class UserRepository {
         uniqueUser.setCheckboxReceiveOffers(Boolean.TRUE);
         uniqueUser.setCheckboxSignUpNewsletter(Boolean.TRUE);
 
-        //setting random email like test142@test.com
+        //setting random email like test1642@test.com
         Random random = new Random();
         Integer randomNumber = random.nextInt(9999);
 
