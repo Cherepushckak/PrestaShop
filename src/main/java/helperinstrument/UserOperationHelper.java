@@ -3,7 +3,7 @@ package main.java.helperinstrument;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import io.qameta.allure.Step;
-import main.java.data.customer;
+import main.java.data.Customer;
 import main.java.data.User;
 import main.java.data.UserRepository;
 import main.java.pages.register.RegisterPage;
@@ -49,7 +49,7 @@ public class UserOperationHelper {
 
         //Creating new customer object out of needed fields of User object
 
-        customer customer = new customer(user);
+        Customer customer = new Customer(user);
 
         //Preparing body for POST request using Jackson
 
@@ -111,7 +111,7 @@ public class UserOperationHelper {
                 statusCode(200).
                 extract().xmlPath().getInt("prestashop.customers.customer.size()");
 
-        System.out.printf("\nCustomers in the system: %d", count);
+        System.out.printf("\nCustomers in the system: %d \n", count);
 
         return count;
     }

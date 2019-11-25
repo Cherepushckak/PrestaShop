@@ -2,7 +2,7 @@ package main.java.data;
 
 // This class is needed to serialize into XML in order to make POST API requests
 
-public class customer {
+public class Customer {
 
     private String id_gender;
     private String firstname;
@@ -17,10 +17,10 @@ public class customer {
     private String optin;
 
 
-    public customer() {
+    public Customer() {
     }
 
-    public customer(User user) {
+    public Customer(User user) {
 
         this.id_gender = user.getIdGender();
         this.firstname = user.getFirstName();
