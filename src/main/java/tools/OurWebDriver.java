@@ -2,7 +2,6 @@ package main.java.tools;
 
 import main.java.helperinstrument.EnviromentHelper;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -26,11 +25,7 @@ public class OurWebDriver {
         wait = new WebDriverWait(driver, 5);
     }
 
-    public static WebDriverWait getWait() {
-        return wait;
-    }
+    public static WebDriverWait getWait() { return wait; }
 
-    public void closeDriver() {
-        driver.quit();
-    } // Close test browser windows to release hardware resources
+    public void closeDriver() { driver.quit(); } // Close test browser windows to release hardware resources
 }
