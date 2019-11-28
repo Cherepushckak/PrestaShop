@@ -32,6 +32,7 @@ public class Address {
         alias();
     }
 
+    // Locators
     @Step("Initialize single address container")
     private void initAddress() {
         addressContainer = OurWebDriver.driver.findElementByXPath("//section[@id='content']/div");

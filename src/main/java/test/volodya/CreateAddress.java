@@ -75,7 +75,7 @@ public class CreateAddress extends BasicTest {
         // Verify alert, that new address was successfully created
         String actualAlert = new AddressesPage().getAddressesList().getAlert().getText();
         String expectedAlert = "Address successfully added!";
-        assertEquals ( actualAlert, expectedAlert );
+        assertEquals ( actualAlert, expectedAlert, "Actual alert [ actualAlert ] did not match expected [ expectedAlert ]");
     }
 
 }
