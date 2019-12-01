@@ -64,18 +64,18 @@
             <version>${selenium.version}</version>
         </dependency>
         <!--  dependency for testing api (should be before testNG), xml for easy parsing -->
-                <dependency>
-                    <groupId>io.rest-assured</groupId>
-                    <artifactId>rest-assured</artifactId>
-                    <version>3.0.6</version>
-                </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.0.6</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-                <dependency>
-                    <groupId>io.rest-assured</groupId>
-                    <artifactId>rest-assured</artifactId>
-                    <version>3.0.0</version>
-                    <scope>test</scope>
-                </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.0.0</version>
+            <scope>test</scope>
+        </dependency>
 
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -83,12 +83,27 @@
             <version>4.1.2</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
-        <groupId>io.rest-assured</groupId>
-        <artifactId>rest-assured</artifactId>
-        <version>4.1.2</version>
-        <scope>compile</scope>
-    </dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>xml-path</artifactId>
+            <version>3.3.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.1.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.3.0</version>
+            <scope>compile</scope>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
@@ -96,7 +111,6 @@
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
         </dependency>
-
 
         <dependency>
             <groupId>io.qameta.allure</groupId>

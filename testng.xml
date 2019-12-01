@@ -205,9 +205,9 @@
             <class name="main.java.test.roman.TestDeleteReview"></class>
         </classes>
     </test>
-    <test name="Test API. Verify adding two equals customers with length password less than 5 chars.">
+    <test name="Test API. Verify adding Customers with correct and wrong values.">
         <classes>
-            <class name="main.java.test.roman.TestAPIAddCustomer"></class>
+            <class name="main.java.test.roman.TestAPIPS"></class>
         </classes>
     </test>
 
