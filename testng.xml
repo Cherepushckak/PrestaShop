@@ -30,7 +30,17 @@
     </test>
     <test verbose="3" name="API request to get details of User Maria Kvitka">
         <classes>
-            <class name="main.java.test.maksym.APITestGetUserMariaDetails"></class>
+            <class name="main.java.test.maksym.TestAPIGetUserMariaApiStatus"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="Create new user and API verification Test">
+        <classes>
+            <class name="main.java.test.maksym.TestAPICreateNewUserViaGUIApiVerification"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="Create new user via API">
+        <classes>
+            <class name="main.java.test.maksym.TestAPICreateNewUserViaAPIAndGUIVerification"></class>
         </classes>
     </test>
 
