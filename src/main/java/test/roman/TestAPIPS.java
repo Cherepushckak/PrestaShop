@@ -15,10 +15,10 @@ import static main.java.test.roman.XMLConverter.*;
 
 public class TestAPIPS {
 
-    String PSUrl = EnviromentHelper.getPrestaUrl();
-    String PSKey = EnviromentHelper.getPrestaKey();
-    //private static final String PSUrl = "";
-    //private static final String PSKey = "";
+    //String PSUrl = EnviromentHelper.getPrestaUrl();
+    //String PSKey = EnviromentHelper.getPrestaKey();
+    private static final String PSUrl = "http://3.124.147.74";
+    private static final String PSKey = "8EK95K35AXZ1FL416IG25475KBC48S7T";
     private static final String xmlCorrectCust = "./src/main/java/test/roman/correctCust.xml";
     private static final String xmlExistingLoginCust = "./src/main/java/test/roman/existingLoginCust.xml";
     private static final String xmlWrongPassCust = "./src/main/java/test/roman/wrongPassCust.xml";
@@ -79,13 +79,6 @@ public class TestAPIPS {
         int getStatusCode = xmlPostRequestAddCust(xmlExistingLoginCust);
         Assert.assertFalse(getStatusCode == 201);
         System.out.println("API return status code: " + getStatusCode + ". New customer with existing login not added.\n");
-    }
-
-
-    @Severity(SeverityLevel.CRITICAL)
-    @Description("Check count of customers after adding customer with wrong value of login (mail)")
-    @Test(priority = 5)
-    public void checkCountCustomersAfterAddWrongLoginCust() {
         Assert.assertTrue(CountCustBeforeAdding == CountCustAfterAdding);
         System.out.println("A count of customers is not increased. New customer with wrong login not added.\n");
     }
@@ -93,18 +86,11 @@ public class TestAPIPS {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Check API's status code after adding customer with wrong value of password (<5 chars)")
-    @Test(priority = 6)
+    @Test(priority = 5)
     public void checkAPIStatusCodeAfterAddWrongPassCust() {
         int getStatusCode = xmlPostRequestAddCust(xmlWrongPassCust);
         Assert.assertFalse(getStatusCode == 201);
         System.out.println("API return status code: " + getStatusCode + ". New customer with wrong password not added.\n");
-    }
-
-
-    @Severity(SeverityLevel.CRITICAL)
-    @Description("Check count of customers after adding customer with wrong value of password (<5 chars)")
-    @Test(priority = 7)
-    public void checkCountCustomersAfrerAddWrongPassCust() {
         Assert.assertTrue(CountCustBeforeAdding == CountCustAfterAdding);
         System.out.println("A count of customers is not increased. New customer with wrong password is not added.\n");
     }
