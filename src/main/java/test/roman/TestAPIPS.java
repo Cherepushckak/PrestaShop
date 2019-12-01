@@ -15,10 +15,10 @@ import static main.java.test.roman.XMLConverter.*;
 
 public class TestAPIPS {
 
-    //String PSUrl = EnviromentHelper.getPrestaUrl();
-    //String PSKey = EnviromentHelper.getPrestaKey();
-    private static final String PSUrl = "http://3.124.147.74";
-    private static final String PSKey = "8EK95K35AXZ1FL416IG25475KBC48S7T";
+    String PSUrl = EnviromentHelper.getPrestaUrl();
+    String PSKey = EnviromentHelper.getPrestaKey();
+    //private static final String PSUrl = "";
+    //private static final String PSKey = "";
     private static final String xmlCorrectCust = "./src/main/java/test/roman/correctCust.xml";
     private static final String xmlExistingLoginCust = "./src/main/java/test/roman/existingLoginCust.xml";
     private static final String xmlWrongPassCust = "./src/main/java/test/roman/wrongPassCust.xml";
