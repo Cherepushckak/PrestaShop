@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <cart>
+        <id_currency xlink:href="http://3.124.147.74/api/currencies/1">1</id_currency>
+        <id_customer xlink:href="http://3.124.147.74/api/customers/3">3</id_customer>
+        <id_guest xlink:href="http://3.124.147.74/api/guests/588">588</id_guest>
+        <id_lang xlink:href="http://3.124.147.74/api/languages/1">1</id_lang>
+        <id_shop_group>1</id_shop_group>
+        <id_shop>1</id_shop>
+        <secure_key>cadd4b2af161e52cfa90dfcd9648d2dc</secure_key>
+        <date_add>2019-11-06 14:55:17</date_add>
+        <date_upd>2019-11-06 14:55:17</date_upd>
+        <associations>
+            <cart_rows nodeType="cart_row" virtualEntity="true"/>
+        </associations>
+    </cart>
+</prestashop>

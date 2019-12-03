@@ -112,17 +112,6 @@ public class ShoppingItem {
         OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-    /**
-     * decrease quantity value
-     * using explicitly wait to check the total price
-     */
-    @Step("Click down arrow to decrease quantity of product")
-    public void changeValueByDecreasing() {
-        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        clickDecreaseQuantity();
-        OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
-        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    }
 
     /**
      * click at name field atomic method
@@ -166,6 +155,18 @@ public class ShoppingItem {
     @Step("Check added item by name")
     public String getNameText () {
        return getName().getText();
+    }
+
+    /**
+     * decrease quantity value
+     * using explicitly wait to check the total price
+     */
+    @Step("Click down arrow to decrease quantity of product")
+    public void changeValueByDecreasing() {
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        clickDecreaseQuantity();
+        OurWebDriver.getWait().until(ExpectedConditions.stalenessOf(quantity));
+        OurWebDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     /**

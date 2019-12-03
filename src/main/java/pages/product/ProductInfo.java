@@ -39,11 +39,18 @@ public class ProductInfo {
     }
 
     /**
+     * atomic click at button method
+     */
+    private void addToCartButtonClick () {
+        addToCartButton.click();
+    }
+
+    /**
      * click Cart Button and move to AddedToCart class
      */
     @Step("Click at add cart button")
     public AddedToCart setAddToCartButtonClick() {
-        addToCartButton.click();
+        addToCartButtonClick();
         return new AddedToCart();
     }
 }

@@ -129,6 +129,16 @@
             <class name="main.java.test.artem.ArtemAPITest"></class>
         </classes>
     </test>
+    <test verbose="3" name="APIGettest">
+        <classes>
+            <class name="main.java.test.artem.ArtemAPIGetTest"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="APIPosttest">
+        <classes>
+            <class name="main.java.test.artem.ArtemAPIPostTest"></class>
+        </classes>
+    </test>
 
      <!-- Volodya's tests-->
     <test name="Create new address">

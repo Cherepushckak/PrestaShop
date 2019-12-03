@@ -7,14 +7,11 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import main.java.helperinstrument.EnviromentHelper;
-import main.java.test.BasicTest;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
-@Listeners( BasicTest.class)
 
-public class ArtemAPITest extends BasicTest {
+public class ArtemAPITest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verification of presents product item in cart")
