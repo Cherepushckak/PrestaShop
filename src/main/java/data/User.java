@@ -96,6 +96,15 @@ public class User {
         this.checkboxSignUpNewsletter = checkboxSignUpNewsletter;
     }
 
+    public String getIdGender() {
+        String genderId = "";
+        if (title == Title.MR) {
+            genderId = "1";}
+        else if (title == Title.MS) {
+            genderId = "2";}
+    return genderId;
+    }
+
     @Override
     public String toString() {
         return "User{" +

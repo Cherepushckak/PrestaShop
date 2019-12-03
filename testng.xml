@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" verbose="3">
 
-     <!--Maksym's tests-->
+    <!--Maksym's tests-->
     <test verbose="3" name="Verify that immediately after new user creation, User's name is shown in the header">
         <classes>
             <class name="main.java.test.maksym.TestUserNameIsShownInHeaderAfterAccountCreation"></class>
@@ -30,12 +30,22 @@
     </test>
     <test verbose="3" name="API request to get details of User Maria Kvitka">
         <classes>
-            <class name="main.java.test.maksym.APITestGetUserMariaDetails"></class>
+            <class name="main.java.test.maksym.TestAPIGetUserMariaApiStatus"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="Create new user and API verification Test">
+        <classes>
+            <class name="main.java.test.maksym.TestAPICreateNewUserViaGUIApiVerification"></class>
+        </classes>
+    </test>
+    <test verbose="3" name="Create new user via API">
+        <classes>
+            <class name="main.java.test.maksym.TestAPICreateNewUserViaAPIAndGUIVerification"></class>
         </classes>
     </test>
 
-     <!--Oleg's tests-->
-        <test verbose="3" name="testLoginForm">
+    <!--Oleg's tests-->
+    <test verbose="3" name="testLoginForm">
         <classes>
             <class name="main.java.test.oleg.TestLoginForm"></class>
         </classes>
@@ -140,7 +150,7 @@
         </classes>
     </test>
 
-     <!-- Volodya's tests-->
+    <!-- Volodya's tests-->
     <test name="Create new address">
         <classes>
             <class name="main.java.test.volodya.CreateAddress"></class>
@@ -196,6 +206,28 @@
     <test name="Test sort type">
         <classes>
             <class name="main.java.test.ok.TestSortType"></class>
+        </classes>
+    </test>
+
+    <!-- Roman's test -->
+    <test name="Create new ProductReview">
+        <classes>
+            <class name="main.java.test.roman.TestAddReview"></class>
+        </classes>
+    </test>
+    <test name="Update existing ProductReview">
+        <classes>
+            <class name="main.java.test.roman.TestEditReview"></class>
+        </classes>
+    </test>
+    <test name="Delete existing ProductReview">
+        <classes>
+            <class name="main.java.test.roman.TestDeleteReview"></class>
+        </classes>
+    </test>
+    <test name="Test API. Verify adding Customers with correct and wrong values.">
+        <classes>
+            <class name="main.java.test.roman.TestAPIPS"></class>
         </classes>
     </test>
 </suite>
