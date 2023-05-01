@@ -20,7 +20,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.surefile.plugin.version>2.22.2</maven.surefile.plugin.version>
         <!-- - - - - - - TestNG - - - - - - -->
-        <org.testng.version>6.14.3</org.testng.version>
+        <org.testng.version>7.7.0</org.testng.version>
         <!-- - - - - - - Selenium - - - - - - -->
         <org.seleniumhq.selenium.version>3.14.0</org.seleniumhq.selenium.version>
         <!-- - - - - - -Utils - - - - - - -->
